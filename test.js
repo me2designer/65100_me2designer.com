@@ -1,9 +1,8 @@
-function show(){
-    for(var i=0; i < myBook.length; i++){
-        myBook[i] = i + 30;
-        console.log(myBook[i]);
-    }
-}
+// /* <img> 캐시 제거 */ 
+// var imgNods = document.getElementsByTagName('img');
 
-var myBook = new Array(10);
-show();
+// for (var i = 0; i < imgNods.length; i++){
+//     imgNods[i].attributes['src'].value += "?v=" + cache;
+// }
+
+

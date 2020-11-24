@@ -1,5 +1,6 @@
 cache = '?v='+(new Date).getTime();
 
+/* CSS, JS import  */ 
 var files = [
     'test.js', 
     '//public.peoplelife.co.kr/css/reset.css',
@@ -23,3 +24,15 @@ for (var i=0; i<files.length; i++){
         (document.getElementsByTagName('HEAD')[0]||document.body).appendChild(el);
     }
 }
+
+
+
+    
+
+$(function() {
+    console.log('a');
+});
+
+$('img').on('load', function(){
+    console.log('b');
+});
