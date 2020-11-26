@@ -1,10 +1,12 @@
 cache = '?v='+(new Date).getTime();
 
 /* CSS, JS import  */ 
-var files = [
-    'test.js', 
+var files = [    
     '//public.peoplelife.co.kr/css/reset.css',
-    'test.css',
+    '/css/style.css',
+
+    '/lib/gsap/gsap.min.js',
+    '/js/script.js',
 ]
 
 for (var i=0; i<files.length; i++){
@@ -25,14 +27,3 @@ for (var i=0; i<files.length; i++){
     }
 }
 
-
-
-    
-
-$(function() {
-    console.log('a');
-});
-
-$('img').on('load', function(){
-    console.log('b');
-});

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/****************************************************************************
+    layout
+****************************************************************************/
+/* Frame */
+html,body {font-size:inherit;color:#fff;background-color:#000}
+
+/* HEADER */
+header { height: 100vh; display: flex;font-size:100px; justify-content: center; align-items: center; }
+
+
+
+.box_red {position: relative;;width:100px;height:100px;background-color:red;}
+.box_blue {position: relative;;width:100px;height:100px;background-color:blue;}
