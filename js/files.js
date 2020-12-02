@@ -5,7 +5,7 @@ var files = [
     '//public.peoplelife.co.kr/css/reset.css',
     '/css/style.css',
 
-    '/lib/gsap/gsap.min.js',
+    '/lib/gsap/TweenMax.min.js',
     '/js/script.js',
 ]
 
