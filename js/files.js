@@ -1,13 +1,15 @@
-cache = '?v='+(new Date).getTime();
-
-/* CSS, JS import  */ 
-var files = [    
+/* CSS, JS import  */
+var files = [
+    // CSS
     '//public.peoplelife.co.kr/css/reset.css',
     '/css/style.css',
 
+    // JS
     '/lib/gsap/TweenMax.min.js',
     '/js/script.js',
 ]
+
+cache = '?v='+(new Date).getTime();
 
 for (var i=0; i<files.length; i++){
     if (files[i].indexOf('.js') != -1){
