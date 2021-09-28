@@ -1,8 +1,12 @@
+
 import Vue from 'vue'
-import main from './main.vue'
+import wrap from './App.vue'
+import router from './router'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(main),
-}).$mount('#app')
+  el: '#wrap',
+  router,
+  render: h => h(wrap),
+}).$mount('#wrap')
