@@ -1,5 +1,5 @@
 
 const path = require("path");
 module.exports = {
-  outputDir: path.resolve(__dirname, "./dosc")   
+  outputDir: path.resolve(__dirname, "./docs")   
 }
