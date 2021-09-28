@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">    
     <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
+
+    <!-- SEO -->
+    <meta name="title" content="제목">
+    <meta name="description" content="설명">
+    <meta name="keywords" content="키워드">
+    <meta property="og:type" content="website"> <!-- 페이지 타입 -->
+    <meta property="og:title" content="제목">
+    <meta property="og:description" content="설명">
+    <meta property="og:image" content="https://www.me2designer.co.kr/img/myimage.jpg"> <!-- 콘텐츠를 공유 시 표시되는 이미지의 URL 800x400 -->
+    <meta property="og:url" content="https://www.me2designer.co.kr"> <!-- 페이지의 표준 URL (데스크탑 URL) -->
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
+</head>
+<body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+        <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-  </body>
+</body>
 </html>

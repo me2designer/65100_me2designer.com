@@ -1,13 +1,13 @@
 <template>
-    <visual/>
+    <visual-component/>
 </template>
 
 <script>
-import visual from './components/visual.vue';
+import visual-component from './views/main/visual-component.vue';
 
 export default {
     components: {
-        visual
+        visual-component
     }
 }
 </script>
