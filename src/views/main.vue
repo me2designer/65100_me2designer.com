@@ -1,13 +1,22 @@
 <template>
-    <p>main.vue</p>
+    <visualComponent/>
 </template>
 
-<script>
 
+
+<script>
+import visualComponent from '@/components/main/visualComponent'
+import careerComponent from '@/components/main/careerComponent'
 
 export default {   
+    components: {
+        visualComponent
+        careerComponent
+    }    
 }
 </script>
+
+
 
 <style>
 

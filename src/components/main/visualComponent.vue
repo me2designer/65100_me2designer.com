@@ -1,5 +1,7 @@
 <template>
-    <p>메인</p>
+    <section id="visual">
+        메인
+    </section>
 </template>
 
 <script>
