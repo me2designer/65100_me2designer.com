@@ -1,5 +1,7 @@
 <template>
-  <p>근무이력</p>
+    <section id="career">
+        <p>근무이력</p>
+    </section>
 </template>
 
 

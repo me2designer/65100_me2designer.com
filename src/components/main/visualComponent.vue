@@ -1,6 +1,6 @@
 <template>
     <section id="visual">
-        메인
+        비주얼
     </section>
 </template>
 
