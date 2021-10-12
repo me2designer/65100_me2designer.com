@@ -151,6 +151,6 @@ FILES([
     SERVER.public+'/css/reset.css',
     SERVER.public+'/css/common_pc.css',
     SERVER.public+'/lib/swiper/swiper.css',
-    SERVER.public+'/js/server.js',
+    // SERVER.public+'/js/server.js',
     SERVER.public+'/js/public.js',
 ]);
