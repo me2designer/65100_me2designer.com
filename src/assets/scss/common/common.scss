@@ -1,0 +1,83 @@
+/* SCSS Document */
+@charset "UTF-8";
+@import "@/assets/scss/common/mixins.scss";
+@import "@/assets/scss/common/variables.scss";
+@import "@/assets/scss/common/layout.scss";
+@import "@/assets/scss/common/table.scss";
+
+
+
+/****************************************************************************
+    reset
+****************************************************************************/
+
+
+
+
+/****************************************************************************
+    common                                  https://getbootstrap.com 참고함
+****************************************************************************/
+/* display */
+.d-flex  {display:flex}
+.d-block  {display:block}
+
+/* flex */
+.flex-column {flex-direction:column}
+.justify-content-between {justify-content:space-between}
+.justify-content-center {justify-content:center}
+.align-items-center {align-items:center}
+
+/* float */
+.float-start {float:left}
+.float-end {float:right}
+.float-none {float:none}
+
+/* position */
+.position-relative {position:relative}
+.position-absolute {position:absolute}
+.position-fixed {position:fixed}
+
+/* Text alignment */
+.text-left {text-align:left !important}
+.text-center {text-align:center !important}
+.text-right {text-align:right !important}
+
+/* margin */
+.m {
+    $value: t top, r right, b bottom, l left;
+    @each $class, $name in $value {
+        @for $i from 0 through 100 {
+            $margin : $i * 5;
+            &#{$class+"-"+$margin} {
+                #{"margin-"+$name}:#{$margin}px !important;
+            }
+        }
+    }
+}
+.mx-auto {margin:0 auto}
+
+/* padding */
+.p {
+    $value: t top, r right, b bottom, l left;
+    @each $class, $name in $value {
+        @for $i from 0 through 100 {
+            $margin : $i * 5;
+            &#{$class+"-"+$margin} {
+                #{"padding-"+$name}:#{$margin}px !important;
+            }
+        }
+    }
+}
+
+/* color */
+.color {
+    $value: #ffffff, #000000;
+    @each $hexCode in $value {
+        $class: str-slice(#{$hexCode}, 2, 7);
+        &#{"-"+$class} {
+            color:#{$hexCode};
+        }
+    }
+}
+
+

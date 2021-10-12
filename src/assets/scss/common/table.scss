@@ -1,0 +1,80 @@
+/* SCSS Document */
+@charset "UTF-8";
+
+
+/****************************************************************************
+    table                                  https://getbootstrap.com 참고함
+****************************************************************************/
+.table {
+    width:100%;border-top:2px solid #212e50;border-bottom:1px solid #212e50;
+    thead {
+        tr { 
+            th {
+                padding:0.875em 1.667em;border-left:1px solid #aaaaaa;border-bottom:1px solid #aaaaaa;
+                &:nth-child(1) {
+                    border-left:none;
+                }
+                &[rowspan] {
+                    border-right:1px solid #212e50;;border-bottom:2px solid #212e50;
+                }
+            }
+            &:last-child {
+                th {
+                    border-bottom:2px solid #212e50;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            th {
+                padding:0.875em 1.667em;border-top:1px solid #aaaaaa;word-break:keep-all;
+            }
+            td {
+                padding:0.875em 1.667em;border-top:1px solid #aaaaaa;border-left:1px solid #aaaaaa;text-align:center;word-break:keep-all;
+                &:nth-child(1) {
+                    border-left:none;
+                }
+            }
+            &:nth-child(1) {
+                td {
+                    border-top:none;
+                }
+            }
+        }
+    }
+}
+
+.table {
+    .bullet_area {
+        p {
+            position:relative;margin-top:5px;min-height:1em;
+            &:nth-child(1) {
+                margin-top:0;
+            }
+            .bullet {
+                display:flex;align-items:center;position:absolute;top:0.25em;left:0;height:1em;
+            }
+        }        
+    }
+}
+
+
+
+
+/****************************************************************************
+    table-navy
+****************************************************************************/
+.table.table-navy {
+    border-color:#313f65;
+    thead {
+        th {
+            color:#212e50;border-color:#313f65;
+        }
+    }
+    tbody {
+        th {
+            background-color:#f8fafe;
+        }
+    }
+} 

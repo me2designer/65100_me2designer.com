@@ -17,8 +17,6 @@ export default {
         careerComponent
     }
 }
-
-console.log($('body'));
 </script>
 
 
