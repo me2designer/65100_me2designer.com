@@ -90,10 +90,11 @@ function FILES (fileList, callback){
             if(!isOverlap(FILES_CSS, filePath)){
                 var head  = document.getElementsByTagName('head')[0];
                 var tag  = document.createElement('link');
+                // var node = document.querySelectorAll('[href="/js/app.js"]');
                 tag.rel = 'stylesheet';
                 tag.type = 'text/css';
                 tag.href = filePath+cache;
-                head.appendChild(tag);                
+                head.appendChild(tag);
                 FILES_CSS.push(filePath);
             }
             if(callback && (CSS.length-1==i) && !JS.length) _result = callback();
