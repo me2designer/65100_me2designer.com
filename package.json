@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "jquery": "^3.6.0",
     "swiper": "^5.3.7",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
@@ -26,7 +27,8 @@
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "jquery": true
     },
     "extends": [
       "plugin:vue/essential",

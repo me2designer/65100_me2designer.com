@@ -1,6 +1,6 @@
 /* Router */
-import Vue          from 'vue';
-import Router       from 'vue-router';
+import Vue              from 'vue';
+import Router           from 'vue-router';
 
 //MAIN
 import main             from '@/views/main';
