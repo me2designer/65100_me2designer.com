@@ -5,7 +5,7 @@
             <button class="btn_video" type="button">1분 자기소개 영상</button>
         </div>
         <swiper :options="swiperBG">
-            <swiper-slide :style="'background-image:url('+imgPath+'bg.jpg)'">
+            <swiper-slide :style="'background-image:url('+imgPath+'bg1.jpg)'">
                 <div class="inner">
                     <p class="tit">다양한 디바이스 크로스 부라우징 기술력을 확보한<br>UI개발을 지원하고있습니다.</p>
                 </div>
@@ -55,7 +55,7 @@ export default {
                 // },
                 slidesPerView: 1,
                 speed: 400,
-                loop: true,
+                // loop: true,
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
                 // allowTouchMove: true,  // drag 방지
@@ -64,7 +64,7 @@ export default {
                 //     1023: {
                 //         allowTouchMove: false // drag 방지
                 //     }
-                // },                
+                // },
                 // pagination: {
                 //     el: '.swiper-pagination',
                 //     clickable: true
