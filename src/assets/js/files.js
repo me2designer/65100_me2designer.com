@@ -93,7 +93,7 @@ function FILES (fileList, callback){
                 tag.rel = 'stylesheet';
                 tag.type = 'text/css';
                 tag.href = filePath+cache;
-                head.appendChild(tag);
+                head.appendChild(tag);                
                 FILES_CSS.push(filePath);
             }
             if(callback && (CSS.length-1==i) && !JS.length) _result = callback();
@@ -151,6 +151,6 @@ FILES([
     SERVER.public+'/css/reset.css',
     SERVER.public+'/css/common_pc.css',
     SERVER.public+'/lib/swiper/swiper.css',
-    // SERVER.public+'/js/server.js',
+    SERVER.public+'/js/server.js',
     SERVER.public+'/js/public.js',
 ]);

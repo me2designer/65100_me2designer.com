@@ -6,8 +6,8 @@ import router           from './router'
 Vue.config.productionTip = false
 
 new Vue({
-  el: '#wrap',  
   files,
+  el: '#wrap',  
   router,
   render: h => h(wrap),
 }).$mount('#wrap')
