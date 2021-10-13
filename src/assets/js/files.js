@@ -55,7 +55,7 @@ function FILES (fileList, callback){
     var result, FILES_CSS, FILES_JS;
     var head  = document.getElementsByTagName('head')[0];
     var appCss = $('head [rel="stylesheet');
-    var appCss_copuid = appCss.detach;
+    var appCss_copuid = appCss.detach();
 
     console.log(appCss_copuid);
 
