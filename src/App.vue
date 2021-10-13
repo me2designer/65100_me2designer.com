@@ -1,5 +1,5 @@
 <template>
-    <div id="wrap">
+    <div id="wrap" style="visibility:hidden;opacity:0">
         <Header/>
         <router-view/>
         <Footer/>
