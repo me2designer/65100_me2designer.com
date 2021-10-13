@@ -52,12 +52,9 @@ var cache = '?v='+(new Date).getTime();
 
 /* FILES */
 function FILES (fileList, callback){
-    var result, FILES_CSS, FILES_JS;
-    var head  = document.getElementsByTagName('head')[0];
+    var result, FILES_CSS, FILES_JS;    
     var appCss = $('head [rel="stylesheet');
     var appCss_copuid = appCss.detach();
-
-    console.log(appCss_copuid);
 
     function isOverlap (list, filePath){
         var value;
@@ -93,6 +90,7 @@ function FILES (fileList, callback){
 
             var filePath = CSS[i];
             if(!isOverlap(FILES_CSS, filePath)){
+                var head  = document.getElementsByTagName('head')[0];
                 var tag  = document.createElement('link');
                 tag.rel = 'stylesheet';
                 tag.type = 'text/css';
@@ -136,9 +134,8 @@ function FILES (fileList, callback){
             })(0);
         }
 
-        if(appCss.length){
-            // var ddd = document.createElement(appCss);
-            // head.appendChild(ddd);
+        if(appCss.length){            
+            $('head').append(appCss_copuid);
         }
         return _result;
     }
