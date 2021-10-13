@@ -90,7 +90,6 @@ function FILES (fileList, callback){
 
             var filePath = CSS[i];
             if(!isOverlap(FILES_CSS, filePath)){
-                var head  = document.getElementsByTagName('head')[0];
                 var tag  = document.createElement('link');                
                 tag.rel = 'stylesheet';
                 tag.type = 'text/css';
@@ -135,7 +134,7 @@ function FILES (fileList, callback){
         }
 
         if(AppCss.length){
-            console.log(AppCss);
+            head.appendChild(AppCss);            
         }
         return _result;
     }
