@@ -4,7 +4,7 @@
             <h3 class="tit_section">안녕하세요,<br><strong>UI 마크업 개발자 장지훈</strong> 입니다.</h3>
             <button class="btn_video" type="button">1분 자기소개 영상</button>
         </div>
-        <swiper :options="swiperBG">
+        <swiper class="mySwiper">
             <swiper-slide :style="'background-image:url('+imgPath+'bg1.jpg)'">
                 <div class="inner">
                     <p class="tit">다양한 디바이스 크로스 부라우징 기술력을 확보한<br>UI개발을 지원하고있습니다.</p>
@@ -37,39 +37,19 @@
 
 
 <script>
-import {swiper, swiperSlide } from 'vue-awesome-swiper'
+// import {Swiper, SwiperSlide} from 'swiper/vue';
+// import 'swiper/css';
+// import './style.css';
 
 export default {
     name: 'visualComponent',
     components: {
-        swiper,
-        swiperSlide
+        // Swiper,
+        // SwiperSlide
     },
     data() {
         return {
-            imgPath: '/img/main/visual_',
-            swiperBG: {
-                // autoplay: {
-                //     delay: 5000,
-                //     disableOnInteraction : false,
-                // },
-                slidesPerView: 1,
-                speed: 400,
-                // loop: true,
-                effect: 'fade',
-                fadeEffect: { crossFade: true },
-                // allowTouchMove: true,  // drag 방지
-                // breakpointsInverse: true,  // drag 방지
-                // breakpoints: {
-                //     1023: {
-                //         allowTouchMove: false // drag 방지
-                //     }
-                // },
-                // pagination: {
-                //     el: '.swiper-pagination',
-                //     clickable: true
-                // }
-            }
+            imgPath: '/img/main/visual_',           
         }
     }
 }
@@ -80,7 +60,6 @@ export default {
 
 <style lang="scss">
     #visual {
-        position:relative;width:100%;height:900px;
         > .inner {
             pointer-events:none;
         }
@@ -97,9 +76,9 @@ export default {
 
     #visual {
         .swiper-container {
-            position:absolute;top:0;bottom:0;left:0;right:0;z-index:0;
+            width:100%;height:900px;
             .swiper-slide {
-                background-size:cover;
+                width:100%;height:100%;background-size:cover;
                 .tit {
                     position:absolute;top:500px;font-size:20px;line-height:1.4em;letter-spacing:-0.2px;color:#fff;
                 }

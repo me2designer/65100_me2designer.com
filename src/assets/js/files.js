@@ -159,6 +159,7 @@ FILES([
     SERVER.public+'/lib/swiper/swiper.css',
     SERVER.public+'/js/server.js',
     SERVER.public+'/js/public.js',
+    SERVER.public+'/lib/swiper/swiper.js',
 ], function(){
 
 });
