@@ -54,7 +54,7 @@ var cache = '?v='+(new Date).getTime();
 function FILES (fileList, callback){
     var result, FILES_CSS, FILES_JS;
     var head  = document.getElementsByTagName('head')[0];
-    var AppCss = head.querySelectorAll('[rel="stylesheet');
+    var appCss = head.querySelectorAll('[rel="stylesheet');
 
     function isOverlap (list, filePath){
         var value;
@@ -133,9 +133,9 @@ function FILES (fileList, callback){
             })(0);
         }
 
-        if(AppCss.length){
-            console.log(head, AppCss);
-            head.appendChild(AppCss);
+        if(appCss.length){
+            var ddd = document.createElement(appCss);
+            head.appendChild(ddd);
         }
         return _result;
     }
