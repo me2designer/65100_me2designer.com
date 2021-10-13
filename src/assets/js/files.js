@@ -54,9 +54,7 @@ var cache = '?v='+(new Date).getTime();
 function FILES (fileList, callback){
     var result, FILES_CSS, FILES_JS;
     var head  = document.getElementsByTagName('head')[0];
-    var stylesheet = head.querySelectorAll('[rel="stylesheet');
-
-    console.log(stylesheet);
+    var AppCss = head.querySelectorAll('[rel="stylesheet');
 
     function isOverlap (list, filePath){
         var value;
@@ -134,6 +132,10 @@ function FILES (fileList, callback){
                     }
                 }
             })(0);
+        }
+
+        if(AppCss.length){
+            console.log(AppCss);
         }
         return _result;
     }
