@@ -90,7 +90,7 @@ function FILES (fileList, callback){
 
             var filePath = CSS[i];
             if(!isOverlap(FILES_CSS, filePath)){
-                var tag  = document.createElement('link');                
+                var tag  = document.createElement('link');
                 tag.rel = 'stylesheet';
                 tag.type = 'text/css';
                 tag.href = filePath+cache;
@@ -134,7 +134,8 @@ function FILES (fileList, callback){
         }
 
         if(AppCss.length){
-            head.appendChild(AppCss);            
+            console.log(head, AppCss);
+            head.appendChild(AppCss);
         }
         return _result;
     }
@@ -159,5 +160,5 @@ FILES([
     SERVER.public+'/js/server.js',
     SERVER.public+'/js/public.js',
 ], function(){
-    
+
 });
