@@ -134,7 +134,7 @@ function FILES (fileList, callback){
             })(0);
         }
 
-        if(appCss.length){            
+        if(appCss.length){ //vue cli와 FILES() CSS 오류 보안
             $('head').append(appCss_copuid);
         }
         return _result;
