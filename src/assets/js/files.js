@@ -53,6 +53,10 @@ var cache = '?v='+(new Date).getTime();
 /* FILES */
 function FILES (fileList, callback){
     var result, FILES_CSS, FILES_JS;
+    var head  = document.getElementsByTagName('head')[0];
+    var stylesheet = head.querySelectorAll('[rel="stylesheet');
+
+    console.log(stylesheet);
 
     function isOverlap (list, filePath){
         var value;
@@ -89,8 +93,7 @@ function FILES (fileList, callback){
             var filePath = CSS[i];
             if(!isOverlap(FILES_CSS, filePath)){
                 var head  = document.getElementsByTagName('head')[0];
-                var tag  = document.createElement('link');
-                // var node = document.querySelectorAll('[href="/js/app.js"]');
+                var tag  = document.createElement('link');                
                 tag.rel = 'stylesheet';
                 tag.type = 'text/css';
                 tag.href = filePath+cache;
@@ -154,4 +157,6 @@ FILES([
     SERVER.public+'/lib/swiper/swiper.css',
     SERVER.public+'/js/server.js',
     SERVER.public+'/js/public.js',
-]);
+], function(){
+    
+});
