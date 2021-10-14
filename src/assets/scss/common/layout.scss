@@ -7,7 +7,7 @@
     layout
 ****************************************************************************/
 /* Frame */
-#wrap {min-width:1440px;font-family:"NanumSquare", sans-serif;font-size:16px;letter-spacing:-0.02em}
+#wrap {overflow-x:hidden !important;min-width:1440px;font-family:"NanumSquare", sans-serif;font-size:16px;letter-spacing:-0.02em}
 .inner {position:relative;z-index:1;max-width:1440px;padding:0 72px;margin:0 auto;}
 
 

@@ -4,7 +4,7 @@
             <h3 class="tit_section">안녕하세요,<br><strong>UI 마크업 개발자 장지훈</strong> 입니다.</h3>
             <button class="btn_video" type="button">1분 자기소개 영상</button>
         </div>
-        <swiper class="swiper" :options="swiperOption">
+        <swiper :options="swiperOption">
             <swiper-slide style="background-image:url(/img/main/visual_bg1.jpg)">
                 <div class="inner">
                     <p class="tit">다양한 디바이스 크로스 부라우징 기술력을 확보한<br>UI개발을 지원하고있습니다.</p>
@@ -30,6 +30,10 @@
                     <p class="tit">꾸준한 역량개발로<br>프론트 엔드 개발자 성장 중</p>
                 </div>
             </swiper-slide>
+           <div class="swiper-button-area">
+                <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
+                <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
+           </div>
         </swiper>
     </section>
 </template>
@@ -48,7 +52,7 @@ export default {
     data() {
         return {
             imgPath: '/img/main/visual_',
-            swiperOption: { 
+            swiperOption: {
                 // autoplay: {
                 //     delay: 5000,
                 //     disableOnInteraction : false,
@@ -56,14 +60,18 @@ export default {
                 slidesPerView: 1,
                 speed: 400,
                 loop: true,
-                // effect: 'fade',
-                // allowTouchMove: true,  // drag 방지
-                // breakpointsInverse: true,  // drag 방지
-                // breakpoints: {
-                //     1023: {
-                //         allowTouchMove: false // drag 방지
-                //     }
-                // },
+                effect: 'fade',
+                allowTouchMove: true,  // drag 방지
+                breakpointsInverse: true,  // drag 방지
+                breakpoints: {
+                    1023: {
+                        allowTouchMove: false // drag 방지
+                    }
+                },
+                navigation: { 
+                    nextEl: '.swiper-button-next', 
+                    prevEl: '.swiper-button-prev' 
+                },
                 // pagination: {
                 //     el: '.swiper-pagination',
                 //     clickable: true
@@ -93,21 +101,24 @@ export default {
             }
         }
         .btn_video {
-             position:absolute;top:584px;width: 176px; height: 46px;
+            position:absolute;top:590px;width:176px;height:46px;border-radius:2em;color:#fff;background-image:linear-gradient(to right, #07d05a, #24beac);pointer-events:all;
         }
     }
 
     #visual {
         .swiper-container {
-            position:absolute;top:0;left:0;z-index:0;width:100%;height:100%;
+            position:absolute;top:0;left:0;z-index:0;width:100vw;height:100%;
             @include ieHack {
-                width:100%;
-            }            
+                width:100vw;
+            }
             .swiper-slide {
                 background-size:cover;
                 .tit {
                     position:absolute;top:500px;font-size:20px;line-height:1.4em;letter-spacing:-0.2px;color:#fff;
                 }
+            }
+            .swiper-button-area {
+                position:absolute;left:50%;top:50%;width:95%;border:1px solid red;transform:translate(-50%, 50%);
             }
         }
     }
