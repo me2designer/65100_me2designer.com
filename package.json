@@ -1,5 +1,5 @@
 {
-  "name": "9998_me2designer.com",
+  "name": "65100_www.me2designer.com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,9 +10,10 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "jquery": "^3.6.0",
+    "swiper": "^4.4.1",
     "vue": "^2.6.11",
-    "vue-router": "^3.5.2",
-    "swiper": "^7.0.0"
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-router": "^3.5.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
