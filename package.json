@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --oepn --port 65100",
     "build": "vue-cli-service build --no-clean",
     "lint": "vue-cli-service lint"
   },
@@ -11,9 +11,7 @@
     "core-js": "^3.6.5",
     "jquery": "^3.6.0",
     "swiper": "^4.4.1",
-    "vue": "^2.6.11",
-    "vue-awesome-swiper": "^3.1.3",
-    "vue-router": "^3.5.2"
+    "vue": "^2.6.11"    
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

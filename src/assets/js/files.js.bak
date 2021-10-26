@@ -52,7 +52,7 @@ var cache = '?v='+(new Date).getTime();
 
 /* FILES */
 function FILES (fileList, callback){
-    var result, FILES_CSS, FILES_JS;    
+    var result, FILES_CSS, FILES_JS;
     var appCss = $('head [rel="stylesheet');
     var appCss_copuid = appCss.detach();
 
@@ -156,9 +156,10 @@ FILES([
     SERVER.fonts+'/fonts/NanumSquare/NanumSquare.css',
     SERVER.public+'/css/reset.css',
     SERVER.public+'/css/common_pc.css',
-    // SERVER.public+'/lib/swiper/swiper.css',
+    SERVER.public+'/lib/swiper/swiper.css',
     SERVER.public+'/js/server.js',
-    SERVER.public+'/js/public.js',    
+    SERVER.public+'/js/public.js',
+    SERVER.public+'/lib/swiper/swiper.js',
 ], function(){
 
 });

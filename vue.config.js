@@ -21,8 +21,7 @@ module.exports = {
         ]
     },
     devServer: {
-        overlay: false,
-        port: '56100',
+        overlay: false,        
 	},    
     css: {
         loaderOptions: {
