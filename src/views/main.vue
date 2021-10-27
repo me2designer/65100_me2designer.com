@@ -7,7 +7,7 @@
             </div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image:url(/img/main/visual_bg1.jpg)">
+                    <div class="swiper-slide" :style="'background-image:url('+imgPath+'visual_bg1.jpg)'">
                         <div class="inner">
                             <p class="tit">다양한 디바이스 크로스 부라우징 기술력을 확보한<br>UI개발을 지원하고있습니다.</p>
                         </div>
@@ -48,11 +48,17 @@
 
 
 <script>
-export default {}
+export default {
+    data() {
+        return {
+            imgPath: '/img/main/'
+        }
+    }
+}
 </script>
 
 
 
-<style lang="scss" scoped>
+<style lang="scss">
     @import '@/assets/scss/main/main.scss';
 </style>
