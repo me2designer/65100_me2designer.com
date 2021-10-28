@@ -149,6 +149,19 @@ $imgPath : "/img/main/";
         }
     }
 
+    #project .list_tag {
+        margin:-5px;padding-bottom:70px;
+        .btn_tag {
+            display:inline-block;margin:5px;padding:10px 20px 10px;border:1px solid #eaeaea;line-height:1em;
+            &::before {
+                content:"# ";
+            }
+            &.on {
+                color:#fff;background-image:linear-gradient(to right, #07d05a, #24beac);
+            }
+        }
+    }
+
     #project .list_project {
         display:flex;flex-wrap:wrap;justify-content:space-between;
         .item_project {

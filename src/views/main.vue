@@ -90,7 +90,7 @@
             <div class="inner">
                 <p class="tit_section">광고디자인, UI/UX, 퍼블리싱까지<br><strong>다양한 프로젝트 스토리</strong></p>
                 <div class="list_tag">
-                    <button class="btn_tag" type="button">기업홈페이지</button>
+                    <button class="btn_tag on" type="button">기업홈페이지</button>
                     <button class="btn_tag" type="button">사업소개</button>
                     <button class="btn_tag" type="button">광고디자인</button>
                     <button class="btn_tag" type="button">모션그래픽</button>
