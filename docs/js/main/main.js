@@ -4,9 +4,20 @@ $(function(){/*
 
 
 
+    /* 사이트 준비중 안내 */
+    if(isReal) LAYER('developing');
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
     /* 메인 비주얼 */
     var $wrap = $('#visual');
-    
+
     // 본문
     var $swiperContainer = $wrap.find('.swiper-container');
     var swiper = new Swiper($swiperContainer, {
@@ -27,11 +38,11 @@ $(function(){/*
             el: $wrap.find('.swiper-pagination'),
             clickable: true
         },
-    });    
+    });
 
     // videoLayer
-    $wrap.find('.videoLayer').videoLayer();    
-    
+    $wrap.find('.videoLayer').videoLayer();
+
 
 
 })();/*
@@ -63,7 +74,7 @@ $(function(){/*
             clickable: true
         },
         on : {
-            slideChangeTransitionStart: function(){            
+            slideChangeTransitionStart: function(){
                 // animate counter
                 $wrap.attr('data-swiper-slide', this.realIndex);
 
@@ -71,7 +82,7 @@ $(function(){/*
                 var $num = $this.find('.num');
                 var _countNum = $num.eq(0).text();
 
-                $num.stop().animateNumber({                    
+                $num.stop().animateNumber({
                     totalPlayTime : 1500,
                     endNumber : _countNum.replace(/[^0-9]/g,''),
                     endValue : _countNum,
@@ -79,7 +90,7 @@ $(function(){/*
             },
         },
     });
-    
+
 
 
 
