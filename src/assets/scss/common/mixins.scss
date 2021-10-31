@@ -9,7 +9,7 @@
 
 
 
-/*    
+/*
     [style 작성 예]
         .선택자 {
             @include ieHack {
@@ -58,7 +58,7 @@
         }
 */
 
-@mixin textMark($bgColor:#ccc, $delay:1s, $height:0.6) {    
+@mixin textMark($bgColor:#ccc, $delay:1s, $height:0.6) {
     $name: inline-#{unique-id()};
     display:inline-block;position:relative;z-index:1;line-height:1em;padding:0 0.2em;
     &::after {
@@ -67,18 +67,6 @@
     @keyframes #{$name} {
         100% {width:100%}
     }
-}
-
-
-
-/****************************************************************************
-    pattern Diagonal (패턴 사전)
-****************************************************************************/
-
-
-
-@mixin patDiagonal($bgcolor:#ff6815) {
-    background-color:$bgcolor;background-image:url(/img/common/object/particle_circle_bg2.png?=#{$G-cache});background-repeat:repeat;
 }
 
 

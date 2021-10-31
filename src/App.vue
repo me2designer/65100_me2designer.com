@@ -1,5 +1,5 @@
 <template>
-    <div id="wrap" style="visibility:hidden;opacity:0">
+    <div id="wrap" data-target-device="pc" style="visibility:hidden;opacity:0">
         <Header/>
         <router-view/>
         <Footer/>

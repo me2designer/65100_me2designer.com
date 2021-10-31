@@ -4,8 +4,8 @@
         <section id="visual">
             <div class="inner">
                 <h3 class="tit_section">안녕하세요,<br><strong>UI 마크업 개발자 장지훈</strong> 입니다.</h3>
-                <button class="btn_video" type="button">1분 자기소개 영상</button>
-            </div>
+                <button class="videoLayer" data-src="https://www.youtube.com/embed/sqgxcCjD04s" data-title="영상제목, 말줄임 오류있음" data-type="youtube" type="button" title="영상재생">1분 자기소개 영상</button>
+            </div> 
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" :style="'background-image:url('+imgPath+'visual_bg1.jpg)'">

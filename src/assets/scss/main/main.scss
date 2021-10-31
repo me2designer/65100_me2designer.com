@@ -22,8 +22,8 @@ $imgPath : "/img/main/";
                 }
             }
         }
-        .btn_video {
-            position:absolute;top:590px;width:176px;height:46px;border-radius:2em;color:#fff;background-image:linear-gradient(to right, #07d05a, #24beac);
+        .videoLayer {
+            position:absolute;top:590px;width:176px;height:46px;border-radius:2em;color:#fff;background-image:linear-gradient(to right, #07d05a, #24beac);pointer-events:all;
         }
     }
 
@@ -37,11 +37,11 @@ $imgPath : "/img/main/";
     #visual .swiper-slide {
         background-size:cover;
         .tit {
-            position:absolute;top:500px;font-size:20px;line-height:1.4em;letter-spacing:-0.2px;color:#fff;opacity:0;transform:translateX(60px);transition:all 0.4s ease-in-out;
+            position:absolute;top:500px;font-size:20px;line-height:1.4em;letter-spacing:-0.2px;color:#fff;opacity:0;transform:translateX(60px);
         }
         &.swiper-slide-active {
             .tit {
-                opacity:1;transform:translateX(0);
+                opacity:1;transform:translateX(0);transition:all 0.6s ease-in-out;
             }
         }
     }
@@ -50,7 +50,7 @@ $imgPath : "/img/main/";
         position:absolute;top:50%;left:110px;right:110px;z-index:1;height:1px;background-color:rgba(#fff,0.3);;
         .swiper-button-white {
             width:55px;height:55px;margin-top:-28px;border-radius:100%;background-color:rgba(#fff,0.3);background-size:13px;transition:background-color 0.2s ease-in-out;
-            &:hover {
+            &:hover {                
                 background-color:rgba(#fff,0.6);
             }
         }
@@ -165,7 +165,7 @@ $imgPath : "/img/main/";
     #project .list_project {
         display:flex;flex-wrap:wrap;justify-content:space-between;
         .item_project {
-            width:416px;margin-bottom:33px;background-color:#fff;
+            width:416px;margin-bottom:33px;background-color:#fff;            
             .tit {
                 padding:36px 0 23px 32px;font-size:24px;font-weight:bold;line-height:1em;
             }
