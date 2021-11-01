@@ -151,6 +151,9 @@
                         <p class="tag"><span>기업홈페이지</span><span>사업소개</span><span>적응형</span></p>
                     </li>
                 </ul>
+                <div class="btn_area">
+                    <button class="btn_more" type="button"><img class="ico" src="" data-images-path="/images/ico/arr_bottom01.svg"><span>더보기</span></button>
+                </div>
             </div>
         </section>
         <!-- //프로젝트 -->

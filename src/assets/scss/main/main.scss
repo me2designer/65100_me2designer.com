@@ -184,6 +184,21 @@ $imgPath : "/img/main/";
         }
     }
 
+    #project .btn_area {
+        padding:50px 0 90px;text-align:center;;
+        .btn_more {
+            @include slideBtn();
+            overflow: hidden;;height:64px;padding:0 52px;font-size:20px;border: solid 1px #b4b5b5;border-radius:2em;background:linear-gradient(to right, #fff, #fff);transition:all 0.4s ease-in-out;
+            .ico {
+                margin-right:7px;font-size:0.7em;
+            }
+            &:hover {
+                @include slideBtnHover(#000);
+                color:#fff;;fill:#fff;
+            }
+        }
+    }
+
 
 
 
