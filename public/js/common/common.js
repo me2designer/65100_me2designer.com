@@ -2,7 +2,7 @@ $(function(){/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
 
-
+    
 
     /* wrapper is ready */ 
     var $wrap = $('#wrap');
@@ -13,6 +13,9 @@ $(function(){/*
             'visibility': 'visible'
         });
     }
+
+    var $lodingWrap = $('#lodingWrap');
+    $lodingWrap.remove();
 
 
 
