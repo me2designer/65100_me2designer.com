@@ -16,10 +16,12 @@
 #footer {display:flex;justify-content:space-between;align-items:center;height:446px;padding:0 315px 0 75px;background-color:#292b31;}
 #footer .left .tit {margin-bottom:10px;font-family:'OpenSans';font-size:38px;font-weight:800;color:#fff}
 #footer .left .desc {margin-bottom:22px;font-size:16px;color:#fff;}
-#footer .left .list_sns {margin:0 -14px}
-#footer .left .list_sns .link_sns {padding:0 14px;font-size:29px;fill:#fff}
+#footer .left .list_sns {display:flex;align-items:center;margin:0 -14px}
+#footer .left .list_sns .link_sns {display:block;padding:0 14px;font-size:29px;line-height:0em;fill:#fff}
 #footer .right .tit {margin-bottom:15px;font-size:50px;color:#fff;font-weight:900;letter-spacing:-0.02em;line-height:1.45em}
 #footer .right .desc {font-family:'OpenSans';font-size:21px;color:#fff;}
+
+
 
 /****************************************************************************
     container
