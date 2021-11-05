@@ -8,7 +8,7 @@
             <a class="link_sns" href="mailto:me2designer@naver.com" target="_blank" title="메일"><img class="mail" src="" data-images-path="/images/sns/mail02.svg"></a>
             <a class="link_sns" href="https://open.kakao.com/o/sgydGNHd" target="_blank" title="카카오톡 오픈채팅"><img class="kakao" src="" data-images-path="/images/sns/kakaotalk02.svg"></a>
             <a class="link_sns" href="https://blog.naver.com/hymt18" target="_blank" title="네이버 블로그"><img class="blog" src="" data-images-path="/images/sns/blog02.svg"></a>
-            <a class="link_sns" href="https://www.instagram.com/hymt18" target="_blank" title="인스타그램"><img class="instagram" src="" data-images-path="/images/sns/instagram02.svg"></a>
+            <a class="link_sns" href="https://www.instagram.com/me2designer" target="_blank" title="인스타그램"><img class="instagram" src="" data-images-path="/images/sns/instagram02.svg"></a>
             <a class="link_sns" href="https://www.facebook.com/me2designer" target="_blank" title="인스타그램"><img class="instagram" src="" data-images-path="/images/sns/facebook02.svg"></a>
             <a class="link_sns" href="https://github.com/me2designer" target="_blank" title="GitHub"><img class="github" src="" data-images-path="/images/sns/github02.svg"></a>
         </div>
@@ -16,7 +16,7 @@
     <div class="right">
         <p class="tit">가장 쓸모 있는<br>경험을 제공하기 위해<br>UI를 개발 합니다</p>
         <p class="desc">ME2DESIGNER.COM All rights reserved </p>
-    </div>
+    </div>    
 </div>
 <!-- //#footer -->
 </template>

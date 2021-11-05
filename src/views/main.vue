@@ -158,6 +158,12 @@
         </div>
     </section>
     <!-- //프로젝트 -->
+    
+    <aside id="btnTop">
+        <button class="btn_top anchor" data-target="#wrap" type="button">
+            <span>TOP</span>
+        </button>
+    </aside>
 </div>
 <!-- //#container -->
 </template>
