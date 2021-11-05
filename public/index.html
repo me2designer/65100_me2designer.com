@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title><%= htmlWebpackPlugin.options.title %></title>
 
     <!-- SEO -->
@@ -17,19 +17,22 @@
     <meta property="og:url" content="https://www.me2designer.co.kr"> <!-- 페이지의 표준 URL (데스크탑 URL) -->
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="/img/favicon/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/img/favicon/favicon-48.png" sizes="48x48">
+    <link rel="icon" href="/img/favicon/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="/img/favicon/favicon-128.png" sizes="128x128">
 
     <!-- FILES -->
 	<script src="//public.me2designer.com/js/server.js"></script>
-	<script src="/js/files.js"></script>	
+	<script src="/js/files.js"></script>
 
 </head>
 <body>
     <noscript>
         <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    
+
     <aside id="lodingWrap">
         <div class="content">
             <div class="img">
@@ -53,20 +56,20 @@
             #lodingWrap .content .img i:nth-child(8) {transform: rotate(360deg);}
             #lodingWrap .content .img i::after {content:"";display:block;width:6vw;height:6vw;background-color:#fff;border-radius:50%;transform:scale(0.6)}
 
-            @media screen and (min-width:1024px) {            
+            @media screen and (min-width:1024px) {
                 #lodingWrap {font-size:18px}
                 #lodingWrap .content .img {width:150px;height:150px}
                 #lodingWrap .content .img i {width:20px;margin-left:-10px}
                 #lodingWrap .content .img i::after {width:20px;height:20px}
                 #lodingWrap .content p {margin-top:15px}
-            }        
-        
+            }
+
             @keyframes loading {
                 0% {transform: rotate(0);}
                 100% {transform: rotate(360deg);}
             }
         </style>
-    </aside>    
+    </aside>
 
     <div id="wrap" data-target-device="pc" style="visibility:hidden;opacity:0"></div>
     <!-- built files will be auto injected -->
