@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --oepn --port 65100",
-    "build": "vue-cli-service build --no-clean",
+    "build": "vue-cli-service build --no-clean --watch",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
