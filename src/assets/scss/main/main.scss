@@ -47,7 +47,7 @@ $imgPath : "/img/main/";
         position:absolute;top:50%;left:110px;right:110px;z-index:1;height:1px;background-color:rgba(#fff,0.3);;
         .swiper-button-white {
             width:55px;height:55px;margin-top:-28px;border-radius:100%;background-color:rgba(#fff,0.3);background-size:13px;transition:background-color 0.2s ease-in-out;
-            &:hover {                
+            &:hover {
                 background-color:rgba(#fff,0.6);
             }
         }
@@ -148,7 +148,7 @@ $imgPath : "/img/main/";
 
     #project .list_tag {
         margin:-5px;padding-bottom:70px;
-        .btn_tag {            
+        .btn_tag {
             overflow:hidden;display:inline-block;position:relative;z-index:1;margin:5px;padding:10px 20px 10px;border:1px solid #eaeaea;line-height:1em;transition:all 0.2s ease-in-out;
             &::before {
                 content:"# ";
@@ -160,7 +160,7 @@ $imgPath : "/img/main/";
                 border-color:transparent;color:#fff;transition:all 0.4s ease-in-out;
                 &::after {
                     right:0;
-                }                
+                }
             }
         }
     }
@@ -168,12 +168,12 @@ $imgPath : "/img/main/";
     #project .list_project {
         display:flex;flex-wrap:wrap;justify-content:space-between;
         .item_project {
-            width:416px;margin-bottom:33px;background-color:#fff;            
+            width:416px;margin-bottom:33px;background-color:#fff;
             .tit {
                 padding:36px 0 23px 32px;font-size:24px;font-weight:bold;line-height:1em;
             }
             .desc {
-                padding:0 36px 18px;word-break:keep-all; 
+                padding:0 36px 18px;word-break:keep-all;
             }
             .tag {
                 overflow:hidden;padding:0 36px 35px;
@@ -195,6 +195,27 @@ $imgPath : "/img/main/";
     }
 
 
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+    #device {
+        position:relative;height:1373px;background-color:#292B31;
+    }
+
+    #device {
+        $value: 
+            'tablet'    , 
+            'notebook'  1031px,
+            'phone'     ,
+        ;
+        @each $class, $width in $value {
+            .bg_#{$class} {
+                position:absolute;width:#{$width};height:auto;
+            }
+        }
+    }
 
 
 /*

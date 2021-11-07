@@ -154,10 +154,18 @@
             </ul>
             <div class="btn_area">
                 <button class="btn_more" type="button"><img class="ico" src="" data-images-path="/images/ico/arr_bottom01.svg"><span>더보기</span></button>
-            </div>
+            </div>            
         </div>
     </section>
     <!-- //프로젝트 -->
+
+    <section id="device">
+        <div class="inner">
+            <img class="bg_tablet" :src="imgPath+'project_device_tablet.png'" alt="태블렛">
+            <img class="bg_notebook" :src="imgPath+'project_device_notebook.png'" alt="노트북">
+            <img class="bg_mobile" :src="imgPath+'project_device_mobile.png'" alt="스마트폰">
+        </div>
+    </section>
     
     <!-- 맨 위로 이동하기 -->
     <aside id="aisdeBtnTop">

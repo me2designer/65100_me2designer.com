@@ -77,23 +77,29 @@ $(function(){/*
     var $section = $('#container > section');
     var $btn = $header.find('.btn_gnb');
 
+    //data-target 추출
+    var arrId = []
+    $btn.each(function(idx,info) {
+        arrId.push($(info).attr('data-target'))
+    });    
+
     $section.each(function() {
         var $this = $(this);
+        var id = '#'+$this.attr('id');
+
+        if (arrId.indexOf(id) == -1) return; //data-target 없는 경우 section scrollAction 적용방지
 
         scrollAction({
             target: $this,
             top: 20,
-            scrollDownAction : function(){
+            scrollDownAction : function(){                
                 // 스크롤 DOWN 액션
-                var id = '#'+$this.attr('id');
-
                 $btn.removeClass('on');
                 $btn.siblings('[data-target="'+id+'"]').addClass('on');
 
             },
             scrollUpAction : function(){
-                // 스크롤 UP 액션
-                var id = '#'+$this.attr('id');
+                // 스크롤 UP 액션                
                 var $prev = $btn.siblings('[data-target="'+id+'"]').prev();
                 var prevId = $prev.attr('data-target');
 
@@ -101,6 +107,7 @@ $(function(){/*
                 $btn.siblings('[data-target="'+prevId+'"]').addClass('on');
             }
         });
+        console.log('a');
     });
 
     //.moveTo()
@@ -108,12 +115,12 @@ $(function(){/*
 
     $btn.on('click', function(){
         var target = $(this).attr('data-target')||$(this).attr('data-anchor');
-        var top = $(this).index() == 0 ? 0 : headerH;                
+        var top = $(this).index() == 0 ? 0 : headerH;
 
         moveTo({
             top : top,
             target : target,
-        });        
+        });
     });
 
 
@@ -124,7 +131,7 @@ $(function(){/*
 
 
 
-    /* 맨 위로 이동하기 */ 
+    /* 맨 위로 이동하기 */
     var $wrap = $('#aisdeBtnTop');
 
     // 위치고정
@@ -143,11 +150,11 @@ $(function(){/*
             $wrap.removeClass('is-hidden');
         },
         scrollUpAction : function(){
-            // 스크롤 UP 액션            
+            // 스크롤 UP 액션
             $wrap.addClass('is-hidden');
         }
     });
-    
+
 
 
 })();/*
