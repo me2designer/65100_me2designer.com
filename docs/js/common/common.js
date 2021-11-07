@@ -124,12 +124,30 @@ $(function(){/*
 
 
 
+    /* 맨 위로 이동하기 */ 
+    var $wrap = $('#aisdeBtnTop');
 
+    // 위치고정
     sticky({
-        target: $('#btnTop'),
+        target: $wrap,
         position: 'bottom',
         callback : function(){}
     });
+
+    // 최 상담에서 hidden
+    scrollAction({
+        target: $('section').eq(1),
+        top: 0,
+        scrollDownAction : function(){
+            // 스크롤 DOWN 액션
+            $wrap.removeClass('is-hidden');
+        },
+        scrollUpAction : function(){
+            // 스크롤 UP 액션            
+            $wrap.addClass('is-hidden');
+        }
+    });
+    
 
 
 })();/*

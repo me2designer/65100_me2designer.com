@@ -159,11 +159,11 @@
     </section>
     <!-- //프로젝트 -->
     
-    <aside id="btnTop">
-        <button class="btn_top anchor" data-target="#wrap" type="button">
-            <span>TOP</span>
-        </button>
+    <!-- 맨 위로 이동하기 -->
+    <aside id="aisdeBtnTop">
+        <button class="btn_top anchor" data-target="#wrap" type="button"><img src="" data-images-path="/images/ico/arr_top02.svg" alt=""><span>TOP</span></button>
     </aside>
+    <!-- //맨 위로 이동하기 -->
 </div>
 <!-- //#container -->
 </template>
