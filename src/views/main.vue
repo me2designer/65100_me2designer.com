@@ -6,7 +6,7 @@
         <div class="inner">
             <h3 class="tit_section">안녕하세요,<br><strong>UI 마크업 개발자 장지훈</strong> 입니다.</h3>
             <button class="videoLayer" data-src="https://www.youtube.com/embed/sqgxcCjD04s" data-title="영상제목, 영상제목, 영상제목, 영상제목, 영상제목, 영상제목, 영상제목, 영상제목, 영상제목, 영상제목, 영상제목, 영상제목, 영상제목, " data-type="youtube" type="button" title="영상재생">1분 자기소개 영상</button>
-        </div> 
+        </div>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" :style="'background-image:url('+imgPath+'visual_bg1.jpg)'">
@@ -109,7 +109,7 @@
                     </div>
                     <p class="tit">매경경영지원본부</p>
                     <p class="desc">'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너</p>
-                    <p class="tag"><span>기업홈페이지</span><span>사업소개</span><span>적응형</span></p>                        
+                    <p class="tag"><span>기업홈페이지</span><span>사업소개</span><span>적응형</span></p>
                 </li>
                 <li class="item_project">
                     <div class="box_thumb">
@@ -154,19 +154,71 @@
             </ul>
             <div class="btn_area">
                 <button class="btn_more" type="button"><img class="ico" src="" data-images-path="/images/ico/arr_bottom01.svg"><span>더보기</span></button>
-            </div>            
+            </div>
         </div>
     </section>
     <!-- //프로젝트 -->
 
+    <!-- 사용자 편의성 -->
     <section id="device">
         <div class="inner">
+            <div class="tag">MULTI-DEVICE</div>
             <img class="bg_tablet" :src="imgPath+'project_device_tablet.png'" alt="태블렛">
             <img class="bg_notebook" :src="imgPath+'project_device_notebook.png'" alt="노트북">
             <img class="bg_mobile" :src="imgPath+'project_device_mobile.png'" alt="스마트폰">
         </div>
+        <div class="rotate_top"></div>
+        <div class="rotate_bottom"></div>
     </section>
-    
+    <!-- //사용자 편의성 -->
+
+    <!-- 코딩블로그 -->
+    <section id="blog">
+        <div class="inner">
+            <h3 class="tit_section">공부와 정보 공유 목적의 코딩블로그</h3>
+            <p class="desc_section">더 좋은 엔지니어가 되기 위해 웹스크랩핑 정보를 체계적으로 정리하여 새로운 기술 습득력을 향상하고 있습니다.<br>일관된 스타일의 결과물, 단순하고 재사용 용의하도록 코드리뷰를 진행하고있습니다.</p>
+            <table class="table table-hover-anchor">
+                <colgroup>
+                    <col style="width:200px;">
+                    <col style="width:*;">
+                    <col style="width:200px;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="text-left color-767676">JavaScript</td>
+                        <td class="text-left">SVG import 기능</td>
+                        <td class="text-center color-767676">2021-08-23</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left color-767676">JavaScript</td>
+                        <td class="text-left">SVG import 기능</td>
+                        <td class="text-center color-767676">2021-08-23</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left color-767676">JavaScript</td>
+                        <td class="text-left">SVG import 기능</td>
+                        <td class="text-center color-767676">2021-08-23</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left color-767676">JavaScript</td>
+                        <td class="text-left">SVG import 기능</td>
+                        <td class="text-center color-767676">2021-08-23</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="table-pagination">
+                <span class="table-pagination-prev disable"><img src="" data-images-path="/images/ico/prev01.svg"></span>
+                <span class="table-pagination-bullet on">1</span>
+                <span class="table-pagination-bullet">2</span>
+                <span class="table-pagination-bullet">3</span>
+                <span class="table-pagination-bullet">4</span>
+                <span class="table-pagination-bullet">5</span>
+                <span class="table-pagination-next"><img src="" data-images-path="/images/ico/next01.svg"></span>
+            </div>
+        </div>
+    </section>
+    <!-- //코딩블로그 -->
+
     <!-- 맨 위로 이동하기 -->
     <aside id="aisdeBtnTop">
         <button class="btn_top anchor" data-target="#wrap" type="button"><img src="" data-images-path="/images/ico/arr_top02.svg" alt=""><span>TOP</span></button>

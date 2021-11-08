@@ -99,8 +99,8 @@ $(function(){/*
 
             },
             scrollUpAction : function(){
-                // 스크롤 UP 액션
-                var $prev = $btn.siblings('[data-target="'+id+'"]').prev();
+                // 스크롤 UP 액션                
+                var $prev = $btn.siblings('[data-target="'+id+'"]').prev();                
                 var prevId = $prev.attr('data-target');
 
                 $btn.removeClass('on');

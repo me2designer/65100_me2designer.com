@@ -200,24 +200,78 @@ $imgPath : "/img/main/";
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
 
+
+
+    /* 사용자 편의성 */
     #device {
-        position:relative;height:1373px;background-color:#292B31;
+        position:relative;height:1296px;margin-bottom:300px;background: #292B31 url(https://displayad.naver.com/static/images/9ac6aa3c8c899465dff373ee9586ee53.jpg) 50% 0 no-repeat;background-size:cover;background-attachment:fixed;            
+    }
+
+    #device .tag {
+        display:flex;align-items:center;position:absolute;top:5px;left:316px;z-index:1;width:238px;height:50px;padding-left:28px;border-radius:2em;font-family:"CenturyGothic";font-size:26px;font-weight:bold;font-style:italic;color:#fff;line-height:1em;background-color:#ff0032;
+        &::after {
+            $name: inline-#{unique-id()};
+            content:"";position:absolute;top:50%;right:20px;width:7px;height:7px;background-color:#fff;border-radius:100%;transform:translateY(-50%);animation:#{$name} 0.5s infinite alternate ease-in-out;
+            @keyframes #{$name} {
+                100%        {opacity:0.5}
+            }
+        }
     }
 
     #device {
-        $value: 
-            'tablet'    , 
-            'notebook'  1031px,
-            'phone'     ,
+        $value:
+            top      left       #f5f7f8,
+            bottom   right      #fff,
         ;
-        @each $class, $width in $value {
+        @each $Y, $X, $bgc in $value {
+            .rotate_#{$Y} {
+                position:absolute;width:120%;height:300px;background-color:#{$bgc};transform-origin:#{$X} #{$Y};transform:rotate( 5.2deg);z-index:0;
+                @if ($Y == top){
+                    left:0;top:-288px;
+                } @else {
+                    right:0;bottom:-288px;
+                }
+            }
+        }
+    }
+
+    #device {
+        $value:
+            'tablet'     220px    98px     494px,
+            'notebook'   25px     248px   1031px,
+            'mobile'      264px    1111px   174px,
+        ;
+        @each $class, $top, $left, $width in $value {
             .bg_#{$class} {
-                position:absolute;width:#{$width};height:auto;
+                position:absolute;top:#{$top};left:#{$left};width:#{$width};height:auto;
             }
         }
     }
 
 
+
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
+
+
+
+    /* 코딩블로그 */ 
+    #blog {
+        padding-bottom:110px;
+        .tit_section {
+            padding:120px 0 30px;font-size:41px;text-align:center;letter-spacing:-0.03em;
+        }
+        .desc_section {
+            padding-bottom:90px;font-size:20px;color:#767676;text-align:center;
+        }
+    }
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+
