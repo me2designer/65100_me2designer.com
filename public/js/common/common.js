@@ -81,7 +81,7 @@ $(function(){/*
     var arrId = []
     $btn.each(function(idx,info) {
         arrId.push($(info).attr('data-target'))
-    });    
+    });
 
     $section.each(function() {
         var $this = $(this);
@@ -92,14 +92,14 @@ $(function(){/*
         scrollAction({
             target: $this,
             top: 20,
-            scrollDownAction : function(){                
+            scrollDownAction : function(){
                 // 스크롤 DOWN 액션
                 $btn.removeClass('on');
                 $btn.siblings('[data-target="'+id+'"]').addClass('on');
 
             },
             scrollUpAction : function(){
-                // 스크롤 UP 액션                
+                // 스크롤 UP 액션
                 var $prev = $btn.siblings('[data-target="'+id+'"]').prev();
                 var prevId = $prev.attr('data-target');
 
@@ -107,7 +107,6 @@ $(function(){/*
                 $btn.siblings('[data-target="'+prevId+'"]').addClass('on');
             }
         });
-        console.log('a');
     });
 
     //.moveTo()
@@ -133,6 +132,8 @@ $(function(){/*
 
     /* 맨 위로 이동하기 */
     var $wrap = $('#aisdeBtnTop');
+
+    $wrap.addClass('is-hidden')
 
     // 위치고정
     sticky({
