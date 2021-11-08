@@ -129,7 +129,15 @@
 
 
 /****************************************************************************
-    slide Button Gradient
+    Gradient Button 
+****************************************************************************/
+@mixin gradBtn($width:auto, $height:64px, $bdr:2em, $fz:20px) {
+    overflow:hidden;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;width:#{$width};height:#{$height};margin:0 auto;padding:0 52px;font-size:#{$fz};color:#fff;border-radius:#{$bdr};background:#{$G-gradPrimary};transition:all 0.2s ease-in-out;    
+}
+
+
+/****************************************************************************
+    Gradient Slide Button 
 ****************************************************************************/
 
 
@@ -143,17 +151,17 @@
 
     [style 작성 예]
         .선택자 {
-            @include slideBtn(300px,#000);
+            @include gradSlideBtn(300px,#000);
         }
 */
 
-@mixin slideBtnGrad($width:auto, $height:64px, $bdc:#b4b5b5, $bdr:2em, $fz:20px) {
-    overflow:hidden;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;width:#{$width};height:#{$height};margin:0 auto;padding:0 52px;font-size:20px;border:solid 1px #{$bdc};border-radius:#{$bdr};transition:all 0.2s ease-in-out;
+@mixin gradSlideBtn($width:auto, $height:64px, $bdc:#b4b5b5, $bdr:2em, $fz:20px) {
+    overflow:hidden;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;width:#{$width};height:#{$height};margin:0 auto;padding:0 52px;font-size:#{$fz};border:solid 1px #{$bdc};border-radius:#{$bdr};transition:all 0.2s ease-in-out;
     &::after {
-        content:"";position:absolute;top:0;bottom:0;left:0;right:100%;z-index:-1;background:$G-gradPrimary;transition:all 0.4s ease-in-out;
+        content:"";position:absolute;top:0;bottom:0;left:0;right:100%;z-index:-1;background:#{$G-gradPrimary};transition:all 0.4s ease-in-out;
     }
     span {
-        display:block;font-size:#{$fz};color:#000;line-height:1em;transition:all 0.4s ease-in-out;
+        display:block;color:#000;line-height:1em;transition:all 0.4s ease-in-out;
     }
     svg {
         fill:#000;font-size:0.8em;transition:all 0.4s ease-in-out;

@@ -190,7 +190,7 @@ $imgPath : "/img/main/";
     #project .btn_area {
         padding:50px 0 90px;text-align:center;;
         .btn_more {
-            @include slideBtnGrad;
+            @include gradSlideBtn;
         }
     }
 
@@ -248,6 +248,21 @@ $imgPath : "/img/main/";
         }
     }
 
+    #device .txt_area {
+        position:absolute;top:680px;left:50%;transform:translateX(-50%);
+        .tit_section {
+            padding-bottom:30px;font-size:41px;color:#fff;text-align:center;letter-spacing:-0.03em;
+            strong {
+                font-weight:900;
+            }
+        }
+        .desc_section {
+            padding-bottom:90px;font-size:20px;color:#fff;text-align:center;
+        }
+        .btn_search {
+            @include gradBtn;
+        }
+    }
 
 
 /*
@@ -264,7 +279,7 @@ $imgPath : "/img/main/";
         }
         .desc_section {
             padding-bottom:90px;font-size:20px;color:#767676;text-align:center;
-        }
+        }                
     }
 
 
