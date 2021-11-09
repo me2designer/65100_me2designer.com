@@ -163,8 +163,15 @@
     <section id="device">
         <div class="inner">
             <div class="tag">MULTI-DEVICE</div>
+            <div class="swiper-container swiper-tablet">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-inner"></div>
+                    </div>                    
+                </div>
+            </div>
             <img class="bg_tablet" :src="imgPath+'project_device_tablet.png'" alt="태블렛">
-            <img class="bg_notebook" :src="imgPath+'project_device_notebook.png'" alt="노트북">
+            <img class="bg_pc" :src="imgPath+'project_device_pc.png'" alt="노트북">
             <img class="bg_mobile" :src="imgPath+'project_device_mobile.png'" alt="스마트폰">
             <div class="txt_area">
                 <h3 class="tit_section">사용자의 편의성을 위해<br><strong>다양한 디바이스 조건에 맞춰 제작!</strong></h3>

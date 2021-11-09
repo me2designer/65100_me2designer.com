@@ -95,4 +95,110 @@ $(function(){/*
 
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+    var data = [
+        {
+             "class": "swiper-tablet",
+             "bgImg": [
+                '/img/main/test1.jpg',
+                '/img/main/test2.jpg',
+                '/img/main/test3.jpg',
+                '/img/main/test4.jpg',
+             ]
+        },{
+            "class": "swiper-pc",
+            "bgImg": [
+               '/img/main/test1.jpg',
+               '/img/main/test2.jpg',
+               '/img/main/test3.jpg',
+               '/img/main/test4.jpg',
+            ]
+       },{
+            "class": "swiper-mobile",
+            "bgImg": [
+            '/img/main/test1.jpg',
+            '/img/main/test2.jpg',
+            '/img/main/test3.jpg',
+            '/img/main/test4.jpg',
+            ]
+        },
+    ]
+    var $wrap = $('#device');
+    var $swiper = $wrap.find('.swiper-container');
+    var swiper_copied = $swiper.detach();
+
+    data.forEach(function(info1){
+        var $swiper_clone = swiper_copied.clone();
+        $swiper_clone.addClass(info1.class);
+
+        var $slide_clone = $swiper_clone.find('.swiper-slide').detach().clone();
+        info1.bgImg.forEach(function(info2){            
+            $slide_clone.find('.slide-inner').css('background-image', 'url('+info2+')');
+            $slide_clone.prependTo($swiper_clone.find('.swiper-wrapper'))
+        });
+        $swiper_clone.prependTo($wrap.find('.inner'));
+    });
+
+
+
+    var interleaveOffset = 0.5;
+    var $swiperTablet = $wrap.find('.swiper-tablet');
+    var $swiperPc = $wrap.find('.swiper-pc');
+    var $swiperMobile = $wrap.find('.swiper-mobile');
+    var swiperOptions = {
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction : false,
+        },
+        loop: true,
+        loopedSlides: 4,
+        speed: 1000,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        mousewheelControl: true,
+        keyboardControl: true,
+        on: {
+            progress: function() {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slideProgress = swiper.slides[i].progress;
+                    var innerOffset = swiper.width * interleaveOffset;
+                    var innerTranslate = slideProgress * innerOffset;
+                    swiper.slides[i].querySelector(".slide-inner").style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
+                }
+            },
+            touchStart: function() {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = "";
+                }
+            },
+            setTransition: function(speed) {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = speed + "ms";
+                    swiper.slides[i].querySelector(".slide-inner").style.transition =
+                    speed + "ms";
+                }
+            }
+        }
+      };
+      var swiperTablet = new Swiper($swiperTablet, swiperOptions);
+      var swiperPc = new Swiper($swiperPc, swiperOptions);
+      var swiperMobile = new Swiper($swiperMobile, swiperOptions);
+
+      // swiper sync
+      swiperPc.controller.control = [swiperMobile];
+      swiperMobile.controller.control = [swiperTablet]
+
+      // swiper autoplay 초기화
+      swiperTablet.autoplay.stop();
+      swiperPc.autoplay.stop();
+      swiperMobile.autoplay.stop();
+      swiperPc.autoplay.start();
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */});// DOCUMENT READY...
