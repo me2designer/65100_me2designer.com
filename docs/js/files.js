@@ -10,6 +10,7 @@ FILES([
     SERVER.public+'/lib/swiper/swiper.js',
     SERVER.public+'/lib/tweenmax/tweenmax.js',
     '/js/common/modules.js',
+    '/js/common/api.js',
     '/js/common/common.js',
     '/js/main/main.js',
 ]);
