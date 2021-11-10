@@ -99,9 +99,8 @@ $(function(){/*
 
 
 
-    /* 사용자 편의성 */
+    /* 사용자 편의성 - DOM 생성 */
     var $wrap = $('#device');
-
     var objData = [
         {
              "class": "swiper-tablet",
@@ -145,20 +144,38 @@ $(function(){/*
         $swiper_clone.prependTo($wrap.find('.inner'));
     });
 
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 사용자 편의성 - swiper */
+    var $wrap = $('#device');
     var interleaveOffset = 0.5;
     var $swiperTablet = $wrap.find('.swiper-tablet');
     var $swiperPc = $wrap.find('.swiper-pc');
     var $swiperMobile = $wrap.find('.swiper-mobile');
+    var ddd = {
+        autoplay: {
+            delay: 500,
+            disableOnInteraction : false,
+        }
+    }
     var swiperOptions = {
         autoplay: {
             delay: 500,
             disableOnInteraction : false,
         },
+        ddd,
+        loop: true,
         speed: 1000,
         grabCursor: true,
         watchSlidesProgress: true,
         mousewheelControl: true,
-        keyboardControl: true,        
+        keyboardControl: true,
         on: {
             progress: function() {
                 var swiper = this;
@@ -184,11 +201,45 @@ $(function(){/*
                 }
             }
         }
-      };
+    };
 
-      var swiperTablet = new Swiper($swiperTablet, swiperOptions);
-      var swiperPc = new Swiper($swiperPc, swiperOptions);
-      var swiperMobile = new Swiper($swiperMobile, swiperOptions);
+    // swiper 실행
+    var swiperTablet = new Swiper($swiperTablet, swiperOptions);
+    var swiperPc = new Swiper($swiperPc, swiperOptions);
+    var swiperMobile = new Swiper($swiperMobile, swiperOptions);
+
+    // swiper stop
+    swiperTablet.autoplay.stop();
+    swiperPc.autoplay.stop();
+    swiperMobile.autoplay.stop();
+
+    // swiper sync
+    swiperPc.controller.control = [swiperMobile]
+    swiperMobile.controller.control = [swiperTablet]
+
+    // swiper play
+    swiperPc.autoplay.start();
+
+
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+    
+    /* 사용자 편의성 - 적응형, 반응형 프로젝트 보기 */
+    var $wrap = $('#device');
+    var $btnSrh = $wrap.find('.btn_search');
+
+    $btnSrh.on('click', function(){
+        moveTo({
+            top: 150,
+            target: $('#project .list_tag'),
+        });
+    });
 
 
 

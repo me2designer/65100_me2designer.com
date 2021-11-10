@@ -110,11 +110,10 @@ $(function(){/*
     });
 
     //.moveTo()
-    var headerH = $header.outerHeight();
-
+    // var headerH = $header.outerHeight();
     $btn.on('click', function(){
         var target = $(this).attr('data-target')||$(this).attr('data-anchor');
-        var top = $(this).index() == 0 ? 0 : headerH;
+        var top = $(this).index() == 0 ? 0 : 40;        
 
         moveTo({
             top : top,

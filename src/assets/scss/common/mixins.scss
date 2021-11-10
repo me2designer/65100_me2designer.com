@@ -129,15 +129,15 @@
 
 
 /****************************************************************************
-    Gradient Button 
+    Gradient Button
 ****************************************************************************/
-@mixin gradBtn($width:auto, $height:64px, $bdr:2em, $fz:20px) {
-    overflow:hidden;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;width:#{$width};height:#{$height};margin:0 auto;padding:0 52px;font-size:#{$fz};color:#fff;border-radius:#{$bdr};background:#{$G-gradPrimary};transition:all 0.2s ease-in-out;    
+@mixin gradBtn($width:auto, $height:64px, $pd:0 52px, $bdr:2em, $fz:20px) {
+    overflow:hidden;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;width:#{$width};height:#{$height};margin:0 auto;padding:#{$pd};font-size:#{$fz};color:#fff;border-radius:#{$bdr};background:#{$G-gradPrimary};transition:all 0.2s ease-in-out;
 }
 
 
 /****************************************************************************
-    Gradient Slide Button 
+    Gradient Slide Button
 ****************************************************************************/
 
 

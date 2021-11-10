@@ -219,7 +219,7 @@ $imgPath : "/img/main/";
     }
 
     #device .swiper-container {
-        pointer-events:none;
+        // pointer-events:none;
         $value:
             'tablet'     236px    131px    11   427px   319px    6px,
             'pc'         51px     390px    21   748px   466px    0,
@@ -264,7 +264,10 @@ $imgPath : "/img/main/";
             padding-bottom:90px;font-size:20px;color:#fff;text-align:center;
         }
         .btn_search {
-            @include gradBtn;
+            @include gradBtn($pd:0 40px);
+            .cmt {
+                margin-left:9px;padding:5px 8px;font-size:14px;color:#fff;background-color:rgba(#0d0d0d, 0.2);
+            }
         }
     }
 

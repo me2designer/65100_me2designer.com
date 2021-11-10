@@ -163,7 +163,7 @@
     <section id="device">
         <div class="inner">
             <div class="tag">MULTI-DEVICE</div>
-            <div class="swiper-container swiper-tablet">
+            <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide-inner"></div>
