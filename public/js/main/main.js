@@ -97,7 +97,12 @@ $(function(){/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
 
-    var data = [
+
+
+    /* 사용자 편의성 */
+    var $wrap = $('#device');
+
+    var objData = [
         {
              "class": "swiper-tablet",
              "bgImg": [
@@ -117,30 +122,28 @@ $(function(){/*
        },{
             "class": "swiper-mobile",
             "bgImg": [
-            '/img/main/test1.jpg',
-            '/img/main/test2.jpg',
-            '/img/main/test3.jpg',
-            '/img/main/test4.jpg',
+                '/img/main/test1.jpg',
+                '/img/main/test2.jpg',
+                '/img/main/test3.jpg',
+                '/img/main/test4.jpg',
             ]
         },
     ]
-    var $wrap = $('#device');
     var $swiper = $wrap.find('.swiper-container');
     var swiper_copied = $swiper.detach();
 
-    data.forEach(function(info1){
+    objData.forEach(function(info1){
         var $swiper_clone = swiper_copied.clone();
         $swiper_clone.addClass(info1.class);
 
-        var $slide_clone = $swiper_clone.find('.swiper-slide').detach().clone();
-        info1.bgImg.forEach(function(info2){            
+        var slide_copied = $swiper_clone.find('.swiper-slide').detach();
+        info1.bgImg.forEach(function(info2){
+            var $slide_clone = slide_copied.clone()
             $slide_clone.find('.slide-inner').css('background-image', 'url('+info2+')');
             $slide_clone.prependTo($swiper_clone.find('.swiper-wrapper'))
         });
         $swiper_clone.prependTo($wrap.find('.inner'));
     });
-
-
 
     var interleaveOffset = 0.5;
     var $swiperTablet = $wrap.find('.swiper-tablet');
@@ -148,16 +151,21 @@ $(function(){/*
     var $swiperMobile = $wrap.find('.swiper-mobile');
     var swiperOptions = {
         autoplay: {
-            delay: 2000,
+            delay: 500,
             disableOnInteraction : false,
         },
-        loop: true,
-        loopedSlides: 4,
         speed: 1000,
         grabCursor: true,
         watchSlidesProgress: true,
         mousewheelControl: true,
         keyboardControl: true,
+        allowTouchMove: true, //drag 방지
+        breakpointsInverse: true, //drag 방지
+        breakpoints: { //drag 방지
+            1023: {
+                allowTouchMove: false
+            }
+        },
         on: {
             progress: function() {
                 var swiper = this;
@@ -184,19 +192,11 @@ $(function(){/*
             }
         }
       };
+
       var swiperTablet = new Swiper($swiperTablet, swiperOptions);
       var swiperPc = new Swiper($swiperPc, swiperOptions);
       var swiperMobile = new Swiper($swiperMobile, swiperOptions);
 
-      // swiper sync
-      swiperPc.controller.control = [swiperMobile];
-      swiperMobile.controller.control = [swiperTablet]
-
-      // swiper autoplay 초기화
-      swiperTablet.autoplay.stop();
-      swiperPc.autoplay.stop();
-      swiperMobile.autoplay.stop();
-      swiperPc.autoplay.start();
 
 
 })();/*
