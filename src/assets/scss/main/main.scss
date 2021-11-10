@@ -219,6 +219,7 @@ $imgPath : "/img/main/";
     }
 
     #device .swiper-container {
+        pointer-events:none;
         $value:
             'tablet'     236px    131px    11   427px   319px    6px,
             'pc'         51px     390px    21   748px   466px    0,

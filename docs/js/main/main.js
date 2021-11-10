@@ -158,14 +158,7 @@ $(function(){/*
         grabCursor: true,
         watchSlidesProgress: true,
         mousewheelControl: true,
-        keyboardControl: true,
-        allowTouchMove: true, //drag 방지
-        breakpointsInverse: true, //drag 방지
-        breakpoints: { //drag 방지
-            1023: {
-                allowTouchMove: false
-            }
-        },
+        keyboardControl: true,        
         on: {
             progress: function() {
                 var swiper = this;
