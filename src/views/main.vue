@@ -167,7 +167,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide-inner"></div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
             <img class="bg_tablet" :src="imgPath+'project_device_tablet.png'" alt="태블렛">
@@ -183,6 +183,40 @@
         <div class="rotate_bottom"></div>
     </section>
     <!-- //사용자 편의성 -->
+
+    <!-- 경력개발 -->
+    <section id="professional">
+
+    </section>
+    <!-- //경력개발 -->
+
+    <!-- 근무이력 -->
+    <section id="career">
+        <h3 class="tit_section">커리어 성장과 행복을 위한 여정,<br><strong>지금까지 함께한 기업을 소개합니다.</strong></h3>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="info">
+                        <img class="logo" src="" alt="">
+                        <div class="detail">
+                            <p class="name"></p>
+                            <p class="period"></p>
+                            <p class="postion"></p>
+                        </div>
+                    </div>
+                    <dl class="list_job">
+                        <dt class="tit"></dt>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!-- Add Navigation -->
+        <!-- <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
+        <div class="swiper-button-next swiper-button-white" slot="button-next"></div> -->
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </section>
+    <!-- //근무이력 -->
 
     <!-- 코딩블로그 -->
     <section id="blog">

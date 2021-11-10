@@ -3,6 +3,7 @@
 */
 
 
+    /* 코딩블로그 - 티스토리 */ 
     function getTistory(count, pageNum) {
         var list;
         var pars = {
@@ -10,7 +11,7 @@
             'outputType' : 'json', //xml 또는 json
             'blogName' : 'https://me2designer.tistory.com'
         }
-        $.ajax({            
+        $.ajax({
             url: 'https://www.tistory.com/apis/post/list?access_token='+pars.accessToken+'&output='+pars.outputType+'&blogName='+pars.blogName+'&count='+count+'&page='+pageNum+'&visibility=0',
             async : false,
             success : function(data){
@@ -19,8 +20,39 @@
         });
         return list;
     };
-    
-    
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+
+    /* 근무이력 */     
+    function getCareerList() {
+        var list = [];
+        $.ajax({
+            url : '/js/json/career.json',
+            async : false,
+            success : function(data){
+                list = data;
+            }
+        });
+        return list;
+    }    
+
+    // function getCareer(callback){
+    //     $.ajax({
+    //         url:'/js/json/career.json',
+    //         async : false,
+    //         success:function(data){
+    //             if(callback) callback(data);
+    //         }
+    //     });
+    // }
+
+
 
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■

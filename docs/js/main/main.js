@@ -18,9 +18,9 @@ $(function(){/*
     /* 메인 비주얼 */
     var $wrap = $('#visual');
 
-    // 본문
-    var $swiperContainer = $wrap.find('.swiper-container');
-    var swiper = new Swiper($swiperContainer, {
+    // swiper
+    var $swiper = $wrap.find('.swiper-container');
+    var swiper = new Swiper($swiper, {
         // autoplay: {
         //     delay: 5000,
         //     disableOnInteraction : false,
@@ -28,7 +28,7 @@ $(function(){/*
         speed: 400,
         slidesPerView: 1,
         loop: true,
-        loopedSlides: $swiperContainer.find('.swiper-slide').length,
+        loopedSlides: $swiper.find('.swiper-slide').length,
         effect: 'fade',
         navigation: {
             nextEl: $wrap.find('.swiper-button-next'),
@@ -54,9 +54,9 @@ $(function(){/*
     /* 약력 */
     var $wrap = $('#profile');
 
-    // 본문
-    var $swiperContainer = $wrap.find('.swiper-container');
-    var swiper = new Swiper($swiperContainer, {
+    // swiper
+    var $swiper = $wrap.find('.swiper-container');
+    var swiper = new Swiper($swiper, {
         // autoplay: {
         //     delay: 5000,
         //     disableOnInteraction : false,
@@ -64,7 +64,7 @@ $(function(){/*
         speed: 1000,
         slidesPerView: 1,
         loop: true,
-        loopedSlides: $swiperContainer.find('.swiper-slide').length,
+        loopedSlides: $swiper.find('.swiper-slide').length,
         navigation: {
             nextEl: $wrap.find('.swiper-button-next'),
             prevEl: $wrap.find('.swiper-button-prev')
@@ -78,7 +78,7 @@ $(function(){/*
                 // animate counter
                 $wrap.attr('data-swiper-slide', this.realIndex);
 
-                var $this = $swiperContainer.find('.swiper-slide[data-swiper-slide-index="'+this.realIndex+'"]');
+                var $this = $swiper.find('.swiper-slide[data-swiper-slide-index="'+this.realIndex+'"]');
                 var $num = $this.find('.num');
                 var _countNum = $num.eq(0).text();
 
@@ -158,18 +158,11 @@ $(function(){/*
     var $swiperTablet = $wrap.find('.swiper-tablet');
     var $swiperPc = $wrap.find('.swiper-pc');
     var $swiperMobile = $wrap.find('.swiper-mobile');
-    var ddd = {
-        autoplay: {
-            delay: 500,
-            disableOnInteraction : false,
-        }
-    }
     var swiperOptions = {
         autoplay: {
             delay: 500,
             disableOnInteraction : false,
         },
-        ddd,
         loop: true,
         speed: 1000,
         grabCursor: true,
@@ -222,14 +215,12 @@ $(function(){/*
 
 
 
-
-
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
 
 
-    
+
     /* 사용자 편의성 - 적응형, 반응형 프로젝트 보기 */
     var $wrap = $('#device');
     var $btnSrh = $wrap.find('.btn_search');
@@ -242,6 +233,89 @@ $(function(){/*
     });
 
 
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 근무이력 - DOM 생성 */
+    var $wrap = $('#career');
+    var objData = getCareerList();
+    var $swiper = $wrap.find('.swiper-container');
+    var slide_copied = $swiper.find('.swiper-slide').detach();
+
+    objData.forEach(function(info){
+        var $slide_clone = slide_copied.clone();
+        $slide_clone.find('.logo').attr({
+            'src': '/img/common/ci/'+info.logo+'',
+            'alt': info.name
+        });
+        $slide_clone.find('.name').text(info.name);
+        $slide_clone.find('.period').text(info.period);
+        $slide_clone.find('.postion').text(info.postion);
+        $slide_clone.find('.list_job .tit').text(info.title);
+
+        for (var i = 0; i < info.job.length && i < 5; i++) {
+            var  dd = $slide_clone.find('.list_job').append('<dd class="desc">'+info.job[i]+'</dd>');
+        }
+        $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
+    });
+    
+    
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 근무이력 - swiper */
+    var $wrap = $('#career');
+
+    // swiper
+    var $swiper = $wrap.find('.swiper-container');
+    var swiper = new Swiper($swiper, {
+        autoplay: {
+            delay: 1,
+            disableOnInteraction : false,
+        },
+        speed: 20000,
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: $swiper.find('.swiper-slide').length,
+        // navigation: {
+        //     nextEl: $wrap.find('.swiper-button-next'),
+        //     prevEl: $wrap.find('.swiper-button-prev')
+        // },
+        pagination: {
+            el: $wrap.find('.swiper-pagination'),
+            clickable: true
+        },
+    });
+
+    // swiper 위치 초기화
+    swiper.autoplay.stop();
+    scrollAction({
+        target: $wrap,
+        top: 100,
+        scrollDownAction : function(){
+            // 스크롤 DOWN 액션
+            swiper.autoplay.start();
+        },
+        scrollUpAction : function(){
+            // 스크롤 UP 액션
+            swiper.slideTo($swiper.find('.swiper-slide[data-swiper-slide-index="0"]').index(), 0, false);
+            swiper.autoplay.stop();
+        }
+    });
+
+    
 
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
