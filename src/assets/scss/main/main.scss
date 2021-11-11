@@ -264,7 +264,8 @@ $imgPath : "/img/main/";
             padding-bottom:90px;font-size:20px;color:#fff;text-align:center;
         }
         .btn_search {
-            @include gradBtn($pd:0 40px);
+            @include gradSlideBtn($pd:0 40px);
+            display:block;margin:0 auto;
             .cmt {
                 margin-left:9px;padding:5px 8px;font-size:14px;color:#fff;background-color:rgba(#0d0d0d, 0.2);
             }
@@ -288,6 +289,45 @@ $imgPath : "/img/main/";
         }
     }
 
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+
+    /* 경력개발 */
+    #professional {
+        padding-bottom:78px;
+        .tit_section {
+            padding:120px 0 30px;font-size:41px;text-align:center;letter-spacing:-0.03em;
+        }
+        .desc_section {
+            padding-bottom:90px;font-size:20px;color:#767676;text-align:center;
+        }
+    }
+
+    
+
+    #professional .tab-nav {
+        text-align:center;
+    }
+
+    #professional .tab-btn {
+        @include gradSlideBtn;
+        margin:0 7px;
+    }
+
+    #professional .tab-btn-active {
+        color:#fff;border-color:transparent;transition:border-color 0.4s 0.2s #{$G-easeHover}, color 0.4s #{$G-easeHover};
+        &::after {
+            right:0;
+        }
+        svg {
+            fill:#fff;transition:all 0.4s #{$G-easeHover};
+        }
+    }
 
 
 /*

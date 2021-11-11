@@ -28,6 +28,51 @@
 
 
 /****************************************************************************
+    table-bordered
+****************************************************************************/
+.table-bordered {
+    width:100%;border-top:2px solid #212e50;border-bottom:1px solid #212e50;
+    thead {
+        tr { 
+            th {
+                padding:0.875em 0.667em;border-left:1px solid #ddd;border-bottom:1px solid #ddd;text-align:center;background-color:#f4f4f4;;
+                &:nth-child(1) {
+                    border-left:none;
+                }
+                &[rowspan] {
+                    border-right:1px solid #212e50;;border-bottom:2px solid #212e50;
+                }
+            }
+            &:last-child {
+                th {
+                    border-bottom:1px solid #ddd;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            th {
+                padding:0.875em 0.667em;border-top:1px solid #ddd;border-right:1px solid #ddd;text-align:center;word-break:keep-all;                
+            }
+            td {
+                padding:0.875em 0.667em;border-top:1px solid #ddd;border-right:1px solid #ddd;word-break:keep-all;
+                &:last-child {
+                    border-right:none;
+                }                
+            }
+            &:nth-child(1) {
+                td {
+                    border-top:none;
+                }
+            }
+        }
+    }
+}
+
+
+
+/****************************************************************************
     table-hover
 ****************************************************************************/
 .table-hover {

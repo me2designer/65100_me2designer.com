@@ -132,7 +132,7 @@
     Gradient Button
 ****************************************************************************/
 @mixin gradBtn($width:auto, $height:64px, $pd:0 52px, $bdr:2em, $fz:20px) {
-    overflow:hidden;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;width:#{$width};height:#{$height};margin:0 auto;padding:#{$pd};font-size:#{$fz};color:#fff;border-radius:#{$bdr};background:#{$G-gradPrimary};transition:all 0.2s ease-in-out;
+    overflow:hidden;display:inline-flex;justify-content:center;align-items:center;position:relative;z-index:1;width:#{$width};height:#{$height};margin:0 auto;padding:#{$pd};font-size:#{$fz};color:#fff;border-radius:#{$bdr};background:#{$G-gradPrimary};transition:all 0.2s ease-in-out;
 }
 
 
@@ -155,30 +155,21 @@
         }
 */
 
-@mixin gradSlideBtn($width:auto, $height:64px, $bdc:#b4b5b5, $bdr:2em, $fz:20px) {
-    overflow:hidden;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;width:#{$width};height:#{$height};margin:0 auto;padding:0 52px;font-size:#{$fz};border:solid 1px #{$bdc};border-radius:#{$bdr};transition:all 0.2s ease-in-out;
+@mixin gradSlideBtn($width:auto, $height:64px, $pd:0 52px, $bdc:#b4b5b5, $bdr:2em, $fz:20px) {
+    overflow:hidden;display:inline-flex;justify-content:center;align-items:center;position:relative;z-index:1;width:#{$width};height:#{$height};margin:0 auto;padding:#{$pd};font-size:#{$fz};border:solid 1px #{$bdc};border-radius:#{$bdr};line-height:1em;transition:all 0.2s #{$G-easeHover};
     &::after {
-        content:"";position:absolute;top:0;bottom:0;left:0;right:100%;z-index:-1;background:#{$G-gradPrimary};transition:all 0.4s ease-in-out;
-    }
-    span {
-        display:block;color:#000;line-height:1em;transition:all 0.4s ease-in-out;
-    }
+        content:"";position:absolute;top:0;bottom:0;left:0;right:100%;z-index:-1;background:#{$G-gradPrimary};transition:all 0.4s #{$G-easeHover};
+    }    
     svg {
-        fill:#000;font-size:0.8em;transition:all 0.4s ease-in-out;
-    }
-    svg ~ span {
-        margin-left:7px;
-    }
+        fill:#000;font-size:0.8em;transition:all 0.2s #{$G-easeHover};
+    }    
     &:hover, &.on {
-        border-color:transparent;transition:all 0.4s 0.2s ease-in-out;
+        color:#fff;border-color:transparent;transition:border-color 0.4s 0.2s #{$G-easeHover}, color 0.4s #{$G-easeHover};
         &::after {
             right:0;
-        }
-        span {
-            color:#fff;
-        }
+        }        
         svg {
-            fill:#fff;
+            fill:#fff;transition:all 0.4s #{$G-easeHover};
         }
     }
 }

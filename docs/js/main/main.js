@@ -240,6 +240,27 @@ $(function(){/*
 
 
 
+    /* 경력개발 - 탭메뉴 */
+    var $wrap = $('#professional');
+
+    $wrap.find('.tab-btn').on('click', function(){
+        var idx = $(this).index();
+
+        // 탭버튼 활성화
+        $wrap.find('.tab-btn').removeClass('tab-btn-active').eq(idx).addClass('tab-btn-active');
+
+        // 탭슬라이드 활성화
+        $wrap.find('.tab-slide').hide().removeClass('tab-slide-active').eq(idx).show().addClass('tab-slide-active');
+    }).eq(0).trigger('click');
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
     /* 근무이력 - DOM 생성 */
     var $wrap = $('#career');
     var objData = getCareerList();
@@ -262,8 +283,8 @@ $(function(){/*
         }
         $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
     });
-    
-    
+
+
 
 
 
@@ -315,7 +336,7 @@ $(function(){/*
         }
     });
 
-    
+
 
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■

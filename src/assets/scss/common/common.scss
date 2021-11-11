@@ -79,7 +79,7 @@
 
 /* color */
 .color {
-    $value: #ffffff, #000000, #767676;
+    $value: #ffffff, #000000, #767676, $G-colorPrimary, $G-colorSecondary;
     @each $hexCode in $value {
         $class: str-slice(#{$hexCode}, 2, 7);
         &#{"-"+$class} {
@@ -88,14 +88,17 @@
     }
 }
 
-/* line-height */ 
-.lh {    
-    @for $i from 0 through 100 {        
+/* line-height */
+.lh {
+    @for $i from 0 through 100 {
         &#{"-"+$i} {
             line-height:#{$i * 0.1}em !important;
         }
-    }    
+    }
 }
 
 /* images */
 .img-fluid {max-width:100%;height:auto;vertical-align:middle}
+
+/* cursor & pointer-event */
+.pointer-none {pointer-events:none !important}

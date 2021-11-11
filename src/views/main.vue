@@ -153,7 +153,7 @@
                 </li>
             </ul>
             <div class="btn_area">
-                <button class="btn_more" type="button"><img class="ico" src="" data-images-path="/images/ico/arr_bottom01.svg"><span>더보기</span></button>
+                <button class="btn_more" type="button"><img class="ico mr-5" src="" data-images-path="/images/ico/arr_bottom01.svg"><span>더보기</span></button>
             </div>
         </div>
     </section>
@@ -175,8 +175,8 @@
             <img class="bg_mobile" :src="imgPath+'project_device_mobile.png'" alt="스마트폰">
             <div class="txt_area">
                 <h3 class="tit_section">사용자의 편의성을 위해<br><strong>다양한 디바이스 조건에 맞춰 제작!</strong></h3>
-                <p class="desc_section">브랜드의 가치를 알리고, 마케팅 효율을 극대화 하기 위하여<br>수많은 프로젝트에서 Flexible Web 형태의 구축과 유지보수 경험을 가지고 있습니다.</p>
-                <button class="btn_search" type="button"><span>프로젝트 찾아보기</span><span class="cmt">반응형ㆍ적응형</span></button>
+                <p class="desc_section">브랜드의 가치를 알리고, 마케팅 효율을 극대화 하기 위하여<br>수많은 프로젝트에서 Flexible Web 형태의 구축과 유지보수 경험을 가지고 있습니다.</p>                
+                <button class="btn_search on" type="button">프로젝트 찾아보기<span class="cmt">반응형ㆍ적응형</span></button>
             </div>
         </div>
         <div class="rotate_top"></div>
@@ -186,7 +186,28 @@
 
     <!-- 경력개발 -->
     <section id="professional">
-
+        <h3 class="tit_section">비즈니스 니즈를 충족시키기 위하여<br> 꾸준한 자기계발로 <span class="color-07d05a">기술역량</span>을 확장했습니다.</h3>
+        <p class="desc_section">현재를 안주하기 보다 절박함과 위기의식을 느끼고 미래에 대한 지속성 갖기위해<br>시장의 변화와 맞춰 필요한 역량을 개발하고 발전시켰습니다.</p>
+        <div class="tab-container">
+            <div class="tab-wrapper">
+                <div class="tab-slide tab-tool">
+                    <div class="content">
+                        <div class="list_tool"></div>
+                    </div>
+                </div>
+                <div class="tab-slide">
+                    2222222222222222
+                </div>
+                <div class="tab-slide">
+                    3333333333333333
+                </div>
+            </div>
+            <nav class="tab-nav">
+                <button class="tab-btn" type=button>기술역량</button>
+                <button class="tab-btn" type=button>수상경력 및 자격증</button>
+                <button class="tab-btn" type=button> 인턴·대외활동</button>
+            </nav>
+        </div>
     </section>
     <!-- //경력개발 -->
 
