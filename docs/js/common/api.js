@@ -1,3 +1,5 @@
+console.log('aab');
+
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
@@ -22,6 +24,13 @@
     };
 
 
+    
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+
 
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -29,18 +38,19 @@
 
 
 
-    /* 근무이력 */     
-    function getCareerList() {
-        var list = [];
-        $.ajax({
-            url : '/js/json/career.json',
-            async : false,
-            success : function(data){
-                list = data;
-            }
-        });
-        return list;
-    }    
+    // /* 근무이력 */     
+    // function getCareerList() {
+    //     var list = [];
+    //     $.ajax({
+    //         url : '/js/json/career.json',
+    //         async : false,
+    //         success : function(data){
+    //             console.log(data);
+    //             list = data;
+    //         }
+    //     });
+    //     return list;
+    // }    
 
     // function getCareer(callback){
     //     $.ajax({

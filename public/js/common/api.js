@@ -3,7 +3,17 @@
 */
 
 
-    /* 코딩블로그 - 티스토리 */ 
+   
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+
+    /* 코딩블로그 - 티스토리 */
     function getTistory(count, pageNum) {
         var list;
         var pars = {
@@ -28,8 +38,43 @@
 */
 
 
+    function getProjectList() {
+        var arg = arguments[0];        
+        var callback = arg.callback;
+        $.ajax({
+            url: '/js/json/project.json',
+            method:'GET',
+            contentType : "application/json; charset=utf-8",
+            dataType: "JSON",
+            success:function(data){
+                if(callback) callback(data);
+            }
+        });
+    }
 
-    /* 근무이력 */     
+    // function getProjectList(callback){
+    //     $.ajax({
+    //         url:'/js/json/career.json',
+    //         async : false,
+    //         success:function(data){
+    //             if(callback) callback(data);
+    //         }
+    //     });
+    // }
+
+    // getProjectList(function(infoList){
+    //     console.log(infoList);
+    // })
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+
+    /* 근무이력 */
     function getCareerList() {
         var list = [];
         $.ajax({
@@ -40,7 +85,7 @@
             }
         });
         return list;
-    }    
+    }
 
     // function getCareer(callback){
     //     $.ajax({
@@ -52,6 +97,11 @@
     //     });
     // }
 
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 
 
 /*

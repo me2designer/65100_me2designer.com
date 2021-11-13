@@ -105,52 +105,12 @@
             <ul class="list_project">
                 <li class="item_project">
                     <div class="box_thumb">
-                        <img src="https://via.placeholder.com/416x240/" alt="">
+                        <img src="" alt="">
                     </div>
-                    <p class="tit">매경경영지원본부</p>
-                    <p class="desc">'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너</p>
-                    <p class="tag"><span>기업홈페이지</span><span>사업소개</span><span>적응형</span></p>
-                </li>
-                <li class="item_project">
-                    <div class="box_thumb">
-                        <img src="https://via.placeholder.com/416x240/" alt="">
-                    </div>
-                    <p class="tit">매경경영지원본부</p>
-                    <p class="desc">'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너</p>
-                    <p class="tag"><span>기업홈페이지</span><span>사업소개</span><span>적응형</span></p>
-                </li>
-                <li class="item_project">
-                    <div class="box_thumb">
-                        <img src="https://via.placeholder.com/416x240/" alt="">
-                    </div>
-                    <p class="tit">매경경영지원본부</p>
-                    <p class="desc">'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너</p>
-                    <p class="tag"><span>기업홈페이지</span><span>사업소개</span><span>적응형</span></p>
-                </li>
-                <li class="item_project">
-                    <div class="box_thumb">
-                        <img src="https://via.placeholder.com/416x240/" alt="">
-                    </div>
-                    <p class="tit">매경경영지원본부</p>
-                    <p class="desc">'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너</p>
-                    <p class="tag"><span>기업홈페이지</span><span>사업소개</span><span>적응형</span></p>
-                </li>
-                <li class="item_project">
-                    <div class="box_thumb">
-                        <img src="https://via.placeholder.com/416x240/" alt="">
-                    </div>
-                    <p class="tit">매경경영지원본부</p>
-                    <p class="desc">'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너</p>
-                    <p class="tag"><span>기업홈페이지</span><span>사업소개</span><span>적응형</span></p>
-                </li>
-                <li class="item_project">
-                    <div class="box_thumb">
-                        <img src="https://via.placeholder.com/416x240/" alt="">
-                    </div>
-                    <p class="tit">매경경영지원본부</p>
-                    <p class="desc">'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너</p>
-                    <p class="tag"><span>기업홈페이지</span><span>사업소개</span><span>적응형</span></p>
-                </li>
+                    <p class="tit"></p>
+                    <p class="desc"></p>
+                    <p class="tag"></p>
+                </li>                
             </ul>
             <div class="btn_area">
                 <button class="btn_more" type="button"><img class="ico mr-5" src="" data-images-path="/images/ico/arr_bottom01.svg"><span>더보기</span></button>

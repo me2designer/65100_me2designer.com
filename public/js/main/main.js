@@ -101,7 +101,7 @@ $(function(){/*
 
     /* 사용자 편의성 - DOM 생성 */
     var $wrap = $('#device');
-    var objData = [
+    var infoList = [
         {
              "class": "swiper-tablet",
              "bgImg": [
@@ -131,7 +131,7 @@ $(function(){/*
     var $swiper = $wrap.find('.swiper-container');
     var swiper_copied = $swiper.detach();
 
-    objData.forEach(function(info1){
+    infoList.forEach(function(info1){
         var $swiper_clone = swiper_copied.clone();
         $swiper_clone.addClass(info1.class);
 
@@ -221,6 +221,64 @@ $(function(){/*
 
 
 
+
+
+
+
+
+    /* 프로젝트 - DOM 생성 */
+    getProjectList({
+        callback: function(infoList) {
+            var $wrap = $('#project')
+            var $list = $wrap.find('.list_project');
+            var item_copied = $list.find('.item_project').detach();
+            var $btnMore = $wrap.find('.btn_more');
+
+            function appendList(idx) {
+                var arrList = infoList.arrDivision(6);
+
+                // aappend
+                arrList[idx].forEach(function(info) {
+                    var item_clone = item_copied.clone();
+                    item_clone.find('.box_thumb img').attr({
+                        'src': '/img/main/project_thumb/'+info.thumb+'',
+                        'alt': info.title
+                    });
+                    item_clone.find('.tit').text(info.title);
+                    item_clone.find('.desc').text(info.description);
+    
+                    for (var i = 0; i < info.tag.length && i < 5; i++) {
+                        item_clone.find('.tag').append('<span>'+info.tag[i]+'</span>');
+                    }
+                    item_clone.appendTo($list);
+                });
+                
+                // button hide()
+                console.log(idx);
+                if (idx >= arrList.length - 1) {
+                    $btnMore.hide();
+                } else {
+                    $btnMore.show();
+                }
+            }
+
+            var infoListidx = 0
+            
+            $btnMore.on('click', function() {
+                appendList(infoListidx)
+                infoListidx++
+            }).trigger('click');            
+        }
+    })
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
     /* 사용자 편의성 - 적응형, 반응형 프로젝트 보기 */
     var $wrap = $('#device');
     var $btnSrh = $wrap.find('.btn_search');
@@ -263,11 +321,11 @@ $(function(){/*
 
     /* 근무이력 - DOM 생성 */
     var $wrap = $('#career');
-    var objData = getCareerList();
+    var infoList = getCareerList();
     var $swiper = $wrap.find('.swiper-container');
     var slide_copied = $swiper.find('.swiper-slide').detach();
 
-    objData.forEach(function(info){
+    infoList.forEach(function(info){
         var $slide_clone = slide_copied.clone();
         $slide_clone.find('.logo').attr({
             'src': '/img/common/ci/'+info.logo+'',
@@ -279,7 +337,7 @@ $(function(){/*
         $slide_clone.find('.list_job .tit').text(info.title);
 
         for (var i = 0; i < info.job.length && i < 5; i++) {
-            var  dd = $slide_clone.find('.list_job').append('<dd class="desc">'+info.job[i]+'</dd>');
+            $slide_clone.find('.list_job').append('<dd class="desc">'+info.job[i]+'</dd>');
         }
         $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
     });
