@@ -1,11 +1,19 @@
-console.log('aab');
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+   
+
+
 
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
 
 
-    /* 코딩블로그 - 티스토리 */ 
+
+    /* 코딩블로그 - 티스토리 */
     function getTistory(count, pageNum) {
         var list;
         var pars = {
@@ -24,33 +32,60 @@ console.log('aab');
     };
 
 
-    
-/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/
-
-
-
 
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
 
 
+    function getProjectList() {
+        var arg = arguments[0];        
+        var callback = arg.callback;
+        $.ajax({
+            url: '/js/json/project.json',
+            method:'GET',
+            contentType : "application/json; charset=utf-8",
+            dataType: "JSON",
+            success:function(data){
+                if(callback) callback(data);
+            }
+        });
+    }
 
-    // /* 근무이력 */     
-    // function getCareerList() {
-    //     var list = [];
+    // function getProjectList(callback){
     //     $.ajax({
-    //         url : '/js/json/career.json',
+    //         url:'/js/json/career.json',
     //         async : false,
-    //         success : function(data){
-    //             console.log(data);
-    //             list = data;
+    //         success:function(data){
+    //             if(callback) callback(data);
     //         }
     //     });
-    //     return list;
-    // }    
+    // }
+
+    // getProjectList(function(infoList){
+    //     console.log(infoList);
+    // })
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+
+    /* 근무이력 */
+    function getCareerList() {
+        var list = [];
+        $.ajax({
+            url : '/js/json/career.json',
+            async : false,
+            success : function(data){
+                list = data;
+            }
+        });
+        return list;
+    }
 
     // function getCareer(callback){
     //     $.ajax({
@@ -62,6 +97,11 @@ console.log('aab');
     //     });
     // }
 
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 
 
 /*
