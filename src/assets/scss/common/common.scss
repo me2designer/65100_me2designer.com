@@ -79,14 +79,16 @@
 
 /* color */
 .color {
-    $value: #ffffff, #000000, #767676, $G-colorPrimary, $G-colorSecondary;
+    $value: #ffffff, #000000, #767676;
     @each $hexCode in $value {
         $class: str-slice(#{$hexCode}, 2, 7);
         &#{"-"+$class} {
-            color:#{$hexCode};
+            color:#{$hexCode} !important;
         }
     }
 }
+.color-primary {color:$G-colorPrimary !important}
+.color-secondary {color:$G-colorSecondary !important}
 
 /* line-height */
 .lh {

@@ -101,49 +101,24 @@ $(function(){/*
 
     /* 사용자 편의성 - DOM 생성 */
     var $wrap = $('#device');
-    var infoList = [
-        {
-             "class": "swiper-tablet",
-             "bgImg": [
-                '/img/main/test1.jpg',
-                '/img/main/test2.jpg',
-                '/img/main/test3.jpg',
-                '/img/main/test4.jpg',
-             ]
-        },{
-            "class": "swiper-pc",
-            "bgImg": [
-               '/img/main/test1.jpg',
-               '/img/main/test2.jpg',
-               '/img/main/test3.jpg',
-               '/img/main/test4.jpg',
-            ]
-       },{
-            "class": "swiper-mobile",
-            "bgImg": [
-                '/img/main/test1.jpg',
-                '/img/main/test2.jpg',
-                '/img/main/test3.jpg',
-                '/img/main/test4.jpg',
-            ]
-        },
-    ]
+    var swiperType = ['pc', 'tablet', 'mobile']
+    var listThumb = ['peoplelife', 'mkbiz','peoplelife','mkbiz','peoplelife','mkbiz','peoplelife']
     var $swiper = $wrap.find('.swiper-container');
     var swiper_copied = $swiper.detach();
 
-    infoList.forEach(function(info1){
+    swiperType.forEach(function(type){
         var $swiper_clone = swiper_copied.clone();
-        $swiper_clone.addClass(info1.class);
+        $swiper_clone.addClass('swiper-'+type+'');
 
         var slide_copied = $swiper_clone.find('.swiper-slide').detach();
-        info1.bgImg.forEach(function(info2){
-            var $slide_clone = slide_copied.clone()
-            $slide_clone.find('.slide-inner').css('background-image', 'url('+info2+')');
+        listThumb.forEach(function(fileName){
+            var $slide_clone = slide_copied.clone()            
+            $slide_clone.find('.slide-inner').css('background-image', 'url(/img/main/device_thumb/'+type+'/'+fileName+'.jpg)');
             $slide_clone.prependTo($swiper_clone.find('.swiper-wrapper'))
         });
         $swiper_clone.prependTo($wrap.find('.inner'));
     });
-
+    
 
 
 })();/*
@@ -160,11 +135,11 @@ $(function(){/*
     var $swiperMobile = $wrap.find('.swiper-mobile');
     var swiperOptions = {
         autoplay: {
-            delay: 500,
+            delay: 2000,
             disableOnInteraction : false,
         },
         loop: true,
-        speed: 1000,
+        speed: 3000,
         grabCursor: true,
         watchSlidesProgress: true,
         mousewheelControl: true,
@@ -221,24 +196,48 @@ $(function(){/*
 
 
 
-
-
-
-
-
-    /* 프로젝트 - DOM 생성 */
+    /* 프로젝트 - 태그(tag) 불러오기 */
     getProjectList({
-        callback: function(infoList) {
-            var $wrap = $('#project')
+        callback: function(listAll) {
+            var $wrap = $('#project');
+            var $list = $wrap.find('.list_tag');
+            var btn_copied = $list.find('.btn_tag').detach();
+
+            // listAll.forEach(function(info) {
+            //     var item_clone = item_copied.clone();                
+            //     item_clone.find('.tit').text(info.title);                
+            //     item_clone.appendTo($list);
+            // });            
+
+            var tagAll = filterList(listAll, function(item, index){
+                if(item.tag) return item.tag;
+            });
+
+            // console.log(tagAll.conacat());
+        }
+    });
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 프로젝트 - 목록 불러오기 */
+    getProjectList({
+        callback: function(listAll) {
+            var $wrap = $('#project');
             var $list = $wrap.find('.list_project');
             var item_copied = $list.find('.item_project').detach();
             var $btnMore = $wrap.find('.btn_more');
 
             function appendList(idx) {
-                var arrList = infoList.arrDivision(6);
+                var listAll_divi = listAll.arrDivision(6);
 
                 // aappend
-                arrList[idx].forEach(function(info) {
+                listAll_divi[idx].forEach(function(info) {
                     var item_clone = item_copied.clone();
                     item_clone.find('.box_thumb img').attr({
                         'src': '/img/main/project_thumb/'+info.thumb+'',
@@ -246,28 +245,27 @@ $(function(){/*
                     });
                     item_clone.find('.tit').text(info.title);
                     item_clone.find('.desc').text(info.description);
-    
+
                     for (var i = 0; i < info.tag.length && i < 5; i++) {
                         item_clone.find('.tag').append('<span>'+info.tag[i]+'</span>');
                     }
                     item_clone.appendTo($list);
                 });
-                
+
                 // button hide()
-                console.log(idx);
-                if (idx >= arrList.length - 1) {
+                if (idx >= listAll_divi.length - 1) {
                     $btnMore.hide();
                 } else {
                     $btnMore.show();
                 }
             }
 
-            var infoListidx = 0
-            
+            var listIdx = 0
+
             $btnMore.on('click', function() {
-                appendList(infoListidx)
-                infoListidx++
-            }).trigger('click');            
+                appendList(listIdx)
+                listIdx++
+            }).trigger('click');
         }
     })
 
@@ -331,18 +329,21 @@ $(function(){/*
             'src': '/img/common/ci/'+info.logo+'',
             'alt': info.name
         });
-        $slide_clone.find('.name').text(info.name);
-        $slide_clone.find('.period').text(info.period);
+        $slide_clone.find('.name').text(info.name);        
         $slide_clone.find('.postion').text(info.postion);
         $slide_clone.find('.list_job .tit').text(info.title);
+
+        var period = $slide_clone.find('.period').text(info.period);
+        period.html(function(i, text) {
+            return text.replace('재직중', '<strong class="color-primary">재직중</strong>');
+        });
+
 
         for (var i = 0; i < info.job.length && i < 5; i++) {
             $slide_clone.find('.list_job').append('<dd class="desc">'+info.job[i]+'</dd>');
         }
         $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
     });
-
-
 
 
 

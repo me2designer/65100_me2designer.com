@@ -222,9 +222,9 @@ $imgPath : "/img/main/";
     #device .swiper-container {
         // pointer-events:none;
         $value:
+            'pc'         49px     388px    21   750px   468px    0,
             'tablet'     236px    131px    11   427px   319px    6px,
-            'pc'         51px     390px    21   748px   466px    0,
-            'mobile'     275px    1132px   31   131px   285px    13px,
+            'mobile'     275px    1132px   31   133px   287px    13px,
         ;
         @each $class, $top, $left, $z-index, $width, $height, $bdr in $value {
             &.swiper-#{$class} {

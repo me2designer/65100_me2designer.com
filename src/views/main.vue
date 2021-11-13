@@ -91,16 +91,7 @@
         <div class="inner">
             <p class="tit_section">광고디자인, UI/UX, 퍼블리싱까지<br><strong>다양한 프로젝트 스토리</strong></p>
             <div class="list_tag">
-                <button class="btn_tag on" type="button">기업홈페이지</button>
-                <button class="btn_tag" type="button">사업소개</button>
-                <button class="btn_tag" type="button">광고디자인</button>
-                <button class="btn_tag" type="button">모션그래픽</button>
-                <button class="btn_tag" type="button">패키지디자인</button>
-                <button class="btn_tag" type="button">웹디자인</button>
-                <button class="btn_tag" type="button">적응형</button>
-                <button class="btn_tag" type="button">반응형</button>
-                <button class="btn_tag" type="button">PC</button>
-                <button class="btn_tag" type="button">MOBILe</button>
+                <button class="btn_tag" type="button"></button>                
             </div>
             <ul class="list_project">
                 <li class="item_project">
@@ -146,7 +137,7 @@
 
     <!-- 경력개발 -->
     <section id="professional">
-        <h3 class="tit_section">비즈니스 니즈를 충족시키기 위하여<br> 꾸준한 자기계발로 <span class="color-07d05a">기술역량</span>을 확장했습니다.</h3>
+        <h3 class="tit_section">비즈니스 니즈를 충족시키기 위하여<br> 꾸준한 자기계발로 <span class="color-primary">기술역량</span>을 확장했습니다.</h3>
         <p class="desc_section">현재를 안주하기 보다 절박함과 위기의식을 느끼고 미래에 대한 지속성 갖기위해<br>시장의 변화와 맞춰 필요한 역량을 개발하고 발전시켰습니다.</p>
         <div class="tab-container">
             <div class="tab-wrapper">
