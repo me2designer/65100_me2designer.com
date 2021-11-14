@@ -96,7 +96,7 @@
             <ul class="list_project">
                 <li class="item_project">
                     <div class="box_thumb">
-                        <img src="" alt="">
+                        <img src="" alt="" onerror="this.src='https://via.placeholder.com/416x240'">
                     </div>
                     <p class="tit"></p>
                     <p class="desc"></p>

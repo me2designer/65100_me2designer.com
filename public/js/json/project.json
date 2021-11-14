@@ -1,7 +1,7 @@
 [
     {
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부1",
+        "thumb" : "mkbiz.kr.jpg",
+        "title" : "매경경영지원본부",
         "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
         "link" : ["www.mkbiz.kr"],
         "workRole" : ["퍼블리싱"],
@@ -9,157 +9,96 @@
         "workDays" : "22",
         "tag" : ["기업홈페이지", "사업소개", "적응형"]
     },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부2",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
+        "thumb" : "peoplelife.co.kr.jpg",
+        "title" : "피플라이프",
+        "description" : "당신에게 필요한 모든 순간, 전방위적으로! 보험상품 비교추천부터 중소기업 경영효율화까지",
+        "link" : ["peoplelife.co.kr"],
         "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["광고디자인", "사업소개", "반응형"]
-    },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부3",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "모션그래픽", "반응형"]
-    },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부4",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["패키지디자인", "광고디자인", "PC"]
-    },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부5",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["MOBILE", "웹디자인", "적응형"]
-    },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부6",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
+        "workDate" : "20??.??.?? ~ 20??.??.??",
+        "workDays" : "??",
         "tag" : ["기업홈페이지", "사업소개", "적응형"]
     },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부7",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
+        "thumb" : "bohumclinic.com.jpg",
+        "title" : "보험클리닉 OTC & FA",
+        "description" : "보험도 마트나 백화점에서 쇼핑하듯이 본인의 상황과 니즈에 맞게 보험상품을 능동적 쇼핑하라",
+        "link" : ["bohumclinic.com"],
+        "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "20??.??.?? ~ 20??.??.??",
+        "workDays" : "??",
+        "tag" : ["기업홈페이지", "사업소개", "적응형", "웹디자인"]
     },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부8",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
+        "thumb" : "bohum-moa.com.jpg",
+        "title" : "보험클리닉 MICROSITE",
+        "description" : "APP·인터넷(웹)·모바일(전화)을 활용한 고객이 매장 방문 예약에서, 상당매니저 방문요청 제공",
+        "link" : ["bohum-moa.com"],
         "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
+        "workDate" : "20??.??.?? ~ 20??.??.??",
+        "workDays" : "??",
+        "tag" : ["원페이지", "TM영업", "적응형"]
     },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부9",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
+        "thumb" : "bigyo-clinic.com.jpg",
+        "title" : "보험비교클리닉",
+        "description" : "암보험부터 건강보험까지 보험클리닉의 대표 상품을 비교하고 보장분석 한 번에 쉽고 정확하게!",
+        "link" : ["bigyo-clinic.com"],
         "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
+        "workDate" : "20??.??.?? ~ 20??.??.??",
+        "workDays" : "??",
+        "tag" : ["원페이지", "TM영업", "적응형"]
     },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부10",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
+        "thumb" : "zero-clinic.co.kr.jpg",
+        "title" : "저해지환급형 보험클리닉",
+        "description" : "해지환급금 미지급형으로 한번 더 보험료 부담을 덜어주는 절약형 저해지환급형보험",
+        "link" : ["zero-clinic.co.kr"],
         "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
+        "workDate" : "20??.??.?? ~ 20??.??.??",
+        "workDays" : "??",
+        "tag" : ["원페이지", "TM영업", "적응형"]
     },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부11",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
+        "thumb" : "",
+        "title" : "테스트1",
+        "description" : "사이트 소개",
+        "link" : ["주소"],
+        "workRole" : ["직무내용"],
+        "workDate" : "20??.??.?? ~ 20??.??.??",
+        "workDays" : "??",
+        "tag" : ["기업홈페이지", "웹디자인", "적응형"]
     },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부12",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
+        "thumb" : "",
+        "title" : "테스트2",
+        "description" : "사이트 소개",
+        "link" : ["주소"],
+        "workRole" : ["직무내용"],
+        "workDate" : "20??.??.?? ~ 20??.??.??",
+        "workDays" : "??",
+        "tag" : ["기업홈페이지", "반응형"]
     },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부13",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
+        "thumb" : "",
+        "title" : "테스트3",
+        "description" : "사이트 소개",
+        "link" : ["주소"],
+        "workRole" : ["직무내용"],
+        "workDate" : "20??.??.?? ~ 20??.??.??",
+        "workDays" : "??",
+        "tag" : ["패키지디자인", "광고디자인"]
     },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부14",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
+        "thumb" : "",
+        "title" : "테스트4",
+        "description" : "사이트 소개",
+        "link" : ["주소"],
+        "workRole" : ["직무내용"],
+        "workDate" : "20??.??.?? ~ 20??.??.??",
+        "workDays" : "??",
+        "tag" : ["모션그래픽"]
     },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부15",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
-    },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부16",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
-    },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부17",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
-    },{
-        "thumb" : "mkbiz.jpg",
-        "title" : "매경경영지원본부18",
-        "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
-        "link" : ["www.mkbiz.kr"],
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "2021.08.05 ~ 2021.09.31",
-        "workDays" : "22",
-        "tag" : ["기업홈페이지", "사업소개", "적응형"]
+        "thumb" : "",
+        "title" : "테스트5",
+        "description" : "사이트 소개",
+        "link" : ["주소"],
+        "workRole" : ["직무내용"],
+        "workDate" : "20??.??.?? ~ 20??.??.??",
+        "workDays" : "??",
+        "tag" : ["웹디자인", "광고디자인", "패키지디자인"]
     }
+    
+    
 ]

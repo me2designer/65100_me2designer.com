@@ -246,8 +246,8 @@ $(function(){/*
                 }
             });
         }
-
     });
+
 
 
 })();/*
@@ -303,16 +303,19 @@ $(function(){/*
                         });
 
                         if (idx == activeIdx) filterListIdx.push(idx);
-                    });            
+                    });
                 });
 
                 // 2. 가져온 item.index()에서 중복된 index 제거
                 var filterIdx = filterListIdx.filter(function(info, idx){
                     return filterListIdx.indexOf(info) === idx;
+                }).sort(function(a, b){
+                    return a - b; //배열정렬
                 });
 
+
                 // 3. filter된 item.index()의 item 정보 가져오기
-                var activeTagList = []
+                var activeTagList = []                
 
                 filterIdx.forEach(function(info){
                     filterList(listAll, function(item, idx){
@@ -324,8 +327,26 @@ $(function(){/*
                 ProjectPage++
             });
         }
-    })
+    });
 
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 프로젝트 - 처음 불러오기 */
+    getProjectList({
+        callback: function(listAll) {
+            var $wrap = $('#project');
+            var $btn = $wrap.find('.btn_tag');
+
+            $btn.eq(0).trigger('click');
+            $btn.eq(5).trigger('click');            
+        }
+    });
 
 
 

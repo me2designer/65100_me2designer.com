@@ -174,10 +174,10 @@ $imgPath : "/img/main/";
                 padding:36px 0 23px 32px;font-size:24px;font-weight:bold;line-height:1em;
             }
             .desc {
-                padding:0 36px 18px;word-break:keep-all;
+               height:66px;padding:0 36px;word-break:keep-all;
             }
             .tag {
-                overflow:hidden;padding:0 36px 35px;
+                overflow:hidden;height:34px;margin-bottom:35px;padding:0 36px;
                 span {
                     display:inline-block;margin-right:10px;padding:9px 13px 7px;border:1px solid #eaeaea;line-height:1em;
                     &::before {
