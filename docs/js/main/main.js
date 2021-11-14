@@ -1,3 +1,8 @@
+var ProjectPage = 0;
+var ProjectTag = []
+
+
+
 $(function(){/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
@@ -112,13 +117,13 @@ $(function(){/*
 
         var slide_copied = $swiper_clone.find('.swiper-slide').detach();
         listThumb.forEach(function(fileName){
-            var $slide_clone = slide_copied.clone()            
+            var $slide_clone = slide_copied.clone()
             $slide_clone.find('.slide-inner').css('background-image', 'url(/img/main/device_thumb/'+type+'/'+fileName+'.jpg)');
             $slide_clone.prependTo($swiper_clone.find('.swiper-wrapper'))
         });
         $swiper_clone.prependTo($wrap.find('.inner'));
     });
-    
+
 
 
 })();/*
@@ -135,11 +140,11 @@ $(function(){/*
     var $swiperMobile = $wrap.find('.swiper-mobile');
     var swiperOptions = {
         autoplay: {
-            delay: 2000,
+            delay: 3000,
             disableOnInteraction : false,
         },
         loop: true,
-        speed: 3000,
+        speed: 1000,
         grabCursor: true,
         watchSlidesProgress: true,
         mousewheelControl: true,
@@ -203,20 +208,46 @@ $(function(){/*
             var $list = $wrap.find('.list_tag');
             var btn_copied = $list.find('.btn_tag').detach();
 
-            // listAll.forEach(function(info) {
-            //     var item_clone = item_copied.clone();                
-            //     item_clone.find('.tit').text(info.title);                
-            //     item_clone.appendTo($list);
-            // });            
-
-            var tagAll = filterList(listAll, function(item, index){
-                if(item.tag) return item.tag;
+            // tag 배열 합치기
+            var concatTag = [];
+            filterList(listAll, function(info){
+                concatTag = concatTag.concat(info.tag);
             });
 
-            // console.log(tagAll.conacat());
-        }
-    });
+            // tag 중복된 배열 제거
+            var filterTag = concatTag.filter(function(info, idx){
+                return concatTag.indexOf(info) === idx;
+            });
 
+            // append
+            filterTag.forEach(function(info, idx, arr) {
+                var btn_clone = btn_copied.clone();
+                btn_clone.html('<span>'+info+'</span>');
+                btn_clone.appendTo($list);
+            });
+
+            // click event
+            $list.find('.btn_tag').on('click', function(){
+                var tag = $(this).toggleClass('on').find('span').text();
+
+                if ($(this).hasClass('on')) {
+                    ProjectTag.push(tag);
+                } else {
+                    ProjectTag = ProjectTag.filter(function(info) { //배열삭제
+                        return info !== tag;
+                    });
+                }
+
+                // list 초기화
+                ProjectPage = 0;
+                $wrap.find('.item_project').remove();
+                if (ProjectTag.length) {
+                    $wrap.find('.btn_more').trigger('click');
+                }
+            });
+        }
+
+    });
 
 
 })();/*
@@ -233,11 +264,11 @@ $(function(){/*
             var item_copied = $list.find('.item_project').detach();
             var $btnMore = $wrap.find('.btn_more');
 
-            function appendList(idx) {
-                var listAll_divi = listAll.arrDivision(6);
+            function appendList(list, idx) {
+                var list_divi = list.arrDivision(6);
 
-                // aappend
-                listAll_divi[idx].forEach(function(info) {
+                // append
+                list_divi[idx].forEach(function(info) {
                     var item_clone = item_copied.clone();
                     item_clone.find('.box_thumb img').attr({
                         'src': '/img/main/project_thumb/'+info.thumb+'',
@@ -253,21 +284,48 @@ $(function(){/*
                 });
 
                 // button hide()
-                if (idx >= listAll_divi.length - 1) {
+                if (idx >= list_divi.length - 1) {
                     $btnMore.hide();
                 } else {
                     $btnMore.show();
                 }
             }
 
-            var listIdx = 0
-
             $btnMore.on('click', function() {
-                appendList(listIdx)
-                listIdx++
-            }).trigger('click');
+                // 1. 선택된 태그의 item.index() 가져오기
+                var filterListIdx = []
+
+                ProjectTag.forEach(function(activeTag){
+                    filterList(listAll, function(item, idx){
+                        var activeIdx;
+                        item.tag.filter(function(itemTag) {
+                            if(itemTag == activeTag) activeIdx = idx;
+                        });
+
+                        if (idx == activeIdx) filterListIdx.push(idx);
+                    });            
+                });
+
+                // 2. 가져온 item.index()에서 중복된 index 제거
+                var filterIdx = filterListIdx.filter(function(info, idx){
+                    return filterListIdx.indexOf(info) === idx;
+                });
+
+                // 3. filter된 item.index()의 item 정보 가져오기
+                var activeTagList = []
+
+                filterIdx.forEach(function(info){
+                    filterList(listAll, function(item, idx){
+                        if(idx == info) activeTagList.push(item);
+                    })
+                });
+
+                appendList(activeTagList, ProjectPage)
+                ProjectPage++
+            });
         }
     })
+
 
 
 
@@ -329,7 +387,7 @@ $(function(){/*
             'src': '/img/common/ci/'+info.logo+'',
             'alt': info.name
         });
-        $slide_clone.find('.name').text(info.name);        
+        $slide_clone.find('.name').text(info.name);
         $slide_clone.find('.postion').text(info.postion);
         $slide_clone.find('.list_job .tit').text(info.title);
 

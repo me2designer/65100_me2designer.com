@@ -167,9 +167,9 @@ $imgPath : "/img/main/";
     }
 
     #project .list_project {
-        display:flex;flex-wrap:wrap;justify-content:space-between;
+        display:flex;flex-wrap:wrap;margin:0 -10px;
         .item_project {
-            width:416px;margin-bottom:33px;background-color:#fff;
+            width:416px;margin:0 10px 33px;background-color:#fff;
             .tit {
                 padding:36px 0 23px 32px;font-size:24px;font-weight:bold;line-height:1em;
             }
