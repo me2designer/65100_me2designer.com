@@ -1,5 +1,5 @@
 var ProjectPage = 0;
-var ProjectTag = []
+// var ProjectTag = []
 
 
 
@@ -228,22 +228,12 @@ $(function(){/*
 
             // click event
             $list.find('.btn_tag').on('click', function(){
-                var tag = $(this).toggleClass('on').find('span').text();
-
-                if ($(this).hasClass('on')) {
-                    ProjectTag.push(tag);
-                } else {
-                    ProjectTag = ProjectTag.filter(function(info) { //배열삭제
-                        return info !== tag;
-                    });
-                }
+                $(this).toggleClass('on');
 
                 // list 초기화
                 ProjectPage = 0;
                 $wrap.find('.item_project').remove();
-                if (ProjectTag.length) {
-                    $wrap.find('.btn_more').trigger('click');
-                }
+                if ($list.find('.btn_tag.on').length) $wrap.find('.btn_more').trigger('click');
             });
         }
     });
@@ -291,8 +281,18 @@ $(function(){/*
                 }
             }
 
+            // .btn_more click event
             $btnMore.on('click', function() {
-                // 1. 선택된 태그의 item.index() 가져오기
+                // 1. 선택된 태그의 keyword 저장
+                var ProjectTag = []
+
+                var getTag = $wrap.find('.list_tag .btn_tag.on').get();
+                getTag.forEach(function(info){
+                    var thisTag = $(info).find('span').text();
+                    ProjectTag.push(thisTag);
+                });                
+
+                // 2. 저장된 태그 keyword 가지고 있는 listAll > item.index() 가져오기
                 var filterListIdx = []
 
                 ProjectTag.forEach(function(activeTag){
@@ -306,7 +306,7 @@ $(function(){/*
                     });
                 });
 
-                // 2. 가져온 item.index()에서 중복된 index 제거
+                // 3. 가져온 item.index()에서 중복된 item.index() 제거
                 var filterIdx = filterListIdx.filter(function(info, idx){
                     return filterListIdx.indexOf(info) === idx;
                 }).sort(function(a, b){
@@ -314,8 +314,8 @@ $(function(){/*
                 });
 
 
-                // 3. filter된 item.index()의 item 정보 가져오기
-                var activeTagList = []                
+                // 4. filter된 item.index()의 item 정보 가져오기
+                var activeTagList = []
 
                 filterIdx.forEach(function(info){
                     filterList(listAll, function(item, idx){
@@ -326,6 +326,7 @@ $(function(){/*
                 appendList(activeTagList, ProjectPage)
                 ProjectPage++
             });
+
         }
     });
 
@@ -344,7 +345,7 @@ $(function(){/*
             var $btn = $wrap.find('.btn_tag');
 
             $btn.eq(0).trigger('click');
-            $btn.eq(5).trigger('click');            
+            $btn.eq(5).trigger('click');
         }
     });
 
@@ -363,8 +364,27 @@ $(function(){/*
     $btnSrh.on('click', function(){
         moveTo({
             top: 150,
-            target: $('#project .list_tag'),
+            target: $('#project .list_tag'),            
         });
+
+        setTimeout(function() {
+            var keyword = ['반응형', '적응형'];
+            var $project = $('#project')
+            var $listTag = $project.find('.list_tag');
+            var $btnMore = $project.find('.btn_more');
+
+            // list 초기화
+            ProjectPage = 0;
+            $project.find('.item_project').remove();
+
+            // tag 초기화 및 선택
+            $listTag.find('.btn_tag.on').removeClass('on');
+            keyword.forEach(function(info){
+                $listTag.find(':contains("'+info+'")').closest('.btn_tag').addClass('on')
+            });
+
+            $btnMore.trigger('click');
+        }, 400);
     });
 
 
