@@ -1,6 +1,4 @@
 var ProjectPage = 0;
-// var ProjectTag = []
-
 
 
 $(function(){/*
@@ -271,7 +269,7 @@ $(function(){/*
                         item_clone.find('.tag').append('<span>'+info.tag[i]+'</span>');
                     }
                     item_clone.appendTo($list);
-                });
+                });                
 
                 // button hide()
                 if (idx >= list_divi.length - 1) {
@@ -325,8 +323,7 @@ $(function(){/*
 
                 appendList(activeTagList, ProjectPage)
                 ProjectPage++
-            });
-
+            });            
         }
     });
 
@@ -341,11 +338,15 @@ $(function(){/*
     /* 프로젝트 - 처음 불러오기 */
     getProjectList({
         callback: function(listAll) {
+            var keyword = ['기업홈페이지', 'TM영업'];
             var $wrap = $('#project');
-            var $btn = $wrap.find('.btn_tag');
+            var $btnMore = $wrap.find('.btn_more');
 
-            $btn.eq(0).trigger('click');
-            $btn.eq(5).trigger('click');
+            keyword.forEach(function(info){
+                $wrap.find('.list_tag :contains("'+info+'")').closest('.btn_tag').addClass('on')
+            });
+
+            $btnMore.trigger('click');
         }
     });
 

@@ -137,14 +137,27 @@
 
     <!-- 경력개발 -->
     <section id="professional">
-        <h3 class="tit_section">비즈니스 니즈를 충족시키기 위하여<br> 꾸준한 자기계발로 <span class="color-primary">기술역량</span>을 확장했습니다.</h3>
+        <h3 class="tit_section">비즈니스 니즈를 충족시키기 위하여<br> 꾸준한 자기계발로 <strong class="color-primary">기술역량</strong>을 확장했습니다.</h3>
         <p class="desc_section">현재를 안주하기 보다 절박함과 위기의식을 느끼고 미래에 대한 지속성 갖기위해<br>시장의 변화와 맞춰 필요한 역량을 개발하고 발전시켰습니다.</p>
         <div class="tab-container">
             <div class="tab-wrapper">
-                <div class="tab-slide tab-tool">
-                    <div class="content">
-                        <div class="list_tool"></div>
-                    </div>
+                <div class="tab-slide tab-slide-tool">
+                    <div class="list_tool">
+                        <i class="item_tool indesign"></i>
+                        <i class="item_tool illust"></i>
+                        <i class="item_tool vue"></i>
+                        <i class="item_tool sass"></i>
+                        <i class="item_tool premiere"></i>
+                        <i class="item_tool photoshop"></i>
+                        <i class="item_tool xd"></i>
+                        <i class="item_tool js"></i>
+                        <i class="item_tool html"></i>
+                        <i class="item_tool css"></i>
+                        <i class="item_tool aftereffect"></i>
+                        <i class="item_tool git"></i>
+                        <i class="item_tool jquery"></i>
+                        <i class="item_tool gsap"></i>
+                    </div>                    
                 </div>
                 <div class="tab-slide">
                     2222222222222222
@@ -154,9 +167,9 @@
                 </div>
             </div>
             <nav class="tab-nav">
-                <button class="tab-btn" type=button>기술역량</button>
-                <button class="tab-btn" type=button>수상경력 및 자격증</button>
-                <button class="tab-btn" type=button> 인턴·대외활동</button>
+                <button class="tab-btn" type=button><img class="ico" src="" data-images-path="/images/ico/lightbulb-exclamation-solid.svg" alt="">기술역량</button>
+                <button class="tab-btn" type=button><img class="ico" src="" data-images-path="/images/ico/medal-solid.svg" alt="">수상경력 및 자격증</button>
+                <button class="tab-btn" type=button><img class="ico" src="" data-images-path="/images/ico/calendar-alt-regular.svg" alt="">인턴·대외활동</button>
             </nav>
         </div>
     </section>
