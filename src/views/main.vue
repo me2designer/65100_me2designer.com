@@ -143,20 +143,21 @@
             <div class="tab-wrapper">
                 <div class="tab-slide tab-slide-tool">
                     <div class="list_tool">
-                        <i class="item_tool indesign"></i>
-                        <i class="item_tool illust"></i>
-                        <i class="item_tool vue"></i>
-                        <i class="item_tool sass"></i>
-                        <i class="item_tool premiere"></i>
-                        <i class="item_tool photoshop"></i>
-                        <i class="item_tool xd"></i>
-                        <i class="item_tool js"></i>
-                        <i class="item_tool html"></i>
-                        <i class="item_tool css"></i>
-                        <i class="item_tool aftereffect"></i>
-                        <i class="item_tool git"></i>
-                        <i class="item_tool jquery"></i>
-                        <i class="item_tool gsap"></i>
+                        <i class="item_tool indesign"><img class="logo" :src="imgPath+'professional_tool_logo/indesign.svg'"></i>
+                        <i class="item_tool illust"><img class="logo" :src="imgPath+'professional_tool_logo/illust.svg'"></i>
+                        <i class="item_tool vue"><img class="logo" :src="imgPath+'professional_tool_logo/vue.svg'"></i>
+                        <i class="item_tool sass"><img class="logo" :src="imgPath+'professional_tool_logo/sass.svg'"></i>
+                        <i class="item_tool premiere"><img class="logo" :src="imgPath+'professional_tool_logo/premiere.svg'"></i>
+                        <i class="item_tool photoshop"><img class="logo" :src="imgPath+'professional_tool_logo/photoshop.svg'"></i>
+                        <i class="item_tool xd"><img class="logo" :src="imgPath+'professional_tool_logo/xd.svg'"></i>
+                        <i class="item_tool js"><img class="logo" :src="imgPath+'professional_tool_logo/js.svg'"></i>
+                        <i class="item_tool html"><img class="logo" :src="imgPath+'professional_tool_logo/html.svg'"></i>
+                        <i class="item_tool css"><img class="logo" :src="imgPath+'professional_tool_logo/css.svg?v=1'"></i>
+                        <i class="item_tool aftereffect"><img class="logo" :src="imgPath+'professional_tool_logo/aftereffect.svg'"></i>
+                        <i class="item_tool git"><img class="logo" :src="imgPath+'professional_tool_logo/git.svg'"></i>
+                        <i class="item_tool jquery"><img class="logo" :src="imgPath+'professional_tool_logo/jquery.svg'"></i>
+                        <i class="item_tool gsap"><img class="logo" :src="imgPath+'professional_tool_logo/gsap.svg'"></i>
+                        <img class="line" :src="imgPath+'professional_tool_line.svg'" alt="">
                     </div>                    
                 </div>
                 <div class="tab-slide">

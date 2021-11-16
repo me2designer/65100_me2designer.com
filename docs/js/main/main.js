@@ -269,7 +269,7 @@ $(function(){/*
                         item_clone.find('.tag').append('<span>'+info.tag[i]+'</span>');
                     }
                     item_clone.appendTo($list);
-                });                
+                });
 
                 // button hide()
                 if (idx >= list_divi.length - 1) {
@@ -288,7 +288,7 @@ $(function(){/*
                 getTag.forEach(function(info){
                     var thisTag = $(info).find('span').text();
                     ProjectTag.push(thisTag);
-                });                
+                });
 
                 // 2. 저장된 태그 keyword 가지고 있는 listAll > item.index() 가져오기
                 var filterListIdx = []
@@ -323,7 +323,7 @@ $(function(){/*
 
                 appendList(activeTagList, ProjectPage)
                 ProjectPage++
-            });            
+            });
         }
     });
 
@@ -365,7 +365,7 @@ $(function(){/*
     $btnSrh.on('click', function(){
         moveTo({
             top: 150,
-            target: $('#project .list_tag'),            
+            target: $('#project .list_tag'),
         });
 
         setTimeout(function() {
@@ -408,6 +408,35 @@ $(function(){/*
         // 탭슬라이드 활성화
         $wrap.find('.tab-slide').hide().removeClass('tab-slide-active').eq(idx).show().addClass('tab-slide-active');
     }).eq(0).trigger('click');
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 경력개발 - 탭메뉴 */
+    var $wrap = $('#professional')
+
+    //line animate
+    var $make = $wrap.find('#theMask')
+    var $loop = $wrap.find('#maskReveal')
+    var $lineList = [];
+
+    for (var i = 1; i < $make.find('line').length + 1; i++) {        
+        $lineList.push($make.find('.line'+i+''));
+    }
+    
+    var tl = new TimelineMax();
+    TweenMax.set($make.find('path, line'), {strokeDasharray:400, strokeDashoffset:400});
+
+    tl.addLabel("span", 0)
+        .to($lineList, 0.5, {ease:Power0.easeNone, strokeDashoffset:0}, "span")
+        .to($loop.find('path, line'), 10, {ease:Power0.easeNone, strokeDashoffset:-400, repeat:-1}, "loop");
+    tl.restart();
+
 
 
 
