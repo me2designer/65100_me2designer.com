@@ -205,7 +205,7 @@ $imgPath : "/img/main/";
 
     /* 사용자 편의성 */
     #device {
-        position:relative;height:1296px;margin-bottom:300px;background: #292B31 url(https://displayad.naver.com/static/images/9ac6aa3c8c899465dff373ee9586ee53.jpg) 50% 0 no-repeat;background-size:cover;background-attachment:fixed;
+        overflow:hidden;position:relative;height:1296px;background: #292B31 url(https://displayad.naver.com/static/images/9ac6aa3c8c899465dff373ee9586ee53.jpg) 50% 0 no-repeat;background-size:cover;background-attachment:fixed;
     }
 
     #device .tag {
@@ -302,7 +302,7 @@ $imgPath : "/img/main/";
     #professional {
         padding-bottom:78px;
         .tit_section {
-            padding:120px 0 30px;font-size:41px;text-align:center;letter-spacing:-0.03em;
+            padding-bottom:30px;font-size:41px;text-align:center;letter-spacing:-0.03em;
         }
         .desc_section {
             padding-bottom:90px;font-size:20px;color:#767676;text-align:center;
