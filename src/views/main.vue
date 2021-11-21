@@ -141,7 +141,7 @@
         <p class="desc_section">현재를 안주하기 보다 절박함과 위기의식을 느끼고 미래에 대한 지속성 갖기위해<br>시장의 변화와 맞춰 필요한 역량을 개발하고 발전시켰습니다.</p>
         <div class="tab-container">
             <div class="tab-wrapper">
-                <div class="tab-slide tab-slide-tool">
+                <div class="tab-slide tab-slide-tool isAppear">
                     <div class="list_tool">
                         <i class="item_tool indesign"><img class="logo" :src="imgPath+'professional_tool_logo/indesign.svg'"></i>
                         <i class="item_tool illust"><img class="logo" :src="imgPath+'professional_tool_logo/illust.svg'"></i>
@@ -161,10 +161,10 @@
                     </div>                    
                 </div>
                 <div class="tab-slide">
-                    2222222222222222
+                    수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>
                 </div>
                 <div class="tab-slide">
-                    3333333333333333
+                    대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>
                 </div>
             </div>
             <nav class="tab-nav">
@@ -217,25 +217,10 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <td class="text-left color-767676">JavaScript</td>
-                        <td class="text-left">SVG import 기능</td>
-                        <td class="text-center color-767676">2021-08-23</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left color-767676">JavaScript</td>
-                        <td class="text-left">SVG import 기능</td>
-                        <td class="text-center color-767676">2021-08-23</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left color-767676">JavaScript</td>
-                        <td class="text-left">SVG import 기능</td>
-                        <td class="text-center color-767676">2021-08-23</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left color-767676">JavaScript</td>
-                        <td class="text-left">SVG import 기능</td>
-                        <td class="text-center color-767676">2021-08-23</td>
-                    </tr>
+                        <td class="cate text-left color-767676">JavaScript</td>
+                        <td class="tit text-left">SVG import 기능</td>
+                        <td class="date text-center color-767676">2021-08-23</td>
+                    </tr>                    
                 </tbody>
             </table>
             <div class="table-pagination">

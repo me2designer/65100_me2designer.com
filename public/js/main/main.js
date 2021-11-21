@@ -398,15 +398,22 @@ $(function(){/*
 
     /* 경력개발 - 탭메뉴 */
     var $wrap = $('#professional');
+    var $tabWrapper = $wrap.find('.tab-wrapper');
 
     $wrap.find('.tab-btn').on('click', function(){
+        if ($(this).hasClass('tab-btn-active')) return; //중복클릭 방지
+
         var idx = $(this).index();
 
         // 탭버튼 활성화
         $wrap.find('.tab-btn').removeClass('tab-btn-active').eq(idx).addClass('tab-btn-active');
 
         // 탭슬라이드 활성화
-        $wrap.find('.tab-slide').hide().removeClass('tab-slide-active').eq(idx).show().addClass('tab-slide-active');
+        $wrap.find('.tab-slide').hide().css('opacity', 0).removeClass('tab-slide-active').eq(idx).show().addClass('tab-slide-active').fadeTo(100, 1);
+
+        // 탭높이 animate
+        var slideH = $wrap.find('.tab-slide').eq(idx).outerHeight();        
+        $tabWrapper.height(slideH)
     }).eq(0).trigger('click');
 
 
@@ -436,7 +443,6 @@ $(function(){/*
         .to($lineList, 0.5, {ease:Power0.easeNone, strokeDashoffset:0}, "span")
         .to($loop.find('path, line'), 10, {ease:Power0.easeNone, strokeDashoffset:-400, repeat:-1}, "loop");
     tl.restart();
-
 
 
 
@@ -524,6 +530,20 @@ $(function(){/*
         }
     });
 
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 코딩블로그 */
+    getTistory({
+        callback: function(listAll) {
+            // console.log('a');
+        }
+    });
 
 
 })();/*
