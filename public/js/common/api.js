@@ -5,13 +5,12 @@
 
 
     /* 코딩블로그 - 티스토리 */
-    function getTistory(count, pageNum) {        
-        console.log(count);
+    function getTistory() {                
         var arg = arguments[0];
         var callback = arg.callback;
         var opction = {
-            count : count == undefined ? '' : '&count='+count,
-            pageNum : pageNum == undefined ? '' : '&page='+pageNum,
+            count : arg.count == undefined ? '' : '&count='+arg.count,
+            pageNum : arg.page == undefined ? '' : '&page='+arg.page,
         }        
         var pars = {
             'accessToken' : '014f0adecdf2a12798c783abbc7a0498_3ea393c3f6e235ff61d1f6e3557bbdb9',
