@@ -412,7 +412,7 @@ $(function(){/*
         $wrap.find('.tab-slide').hide().css('opacity', 0).removeClass('tab-slide-active').eq(idx).show().addClass('tab-slide-active').fadeTo(100, 1);
 
         // 탭높이 animate
-        var slideH = $wrap.find('.tab-slide').eq(idx).outerHeight();        
+        var slideH = $wrap.find('.tab-slide').eq(idx).outerHeight();
         $tabWrapper.height(slideH)
     }).eq(0).trigger('click');
 
@@ -432,10 +432,10 @@ $(function(){/*
     var $loop = $wrap.find('#maskReveal')
     var $lineList = [];
 
-    for (var i = 1; i < $make.find('line').length + 1; i++) {        
+    for (var i = 1; i < $make.find('line').length + 1; i++) {
         $lineList.push($make.find('.line'+i+''));
     }
-    
+
     var tl = new TimelineMax();
     TweenMax.set($make.find('path, line'), {strokeDasharray:400, strokeDashoffset:400});
 
@@ -540,8 +540,10 @@ $(function(){/*
 
     /* 코딩블로그 */
     getTistory({
+        count: 4,
+        page: 1,
         callback: function(listAll) {
-            // console.log('a');
+            console.log(listAll);
         }
     });
 

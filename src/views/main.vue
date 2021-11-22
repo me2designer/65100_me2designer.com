@@ -147,12 +147,12 @@
                         <i class="item_tool illust"><img class="logo" :src="imgPath+'professional_tool_logo/illust.svg'"></i>
                         <i class="item_tool vue"><img class="logo" :src="imgPath+'professional_tool_logo/vue.svg'"></i>
                         <i class="item_tool sass"><img class="logo" :src="imgPath+'professional_tool_logo/sass.svg'"></i>
-                        <i class="item_tool premiere"><img class="logo" :src="imgPath+'professional_tool_logo/premiere.svg'"></i>
+                        <i class="item_tool premiere"><img class="logo" src="/img/main/professional_tool_logo/premiere.svg"></i>
                         <i class="item_tool photoshop"><img class="logo" :src="imgPath+'professional_tool_logo/photoshop.svg'"></i>
                         <i class="item_tool xd"><img class="logo" :src="imgPath+'professional_tool_logo/xd.svg'"></i>
                         <i class="item_tool js"><img class="logo" :src="imgPath+'professional_tool_logo/js.svg'"></i>
                         <i class="item_tool html"><img class="logo" :src="imgPath+'professional_tool_logo/html.svg'"></i>
-                        <i class="item_tool css"><img class="logo" :src="imgPath+'professional_tool_logo/css.svg?v=1'"></i>
+                        <i class="item_tool css"><img class="logo" :src="imgPath+'professional_tool_logo/css.svg'"></i>
                         <i class="item_tool aftereffect"><img class="logo" :src="imgPath+'professional_tool_logo/aftereffect.svg'"></i>
                         <i class="item_tool git"><img class="logo" :src="imgPath+'professional_tool_logo/git.svg'"></i>
                         <i class="item_tool jquery"><img class="logo" :src="imgPath+'professional_tool_logo/jquery.svg'"></i>
