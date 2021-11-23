@@ -211,26 +211,22 @@
             <p class="desc_section">더 좋은 엔지니어가 되기 위해 웹스크랩핑 정보를 체계적으로 정리하여 새로운 기술 습득력을 향상하고 있습니다.<br>일관된 스타일의 결과물, 단순하고 재사용 용의하도록 코드리뷰를 진행하고있습니다.</p>
             <table class="table table-hover-anchor">
                 <colgroup>
-                    <col style="width:200px;">
+                    <col style="width:220px;">
                     <col style="width:*;">
                     <col style="width:200px;">
                 </colgroup>
                 <tbody>
                     <tr>
-                        <td class="cate text-left color-767676">JavaScript</td>
-                        <td class="tit text-left">SVG import 기능</td>
-                        <td class="date text-center color-767676">2021-08-23</td>
+                        <td class="cate text-left color-767676">카테고리</td>
+                        <td class="tit text-left">제목</td>
+                        <td class="date text-center color-767676">날짜</td>
                     </tr>                    
                 </tbody>
             </table>
             <div class="table-pagination">
-                <span class="table-pagination-prev disable"><img src="" data-images-path="/images/ico/prev01.svg"></span>
-                <span class="table-pagination-bullet on">1</span>
-                <span class="table-pagination-bullet">2</span>
-                <span class="table-pagination-bullet">3</span>
-                <span class="table-pagination-bullet">4</span>
-                <span class="table-pagination-bullet">5</span>
-                <span class="table-pagination-next"><img src="" data-images-path="/images/ico/next01.svg"></span>
+                <span class="table-pagination-bullet"></span>                
+                <!-- <span class="table-pagination-prev disable"><img src="" data-images-path="/images/ico/prev01.svg"></span> -->
+                <!-- <span class="table-pagination-next"><img src="" data-images-path="/images/ico/next01.svg"></span> -->
             </div>
         </div>
     </section>

@@ -539,13 +539,62 @@ $(function(){/*
 
 
     /* 코딩블로그 */
-    getTistory({
-        count: 4,
-        page: 1,
-        callback: function(listAll) {
-            console.log(listAll);
-        }
-    });
+    var $wrap = $('#blog');
+
+    // categroy 변환기
+    var categoryList = getTistory('category');
+    var filterCate = function(id) {
+        var category = categoryList.categories.filter(function(item) {
+            if (item.id == id) return item;
+        });
+        return category[0].name;
+    }
+
+    // post 생성
+    var $tbody = $wrap.find('.table tbody');
+    var tr_copied = $tbody.find('tr').detach();
+    
+    function appendPost(page) {
+        console.log(page);
+        $tbody.find('tr').remove()
+
+        var postList = getTistory('post', 4, page);
+    
+        postList.posts.forEach(function(info){
+            var $tr_clone = tr_copied.clone();
+            $tr_clone.find('.cate').text(filterCate(info.categoryId));
+            $tr_clone.find('.tit').text(info.title)
+            $tr_clone.find('.date').text(info.date.substr(0, 10))
+            $tr_clone.appendTo($tbody);
+    
+            if (info.visibility !== '0') {
+                $tr_clone.on('click', function(){
+                    window.open('about:blank').location.href=info.postUrl;
+                });
+            } else {
+                $tr_clone.attr('data-disable','true');
+            }
+        });
+    }
+
+    //page 생성
+    var pagingList = getTistory('post');
+    var pagingLength = Math.ceil(pagingList.totalCount / 4);
+    var $paging = $wrap.find('.table-pagination');
+    var bullet_copied = $paging.find('.table-pagination-bullet').detach();
+
+    for (var i = 0; i < pagingLength; i++ ) {
+        var $bullet_clone = bullet_copied.clone();
+        var pageNum = i+1;
+        $bullet_clone.text(pageNum);        
+        $bullet_clone.appendTo($paging)
+        
+        $bullet_clone.on('click' ,function(){
+            $bullet_clone.css('border', '10px solid red')
+        });
+        
+    }
+
 
 
 })();/*

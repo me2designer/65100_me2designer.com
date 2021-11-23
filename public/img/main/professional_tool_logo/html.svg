@@ -1,23 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 380 512" style="enable-background:new 0 0 380 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#E44D26;}
-	.st1{fill:#F16529;}
-	.st2{fill:#EBEBEB;}
-	.st3{fill:#FFFFFF;}
-</style>
-<path id="패스_314" class="st0" d="M43.7,468.1L11.1,104.4h357.8l-32.6,363.7l-146.5,40.4L43.7,468.1z"/>
-<path id="패스_315" class="st1" d="M187,476.9l120.4-33.4l28.3-317.2H187V476.9z"/>
-<path id="패스_316" class="st2" d="M191.3,268.5h-60.2l-4.2-46.6h64.4v-45.5H77.2l1.1,12.2L89.5,314h101.9V268.5z"/>
-<path id="패스_317" class="st2" d="M191.1,383.9l-0.2,0l-50.7-13.7L137,334H91.2l6.4,71.5l93.3,25.9l0.2-0.1V383.9z"/>
-<path id="패스_318" d="M45,3.5h23.1v22.9h21.1V3.5h23.2v69.2H89.2V49.6H68.1v23.2H45V3.5z"/>
-<path id="패스_319" d="M140.6,26.5h-20.4v-23h63.9v23h-20.4v46.3h-23.2V26.5z"/>
-<path id="패스_320" d="M192.6,3.5h24.1l14.8,24.3l14.8-24.3h24.1v69.2h-23V38.4l-16,24.6h-0.3l-15.9-24.6v34.3h-22.7L192.6,3.5z"
-	/>
-<path id="패스_321" d="M280,3.5h23.1v46.4h32.5v22.9H280V3.5z"/>
-<path id="패스_322" class="st3" d="M188.6,265.9v45.5h56.1l-5.3,59.1l-50.8,13.7v47.4l93.3-25.9l0.7-7.7l10.7-119.9l1.1-12.2
-	L188.6,265.9L188.6,265.9z"/>
-<path id="패스_323" class="st3" d="M188.5,177.1v45.6h110l0.9-10.2l2.1-23.1l1.1-12.2L188.5,177.1z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="53.135" height="75" viewBox="0 0 53.135 75">
+	<g id="그룹_123" data-name="그룹 123" transform="translate(-441.783 -109)">
+	  <path id="패스_314" data-name="패스 314" d="M446.619,283.288l-4.836-54.016h53.135l-4.841,54.007-21.759,6.008Z" transform="translate(0 -105.288)" fill="#e44d26"/>
+	  <path id="패스_315" data-name="패스 315" d="M658.573,317.528l17.875-4.956,4.206-47.113H658.573Z" transform="translate(-190.665 -138.216)" fill="#f16529"/>
+	  <path id="패스_316" data-name="패스 316" d="M539.423,333.428h-8.949l-.618-6.925h9.567V319.74H522.465l.162,1.814,1.662,18.636h15.134Z" transform="translate(-70.87 -185.072)" fill="#ebebeb"/>
+	  <path id="패스_317" data-name="패스 317" d="M554.362,518.443l-.03.008-7.532-2.034-.482-5.394H539.53l.947,10.619,13.853,3.846.031-.009Z" transform="translate(-85.844 -352.948)" fill="#ebebeb"/>
+	  <path id="패스_318" data-name="패스 318" d="M482.123,109h3.437v3.4H488.7V109h3.437v10.282H488.7v-3.443H485.56v3.443h-3.437V109Z" transform="translate(-35.314)"/>
+	  <path id="패스_319" data-name="패스 319" d="M577.542,112.41h-3.025V109h9.49v3.41H580.98v6.873h-3.437V112.41Z" transform="translate(-116.525)"/>
+	  <path id="패스_320" data-name="패스 320" d="M662.769,109h3.584l2.2,3.613,2.2-3.613h3.585v10.282h-3.423v-5.1l-2.365,3.656H668.5l-2.366-3.656v5.1h-3.363Z" transform="translate(-194.027)"/>
+	  <path id="패스_321" data-name="패스 321" d="M769.4,109h3.438v6.884h4.833v3.4H769.4Z" transform="translate(-287.686)"/>
+	  <path id="패스_322" data-name="패스 322" d="M658.385,429.6v6.763h8.328l-.785,8.771-7.543,2.036v7.036l13.864-3.842.1-1.143,1.589-17.8.165-1.816h-15.72Z" transform="translate(-190.239 -281.626)" fill="#fff"/>
+	  <path id="패스_323" data-name="패스 323" d="M658.385,319.74V326.5H674.72l.136-1.52.308-3.428.162-1.814Z" transform="translate(-190.259 -184.956)" fill="#fff"/>
+	</g>
+  </svg>
+  

@@ -514,6 +514,21 @@ $imgPath : "/img/main/";
         }
     }
 
+    #blog .table tr[data-disable="true"] {        
+        td {
+            color:#cacaca !important;
+        }
+        td.tit {
+            cursor:default;
+            &::after {
+                content:" ※ 현재 열람이 불가합니다.";display:inline-block;font-size:0.8em;color:#ff0032 !important;opacity:0;transform:translateX(30px);
+            }
+        }
+        &:hover td.tit::after {
+            opacity:1;transform:translateX(10px);transition:0.4s #{$G-easeHover};
+        }
+    }
+
 
 
 /*
