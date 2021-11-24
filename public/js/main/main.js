@@ -553,20 +553,19 @@ $(function(){/*
     // post 생성
     var $tbody = $wrap.find('.table tbody');
     var tr_copied = $tbody.find('tr').detach();
-    
+
     function appendPost(page) {
-        console.log(page);
         $tbody.find('tr').remove()
 
         var postList = getTistory('post', 4, page);
-    
+
         postList.posts.forEach(function(info){
             var $tr_clone = tr_copied.clone();
             $tr_clone.find('.cate').text(filterCate(info.categoryId));
             $tr_clone.find('.tit').text(info.title)
             $tr_clone.find('.date').text(info.date.substr(0, 10))
             $tr_clone.appendTo($tbody);
-    
+
             if (info.visibility !== '0') {
                 $tr_clone.on('click', function(){
                     window.open('about:blank').location.href=info.postUrl;
@@ -575,7 +574,10 @@ $(function(){/*
                 $tr_clone.attr('data-disable','true');
             }
         });
-    }
+
+        $paging.find('.table-pagination-bullet').removeClass('on');
+        $paging.find('.table-pagination-bullet[data-page-number="'+page+'"]').addClass('on');
+    }    
 
     //page 생성
     var pagingList = getTistory('post');
@@ -586,14 +588,21 @@ $(function(){/*
     for (var i = 0; i < pagingLength; i++ ) {
         var $bullet_clone = bullet_copied.clone();
         var pageNum = i+1;
-        $bullet_clone.text(pageNum);        
+        $bullet_clone.attr('data-page-number',pageNum).text(pageNum);
         $bullet_clone.appendTo($paging)
-        
-        $bullet_clone.on('click' ,function(){
-            $bullet_clone.css('border', '10px solid red')
-        });
-        
     }
+
+    $paging.find('.table-pagination-bullet').on('click', function(){
+        var len = $paging.find('.table-pagination-bullet').length;
+        var num = Number($(this).text());
+        var pageGrpIdx = Number($paging.attr('data-group-index'));
+        var selectedPageNum = (len*pageGrpIdx)+num;
+
+        appendPost(selectedPageNum)
+    });
+
+    // 게시물 초기목록 load
+    appendPost(1);
 
 
 

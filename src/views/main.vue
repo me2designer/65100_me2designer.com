@@ -223,7 +223,7 @@
                     </tr>                    
                 </tbody>
             </table>
-            <div class="table-pagination">
+            <div class="table-pagination" data-group-index="0">
                 <span class="table-pagination-bullet"></span>                
                 <!-- <span class="table-pagination-prev disable"><img src="" data-images-path="/images/ico/prev01.svg"></span> -->
                 <!-- <span class="table-pagination-next"><img src="" data-images-path="/images/ico/next01.svg"></span> -->
