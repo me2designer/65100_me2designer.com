@@ -24,7 +24,7 @@ $imgPath : "/img/main/";
         }
         .videoLayer {
             @include gradSlideBtn;
-            position:absolute;top:610px;/* width:176px;height:46px;border-radius:2em;color:#fff;background-image:$G-gradPrimary;pointer-events:all; */
+            position:absolute;top:610px;pointer-events:all;/* width:176px;height:46px;border-radius:2em;color:#fff;background-image:$G-gradPrimary; */
         }
     }
 

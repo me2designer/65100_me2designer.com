@@ -105,7 +105,7 @@ $(function(){/*
     /* 사용자 편의성 - DOM 생성 */
     var $wrap = $('#device');
     var swiperType = ['pc', 'tablet', 'mobile']
-    var listThumb = ['peoplelife', 'mkbiz','peoplelife','mkbiz','peoplelife','mkbiz','peoplelife']
+    var listThumb = ['peoplelife', 'mkbiz','bohumclinic_otc','bohumclinic_fa']
     var $swiper = $wrap.find('.swiper-container');
     var swiper_copied = $swiper.detach();
 
