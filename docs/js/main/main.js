@@ -23,6 +23,7 @@ $(function(){/*
 
     // swiper
     var $swiper = $wrap.find('.swiper-container');
+    var slide_length = $swiper.find('.swiper-slide').length;    
     var swiper = new Swiper($swiper, {
         autoplay: {
             delay: 3000,
@@ -31,7 +32,7 @@ $(function(){/*
         speed: 1500,
         slidesPerView: 1,
         loop: true,
-        loopedSlides: $swiper.find('.swiper-slide').length,
+        loopedSlides: slide_length,
         effect: 'fade',
         navigation: {
             nextEl: $wrap.find('.swiper-button-next'),
@@ -40,6 +41,15 @@ $(function(){/*
         pagination: {
             el: $wrap.find('.swiper-pagination'),
             clickable: true
+        },
+        on : {
+            slideChangeTransitionStart : function(){
+                var $active = $swiper.find('.swiper-slide[data-swiper-slide-index="'+this.realIndex+'"]');
+                var $next = $swiper.find('.swiper-slide').not('.swiper-slide-duplicate-prev, .swiper-slide-prev');
+
+                TweenMax.set($next.find('.bg'), {scale:1});
+                TweenMax.to($active.find('.bg'), 5, {ease:Linear.easeNone, scale:1.05});
+            },
         },
     });
 
@@ -577,7 +587,7 @@ $(function(){/*
 
         $paging.find('.table-pagination-bullet').removeClass('on');
         $paging.find('.table-pagination-bullet[data-page-number="'+page+'"]').addClass('on');
-    }    
+    }
 
     //page 생성
     var pagingList = getTistory('post');
