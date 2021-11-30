@@ -47,8 +47,8 @@ $(function(){/*
                 var $active = $swiper.find('.swiper-slide[data-swiper-slide-index="'+this.realIndex+'"]');
                 var $next = $swiper.find('.swiper-slide').not('.swiper-slide-duplicate-prev, .swiper-slide-prev');
 
-                // TweenMax.set($next.find('.bg'), {scale:1});
-                // TweenMax.to($active.find('.bg'), 5, {ease:Linear.easeNone, scale:1.05});
+                TweenMax.set($next.find('.bg'), {scale:1});
+                TweenMax.to($active.find('.bg'), 5, {ease:Linear.easeNone, scale:1.05});
             },
         },
     });
