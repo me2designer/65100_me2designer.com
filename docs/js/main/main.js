@@ -24,11 +24,11 @@ $(function(){/*
     // swiper
     var $swiper = $wrap.find('.swiper-container');
     var swiper = new Swiper($swiper, {
-        // autoplay: {
-        //     delay: 5000,
-        //     disableOnInteraction : false,
-        // },
-        speed: 400,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction : false,
+        },
+        speed: 1500,
         slidesPerView: 1,
         loop: true,
         loopedSlides: $swiper.find('.swiper-slide').length,
