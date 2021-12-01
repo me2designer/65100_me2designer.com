@@ -24,7 +24,7 @@ $(function(){/*
     // swiper
     var $swiper = $wrap.find('.swiper-container');
     var slide_length = $swiper.find('.swiper-slide').length;
-    var $progress = $wrap.find('.progress_bar');    
+    var $progress = $wrap.find('.progress_bar');
     var swiper = new Swiper($swiper, {
         autoplay: {
             delay: 4000,
@@ -211,8 +211,6 @@ $(function(){/*
     // swiper play
     swiperPc.autoplay.start();
 
-
-
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
@@ -223,25 +221,28 @@ $(function(){/*
     getProjectList({
         callback: function(listAll) {
             var $wrap = $('#project');
-            var $list = $wrap.find('.list_tag');
-            var btn_copied = $list.find('.btn_tag').detach();
 
-            // tag 배열 합치기
-            var concatTag = [];
+             // tag 배열 합치기
+            var concat_tag = [];
             filterList(listAll, function(info){
-                concatTag = concatTag.concat(info.tag);
+                concat_tag = concat_tag.concat(info.corp, info.tag, info.workRole);
             });
 
             // tag 중복된 배열 제거
-            var filterTag = concatTag.filter(function(info, idx){
-                return concatTag.indexOf(info) === idx;
+            var filter_tag = concat_tag.filter(function(info, idx){
+                return concat_tag.indexOf(info) === idx;
+            }).sort(function(a, b){
+                return ( a < b ) ? -1 : ( a == b ) ? 0 : 1; //가나다 순 정렬
             });
 
             // append
-            filterTag.forEach(function(info, idx, arr) {
-                var btn_clone = btn_copied.clone();
-                btn_clone.html('<span>'+info+'</span>');
-                btn_clone.appendTo($list);
+            var $list = $wrap.find('.list_tag');
+            var $btn_copied = $list.find('.btn_tag').detach();
+
+            filter_tag.forEach(function(info) {
+                var $btn_clone = $btn_copied.clone();
+                $btn_clone.html('<span>'+info+'</span>');
+                $btn_clone.appendTo($list);
             });
 
             // click event
@@ -273,7 +274,7 @@ $(function(){/*
             var $btnMore = $wrap.find('.btn_more');
 
             function appendList(list, idx) {
-                var list_divi = list.arrDivision(6);
+                var list_divi = list.arrDivision(9);
 
                 // append
                 list_divi[idx].forEach(function(info) {
@@ -302,31 +303,44 @@ $(function(){/*
             // .btn_more click event
             $btnMore.on('click', function() {
                 // 1. 선택된 태그의 keyword 저장
-                var ProjectTag = []
+                var tag = []
+                var get_tag = $wrap.find('.list_tag .btn_tag.on').get();
 
-                var getTag = $wrap.find('.list_tag .btn_tag.on').get();
-                getTag.forEach(function(info){
-                    var thisTag = $(info).find('span').text();
-                    ProjectTag.push(thisTag);
+                get_tag.forEach(function(info){
+                    var text = $(info).find('span').text();
+                    tag.push(text);
                 });
 
                 // 2. 저장된 태그 keyword 가지고 있는 listAll > item.index() 가져오기
-                var filterListIdx = []
+                var filterList_idx = []
 
-                ProjectTag.forEach(function(activeTag){
-                    filterList(listAll, function(item, idx){
-                        var activeIdx;
-                        item.tag.filter(function(itemTag) {
-                            if(itemTag == activeTag) activeIdx = idx;
+                tag.forEach(function(txt1){
+                    filterList(listAll, function(item, idx){            
+                        var filter_corp;
+                        [item.corp].filter(function(txt2) {
+                            if(txt1 == txt2) filter_corp = idx;
                         });
 
-                        if (idx == activeIdx) filterListIdx.push(idx);
+                        var filter_tag;
+                        item.tag.filter(function(txt2) {
+                            if(txt1 == txt2) filter_tag = idx;
+                        });
+
+                        var filter_role;
+                        item.workRole.filter(function(txt2) {
+                            if(txt1 == txt2) filter_role = idx;
+                        });
+
+
+                        if (idx == filter_corp && filter_corp !== undefined) filterList_idx.push(idx);
+                        else if (idx == filter_tag && filter_tag !== undefined) filterList_idx.push(idx);
+                        else if (idx == filter_role && filter_role !== undefined) filterList_idx.push(idx);     
                     });
                 });
 
                 // 3. 가져온 item.index()에서 중복된 item.index() 제거
-                var filterIdx = filterListIdx.filter(function(info, idx){
-                    return filterListIdx.indexOf(info) === idx;
+                var filter_idx = filterList_idx.filter(function(info, idx){
+                    return filterList_idx.indexOf(info) === idx;
                 }).sort(function(a, b){
                     return a - b; //배열정렬
                 });
@@ -335,11 +349,11 @@ $(function(){/*
                 // 4. filter된 item.index()의 item 정보 가져오기
                 var activeTagList = []
 
-                filterIdx.forEach(function(info){
-                    filterList(listAll, function(item, idx){
-                        if(idx == info) activeTagList.push(item);
+                filter_idx.forEach(function(idx1){                    
+                    filterList(listAll, function(item, idx2){
+                        if(idx1 == idx2) activeTagList.push(item);
                     })
-                });
+                });                
 
                 appendList(activeTagList, ProjectPage)
                 ProjectPage++
@@ -358,7 +372,7 @@ $(function(){/*
     /* 프로젝트 - 처음 불러오기 */
     getProjectList({
         callback: function(listAll) {
-            var keyword = ['기업홈페이지', 'TM영업'];
+            var keyword = ['퍼블리싱'];
             var $wrap = $('#project');
             var $btnMore = $wrap.find('.btn_more');
 
@@ -378,7 +392,7 @@ $(function(){/*
 
 
 
-    /* 사용자 편의성 - 적응형, 반응형 프로젝트 보기 */
+    /* 사용자 편의성 - "적응형, 반응형" 프로젝트 보기 */
     var $wrap = $('#device');
     var $btnSrh = $wrap.find('.btn_search');
 

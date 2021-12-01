@@ -177,6 +177,14 @@ $imgPath : "/img/main/";
 
     #project .list_project {
         display:flex;flex-wrap:wrap;margin:0 -10px;transition:all 1s ease-in-out;
+        &:empty {
+            &::after {
+                content:"태그(#)가 선택되지 않았습니다.";display:flex;justify-content:center;align-items:center;width:100%;padding-top:65px;font-size:30px;color:#cacaca;text-shadow:1px 1px 0 #fff;
+            }
+            & ~ .btn_area .btn_more {
+                display:none;
+            }
+        }
         .item_project {
             width:416px;margin:0 10px 33px;background-color:#fff;
             .tit {
