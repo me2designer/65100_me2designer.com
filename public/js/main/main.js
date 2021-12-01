@@ -63,10 +63,6 @@ $(function(){/*
         },
     });
 
-    // swiper reset
-    swiper.autoplay.stop();
-    swiper.autoplay.start();    
-
     // videoLayer
     $wrap.find('.videoLayer').videoLayer();
 
