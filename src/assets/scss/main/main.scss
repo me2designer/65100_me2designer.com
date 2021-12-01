@@ -63,7 +63,14 @@ $imgPath : "/img/main/";
     }
 
     #visual .swiper-button-area .progress_bar {
-        position:absolute;top:0;left:0;width:30%;height:100%;background-color:$G-colorPrimary;
+        position:absolute;top:0;left:0;width:0;height:100%;background-color:$G-colorPrimary;
+        &.is-active {
+            $name: inline-#{unique-id()};
+            animation:#{$name} 5s forwards linear;
+            @keyframes #{$name} {
+                100%        {width:100%}
+            }
+        }
     }
 
     #visual .swiper-pagination {

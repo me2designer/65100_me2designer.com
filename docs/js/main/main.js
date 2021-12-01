@@ -23,10 +23,11 @@ $(function(){/*
 
     // swiper
     var $swiper = $wrap.find('.swiper-container');
-    var slide_length = $swiper.find('.swiper-slide').length;    
+    var slide_length = $swiper.find('.swiper-slide').length;
+    var $progress = $wrap.find('.progress_bar');    
     var swiper = new Swiper($swiper, {
         autoplay: {
-            delay: 3000,
+            delay: 4000,
             disableOnInteraction : false,
         },
         speed: 1500,
@@ -43,15 +44,28 @@ $(function(){/*
             clickable: true
         },
         on : {
-            slideChangeTransitionStart : function(){
+            slideChangeTransitionStart: function(){
                 var $active = $swiper.find('.swiper-slide[data-swiper-slide-index="'+this.realIndex+'"]');
                 var $next = $swiper.find('.swiper-slide').not('.swiper-slide-duplicate-prev, .swiper-slide-prev');
 
+                //bacground-image animate
                 TweenMax.set($next.find('.bg'), {scale:1});
-                TweenMax.to($active.find('.bg'), 5, {ease:Linear.easeNone, scale:1.05});
+                TweenMax.to($active.find('.bg'), 6, {ease:Linear.easeNone, scale:1.05});
+
+                //progress bar
+                $progress.removeClass(function(){
+                    setTimeout(function() {
+                        $progress.addClass('is-active');
+                    }, 300);
+                    return 'is-active';
+                });
             },
         },
     });
+
+    // swiper reset
+    swiper.autoplay.stop();
+    swiper.autoplay.start();    
 
     // videoLayer
     $wrap.find('.videoLayer').videoLayer();
