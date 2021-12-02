@@ -57,29 +57,34 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <p class="tit">올해로 만 38세가 되었습니다.</p>
-                    <p class="num" data-animateNumber="1983.02.01">1983.02.01</p>
+                    <p class="tit">올해로 만 <span class="age"></span>세가 되었습니다.</p>
+                    <p class="num"><span class="count">1983</span>.<span class="count">02</span>.<span class="count">01</span></p>
                     <p class="desc">1남 2녀 막내로 충정북도 충주에서 태어났으며,<br> 크리스천인 부모님 영향으로 이타심의 중요성 배우며 성장했습니다.</p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">올해로 만 38세가 되었습니다.</p>
-                    <p class="num" data-animateNumber="1983.02.01">1983.02.01</p>
-                    <p class="desc">1남 2녀 막내로 충정북도 충주에서 태어났으며,<br> 크리스천인 부모님 영향으로 이타심의 중요성 배우며 성장했습니다.</p>
+                    <p class="tit">수상경력 및 자격증</p>
+                    <p class="num"><span class="count">2010</span>.<span class="count">99</span>.<span class="count">99</span></p>
+                    <p class="desc">창업동아리 설립하여 창업아이템경진대회 수상..</p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">올해로 만 38세가 되었습니다.</p>
-                    <p class="num" data-animateNumber="1983.02.01">1983.02.01</p>
-                    <p class="desc">1남 2녀 막내로 충정북도 충주에서 태어났으며,<br> 크리스천인 부모님 영향으로 이타심의 중요성 배우며 성장했습니다.</p>
+                    <p class="tit">대외활동<p>
+                    <p class="num"><span class="count">2010</span>.<span class="count">01</span>.<span class="count">01</span></p>
+                    <p class="desc">삼육대학교 제48대 총학생회장으로..</p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">올해로 만 38세가 되었습니다.</p>
-                    <p class="num" data-animateNumber="1983.02.01">1983.02.01</p>
-                    <p class="desc">1남 2녀 막내로 충정북도 충주에서 태어났으며,<br> 크리스천인 부모님 영향으로 이타심의 중요성 배우며 성장했습니다.</p>
+                    <p class="tit">스물아홉, 커뮤니케이션디자인학과 졸업</p>
+                    <p class="num"><span class="count">2010</span>.<span class="count">02</span>.<span class="count">08</span></p>
+                    <p class="desc">늦게 시작한 미술 공부로 학사 수료가 늦었지만,<br>청소년 시기부터 디자인 분야를 공부하고 업으로 삼는 것이 관심이고 비전이었습니다.</p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">올해로 만 38세가 되었습니다.</p>
-                    <p class="num" data-animateNumber="1983.02.01">1983.02.01</p>
-                    <p class="desc">1남 2녀 막내로 충정북도 충주에서 태어났으며,<br> 크리스천인 부모님 영향으로 이타심의 중요성 배우며 성장했습니다.</p>
+                    <p class="tit">광고디자인에서 UI 마크업개발까지..</p>
+                    <p class="num"><span class="count">2021</span>.<span class="count">12</span>.<span class="count">03</span></p>
+                    <p class="desc">총 11년 7개월</p>
+                </div>                
+                <div class="swiper-slide">
+                    <p class="tit">앞으로 계획</p>
+                    <p class="num">VISION <span class="count">2030</span></p>
+                    <p class="desc">마이스터 자격으로 모교인 한양공업고등학교에서 후배들 취업 및 진학에..</p>
                 </div>
             </div>
         </div>

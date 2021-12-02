@@ -102,17 +102,34 @@ $(function(){/*
                 $wrap.attr('data-swiper-slide', this.realIndex);
 
                 var $this = $swiper.find('.swiper-slide[data-swiper-slide-index="'+this.realIndex+'"]');
-                var $num = $this.find('.num');
-                var _countNum = $num.eq(0).text();
+                var $num = $this.find('.count').get();
 
-                $num.stop().animateNumber({
-                    totalPlayTime : 1500,
-                    endNumber : _countNum.replace(/[^0-9]/g,''),
-                    endValue : _countNum,
+                $num.forEach(function(each){
+                    var $this = $(each);
+                    var _countNum = $this.text();
+
+                    var endNumber = '';
+                    for (var i = 0; i < _countNum.length; i++){
+                        endNumber = endNumber + '9'
+                    }
+                    
+                    $this.stop().animateNumber({                        
+                        addComma : false,                        
+                        totalPlayTime : 1200,
+                        endNumber : Number(endNumber),
+                        endValue : _countNum,
+                    });
                 });
             },
         },
     });
+
+    // 나이계산기
+    var today = new Date();
+    var birthDate = new Date(1983, 2, 1);    
+    var age = today.getFullYear() - birthDate.getFullYear() + 1;
+
+    $wrap.find('.age').text(age);
 
 
 
