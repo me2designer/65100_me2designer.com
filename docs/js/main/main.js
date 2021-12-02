@@ -308,73 +308,28 @@ $(function(){/*
 
                 get_tag.forEach(function(info){
                     var text = $(info).find('span').text();
+                    text = text.replace(/\(/g,'&#40;').replace(/\)/g,'&#41;');
                     tag.push(text);
                 });
 
-                // 2. 저장된 태그 keyword 가지고 있는 listAll > item.index() 가져오기
-                var filterList_idx = []
+                // 2. 선택된 태그가 포함된 item
+                var activeList = []
+                var patt = new RegExp(tag.join('|'),'g');
 
-                tag.forEach(function(txt1){
-                    filterList(listAll, function(item, idx){            
-                        var filter_corp;
-                        [item.corp].filter(function(txt2) {
-                            if(txt1 == txt2) filter_corp = idx;
-                        });
+                listAll.forEach(function(each){
+                    var combineText = each.corp+','+each.workRole.join(',')+','+each.tag.join(',');
+                    combineText = combineText.replace(/\(/g,'&#40;').replace(/\)/g,'&#41;');
 
-                        var filter_tag;
-                        item.tag.filter(function(txt2) {
-                            if(txt1 == txt2) filter_tag = idx;
-                        });
-
-                        var filter_role;
-                        item.workRole.filter(function(txt2) {
-                            if(txt1 == txt2) filter_role = idx;
-                        });
-
-
-                        if (idx == filter_corp && filter_corp !== undefined) filterList_idx.push(idx);
-                        else if (idx == filter_tag && filter_tag !== undefined) filterList_idx.push(idx);
-                        else if (idx == filter_role && filter_role !== undefined) filterList_idx.push(idx);     
-                    });
+                    if (patt.test(combineText)) activeList.push(each);
                 });
 
-                // 3. 가져온 item.index()에서 중복된 item.index() 제거
-                var filter_idx = filterList_idx.filter(function(info, idx){
-                    return filterList_idx.indexOf(info) === idx;
-                }).sort(function(a, b){
-                    return a - b; //배열정렬
-                });
-
-
-                // 4. filter된 item.index()의 item 정보 가져오기
-                var activeTagList = []
-
-                filter_idx.forEach(function(idx1){                    
-                    filterList(listAll, function(item, idx2){
-                        if(idx1 == idx2) activeTagList.push(item);
-                    })
-                });                
-
-                appendList(activeTagList, ProjectPage)
+                // 3.화면생성
+                appendList(activeList, ProjectPage)
                 ProjectPage++
             });
-        }
-    });
 
-
-
-})();/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/(function(){
-
-
-
-    /* 프로젝트 - 처음 불러오기 */
-    getProjectList({
-        callback: function(listAll) {
+            // 처음 불러오기
             var keyword = ['퍼블리싱'];
-            var $wrap = $('#project');
-            var $btnMore = $wrap.find('.btn_more');
 
             keyword.forEach(function(info){
                 $wrap.find('.list_tag :contains("'+info+'")').closest('.btn_tag').addClass('on')
