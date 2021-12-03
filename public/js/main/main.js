@@ -113,10 +113,11 @@ $(function(){/*
                         endNumber = endNumber + '9'
                     }
                     
-                    $this.stop().animateNumber({                        
-                        addComma : false,                        
+                    $this.stop().animateNumber({
+                        addComma : false,
+                        addZero : 2,
                         totalPlayTime : 1200,
-                        endNumber : Number(endNumber),
+                        endNumber : _countNum,
                         endValue : _countNum,
                     });
                 });
@@ -242,7 +243,7 @@ $(function(){/*
              // tag 배열 합치기
             var concat_tag = [];
             filterList(listAll, function(info){
-                concat_tag = concat_tag.concat(info.corp, info.tag, info.workRole);
+                concat_tag = concat_tag.concat(info.corp, info.tag, info.workRole);                
             });
 
             // tag 중복된 배열 제거
