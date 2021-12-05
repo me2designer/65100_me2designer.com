@@ -170,4 +170,28 @@ $(function(){/*
 
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    var $footer = $('#footer');
+    var footerH = $footer.outerHeight();
+    console.log($('#wrap').outerHeight());
+    var status;
+
+    $(window).on('scroll', function () {
+        var windowT = $(this).scrollTop();
+        console.log(windowT);
+        if (windowT >= footerH){
+            if (status) $footer.removeClass('is-active');
+            status = true;
+        } else {d
+            if (!status) $footer.addClass('is-active');
+            status = false;
+        }
+    });
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */});// DOCUMENT READY...

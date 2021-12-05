@@ -8,6 +8,7 @@
 ****************************************************************************/
 /* Frame */
 #wrap {overflow-x:hidden !important;min-width:1440px;font-family:"NanumSquare", sans-serif;font-size:16px;letter-spacing:-0.02em}
+#container {background-color:#fff;}
 .inner {position:relative;z-index:1;width:1440px;padding:0 72px;margin:0 auto;}
 
 /* HEADER */ 
@@ -31,14 +32,43 @@
 #header.is-active .gnb .btn_gnb.on::after {width:108%}
 
 /* FOOTER */ 
-#footer {display:flex;justify-content:space-between;align-items:center;height:446px;padding:0 315px 0 75px;background-color:#292b31;}
-#footer .left .tit {margin-bottom:10px;font-family:'OpenSans';font-size:38px;font-weight:800;color:#fff}
-#footer .left .desc {margin-bottom:22px;font-size:16px;color:#fff;}
-#footer .left .list_sns {display:flex;align-items:center;margin:0 -14px}
-#footer .left .list_sns .link_sns {display:block;padding:0 14px;font-size:29px;line-height:0em;fill:#fff;transition:all 0.3s $G-easeHover;}
-#footer .left .list_sns .link_sns:hover {fill:$G-colorPrimary;transform:scale(1.2)}
-#footer .right .tit {margin-bottom:15px;font-size:50px;color:#fff;font-weight:900;letter-spacing:-0.02em;line-height:1.45em}
-#footer .right .desc {font-family:'OpenSans';font-size:21px;color:#fff;}
+$footerH: 445px;
+#footer {position:relative;width:100%;height:#{$footerH}}
+
+#footer .footer_overlay {
+    position:fixed;bottom:0;z-index:2;width:100%;height:#{$footerH};background-color:rgba(red,0.5);pointer-events:none;
+}
+
+#footer .footer_inner {
+    display:flex;justify-content:space-between;align-items:center;position:fixed;bottom:0;width:100%;height:#{$footerH};padding:0 315px 0 75px;background-color:#292b31;
+}
+
+#footer .footer_inner .left {
+    .tit {
+        margin-bottom:10px;font-family:'OpenSans';font-size:38px;font-weight:800;color:#fff
+    }
+    .desc {
+        margin-bottom:22px;font-size:16px;color:#fff;
+    }
+    .list_sns {
+        display:flex;align-items:center;margin:0 -14px;
+        .link_sns {
+            display:block;padding:0 14px;font-size:29px;line-height:0em;fill:#fff;transition:all 0.3s $G-easeHover;
+            &:hover {
+                fill:$G-colorPrimary;transform:scale(1.2)
+            }
+        }
+    }
+}
+
+#footer .footer_inner .right {
+    .tit {
+        margin-bottom:15px;font-size:50px;color:#fff;font-weight:900;letter-spacing:-0.02em;line-height:1.45em
+    }
+    .desc {
+        font-family:'OpenSans';font-size:21px;color:#fff;
+    }
+}
 
 
 

@@ -112,7 +112,7 @@ $(function(){/*
                     for (var i = 0; i < _countNum.length; i++){
                         endNumber = endNumber + '9'
                     }
-                    
+
                     $this.stop().animateNumber({
                         addComma : false,
                         addZero : 2,
@@ -127,7 +127,7 @@ $(function(){/*
 
     // 나이계산기
     var today = new Date();
-    var birthDate = new Date(1983, 2, 1);    
+    var birthDate = new Date(1983, 2, 1);
     var age = today.getFullYear() - birthDate.getFullYear() + 1;
 
     $wrap.find('.age').text(age);
@@ -243,7 +243,7 @@ $(function(){/*
              // tag 배열 합치기
             var concat_tag = [];
             filterList(listAll, function(info){
-                concat_tag = concat_tag.concat(info.corp, info.tag, info.workRole);                
+                concat_tag = concat_tag.concat(info.corp, info.tag, info.workRole);
             });
 
             // tag 중복된 배열 제거
@@ -332,12 +332,12 @@ $(function(){/*
 
                 // 2. 선택된 태그가 포함된 item
                 var activeList = []
-                var patt = new RegExp(tag.join('|'),'g');
+                var patt = new RegExp(tag.join('|'));
 
-                listAll.forEach(function(each){
+                listAll.forEach(function(each, idx){
                     var combineText = each.corp+','+each.workRole.join(',')+','+each.tag.join(',');
                     combineText = combineText.replace(/\(/g,'&#40;').replace(/\)/g,'&#41;');
-
+                    
                     if (patt.test(combineText)) activeList.push(each);
                 });
 
