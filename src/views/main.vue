@@ -58,12 +58,12 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <p class="tit">올해로 만 <span class="age"></span>세가 되었습니다.</p>
-                    <p class="num"><span class="count">1983</span>.<span class="count">2</span>.<span class="count">1</span></p>
+                    <p class="num"><span class="count">1983</span>.<span class="count">02</span>.<span class="count">01</span></p>
                     <p class="desc">1남 2녀 막내로 충정북도 충주에서 태어났으며,<br> 크리스천인 부모님 영향으로 이타심의 중요성 배우며 성장했습니다.</p>
                 </div>
                 <div class="swiper-slide">
                     <p class="tit">수상경력 및 자격증</p>
-                    <p class="num"><span class="count">2010</span>.<span class="count">99</span>.<span class="count">99</span></p>
+                    <p class="num"><span class="count">2002</span>.<span class="count">07</span>.<span class="count">15</span></p>
                     <p class="desc">창업동아리 설립하여 창업아이템경진대회 수상..</p>
                 </div>
                 <div class="swiper-slide">

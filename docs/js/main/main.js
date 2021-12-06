@@ -117,7 +117,7 @@ $(function(){/*
                         addComma : false,
                         addZero : 2,
                         totalPlayTime : 1200,
-                        endNumber : _countNum,
+                        endNumber : endNumber,
                         endValue : _countNum,
                     });
                 });
