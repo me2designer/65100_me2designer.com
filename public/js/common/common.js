@@ -25,7 +25,7 @@ $(function(){/*
 
 
 
-    /* header 감추기 */     
+    /* header 감추기 */
     if (urlSearchName('header') == 'hidden') $('#header').hide();
 
 
@@ -110,8 +110,8 @@ $(function(){/*
 
             },
             scrollUpAction : function(){
-                // 스크롤 UP 액션                
-                var $prev = $btn.siblings('[data-target="'+id+'"]').prev();                
+                // 스크롤 UP 액션
+                var $prev = $btn.siblings('[data-target="'+id+'"]').prev();
                 var prevId = $prev.attr('data-target');
 
                 $btn.removeClass('on');
@@ -124,7 +124,7 @@ $(function(){/*
     // var headerH = $header.outerHeight();
     $btn.on('click', function(){
         var target = $(this).attr('data-target')||$(this).attr('data-anchor');
-        var top = $(this).index() == 0 ? 0 : 40;        
+        var top = $(this).index() == 0 ? 0 : 40;
 
         moveTo({
             top : top,
@@ -174,19 +174,35 @@ $(function(){/*
 
 
 
+
+    // $(window).on('scroll', function () {
+    //     console.log($('#container').height());
+
+    // var scrollBottom = $(window).scrollTop() + $(window).height();
+    // console.log(scrollBottom);
+
+    // });
+
     var $footer = $('#footer');
     var footerH = $footer.outerHeight();
-    console.log($('#wrap').outerHeight());
     var status;
+    var Y = 0;
 
     $(window).on('scroll', function () {
-        var windowT = $(this).scrollTop();
-        console.log(windowT);
-        if (windowT >= footerH){
-            if (status) $footer.removeClass('is-active');
+        var scrollBottom = $(window).scrollTop() + $(window).height();
+        var containerH = $('#container').height();
+
+        if (scrollBottom >= containerH){
+            Y = Y + 1;
+            if (status) {                               
+                console.log(Y);
+                $footer.find('.footer_inner').css('border', ''+Y+1+'px solid yellow')
+            }
             status = true;
-        } else {d
-            if (!status) $footer.addClass('is-active');
+        } else {
+            
+            console.log(Y);
+            if (!status) Y = 0;
             status = false;
         }
     });

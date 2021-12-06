@@ -40,7 +40,7 @@ $footerH: 445px;
 }
 
 #footer .footer_inner {
-    display:flex;justify-content:space-between;align-items:center;position:fixed;bottom:0;width:100%;height:#{$footerH};padding:0 315px 0 75px;background-color:#292b31;
+    display:flex;justify-content:space-between;align-items:center;position:fixed;bottom:0;width:100%;height:#{$footerH};padding:0 315px 0 75px;background-color:#292b31;transform:translateY(100px);
 }
 
 #footer .footer_inner .left {
