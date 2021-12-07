@@ -186,23 +186,22 @@ $(function(){/*
     var $footer = $('#footer');
     var footerH = $footer.outerHeight();
     var status;
-    var Y = 0;
 
     $(window).on('scroll', function () {
         var scrollBottom = $(window).scrollTop() + $(window).height();
         var containerH = $('#container').height();
 
         if (scrollBottom >= containerH){
-            Y = Y + 1;
-            if (status) {                               
-                console.log(Y);
-                $footer.find('.footer_inner').css('border', ''+Y+1+'px solid yellow')
+            var posT = Math.abs((scrollBottom - containerH) / footerH * 1)
+            var Y = posT >= 1 ? 1 : posT;
+
+            if (status) {            
+                $footer.find('.footer_overlay').css('opacity', Math.abs(Y - 1));
+                $footer.find('.footer_inner').css('transform', 'translateY('+Math.abs(Y * 100 - 100)+'px)');
             }
             status = true;
         } else {
-            
-            console.log(Y);
-            if (!status) Y = 0;
+            // if (!status)
             status = false;
         }
     });

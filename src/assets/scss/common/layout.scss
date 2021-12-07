@@ -7,9 +7,10 @@
     layout
 ****************************************************************************/
 /* Frame */
-#wrap {overflow-x:hidden !important;min-width:1440px;font-family:"NanumSquare", sans-serif;font-size:16px;letter-spacing:-0.02em}
+$wrapW: 1440px;
+#wrap {overflow-x:hidden !important;min-width:$wrapW;font-family:"NanumSquare", sans-serif;font-size:16px;letter-spacing:-0.02em}
 #container {background-color:#fff;}
-.inner {position:relative;z-index:1;width:1440px;padding:0 72px;margin:0 auto;}
+.inner {position:relative;z-index:1;width:$wrapW;padding:0 72px;margin:0 auto;}
 
 /* HEADER */ 
 #header {width:100%;height:90px;transition:background-color 0.3s $G-easeHover, box-shadow 0.3s $G-easeHover;;}
@@ -36,11 +37,11 @@ $footerH: 445px;
 #footer {position:relative;width:100%;height:#{$footerH}}
 
 #footer .footer_overlay {
-    position:fixed;bottom:0;z-index:2;width:100%;height:#{$footerH};background-color:rgba(red,0.5);pointer-events:none;
+    position:fixed;bottom:0;z-index:2;width:100%;height:#{$footerH};background-color:#353535;pointer-events:none;
 }
 
 #footer .footer_inner {
-    display:flex;justify-content:space-between;align-items:center;position:fixed;bottom:0;width:100%;height:#{$footerH};padding:0 315px 0 75px;background-color:#292b31;transform:translateY(100px);
+    display:flex;justify-content:space-between;align-items:center;position:fixed;bottom:0;width:100%;min-width:$wrapW;height:#{$footerH};padding:0 315px 0 75px;transform:translateY(100px);/* transition:0.3s $G-easeHover; */
 }
 
 #footer .footer_inner .left {
@@ -70,6 +71,9 @@ $footerH: 445px;
     }
 }
 
+#footer .footer_bg {
+    position:fixed;top:0;bottom:0;left:0;right:0;z-index:-1;background-color:#292b31;
+}
 
 
 /****************************************************************************
@@ -78,7 +82,7 @@ $footerH: 445px;
 /* 공통 */ 
 
 /* 맨 위로 이동하기 */ 
-#aisdeBtnTop {z-index:1;min-width:1440px;margin-left:0 !important}
+#aisdeBtnTop {z-index:1;min-width:$wrapW;margin-left:0 !important}
 #aisdeBtnTop .btn_top {display:flex;flex-direction:column;justify-content:center;align-items:center;position:absolute;bottom:-45px;right:75px;z-index:1;width:90px;height:90px;color:#fff;fill:#fff;background:$G-gradPrimary;transition:all 0.4s ease-in-out}
 #aisdeBtnTop .btn_top:hover {animation:aisdeBtnTopHover 0.4s forwards ease-in-out}
 #aisdeBtnTop.fixed .btn_top {bottom:75px}
