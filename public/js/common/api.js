@@ -38,36 +38,6 @@
         return list;
     };
 
-    // function getTistory() {
-    //     var arg = arguments[0];
-    //     var callback = arg.callback;
-    //     var opction = {
-    //         count : arg.count == undefined ? '' : '&count='+arg.count,
-    //         pageNum : arg.page == undefined ? '' : '&page='+arg.page,
-    //     }
-    //     var pars = {
-    //         'accessToken' : '014f0adecdf2a12798c783abbc7a0498_3ea393c3f6e235ff61d1f6e3557bbdb9',
-    //         'outputType' : 'json', //xml 또는 json
-    //         'blogName' : 'https://me2designer.tistory.com'
-    //     }
-    //     $.ajax({
-    //         url: 'https://www.tistory.com/apis/post/list?access_token='+pars.accessToken+'&output='+pars.outputType+'&blogName='+pars.blogName+'&visibility=0'+opction.count+opction.pageNum,
-    //         method:'GET',
-    //         dataType: "JSON",
-    //         success:function(data){
-    //             if(callback) callback(data.tistory.item);
-    //         }
-    //     });
-    // }
-
-    // getTistory({
-    //     count: 4,
-    //     page: 1,
-    //     callback: function(listAll) {
-    //         console.log(listAll);
-    //     }
-    // });
-
 
 
 /*
