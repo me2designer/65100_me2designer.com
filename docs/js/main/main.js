@@ -337,7 +337,7 @@ $(function(){/*
                 listAll.forEach(function(each, idx){
                     var combineText = each.corp+','+each.workRole.join(',')+','+each.tag.join(',');
                     combineText = combineText.replace(/\(/g,'&#40;').replace(/\)/g,'&#41;');
-                    
+
                     if (patt.test(combineText)) activeList.push(each);
                 });
 
@@ -349,11 +349,15 @@ $(function(){/*
             // 처음 불러오기
             var keyword = ['퍼블리싱'];
 
-            keyword.forEach(function(info){
-                $wrap.find('.list_tag :contains("'+info+'")').closest('.btn_tag').addClass('on')
+            keyword.forEach(function(each, idx, arr){
+                var $this = $wrap.find('.list_tag :contains("'+each+'")').closest('.btn_tag');
+
+                $this.addClass('on');
+                if (idx === arr.length - 1) {
+                    $btnMore.trigger('click');
+                }
             });
 
-            $btnMore.trigger('click');
         }
     });
 
