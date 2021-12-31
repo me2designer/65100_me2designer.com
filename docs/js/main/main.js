@@ -325,7 +325,7 @@ $(function(){/*
                     if (info.workRate) item_clone.find('.inner_overlay').append('<p class="rate">'+info.workRate+'</p>');
                     if(info.more) {
                         item_clone.find('.inner_overlay').append('<div class="btn_more"></div>')
-                        if (info.more.link) item_clone.find('.btn_more').append('<a class="link" href="'+info.more.link+'" target="_blank"><img src="" data-images-path="/images/ico/link-solid-regular.svg" alt=""></a>');
+                        if (info.more.link) item_clone.find('.btn_more').append('<a class="link" href="'+info.more.link+'" title="사이트 바로가기" target="_blank"><img src="" data-images-path="/images/ico/link-solid-regular.svg" alt=""></a>');
                     }
                     item_clone.appendTo($list);
                 });
