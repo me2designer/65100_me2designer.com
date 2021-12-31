@@ -304,18 +304,34 @@ $(function(){/*
                 // append
                 list_divi[idx].forEach(function(info) {
                     var item_clone = item_copied.clone();
-                    item_clone.find('.box_thumb img').attr({
+
+                    // .inner_default
+                    item_clone.find('.inner_default .box_thumb img').attr({
                         'src': '/img/main/project_thumb/'+info.thumb+'',
                         'alt': info.title
                     });
-                    item_clone.find('.tit').text(info.title);
-                    item_clone.find('.desc').text(info.description);
+                    item_clone.find('.inner_default .tit').text(info.title);
+                    item_clone.find('.inner_default .desc').text(info.description);
 
                     for (var i = 0; i < info.tag.length && i < 5; i++) {
-                        item_clone.find('.tag').append('<span>'+info.tag[i]+'</span>');
+                        item_clone.find('.inner_default .tag').append('<span>'+info.tag[i]+'</span>');
+                    }
+
+                    // .inner_overlay
+                    item_clone.find('.inner_overlay .tit').text(info.title);
+                    item_clone.find('.inner_overlay .desc').text(info.workDesc);
+                    item_clone.find('.inner_overlay .role').text(String(info.workRole).replace(/,/gi,', '));
+                    if (info.workDate) item_clone.find('.inner_overlay').append('<p class="work">'+info.workDate+'</p>');
+                    if (info.workRate) item_clone.find('.inner_overlay').append('<p class="rate">'+info.workRate+'</p>');
+                    if(info.more) {
+                        item_clone.find('.inner_overlay').append('<div class="btn_more"></div>')
+                        if (info.more.link) item_clone.find('.btn_more').append('<a class="link" href="'+info.more.link+'" target="_blank"><img src="" data-images-path="/images/ico/link-solid-regular.svg" alt=""></a>');
                     }
                     item_clone.appendTo($list);
                 });
+
+                // matchPath()
+                $list.find('[data-images-path]').matchPath();
 
                 // button hide()
                 if (idx >= list_divi.length - 1) {

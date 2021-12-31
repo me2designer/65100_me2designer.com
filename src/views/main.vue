@@ -80,7 +80,7 @@
                     <p class="tit">광고디자인에서 UI 마크업개발까지..</p>
                     <p class="num"><span class="count">2021</span>.<span class="count">12</span>.<span class="count">03</span></p>
                     <p class="desc">총 11년 7개월</p>
-                </div>                
+                </div>
                 <div class="swiper-slide">
                     <p class="tit">앞으로 계획</p>
                     <p class="num">VISION <span class="count">2030</span></p>
@@ -101,17 +101,24 @@
         <div class="inner">
             <p class="tit_section">광고디자인, UI/UX, 퍼블리싱까지<br><strong>다양한 프로젝트 스토리</strong></p>
             <div class="list_tag">
-                <button class="btn_tag" type="button"></button>                
+                <button class="btn_tag" type="button"></button>
             </div>
             <ul class="list_project">
                 <li class="item_project">
-                    <div class="box_thumb">
-                        <img src="" alt="" onerror="this.src='https://via.placeholder.com/416x240'">
+                    <div class="inner_default">
+                        <div class="box_thumb">
+                            <img src="" alt="" onerror="this.src='https://via.placeholder.com/416x240'">
+                        </div>
+                        <p class="tit"></p>
+                        <p class="desc"></p>
+                        <p class="tag"></p>
                     </div>
-                    <p class="tit"></p>
-                    <p class="desc"></p>
-                    <p class="tag"></p>
-                </li>                
+                    <div class="inner_overlay">
+                        <p class="tit"></p>
+                        <p class="desc"></p>
+                        <p class="role"></p>
+                    </div>
+                </li>
             </ul>
             <div class="btn_area">
                 <button class="btn_more" type="button"><img class="ico mr-5" src="" data-images-path="/images/ico/arr_bottom01.svg"><span>더보기</span></button>
@@ -136,7 +143,7 @@
             <img class="bg_mobile" :src="imgPath+'project_device_mobile.png'" alt="스마트폰">
             <div class="txt_area">
                 <h3 class="tit_section">사용자의 편의성을 위해<br><strong>다양한 디바이스 조건에 맞춰 제작!</strong></h3>
-                <p class="desc_section">브랜드의 가치를 알리고, 마케팅 효율을 극대화 하기 위하여<br>수많은 프로젝트에서 Flexible Web 형태의 구축과 유지보수 경험을 가지고 있습니다.</p>                
+                <p class="desc_section">브랜드의 가치를 알리고, 마케팅 효율을 극대화 하기 위하여<br>수많은 프로젝트에서 Flexible Web 형태의 구축과 유지보수 경험을 가지고 있습니다.</p>
                 <button class="btn_search on" type="button">프로젝트 찾아보기<span class="cmt">반응형ㆍ적응형</span></button>
             </div>
         </div>
@@ -168,7 +175,7 @@
                         <i class="item_tool jquery"><img class="logo" :src="imgPath+'professional_tool_logo/jquery.svg'"></i>
                         <i class="item_tool gsap"><img class="logo" :src="imgPath+'professional_tool_logo/gsap.svg'"></i>
                         <img class="line" :src="imgPath+'professional_tool_line.svg'" alt="">
-                    </div>                    
+                    </div>
                 </div>
                 <div class="tab-slide">
                     수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>
@@ -230,11 +237,11 @@
                         <td class="cate text-left color-767676">카테고리</td>
                         <td class="tit text-left">제목</td>
                         <td class="date text-center color-767676">날짜</td>
-                    </tr>                    
+                    </tr>
                 </tbody>
             </table>
             <div class="table-pagination" data-group-index="0">
-                <span class="table-pagination-bullet"></span>                
+                <span class="table-pagination-bullet"></span>
                 <!-- <span class="table-pagination-prev disable"><img src="" data-images-path="/images/ico/prev01.svg"></span> -->
                 <!-- <span class="table-pagination-next"><img src="" data-images-path="/images/ico/next01.svg"></span> -->
             </div>

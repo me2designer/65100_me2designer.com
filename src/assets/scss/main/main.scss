@@ -32,7 +32,7 @@ $imgPath : "/img/main/";
         position:absolute;top:0;left:0;z-index:0;width:100%;height:100%;
     }
 
-    #visual .swiper-slide {        
+    #visual .swiper-slide {
         .tit {
             position:absolute;top:500px;font-size:25px;line-height:1.56em;color:#fff;opacity:0;transform:translateX(60px);
         }
@@ -185,22 +185,82 @@ $imgPath : "/img/main/";
                 display:none;
             }
         }
-        .item_project {
-            width:416px;margin:0 10px 33px;background-color:#fff;
+    }
+
+    #project .item_project {
+        position:relative;width:416px;margin:0 10px 33px;background-color:#fff;transition:0.3s $G-easeHover;
+        &:hover {
+            transform:translateY(-20px);box-shadow:8px 8px 13px rgba(#000,0.3);
+        }
+    }
+
+    #project .item_project .inner_default {
+        width:100%;height:100%;
+        .tit {
+            padding:36px 0 23px 32px;font-size:24px;font-weight:bold;line-height:1em;
+        }
+        .desc {
+           height:66px;padding:0 36px;word-break:keep-all;
+        }
+        .tag {
+            overflow:hidden;height:34px;margin-bottom:35px;padding:0 36px;
+            span {
+                display:inline-block;margin-right:10px;padding:9px 13px 7px;border:1px solid #eaeaea;line-height:1em;
+                &::before {
+                    content:"# ";
+                }
+            }
+        }
+    }
+    #project .item_project {
+        .inner_overlay {
+            position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;opacity:0;padding:57px 62px 0;transition:0.3s $G-easeHover;
+            &::after {
+                content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;background-color:rgba(#000,0.9);
+            }
             .tit {
-                padding:36px 0 23px 32px;font-size:24px;font-weight:bold;line-height:1em;
+                margin-bottom:5px;font-size:24px;font-weight:bold;color:#fff;word-break:keep-all;
             }
             .desc {
-               height:66px;padding:0 36px;word-break:keep-all;
+                margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid rgba(#fff,0.23);font-size:20px;color:#fff;word-break:keep-all;
             }
-            .tag {
-                overflow:hidden;height:34px;margin-bottom:35px;padding:0 36px;
-                span {
-                    display:inline-block;margin-right:10px;padding:9px 13px 7px;border:1px solid #eaeaea;line-height:1em;
-                    &::before {
-                        content:"# ";
+            .role {
+                margin-bottom:5px;font-size:16px;color:#fff;
+            }
+            .work {
+                margin-bottom:5px;font-size:16px;color:#fff;
+            }
+            .rate {
+                margin-bottom:5px;font-size:16px;color:#fff;
+            }
+            .btn_more {
+                display:flex;align-items:center;position:absolute;bottom:57px;left:50%;transform:translateX(-50%);
+                > * {
+                    fill:#fff;overflow:hidden;display:inline-flex;justify-content:center;align-items:center;position:relative;width:48px;height:48px;border:2px solid #fff;border-radius:100%;
+                    &::after {
+                        content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;opacity:0;transition:0.3s $G-easeHover;
                     }
                 }
+                &:hover > * {
+                    border-width:0;
+                    &::after {
+                        opacity:1;background:$G-gradPrimary;
+                    }
+                }
+            }
+        }
+        &:hover .inner_overlay {
+            opacity:1;
+        }
+    }
+
+    #project .item_project .btn_more {
+        $value:
+            link    23px,
+        ;
+        @each $class, $fz in $value {
+            .#{$class} {
+                font-size:#{$fz};
             }
         }
     }
@@ -326,7 +386,7 @@ $imgPath : "/img/main/";
         }
     }
 
-    #professional .tab-container {        
+    #professional .tab-container {
         .tab-wrapper {
             overflow:hidden;margin-bottom:110px;transition:all 0.6s $G-easeHover;
             .tab-slide {
@@ -377,12 +437,12 @@ $imgPath : "/img/main/";
         @each $class, $top, $left, $z-index, $width in $value {
             $i : $i + 1;
             &.#{$class} {
-                top:#{$top};left:#{$left};z-index:#{$z-index} !important;transition:all 1s #{$i * 0.05}s ease-in-out;                
+                top:#{$top};left:#{$left};z-index:#{$z-index} !important;transition:all 1s #{$i * 0.05}s ease-in-out;
             }
         }
     }
 
-    #professional .tab-slide-tool:not(.tab-slide-active.appear) .item_tool {        
+    #professional .tab-slide-tool:not(.tab-slide-active.appear) .item_tool {
         $value:
             'indesign'       201px    212px     ,
             'vue'            201px    848px     ,
@@ -399,7 +459,7 @@ $imgPath : "/img/main/";
             'jquery'         201px    848px     ,
             'gsap'           201px    848px     ,
         ;
-        @each $class, $top, $left in $value {            
+        @each $class, $top, $left in $value {
             &.#{$class} {
                 top:#{$top};left:#{$left};transition:none;
             }
@@ -531,7 +591,7 @@ $imgPath : "/img/main/";
         }
     }
 
-    #blog .table tr[data-disable="true"] {        
+    #blog .table tr[data-disable="true"] {
         td {
             color:#cacaca !important;
         }
