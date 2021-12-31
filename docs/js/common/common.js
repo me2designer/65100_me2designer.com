@@ -140,6 +140,64 @@ $(function(){/*
 
 
 
+    /* animate cursor */
+    var $wrap = $('.animateCursor');
+
+    //append
+    $wrap.append('<i class="circle"></i><i class="arrow"></i>');
+
+    //interaction
+    var cursor = $wrap.find('.circle'),
+		follower = $wrap.find('.arrow'),
+        posX = 0,
+        posY = 0,
+        mouseX = 0,
+        mouseY = 0;
+
+    TweenMax.to({}, 0.016, {
+        repeat:-1,
+        onRepeat:function(){
+            console.log(mouseX, posX);
+            posX += (mouseX - posX) / 4;
+            posY += (mouseY - posY) / 4;
+
+            TweenMax.set(follower, {
+                css: {
+                    left: posX,
+                    top: posY
+                }
+            });
+            TweenMax.set(cursor, {
+                css: {
+                    left: mouseX,
+                    top: mouseY
+                }
+            });
+        }
+    });
+
+    $wrap.parent().on("mousemove",function(e){        
+        $wrap.addClass('is-active');
+        // mouseX = e.pageX - 30;
+        // mouseY = e.pageY - 110;
+
+        //cursor hidden
+        if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'default';
+    }).on('mouseleave',function(e) {
+        $wrap.removeClass('is-active');
+
+        //cursor visible
+        if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'default';
+    });
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
     /* 맨 위로 이동하기 */
     var $wrap = $('#aisdeBtnTop');
 

@@ -8,7 +8,7 @@
 
 
 /****************************************************************************
-    common                                  https://getbootstrap.com 참고함
+    utilities Class                        https://getbootstrap.com 참고함
 ****************************************************************************/
 /* color */
 .color {
@@ -22,3 +22,39 @@
 }
 .color-primary {color:$G-colorPrimary !important}
 .color-secondary {color:$G-colorSecondary !important}
+
+
+
+/****************************************************************************
+    animate cursor
+****************************************************************************/
+.animateCursor {    
+    opacity:0;transition:opacity 0.3s ease-in-out;
+    .circle {
+        $name: inline-#{unique-id()};
+        position:absolute;z-index:10000;width:72px;height:72px;border-radius:100%;border:2px solid #06080a;transform:scale(1);animation:$name 1s infinite alternate ease-in-out;user-select:none;pointer-events:none;
+        @keyframes #{$name} {
+            100%            {transform:scale(.6)}
+        }
+    }
+    .arrow {
+        position:absolute;z-index:10000;width:72px;height:72px;user-select:none;pointer-events:none;
+        &::before {
+            $name: inline-#{unique-id()};
+            content:"";position:absolute;top:50%;right:15px;margin-top:-3px;width:0px;height:0px;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left: 6px solid #06080a;animation:$name 1s infinite alternate ease-in-out;
+            @keyframes #{$name} {
+                100%            {right:0;}
+            }
+        }
+        &::after {
+            $name: inline-#{unique-id()};
+            content:"";position:absolute;top:50%;left:15px;margin-top:-3px;width:0px;height:0px;border-top:3px solid transparent;border-bottom:3px solid transparent;border-right: 6px solid #06080a;;animation:$name 1s infinite alternate ease-in-out;
+            @keyframes #{$name} {
+                100%            {left:0;}
+            }
+        }
+    }
+    &.is-active {
+        opacity:1;
+    }
+}

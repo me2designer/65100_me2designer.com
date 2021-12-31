@@ -218,6 +218,7 @@
         <div class="swiper-button-next swiper-button-white" slot="button-next"></div> -->
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
+        <div class="animateCursor"></div>
     </section>
     <!-- //근무이력 -->
 
