@@ -153,12 +153,15 @@ $(function(){/*
         posY = 0,
         mouseX = 0,
         mouseY = 0;
+        
 
     var tm_cursor = TweenMax.to({}, 0.016, {
         repeat:-1,
-        onRepeat:function(){            
+        onRepeat:function(){
             posX += (mouseX - posX) / 4;
             posY += (mouseY - posY) / 4;
+
+            console.log(mouseY, posY);
 
             TweenMax.set(follower, {
                 css: {
@@ -175,21 +178,18 @@ $(function(){/*
         }
     }).pause();
 
-    $wrap.parent().on("mousemove",function(e){        
-        $wrap.addClass('is-active');
+    $wrap.parent().on("mousemove",function(e){                
+        mouseX = e.pageX  - $wrap.offset().left;
+        mouseY = e.pageY - $wrap.offset().top;        
         tm_cursor.play();
-        mouseX = e.pageX - 30;
-        mouseY = e.pageY - 30;
+        $wrap.addClass('is-active');
         
-
-        //cursor hidden
-        if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'none';
+        if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'none'; //cursor hidden
     }).on('mouseleave',function(e) {
         tm_cursor.pause();
         $wrap.removeClass('is-active');
-
-        //cursor visible
-        if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'default';
+        
+        if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'default'; //cursor visible
     });
 
 
@@ -255,7 +255,7 @@ $(function(){/*
             var posT = Math.abs((scrollBottom - containerH) / footerH * 1)
             var Y = posT >= 1 ? 1 : posT;
 
-            if (status) {            
+            if (status) {
                 $footer.find('.footer_overlay').css('opacity', Math.abs(Y - 1));
                 $footer.find('.footer_inner').css('transform', 'translateY('+Math.abs(Y * 100 - 100)+'px)');
             }

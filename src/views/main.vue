@@ -212,13 +212,13 @@
                     </dl>
                 </div>
             </div>
+            <div class="animateCursor"></div>
         </div>
         <!-- Add Navigation -->
         <!-- <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
         <div class="swiper-button-next swiper-button-white" slot="button-next"></div> -->
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <div class="animateCursor"></div>
+        <div class="swiper-pagination"></div>        
     </section>
     <!-- //근무이력 -->
 
