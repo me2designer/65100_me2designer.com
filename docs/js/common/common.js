@@ -159,9 +159,7 @@ $(function(){/*
         repeat:-1,
         onRepeat:function(){
             posX += (mouseX - posX) / 4;
-            posY += (mouseY - posY) / 4;
-
-            console.log(mouseY, posY);
+            posY += (mouseY - posY) / 4;            
 
             TweenMax.set(follower, {
                 css: {
