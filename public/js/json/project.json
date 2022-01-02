@@ -56,17 +56,21 @@
         "thumb" : "bigyo-clinic.com.jpg",
         "title" : "보험비교클리닉",
         "description" : "암보험부터 건강보험까지 보험클리닉의 대표 상품을 비교하고 보장분석 한 번에 쉽고 정확하게!",
-        "link" : ["bigyo-clinic.com"],
         "workRole" : ["퍼블리싱"],
-        "tag" : ["원페이지", "TM영업", "적응형"]
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "more" : {
+            "link" : "//www.bigyo-clinic.com"
+        }
     },{
         "corp" : "피플라이프(주)",
         "thumb" : "zero-clinic.co.kr.jpg",
         "title" : "저해지환급형 보험클리닉",
         "description" : "해지환급금 미지급형으로 한번 더 보험료 부담을 덜어주는 절약형 저해지환급형보험",
-        "link" : ["zero-clinic.co.kr"],
         "workRole" : ["퍼블리싱"],
-        "tag" : ["원페이지", "TM영업", "적응형"]
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "more" : {
+            "link" : "//zero-clinic.co.kr"
+        }
     },{
         "corp" : "피플라이프(주)",
         "thumb" : "baro-bigyo.com.jpg",
@@ -74,7 +78,10 @@
         "description" : "국ㆍ내외 32개 보험사에서 나에게 딱 맞는 상품만 모아서 한 눈에 바로비교 서비스",
         "link" : ["baro-bigyo.com"],
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["원페이지", "TM영업", "적응형"]
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "피플라이프(주)",
         "thumb" : "cancer-clinic.co.kr.jpg",
@@ -82,7 +89,10 @@
         "description" : "암보험 클리닉에서 성별, 연령, 유병자에 관계없이 다양한 종류의 암을 준비하라",
         "link" : ["cancer-clinic.co.kr"],
         "workRole" : ["퍼블리싱"],
-        "tag" : ["원페이지", "TM영업", "적응형"]
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "피플라이프(주)",
         "thumb" : "cancer-bigyo.co.kr.jpg",
@@ -90,7 +100,10 @@
         "description" : " 암보험 전문 컨설턴트가 꼼꼼한 분석을 통한 고객맞춤 보험 설계",
         "link" : ["cancer-bigyo.co.kr"],
         "workRole" : ["퍼블리싱"],
-        "tag" : ["원페이지", "TM영업", "적응형"]
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "피플라이프(주)",
         "thumb" : "senior-clinic.com.jpg",
@@ -98,7 +111,10 @@
         "description" : "대한민국 30여 개 보험사의 18,000여 보험 상품을 비교하여 단계별 치매진단비 보장 및 보험료 확인",
         "link" : ["senior-clinic.com"],
         "workRole" : ["퍼블리싱"],
-        "tag" : ["원페이지", "TM영업", "적응형"]
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "피플라이프(주)",
         "thumb" : "simple-clinic.com.jpg",
@@ -106,7 +122,10 @@
         "description" : "고령자도, 유병자도 2가지 질문 통과시 가입OK",
         "link" : ["simple-clinic.com"],
         "workRole" : ["퍼블리싱"],
-        "tag" : ["원페이지", "TM영업", "적응형"]
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "피플라이프(주)",
         "thumb" : "kidult-clinic.com.jpg",
@@ -114,7 +133,10 @@
         "description" : "영유아부터 30세 성인까지 같은 보장으로 실속있게 가입하는 어른이보험클리닉",
         "link" : ["kidult-clinic.com"],
         "workRole" : ["퍼블리싱"],
-        "tag" : ["원페이지", "TM영업", "적응형"]
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "피플라이프(주)",
         "thumb" : "health-clinic.co.kr.jpg",
@@ -122,7 +144,10 @@
         "description" : "꼭! 필요한 필수보장만 제공하는 수실비&2대질병진단비 보험료 안내",
         "link" : ["health-clinic.co.kr"],
         "workRole" : ["퍼블리싱"],
-        "tag" : ["원페이지", "TM영업", "적응형"]
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "(주)취업뽀개기",
         "thumb" : "chippo.co.kr.jpg",
@@ -138,7 +163,10 @@
         "description" : "코치잡 언제 어디서나 나만의 맞춤형 컨설팅을 받으세요! 취업·재취업·경력관리, 창업분야 컨설팅 플랫폼",
         "link" : "coachjob.net",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["취업컨설팅", "채용서비스", "사업소개", "반응형"]
+        "tag" : ["취업컨설팅", "채용서비스", "사업소개", "반응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "(주)취업뽀개기",
         "thumb" : "campus.coachjob.net.jpg",
@@ -146,7 +174,10 @@
         "description" : "개별면담을 통한 진로설계코칭, 기업별 채용 경향을 심도 깊게 분석해 차별화된 전략까지공기업, 대기업, 중견기업까지 스마트한 코칭서비스",
         "link" : "campus.coachjob.net",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["취업컨설팅", "채용서비스", "반응형"]
+        "tag" : ["취업컨설팅", "채용서비스", "반응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "(주)취업뽀개기",
         "thumb" : "motijob.co.kr.jpg",
@@ -154,7 +185,10 @@
         "description" : "국방부 산하 공공기관으로서 전역예정장병을 대상으로 진로설계, 진로교육, 전직기본교육, 전직컨설팅, 맞춤형 전문교육, 기본교육심화과정 취업컨설팅 제공",
         "link" : "motijob.co.kr",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["취업컨설팅", "채용서비스", "반응형"]
+        "tag" : ["취업컨설팅", "채용서비스", "반응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "(주)취업뽀개기",
         "thumb" : "consult.moti.or.kr.jpg",
@@ -162,7 +196,10 @@
         "description" : "국방부 산하 공공기관으로서 전역예정장병을 대상으로 진로설계, 진로교육, 전직기본교육, 전직컨설팅, 맞춤형 전문교육, 기본교육심화과정 취업컨설팅 제공",
         "link" : "consult.moti.or.kr",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["취업컨설팅", "채용서비스", "반응형", "CMS"]
+        "tag" : ["취업컨설팅", "채용서비스", "반응형", "CMS"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "(주)경향신문사",
         "thumb" : "sports.khan.co.kr_olympic_2018.jpg",
@@ -170,7 +207,10 @@
         "description" : "2018년 대한민국의 뜨거운 겨울을 경향신문·스포츠경향과 함께하세요. 감동과 환희의 순간, 선수 인터뷰, 경기 결과 및 정보, 뒷 얘기 까지 세계 최대의 스포츠 이벤트 평창 동계올림픽의 모든 것을 담았습니다",
         "link" : "sports.khan.co.kr/olympic/2018",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["뉴스플랫폼", "적응형"]
+        "tag" : ["뉴스플랫폼", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "(주)경향신문사",
         "thumb" : "khan.co.kr.jpg",
@@ -178,7 +218,10 @@
         "description" : "국내 최고 언론사 경향신문 온라인 지면 서비스를 통해 오피니언, 정치, 사회, 경제, 국제, 스포츠, 문화 뉴스를 빠르고 정확하게 제공",
         "link" : "khan.co.kr",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["뉴스플랫폼", "적응형"]
+        "tag" : ["뉴스플랫폼", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "(주)경향신문사",
         "thumb" : "khan.co.kr_aboutkh.jpg",
@@ -186,7 +229,10 @@
         "description" : "한국 언론사상 최초의 사원주주회사. 권력과 자본의 막강한 힘 앞에 진실만을 추구하겠습니다.",
         "link" : "khan.co.kr/aboutkh",
         "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
-        "tag" : ["기업홈페이지", "사업소개"]
+        "tag" : ["기업홈페이지", "사업소개"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "(주)경향신문사",
         "thumb" : "recruit.khan.co.kr.jpg",
@@ -194,7 +240,10 @@
         "description" : "경향신문과 함께 성장해 나갈 숨은 인재를 기다립니다.",
         "link" : "recruit.khan.co.kr",
         "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
-        "tag" : ["기업홈페이지", "사업소개", "채용서비스", "반응형"]
+        "tag" : ["기업홈페이지", "사업소개", "채용서비스", "반응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "(주)경향신문사",
         "thumb" : "jebo.khan.co.kr.jpg",
@@ -202,7 +251,10 @@
         "description" : "함께 나누고픈 이야기, 억울한 이야기, 하기 힘든 이야기, 놀라운 이야기를 기다리고 있습니다.",
         "link" : "jebo.khan.co.kr",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["뉴스플랫폼", "봇(BOT)", "반응형"]
+        "tag" : ["뉴스플랫폼", "봇(BOT)", "반응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "(주)경향신문사",
         "thumb" : "khan.co.kr_saturday.jpg",
@@ -210,7 +262,10 @@
         "description" : "뜨거운 사회적 이슈, 이웃을 향한 따뜻한 시선, 톡톡 튀는 생활 속 감각을 담았습니다. 다양한 분야의 전문가와 감각 있는 필진들의 글을 모았습니다",
         "link" : "khan.co.kr/saturday",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["뉴스플랫폼", "반응형"]
+        "tag" : ["뉴스플랫폼", "반응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "한국경제매거진(주)",
         "thumb" : "magazine.hankyung.com.jpg",
@@ -218,7 +273,10 @@
         "description" : "대한민국 잡지 미디어의 새 장을 열어가고 있는 매거진한경, 주간 한경BUSINESS, 월간 MONEY, 격주간 한경JOB&JOY 발행",
         "link" : "magazine.hankyung.com",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["뉴스플랫폼", "적응형"]
+        "tag" : ["뉴스플랫폼", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "한국경제매거진(주)",
         "thumb" : "jobnjoy.com.png",
@@ -226,7 +284,10 @@
         "description" : "한국경제신문 발행 대학생 격주간지. 취업, 창업, 대학생활, 인턴십, 공모전 관련 정보 제공",
         "link" : "jobnjoy.com",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["뉴스플랫폼", "적응형"]
+        "tag" : ["뉴스플랫폼", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "전북은행(주)",
         "thumb" : "jbfg.com.png",
@@ -234,7 +295,10 @@
         "description" : "",
         "link" : "jbbank.co.kr",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["기업홈페이지", "사업소개"]
+        "tag" : ["기업홈페이지", "사업소개"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "전북은행(주)",
         "thumb" : "jbbank.co.kr.png",
@@ -242,7 +306,10 @@
         "description" : "금융으로 더 따뜻한 세상을 만드는 전북은행 지금 전북은행 뉴스마트뱅킹 서비스로 나에게 딱 맞는 금융서비스를 만나보세요",
         "link" : "jbbank.co.kr",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["금융서비스", "적응형"]
+        "tag" : ["금융서비스", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "전북은행(주)",
         "thumb" : "direct.jbbank.co.kr.png",
@@ -250,7 +317,10 @@
         "description" : "비대면 입출금통장. 영업점 방문없이 가입이 가능한 고금리 입출금이 자유로운 예금으로 인터넷뱅킹, 스마트폰뱅킹, 폰뱅킹 및 자동화기기이용수수료 우대",
         "link" : "direct.jbbank.co.kr",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["금융서비스", "적응형"]
+        "tag" : ["금융서비스", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "전북은행(주)",
         "thumb" : "directcredit.jbbank.co.kr.png",
@@ -258,7 +328,10 @@
         "description" : "직장인을 대상으로 무서류·무방문 인터넷으로 대출신청에서 대출실행까지 처리하는 신속하고 간편한 인터넷전용 대출상품",
         "link" : "directcredit.jbbank.co.kr",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["금융서비스", "적응형"]
+        "tag" : ["금융서비스", "적응형"],
+        "more" : {
+            "link" : ""
+        }
     },{
         "corp" : "전북은행(주)",
         "thumb" : "cp.jbbank.co.kr.png",
