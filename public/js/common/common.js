@@ -154,10 +154,9 @@ $(function(){/*
         mouseX = 0,
         mouseY = 0;
 
-    TweenMax.to({}, 0.016, {
+    var tm_cursor = TweenMax.to({}, 0.016, {
         repeat:-1,
-        onRepeat:function(){
-            console.log(mouseX, posX);
+        onRepeat:function(){            
             posX += (mouseX - posX) / 4;
             posY += (mouseY - posY) / 4;
 
@@ -174,16 +173,19 @@ $(function(){/*
                 }
             });
         }
-    });
+    }).pause();
 
     $wrap.parent().on("mousemove",function(e){        
         $wrap.addClass('is-active');
-        // mouseX = e.pageX - 30;
-        // mouseY = e.pageY - 110;
+        tm_cursor.play();
+        mouseX = e.pageX - 30;
+        mouseY = e.pageY - 30;
+        
 
         //cursor hidden
-        if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'default';
+        if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'none';
     }).on('mouseleave',function(e) {
+        tm_cursor.pause();
         $wrap.removeClass('is-active');
 
         //cursor visible

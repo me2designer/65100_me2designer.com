@@ -200,7 +200,7 @@ $imgPath : "/img/main/";
             padding:36px 0 23px 32px;font-size:24px;font-weight:bold;line-height:1em;
         }
         .desc {
-           height:66px;padding:0 36px;word-break:keep-all;
+           min-height:66px;padding:0 36px;word-break:keep-all;
         }
         .tag {
             overflow:hidden;height:34px;margin-bottom:35px;padding:0 36px;
@@ -212,46 +212,45 @@ $imgPath : "/img/main/";
             }
         }
     }
-    #project .item_project {
-        .inner_overlay {
-            position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;opacity:0;padding:57px 62px 0;transition:0.3s $G-easeHover;
-            &::after {
-                content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;background-color:rgba(#000,0.9);
-            }
-            .tit {
-                margin-bottom:5px;font-size:24px;font-weight:bold;color:#fff;word-break:keep-all;
-            }
-            .desc {
-                margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid rgba(#fff,0.23);font-size:20px;color:#fff;word-break:keep-all;
-            }
-            .role {
-                margin-bottom:5px;font-size:16px;color:#fff;
-            }
-            .work {
-                margin-bottom:5px;font-size:16px;color:#fff;
-            }
-            .rate {
-                margin-bottom:5px;font-size:16px;color:#fff;
-            }
-            .btn_more {
-                display:flex;align-items:center;position:absolute;bottom:57px;left:50%;transform:translateX(-50%);
-                > * {
-                    fill:#fff;overflow:hidden;display:inline-flex;justify-content:center;align-items:center;position:relative;width:48px;height:48px;border:2px solid #fff;border-radius:100%;
-                    &::after {
-                        content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;opacity:0;transition:0.3s $G-easeHover;
-                    }
+    #project .inner_overlay {        
+        position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;opacity:0;padding:57px 62px 0;transition:0.3s $G-easeHover;
+        &::after {
+            content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;background-color:rgba(#000,0.9);
+        }
+        .tit {
+            margin-bottom:5px;font-size:24px;font-weight:bold;color:#fff;word-break:keep-all;
+        }
+        .desc {
+            margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid rgba(#fff,0.23);font-size:20px;color:#fff;word-break:keep-all;
+        }
+        .role {
+            margin-bottom:5px;font-size:16px;color:#fff;
+        }
+        .work {
+            margin-bottom:5px;font-size:16px;color:#fff;
+        }
+        .rate {
+            margin-bottom:5px;font-size:16px;color:#fff;
+        }
+        .btn_more {
+            display:flex;align-items:center;position:absolute;bottom:57px;left:50%;transform:translateX(-50%);
+            > * {
+                fill:#fff;overflow:hidden;display:inline-flex;justify-content:center;align-items:center;position:relative;width:48px;height:48px;border:2px solid #fff;border-radius:100%;
+                &::after {
+                    content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;opacity:0;transition:0.3s $G-easeHover;
                 }
-                &:hover > * {
-                    border-width:0;
-                    &::after {
-                        opacity:1;background:$G-gradPrimary;
-                    }
+            }
+            &:hover > * {
+                border-width:0;
+                &::after {
+                    opacity:1;background:$G-gradPrimary;
                 }
             }
         }
-        &:hover .inner_overlay {
-            opacity:1;
-        }
+    }
+
+    #project .item_project:hover .inner_overlay {
+        opacity:1;
     }
 
     #project .item_project .btn_more {
