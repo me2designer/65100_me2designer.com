@@ -200,7 +200,7 @@ $imgPath : "/img/main/";
             padding:36px 0 23px 32px;font-size:24px;font-weight:bold;line-height:1em;
         }
         .desc {
-           min-height:66px;padding:0 36px;word-break:keep-all;
+           min-height:70px !important;padding:0 36px 15px;line-height:1.6;word-break:keep-all;
         }
         .tag {
             overflow:hidden;height:34px;margin-bottom:35px;padding:0 36px;
@@ -212,7 +212,7 @@ $imgPath : "/img/main/";
             }
         }
     }
-    #project .inner_overlay {        
+    #project .inner_overlay {
         position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;opacity:0;padding:57px 62px 0;transition:0.3s $G-easeHover;
         &::after {
             content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;background-color:rgba(#000,0.9);

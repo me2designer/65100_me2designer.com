@@ -311,7 +311,7 @@ $(function(){/*
                         'alt': info.title
                     });
                     item_clone.find('.inner_default .tit').text(info.title);
-                    item_clone.find('.inner_default .desc').text(info.description)/* .lineClamp(2) */
+                    item_clone.find('.inner_default .desc').append('<span>'+info.description+'</span>');
 
                     for (var i = 0; i < info.tag.length && i < 5; i++) {
                         item_clone.find('.inner_default .tag').append('<span>'+info.tag[i]+'</span>');
@@ -330,8 +330,11 @@ $(function(){/*
                     item_clone.appendTo($list);
                 });
 
+                // lineClamp()
+                $list.find('.inner_default .desc span').lineClamp(2);
+
                 // matchPath()
-                $list.find('[data-images-path]').matchPath();                
+                $list.find('[data-images-path]').matchPath();
 
                 // button hide()
                 if (idx >= list_divi.length - 1) {
