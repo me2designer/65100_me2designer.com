@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+
+/* 동영상 자동 재생 */
+#projectImage_wrap {background-color: rgba(0,0,0,0.9)}
+#projectImage_wrap .layer {width:100%;height:100%}
+#projectImage_wrap > .close {top:20px;right:20px;z-index:110;margin:0;}
+#projectImage_wrap > .close svg {font-size:50px;border-radius:100%;background-color:#5e5e5e;box-shadow:3px 3px 10px rgba(0,0,0,0.2);}
+#projectImage_wrap > .close svg path {stroke:#fff;transform:scale(0.4);transform-origin:50% 50%}
+#projectImage {position:relative;width:100%;height:100%}
+#projectImage .swiper-container {width:100%;height:100%}
+#projectImage .swiper-lazy {position:relative;top:50%;width:auto;max-width:100%;height:auto;max-height:100%;transform: translateY(-50%)}
+#projectImage .swiper-pagination {left:50%;bottom:30px}
+#projectImage .swiper-pagination-bullet {margin:0 6px;border-radius:2em;background:linear-gradient(to right, #00c652, #00c5ae);opacity:0.5;transition:all 0.4s ease-in-out;}
+#projectImage .swiper-pagination-bullet-active {width:36px;background:linear-gradient(to right, #00c652, #00c5ae);opacity:1}
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/

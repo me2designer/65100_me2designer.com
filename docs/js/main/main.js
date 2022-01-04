@@ -64,14 +64,18 @@ $(function(){/*
     });
 
     // videoLayer
-    // $wrap.find('.videoLayer').videoLayer();
+    if (isReal) {
+        $wrap.find('.videoLayer').on('click', function() {
+            LAYER({
+                name : 'alert',
+                text : '현재 개발 중 입니다.'
+            })
+        });
+    } else {
+        $wrap.find('.videoLayer').videoLayer();
+    }
 
-    $wrap.find('.videoLayer').on('click', function() {
-        LAYER({
-            name : 'alert',
-            text : '현재 개발 중 입니다.'
-        })
-    });
+
 
 
 
@@ -302,32 +306,77 @@ $(function(){/*
                 var list_divi = list.arrDivision(9);
 
                 // append
-                list_divi[idx].forEach(function(info) {
-                    var item_clone = item_copied.clone();
+                list_divi[idx].forEach(function(each) {
+                    var $item_clone = item_copied.clone();
+                    var eachIdx = listAll.findIndex(el => el == each);
+
 
                     // .inner_default
-                    item_clone.find('.inner_default .box_thumb img').attr({
-                        'src': '/img/main/project_thumb/'+info.thumb+'',
-                        'alt': info.title
+                    $item_clone.find('.inner_default .box_thumb img').attr({
+                        'src': '/img/main/project_thumb/'+each.thumb+'',
+                        'alt': each.title
                     });
-                    item_clone.find('.inner_default .tit').text(info.title);
-                    item_clone.find('.inner_default .desc').append('<span>'+info.description+'</span>');
+                    $item_clone.find('.inner_default .tit').text(each.title);
+                    $item_clone.find('.inner_default .desc').append('<span>'+each.description+'</span>');
 
-                    for (var i = 0; i < info.tag.length && i < 5; i++) {
-                        item_clone.find('.inner_default .tag').append('<span>'+info.tag[i]+'</span>');
+                    for (var i = 0; i < each.tag.length && i < 5; i++) {
+                        $item_clone.find('.inner_default .tag').append('<span>'+each.tag[i]+'</span>');
                     }
 
                     // .inner_overlay
-                    item_clone.find('.inner_overlay .tit').text(info.title);
-                    item_clone.find('.inner_overlay .desc').text(info.workDesc);
-                    item_clone.find('.inner_overlay .role').text(String(info.workRole).replace(/,/gi,', '));
-                    if (info.workDate) item_clone.find('.inner_overlay').append('<p class="work">'+info.workDate+'</p>');
-                    if (info.workRate) item_clone.find('.inner_overlay').append('<p class="rate">'+info.workRate+'</p>');
-                    if(info.more) {
-                        item_clone.find('.inner_overlay').append('<div class="btn_more"></div>')
-                        if (info.more.link) item_clone.find('.btn_more').append('<a class="link" href="'+info.more.link+'" title="사이트 바로가기" target="_blank"><img src="" data-images-path="/images/ico/link-solid-regular.svg" alt=""></a>');
+                    $item_clone.find('.inner_overlay .tit').text(each.title);
+                    $item_clone.find('.inner_overlay .desc').text(each.workDesc);
+                    $item_clone.find('.inner_overlay .role').text(String(each.workRole).replace(/,/gi,', '));
+                    $item_clone.find('.inner_overlay .work').text(each.workDate);
+                    $item_clone.find('.inner_overlay .rate').text(each.workRate);
+
+                    // .inner_overlay - .list_more
+                    var $listMore = $item_clone.find('.inner_overlay .list_more');
+
+                    if (each.more) {
+                        if (each.more.link) $listMore.find('.link_more').css('display', 'inline-flex').attr('href',each.more.link);
+                        if (each.more.image) {
+                            var $btnImg = $listMore.find('.btn_image').css('display', 'inline-flex');
+
+                            $btnImg.on('click', function() {
+                                LAYER({
+                                    name : 'projectImage',
+                                    afterLoad : function(){
+                                        var $layer = $('#projectImage_wrap');
+                                        var $swiper = $layer.find('.swiper-container');
+                                        var slide_copied = $swiper.find('.swiper-slide').detach();
+                                        var $slide_clone;
+                                        for (var i = 1; i <= each.more.image.count; i++) {
+                                            $slide_clone = slide_copied.clone();
+
+                                            $slide_clone.find('.swiper-lazy').attr('data-src', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg');
+                                            $slide_clone.appendTo($swiper.find('.swiper-wrapper'))
+                                        }
+
+                                        // swiper
+                                        new Swiper($swiper, {
+                                            lazy: true,
+                                            lazy: {
+                                                loadPrevNext: false,
+                                                loadOnTransitionStart: true
+                                            },
+                                            navigation: {
+                                                nextEl: $layer.find('.swiper-button-next'),
+                                                prevEl: $layer.find('.swiper-button-prev')
+                                            },
+                                            pagination: {
+                                                el: $layer.find('.swiper-pagination'),
+                                                clickable: true
+                                            },
+                                        });
+
+                                        if (each.more.image.count <= 1) $layer.find('.swiper-button-next, .swiper-button-prev, .swiper-pagination').remove();
+                                    },
+                                });
+                            });
+                        }
                     }
-                    item_clone.appendTo($list);
+                    $item_clone.appendTo($list);
                 });
 
                 // lineClamp()

@@ -8,7 +8,7 @@ FILES([
     SERVER.public+'/lib/swiper/swiper@4.5.1.css',    
     SERVER.public+'/js/modules.js',
     SERVER.public+'/js/public.js',
-    SERVER.public+'/lib/swiper/swiper@4.5.1.js',
+    SERVER.public+'/lib/swiper/swiper@4.5.1.js',    
     SERVER.public+'/lib/tweenmax/tweenmax.js',    
     '/js/common/analysis.js',
     '/js/common/modules.js',
