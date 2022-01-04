@@ -350,27 +350,31 @@ $(function(){/*
                                             $slide_clone = slide_copied.clone();
 
                                             $slide_clone.find('.swiper-lazy').attr('data-src', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg');
-                                            $slide_clone.appendTo($swiper.find('.swiper-wrapper'))
+                                            $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
+                                            
+                                            if (each.more.image.count == i) swiper();
                                         }
 
                                         // swiper
-                                        new Swiper($swiper, {
-                                            lazy: true,
-                                            lazy: {
-                                                loadPrevNext: false,
-                                                loadOnTransitionStart: true
-                                            },
-                                            navigation: {
-                                                nextEl: $layer.find('.swiper-button-next'),
-                                                prevEl: $layer.find('.swiper-button-prev')
-                                            },
-                                            pagination: {
-                                                el: $layer.find('.swiper-pagination'),
-                                                clickable: true
-                                            },
-                                        });
-
-                                        if (each.more.image.count <= 1) $layer.find('.swiper-button-next, .swiper-button-prev, .swiper-pagination').remove();
+                                        function swiper() {                                            
+                                            new Swiper($swiper, {
+                                                lazy: true,
+                                                lazy: {
+                                                    loadPrevNext: false,
+                                                    loadOnTransitionStart: true
+                                                },
+                                                navigation: {
+                                                    nextEl: $layer.find('.swiper-button-next'),
+                                                    prevEl: $layer.find('.swiper-button-prev')
+                                                },
+                                                pagination: {
+                                                    el: $layer.find('.swiper-pagination'),
+                                                    clickable: true
+                                                },
+                                            });
+    
+                                            if (each.more.image.count <= 1) $layer.find('.swiper-button-next, .swiper-button-prev, .swiper-pagination').remove();
+                                        }
                                     },
                                 });
                             });
