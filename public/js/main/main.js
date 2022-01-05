@@ -348,11 +348,12 @@ $(function(){/*
                                         var $slide_clone;
                                         for (var i = 1; i <= each.more.image.count; i++) {
                                             $slide_clone = slide_copied.clone();
+                                            $slide_clone.attr('data-background', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg'+cache);
 
-                                            $slide_clone.find('.swiper-lazy').attr({
-                                                'data-src' : '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg'+cache,
-                                                'alt' : each.title+i,
-                                            });
+                                            // $slide_clone.find('.swiper-lazy').attr({
+                                            //     'data-src' : '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg'+cache,
+                                            //     'alt' : each.title+i,
+                                            // });
                                             $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
 
                                             if (each.more.image.count == i) swiper();
@@ -376,12 +377,20 @@ $(function(){/*
                                                 },
                                                 on : {
                                                     init: function () {
-                                                        $swiper.find('.swiper-lazy').on('load', function() {
-                                                            var $this = $(this);
-                                                            var maxH = $this[0].naturalHeight;
+                                                        // $swiper.find('.swiper-lazy').on('load', function() {
+                                                        //     var $this = $(this);
+                                                        //     var imgW = $this[0].naturalWidth;
+                                                        //     var imgH = $this[0].naturalHeight;
 
-                                                            $this.css('max-height', maxH);
-                                                        })
+                                                        //     if (imgW/2 > imgH) {
+                                                        //         $this.css({
+                                                        //             'width' : '100%',
+                                                        //             'height' : 'auto'
+                                                        //         });
+                                                        //     } else {
+                                                        //         $this.css('max-height', imgH);
+                                                        //     }
+                                                        // })
                                                     }
                                                 }
                                             });
@@ -391,7 +400,7 @@ $(function(){/*
                                     },
                                 });
                             });
-                        }                        
+                        }
                         if (each.more.video) {
                             var $btnVideo = $listMore.find('.btn_video').css('display', 'inline-flex');
 
@@ -399,9 +408,9 @@ $(function(){/*
                                 'data-title' : each.title,
                                 'data-src' : each.more.video.src,
                                 'data-type' : each.more.video.type,
-                            });                            
+                            });
 
-                            $btnVideo.videoLayer();                            
+                            $btnVideo.videoLayer();
                         }
                     }
                     $item_clone.appendTo($list);
@@ -450,7 +459,7 @@ $(function(){/*
             });
 
             // 처음 불러오기
-            var keyword = ['퍼블리싱'];
+            var keyword = ['취업뽀'];
 
             keyword.forEach(function(each, idx, arr){
                 var $this = $wrap.find('.list_tag :contains("'+each+'")').closest('.btn_tag');
@@ -464,7 +473,7 @@ $(function(){/*
         }
     });
 
-    
+
 
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■

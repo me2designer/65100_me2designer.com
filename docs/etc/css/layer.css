@@ -17,7 +17,10 @@
 #projectImage_wrap > .close svg path {stroke:#fff;transform:scale(0.4);transform-origin:50% 50%}
 #projectImage {position:relative;width:100%;height:100%}
 #projectImage .swiper-container {width:100%;height:100%}
-#projectImage .swiper-lazy {position:relative;top:50%;width:auto;max-width:100%;height:100%;transform:translateY(-50%)}
+#projectImage .swiper-slide {background-size:contain}
+#projectImage .swiper-button-white {width:41px;height:66px;background-color:rgba(0,0,0,0.2);background-size:50%;}
+#projectImage .swiper-button-prev {left:0}
+#projectImage .swiper-button-next {right:0}
 #projectImage .swiper-pagination {left:50%;bottom:30px;transform:translateX(-50%)}
 #projectImage .swiper-pagination-bullet {margin:0 6px;border-radius:2em;background:linear-gradient(to right, #00c652, #00c5ae);opacity:0.5;transition:all 0.4s ease-in-out;}
 #projectImage .swiper-pagination-bullet-active {width:36px;background:linear-gradient(to right, #00c652, #00c5ae);opacity:1}

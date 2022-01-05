@@ -154,37 +154,65 @@
         "thumb" : "chippo.co.kr.jpg",
         "title" : "취업뽀개기",
         "description" : "대한민국 최대의 취업정보 온라인 커뮤니티. 공공기관 부터 일반 사기업 취업정보 제공",
+        "workDesc" : "자료수집, 기획, 디자인, 퍼블리싱까지 전 작업 수행. 마크업 단계에서 반응형으로 고도화 진행함",
         "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
-        "tag" : ["기업홈페이지", "사업소개", "취업컨설팅", "원페이지", "반응형"]
+        "workDate" : "2018.12.11 ~ 2019.01.03",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
+        "tag" : ["기업홈페이지", "사업소개", "취업컨설팅", "원페이지", "반응형"],
+        "more" : {
+            "image" : {
+                "folder" : "chippo.co.kr",
+                "count" : 1
+            }
+        }
     },{
         "corp" : "(주)취업뽀개기",
         "thumb" : "coachjob.net.jpg",
         "title" : "코치잡",
         "description" : "코치잡 언제 어디서나 나만의 맞춤형 컨설팅을 받으세요! 취업·재취업·경력관리, 창업분야 컨설팅 플랫폼",
+        "workDesc" : "유지/보수, 고도화등 운영업무 지원",
         "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "2018.06 ~ 2019.05",
+        "workRate" : "기여도 100% (운영부분)",
         "tag" : ["취업컨설팅", "채용서비스", "사업소개", "반응형"],
         "more" : {
-            "link" : "//coachjob.net"
+            "link" : "//coachjob.net",
+            "image" : {
+                "folder" : "coachjob.net",
+                "count" : 4
+            }
         }
     },{
         "corp" : "(주)취업뽀개기",
         "thumb" : "campus.coachjob.net.jpg",
         "title" : "캠퍼스코치잡",
         "description" : "개별면담을 통한 진로설계코칭, 기업별 채용 경향을 심도 깊게 분석해 차별화된 전략까지공기업, 대기업, 중견기업까지 스마트한 코칭서비스",
+        "workDesc" : "기존 코치잡(coachjob.net) 개발코드(JAVA) 위에 디자인 및 퍼블리싱 커스터마이징 진행",
         "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "2018.06 ~ 2019.05",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["취업컨설팅", "채용서비스", "반응형"],
         "more" : {
-            "link" : "//campus.coachjob.net"
+            "link" : "//univ.coachjob.net",
+            "image" : {
+                "folder" : "campus.coachjob.net",
+                "count" : 12
+            }
         }
     },{
         "corp" : "(주)취업뽀개기",
         "thumb" : "motijob.co.kr.jpg",
         "title" : "국방전직교육원 전직컨설팅",
-        "description" : "국방부 산하 공공기관으로서 전역예정장병을 대상으로 진로설계, 진로교육, 전직기본교육, 전직컨설팅, 맞춤형 전문교육, 기본교육심화과정 취업컨설팅 제공",
+        "description" : "국방부 산하 공공기관으로서 전역예정장병을 대상으로 진로설계, 진로교육, 전직기본교육, 전직컨설팅, 맞춤형 전문교육, 기본교육심화과정 취업컨설팅 제공",        
         "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "2019.01.28 ~ 2019.02.22",
+        "workRate" : "기여도 100%",
         "tag" : ["취업컨설팅", "채용서비스", "반응형"],
         "more" : {
-            "link" : "//motijob.co.kr"
+            "image" : {
+                "folder" : "motijob.co.kr",
+                "count" : 2
+            }
         }
     },{
         "corp" : "(주)취업뽀개기",
@@ -192,9 +220,15 @@
         "title" : "국방전직교육원 전직컨설팅 Admin",
         "description" : "국방부 산하 공공기관으로서 전역예정장병을 대상으로 진로설계, 진로교육, 전직기본교육, 전직컨설팅, 맞춤형 전문교육, 기본교육심화과정 취업컨설팅 제공",
         "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "2019.01.28 ~ 2019.02.22",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["취업컨설팅", "채용서비스", "반응형", "CMS"],
         "more" : {
-            "link" : "//consult.moti.or.kr"
+            "link" : "//consult.moti.or.kr",
+            "image" : {
+                "folder" : "consult.moti.or.kr",
+                "count" : 4
+            }
         }
     },{
         "corp" : "(주)경향신문사",
@@ -273,7 +307,7 @@
         "description" : "한국경제신문 발행 대학생 격주간지. 취업, 창업, 대학생활, 인턴십, 공모전 관련 정보 제공",
         "workRole" : ["웹디자인", "퍼블리싱", "영상제작"],
         "tag" : ["뉴스플랫폼", "적응형"],
-        "more" : {            
+        "more" : {
             "video" : {
                 "src" : "//www.youtube.com/embed/3gfBukTyLE0",
                 "type" : "youtube"
