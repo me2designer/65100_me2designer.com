@@ -350,7 +350,7 @@ $(function(){/*
                                             $slide_clone = slide_copied.clone();
 
                                             $slide_clone.find('.swiper-lazy').attr({
-                                                'data-src' : '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg',
+                                                'data-src' : '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg'+cache,
                                                 'alt' : each.title+i,
                                             });
                                             $slide_clone.appendTo($swiper.find('.swiper-wrapper'));

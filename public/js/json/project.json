@@ -13,7 +13,7 @@
             "link" : "//www.mkbiz.kr",
             "image" : {
                 "folder" : "mkbiz.kr",
-                "count" : 6
+                "count" : 27
             }
         }
     },{
@@ -83,7 +83,11 @@
         "workRole" : ["웹디자인", "퍼블리싱"],
         "tag" : ["원페이지", "TM영업", "적응형"],
         "more" : {
-            "link" : "//baro-bigyo.com"
+            "link" : "//baro-bigyo.com",
+            "image" : {
+                "folder" : "baro-bigyo.com",
+                "count" : 2
+            }
         }
     },{
         "corp" : "피플라이프(주)",
