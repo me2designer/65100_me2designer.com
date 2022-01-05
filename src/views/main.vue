@@ -122,6 +122,7 @@
                         <div class="list_more">
                             <a class="link_more" href="" title="사이트 바로가기" target="_blank"><img src="" data-images-path="/images/ico/link-regular.svg" alt=""></a>
                             <button class="btn_image" title="미리보기" type="button"><img src="" data-images-path="/images/ico/image-regular.svg" alt=""></button>
+                            <button class="btn_video" data-src="" data-title="" data-type="" title="영상보기" type="button"><img src="" data-images-path="/images/ico/play-regular.svg" alt=""></button>
                         </div>
                     </div>
                 </li>

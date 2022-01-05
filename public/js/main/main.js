@@ -349,12 +349,14 @@ $(function(){/*
                                         for (var i = 1; i <= each.more.image.count; i++) {
                                             $slide_clone = slide_copied.clone();
 
-                                            $slide_clone.find('.swiper-lazy').attr('data-src', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg');
+                                            $slide_clone.find('.swiper-lazy').attr({
+                                                'data-src' : '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg',
+                                                'alt' : each.title+i,
+                                            });
                                             $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
 
                                             if (each.more.image.count == i) swiper();
                                         }
-
 
                                         // swiper
                                         function swiper() {
@@ -389,6 +391,17 @@ $(function(){/*
                                     },
                                 });
                             });
+                        }                        
+                        if (each.more.video) {
+                            var $btnVideo = $listMore.find('.btn_video').css('display', 'inline-flex');
+
+                            $btnVideo.attr({
+                                'data-title' : each.title,
+                                'data-src' : each.more.video.src,
+                                'data-type' : each.more.video.type,
+                            });                            
+
+                            $btnVideo.videoLayer();                            
                         }
                     }
                     $item_clone.appendTo($list);
@@ -451,7 +464,7 @@ $(function(){/*
         }
     });
 
-
+    
 
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■

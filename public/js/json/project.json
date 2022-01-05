@@ -13,7 +13,11 @@
             "link" : "//www.mkbiz.kr",
             "image" : {
                 "folder" : "mkbiz.kr",
-                "count" : 2
+                "count" : 6
+            },
+            "video" : {
+                "src" : "//www.youtube.com/embed/sUgBiQlDxus",
+                "type" : "youtube"
             }
         }
     },{
@@ -267,8 +271,14 @@
         "thumb" : "jobnjoy.com.png",
         "title" : "캠퍼스잡앤조이",
         "description" : "한국경제신문 발행 대학생 격주간지. 취업, 창업, 대학생활, 인턴십, 공모전 관련 정보 제공",
-        "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["뉴스플랫폼", "적응형"]        
+        "workRole" : ["웹디자인", "퍼블리싱", "영상제작"],
+        "tag" : ["뉴스플랫폼", "적응형"],
+        "more" : {            
+            "video" : {
+                "src" : "//www.youtube.com/embed/3gfBukTyLE0",
+                "type" : "youtube"
+            } 
+        }
     },{
         "corp" : "전북은행(주)",
         "thumb" : "jbfg.com.png",
