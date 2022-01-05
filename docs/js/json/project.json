@@ -219,6 +219,7 @@
         "thumb" : "consult.moti.or.kr.jpg",
         "title" : "국방전직교육원 전직컨설팅 Admin",
         "description" : "국방부 산하 공공기관으로서 전역예정장병을 대상으로 진로설계, 진로교육, 전직기본교육, 전직컨설팅, 맞춤형 전문교육, 기본교육심화과정 취업컨설팅 제공",
+        "workDesc" : "기존 CMS 디자인 고도화 및 반응형 적용등",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "2019.01.28 ~ 2019.02.22",
         "workRate" : "기여도 100% (API 개발부분 제외)",
@@ -228,6 +229,23 @@
             "image" : {
                 "folder" : "consult.moti.or.kr",
                 "count" : 4
+            }
+        }
+    },{
+        "corp" : "(주)취업뽀개기",
+        "thumb" : "vnet.go.kr.jpg",
+        "title" : "국가보훈처 제대군인지원센터",
+        "description" : "제대군인 사회복귀, 복지향상, 취업, 창업 지원, 채용 및 인재정보 제공",
+        "workDesc" : "제대군인지원센터 플랫폼 구축 제안서 컨셉 시안 제작",
+        "workRole" : ["웹디자인"],
+        "workDate" : "2019.05.13",
+        "workRate" : "기여도 100%",
+        "tag" : ["취업컨설팅", "채용서비스", "적응형"],
+        "more" : {
+            "link" : "//vnet.go.kr",
+            "image" : {
+                "folder" : "vnet.go.kr",
+                "count" : 2
             }
         }
     },{

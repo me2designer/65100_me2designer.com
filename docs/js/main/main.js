@@ -459,7 +459,7 @@ $(function(){/*
             });
 
             // 처음 불러오기
-            var keyword = ['취업뽀'];
+            var keyword = ['퍼블리싱'];
 
             keyword.forEach(function(each, idx, arr){
                 var $this = $wrap.find('.list_tag :contains("'+each+'")').closest('.btn_tag');
