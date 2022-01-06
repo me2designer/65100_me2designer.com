@@ -90,7 +90,7 @@
         "description" : "해지환급금 미지급형으로 한번 더 보험료 부담을 덜어주는 절약형 저해지환급형보험",
         "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
-        "workDate" : "2020.05.08 ~ 2020.05.22(W.Day 7)",
+        "workDate" : "2020.05.22 ~ 2020.06.11(W.Day 7)",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
         "thumb" : "zero-clinic.co.kr.jpg",
@@ -124,7 +124,7 @@
         "description" : "암보험 클리닉에서 성별, 연령, 유병자에 관계없이 다양한 종류의 암을 준비하라",
         "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
-        "workDate" : "??",
+        "workDate" : "2019.11.11 ~ 2019.11.18(W.Day 6)",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
         "thumb" : "cancer-clinic.co.kr.jpg",
@@ -141,12 +141,16 @@
         "description" : " 암보험 전문 컨설턴트가 꼼꼼한 분석을 통한 고객맞춤 보험 설계",
         "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
-        "workDate" : "??",
+        "workDate" : "2020.04.07 ~ 2020.04.15(W.Day 3)",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
         "thumb" : "cancer-bigyo.co.kr.jpg",
         "more" : {
-            "link" : "//cancer-bigyo.co.kr"
+            "link" : "//cancer-bigyo.co.kr",
+            "image" : {
+                "folder" : "cancer-bigyo.co.kr",
+                "count" : 2
+            }
         }
     },{
         "title" : "치매간병보험클리닉",

@@ -276,6 +276,8 @@ $(function(){/*
 
             // click event
             $list.find('.btn_tag').on('click', function(){
+                if ($list.hasClass('is-reset')) $list.removeClass('is-reset').find('.btn_tag').removeClass('on');
+
                 $(this).toggleClass('on');
 
                 // list 초기화
@@ -433,7 +435,7 @@ $(function(){/*
             // .btn_more click event
             $btnMore.on('click', function() {
                 // 1. 선택된 태그의 keyword 저장
-                var tag = []
+                var tag = [];
                 var get_tag = $wrap.find('.list_tag .btn_tag.on').get();
 
                 get_tag.forEach(function(info){
@@ -465,8 +467,10 @@ $(function(){/*
                 var $this = $wrap.find('.list_tag :contains("'+each+'")').closest('.btn_tag');
 
                 $this.addClass('on');
-                if (idx === arr.length - 1) {
+                
+                if (idx === arr.length - 1) {                    
                     $btnMore.trigger('click');
+                    $wrap.find('.list_tag').addClass('is-reset');
                 }
             });
 
