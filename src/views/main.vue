@@ -107,7 +107,7 @@
                 <li class="item_project">
                     <div class="inner_default">
                         <div class="box_thumb">
-                            <img src="" alt="" onerror="this.src='https://via.placeholder.com/416x240'">
+                            <img src="" alt="" onerror="this.src='/img/main/project_thumb/onerror.jpg'">
                         </div>
                         <p class="tit"></p>
                         <p class="desc"></p>

@@ -1,14 +1,14 @@
 [
     {
-        "corp" : "피플라이프(주)",
-        "thumb" : "mkbiz.kr.jpg",
         "title" : "매경경영지원본부",
+        "corp" : "피플라이프(주)",
         "description" : "'지속가능한 경영'을 위한 리스크관리부터 컨설팅 후 사후관리까지 중소기업 위기극복 파트너",
         "workDesc" : "PC, Mobile 리뉴얼 VUE 프레임워크 사용한 재구축",
         "workRole" : ["퍼블리싱"],
         "workDate" : "2021.08.05 ~ 2021.12.31(W.Day 39)",
         "workRate" : "기여도 100% (API 및 Canvas 개발부분 제외)",
         "tag" : ["기업홈페이지", "사업소개", "적응형"],
+        "thumb" : "mkbiz.kr.jpg",
         "more" : {
             "link" : "//www.mkbiz.kr",
             "image" : {
@@ -17,15 +17,15 @@
             }
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "peoplelife.co.kr.jpg",
         "title" : "피플라이프",
+        "corp" : "피플라이프(주)",
         "description" : "당신에게 필요한 모든 순간, 전방위적으로! 보험상품 비교추천부터 중소기업 경영효율화까지",
         "workDesc" : "PC, Mobile 리뉴얼 VUE 프레임워크 사용한 재구축",
         "workRole" : ["퍼블리싱"],
         "workDate" : "2021.03.29 ~ 2021.11.12(W.Day 63)",
         "workRate" : "기여도 80% (API 개발부분 제외)",
         "tag" : ["기업홈페이지", "사업소개", "적응형"],
+        "thumb" : "peoplelife.co.kr.jpg",
         "more" : {
             "link" : "//www.peoplelife.co.kr",
             "image" : {
@@ -34,58 +34,83 @@
             }
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "bohumclinic.com.jpg",
         "title" : "보험클리닉 OTC & FA",
+        "corp" : "피플라이프(주)",
         "description" : "보험도 마트나 백화점에서 쇼핑하듯이 본인의 상황과 니즈에 맞게 보험상품을 능동적 쇼핑하라",
         "workDesc" : "SHOP를 제외한 GATE, Visit 부분 PC, Mobile 신규 구축과 컨셉 디자인 시안 제작",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "workDate" : "2020.11.10 ~ 2021.12.15(W.Day 12)",
+        "workDate" : "2020.11.10 ~ 2020.12.15(W.Day 12)",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["기업홈페이지", "사업소개", "적응형"],
+        "thumb" : "bohumclinic.com.jpg",
         "more" : {
-            "link" : "//www.bohumclinic.com"
+            "link" : "//www.bohumclinic.com",
+            "image" : {
+                "folder" : "bohumclinic.com",
+                "count" : 6
+            }
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "bohum-moa.com.jpg",
         "title" : "보험클리닉 MICROSITE",
+        "corp" : "피플라이프(주)",
         "description" : "APP·인터넷(웹)·모바일(전화)을 활용한 고객이 매장 방문 예약에서, 상당매니저 방문요청 제공",
         "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
         "workDate" : "2021.04.12 ~ 2021.04.26(W.Day 6)",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "bohum-moa.com.jpg",
         "more" : {
-            "link" : "//www.bohum-moa.com"
+            "link" : "//www.bohum-moa.com",
+            "image" : {
+                "folder" : "bohum-moa.com",
+                "count" : 2
+            }
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "bigyo-clinic.com.jpg",
         "title" : "보험비교클리닉",
+        "corp" : "피플라이프(주)",
         "description" : "암보험부터 건강보험까지 보험클리닉의 대표 상품을 비교하고 보장분석 한 번에 쉽고 정확하게!",
+        "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
+        "workDate" : "2020.05.08 ~ 2020.05.15(W.Day 2.5)",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "bigyo-clinic.com.jpg",
         "more" : {
-            "link" : "//www.bigyo-clinic.com"
+            "link" : "//www.bigyo-clinic.com",
+            "image" : {
+                "folder" : "bigyo-clinic.com",
+                "count" : 2
+            }
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "zero-clinic.co.kr.jpg",
         "title" : "저해지환급형 보험클리닉",
+        "corp" : "피플라이프(주)",
         "description" : "해지환급금 미지급형으로 한번 더 보험료 부담을 덜어주는 절약형 저해지환급형보험",
+        "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
+        "workDate" : "2020.05.08 ~ 2020.05.22(W.Day 7)",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "zero-clinic.co.kr.jpg",
         "more" : {
-            "link" : "//zero-clinic.co.kr"
+            "link" : "//zero-clinic.co.kr",
+            "image" : {
+                "folder" : "zero-clinic.co.kr",
+                "count" : 2
+            }
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "baro-bigyo.com.jpg",
         "title" : "바로비교",
+        "corp" : "피플라이프(주)",
         "description" : "국ㆍ내외 32개 보험사에서 나에게 딱 맞는 상품만 모아서 한 눈에 바로비교 서비스",
+        "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "2019.10.24 ~ 2019.11.11(W.Day 11)",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "baro-bigyo.com.jpg",
         "more" : {
             "link" : "//baro-bigyo.com",
             "image" : {
@@ -94,75 +119,97 @@
             }
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "cancer-clinic.co.kr.jpg",
         "title" : "암보험클리닉",
+        "corp" : "피플라이프(주)",
         "description" : "암보험 클리닉에서 성별, 연령, 유병자에 관계없이 다양한 종류의 암을 준비하라",
+        "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
+        "workDate" : "??",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "cancer-clinic.co.kr.jpg",
         "more" : {
-            "link" : "//cancer-clinic.co.kr"
+            "link" : "//cancer-clinic.co.kr",
+            "image" : {
+                "folder" : "cancer-clinic.co.kr",
+                "count" : 2
+            }
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "cancer-bigyo.co.kr.jpg",
         "title" : "암보험비교",
+        "corp" : "피플라이프(주)",
         "description" : " 암보험 전문 컨설턴트가 꼼꼼한 분석을 통한 고객맞춤 보험 설계",
+        "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
+        "workDate" : "??",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "cancer-bigyo.co.kr.jpg",
         "more" : {
             "link" : "//cancer-bigyo.co.kr"
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "senior-clinic.com.jpg",
         "title" : "치매간병보험클리닉",
+        "corp" : "피플라이프(주)",
         "description" : "대한민국 30여 개 보험사의 18,000여 보험 상품을 비교하여 단계별 치매진단비 보장 및 보험료 확인",
+        "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
+        "workDate" : "??",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "senior-clinic.com.jpg",
         "more" : {
             "link" : "//senior-clinic.com"
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "simple-clinic.com.jpg",
         "title" : "유병자보험클리닉",
+        "corp" : "피플라이프(주)",
         "description" : "고령자도, 유병자도 2가지 질문 통과시 가입OK",
+        "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
+        "workDate" : "??",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "simple-clinic.com.jpg",
         "more" : {
             "link" : "//simple-clinic.com"
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "kidult-clinic.com.jpg",
         "title" : "어른이보험클리닉",
+        "corp" : "피플라이프(주)",
         "description" : "영유아부터 30세 성인까지 같은 보장으로 실속있게 가입하는 어른이보험클리닉",
+        "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
+        "workDate" : "??",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "kidult-clinic.com.jpg",
         "more" : {
             "link" : "//kidult-clinic.com"
         }
     },{
-        "corp" : "피플라이프(주)",
-        "thumb" : "health-clinic.co.kr.jpg",
         "title" : "건강보험클리닉",
+        "corp" : "피플라이프(주)",
         "description" : "꼭! 필요한 필수보장만 제공하는 수실비&2대질병진단비 보험료 안내",
+        "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
+        "workDate" : "??",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "health-clinic.co.kr.jpg",
         "more" : {
             "link" : "//health-clinic.co.kr"
         }
     },{
-        "corp" : "(주)취업뽀개기",
-        "thumb" : "chippo.co.kr.jpg",
         "title" : "취업뽀개기",
+        "corp" : "(주)취업뽀개기",
         "description" : "대한민국 최대의 취업정보 온라인 커뮤니티. 공공기관 부터 일반 사기업 취업정보 제공",
         "workDesc" : "자료수집, 기획, 디자인, 퍼블리싱까지 전 작업 수행. 마크업 단계에서 반응형으로 고도화 진행함",
         "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
         "workDate" : "2018.12.11 ~ 2019.01.03",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["기업홈페이지", "사업소개", "취업컨설팅", "원페이지", "반응형"],
+        "thumb" : "chippo.co.kr.jpg",
         "more" : {
             "image" : {
                 "folder" : "chippo.co.kr",
@@ -170,15 +217,15 @@
             }
         }
     },{
-        "corp" : "(주)취업뽀개기",
-        "thumb" : "coachjob.net.jpg",
         "title" : "코치잡",
+        "corp" : "(주)취업뽀개기",
         "description" : "코치잡 언제 어디서나 나만의 맞춤형 컨설팅을 받으세요! 취업·재취업·경력관리, 창업분야 컨설팅 플랫폼",
         "workDesc" : "유지/보수, 고도화등 운영업무 지원",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "2018.06 ~ 2019.05",
         "workRate" : "기여도 100% (운영부분)",
         "tag" : ["취업컨설팅", "채용서비스", "사업소개", "반응형"],
+        "thumb" : "coachjob.net.jpg",
         "more" : {
             "link" : "//coachjob.net",
             "image" : {
@@ -187,15 +234,15 @@
             }
         }
     },{
-        "corp" : "(주)취업뽀개기",
-        "thumb" : "campus.coachjob.net.jpg",
         "title" : "캠퍼스코치잡",
+        "corp" : "(주)취업뽀개기",
         "description" : "개별면담을 통한 진로설계코칭, 기업별 채용 경향을 심도 깊게 분석해 차별화된 전략까지공기업, 대기업, 중견기업까지 스마트한 코칭서비스",
         "workDesc" : "기존 코치잡(coachjob.net) 개발코드(JAVA) 위에 디자인 및 퍼블리싱 커스터마이징 진행",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "2018.06 ~ 2019.05",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["취업컨설팅", "채용서비스", "반응형"],
+        "thumb" : "campus.coachjob.net.jpg",
         "more" : {
             "link" : "//univ.coachjob.net",
             "image" : {
@@ -204,30 +251,30 @@
             }
         }
     },{
-        "corp" : "(주)취업뽀개기",
-        "thumb" : "motijob.co.kr.jpg",
         "title" : "국방전직교육원 전직컨설팅",
+        "corp" : "(주)취업뽀개기",
         "description" : "국방부 산하 공공기관으로서 전역예정장병을 대상으로 진로설계, 진로교육, 전직기본교육, 전직컨설팅, 맞춤형 전문교육, 기본교육심화과정 취업컨설팅 제공",        
         "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "2019.01.28 ~ 2019.02.22",
         "workRate" : "기여도 100%",
         "tag" : ["취업컨설팅", "채용서비스", "반응형"],
         "more" : {
+            "thumb" : "motijob.co.kr.jpg",
             "image" : {
                 "folder" : "motijob.co.kr",
                 "count" : 2
             }
         }
     },{
-        "corp" : "(주)취업뽀개기",
-        "thumb" : "consult.moti.or.kr.jpg",
         "title" : "국방전직교육원 전직컨설팅 Admin",
+        "corp" : "(주)취업뽀개기",
         "description" : "국방부 산하 공공기관으로서 전역예정장병을 대상으로 진로설계, 진로교육, 전직기본교육, 전직컨설팅, 맞춤형 전문교육, 기본교육심화과정 취업컨설팅 제공",
         "workDesc" : "기존 CMS 디자인 고도화 및 반응형 적용등",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "2019.01.28 ~ 2019.02.22",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["취업컨설팅", "채용서비스", "반응형", "CMS"],
+        "thumb" : "consult.moti.or.kr.jpg",
         "more" : {
             "link" : "//consult.moti.or.kr",
             "image" : {
@@ -236,15 +283,15 @@
             }
         }
     },{
-        "corp" : "(주)취업뽀개기",
-        "thumb" : "vnet.go.kr.jpg",
         "title" : "국가보훈처 제대군인지원센터",
+        "corp" : "(주)취업뽀개기",
         "description" : "제대군인 사회복귀, 복지향상, 취업, 창업 지원, 채용 및 인재정보 제공",
         "workDesc" : "제대군인지원센터 플랫폼 구축 제안서 컨셉 시안 제작",
         "workRole" : ["웹디자인"],
         "workDate" : "2019.05.13",
         "workRate" : "기여도 100%",
         "tag" : ["취업컨설팅", "채용서비스", "적응형"],
+        "thumb" : "vnet.go.kr.jpg",
         "more" : {
             "link" : "//vnet.go.kr",
             "image" : {
@@ -253,82 +300,82 @@
             }
         }
     },{
-        "corp" : "(주)경향신문사",
-        "thumb" : "sports.khan.co.kr_olympic_2018.jpg",
         "title" : "2018 평창동계올림픽 뉴스포털",
+        "corp" : "(주)경향신문사",
         "description" : "2018년 대한민국의 뜨거운 겨울을 경향신문·스포츠경향과 함께하세요. 감동과 환희의 순간, 선수 인터뷰, 경기 결과 및 정보, 뒷 얘기 까지 세계 최대의 스포츠 이벤트 평창 동계올림픽의 모든 것을 담았습니다",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "tag" : ["뉴스플랫폼", "적응형"],
+        "thumb" : "sports.khan.co.kr_olympic_2018.jpg",
         "more" : {
             "link" : "//sports.khan.co.kr/olympic/2018"
         }
     },{
-        "corp" : "(주)경향신문사",
-        "thumb" : "khan.co.kr.jpg",
         "title" : "경향신문 뉴스플랫폼",
+        "corp" : "(주)경향신문사",
         "description" : "국내 최고 언론사 경향신문 온라인 지면 서비스를 통해 오피니언, 정치, 사회, 경제, 국제, 스포츠, 문화 뉴스를 빠르고 정확하게 제공",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "tag" : ["뉴스플랫폼", "적응형"],
+        "thumb" : "khan.co.kr.jpg",
         "more" : {
             "link" : "//khan.co.kr"
         }
     },{
-        "corp" : "(주)경향신문사",
-        "thumb" : "khan.co.kr_aboutkh.jpg",
         "title" : "경향신문 회사소개",
+        "corp" : "(주)경향신문사",
         "description" : "한국 언론사상 최초의 사원주주회사. 권력과 자본의 막강한 힘 앞에 진실만을 추구하겠습니다.",
         "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
         "tag" : ["기업홈페이지", "사업소개"],
+        "thumb" : "khan.co.kr_aboutkh.jpg",
         "more" : {
             "link" : "//khan.co.kr/aboutkh"
         }
     },{
-        "corp" : "(주)경향신문사",
-        "thumb" : "recruit.khan.co.kr.jpg",
         "title" : "경향신문 인재채용",
+        "corp" : "(주)경향신문사",
         "description" : "경향신문과 함께 성장해 나갈 숨은 인재를 기다립니다.",
         "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
         "tag" : ["기업홈페이지", "사업소개", "채용서비스", "반응형"],
+        "thumb" : "recruit.khan.co.kr.jpg",
         "more" : {
             "link" : "//recruit.khan.co.kr"
         }
     },{
-        "corp" : "(주)경향신문사",
-        "thumb" : "jebo.khan.co.kr.jpg",
         "title" : "경향신문 기사제보",
+        "corp" : "(주)경향신문사",
         "description" : "함께 나누고픈 이야기, 억울한 이야기, 하기 힘든 이야기, 놀라운 이야기를 기다리고 있습니다.",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "tag" : ["뉴스플랫폼", "봇(BOT)", "반응형"],
+        "thumb" : "jebo.khan.co.kr.jpg",
         "more" : {
             "link" : "//jebo.khan.co.kr"
         }
     },{
-        "corp" : "(주)경향신문사",
-        "thumb" : "khan.co.kr_saturday.jpg",
         "title" : "경향신문 토요판",
+        "corp" : "(주)경향신문사",
         "description" : "뜨거운 사회적 이슈, 이웃을 향한 따뜻한 시선, 톡톡 튀는 생활 속 감각을 담았습니다. 다양한 분야의 전문가와 감각 있는 필진들의 글을 모았습니다",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "tag" : ["뉴스플랫폼", "반응형"],
+        "thumb" : "khan.co.kr_saturday.jpg",
         "more" : {
             "link" : "//khan.co.kr/saturday"
         }
     },{
-        "corp" : "한국경제매거진(주)",
-        "thumb" : "magazine.hankyung.com.jpg",
         "title" : "매거진한경",
+        "corp" : "한국경제매거진(주)",
         "description" : "대한민국 잡지 미디어의 새 장을 열어가고 있는 매거진한경, 주간 한경BUSINESS, 월간 MONEY, 격주간 한경JOB&JOY 발행",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "tag" : ["뉴스플랫폼", "적응형"],
+        "thumb" : "magazine.hankyung.com.jpg",
         "more" : {
             "link" : "//magazine.hankyung.com"
         }
     },{
-        "corp" : "한국경제매거진(주)",
-        "thumb" : "jobnjoy.com.png",
         "title" : "캠퍼스잡앤조이",
+        "corp" : "한국경제매거진(주)",
         "description" : "한국경제신문 발행 대학생 격주간지. 취업, 창업, 대학생활, 인턴십, 공모전 관련 정보 제공",
         "workRole" : ["웹디자인", "퍼블리싱", "영상제작"],
         "tag" : ["뉴스플랫폼", "적응형"],
+        "thumb" : "jobnjoy.com.png",
         "more" : {
             "video" : {
                 "src" : "//www.youtube.com/embed/3gfBukTyLE0",
@@ -336,65 +383,65 @@
             }
         }
     },{
-        "corp" : "전북은행(주)",
-        "thumb" : "jbfg.com.png",
         "title" : "JB금융지주",
+        "corp" : "전북은행(주)",
         "description" : "",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "tag" : ["기업홈페이지", "사업소개"],
+        "thumb" : "jbfg.com.png",
         "more" : {
             "link" : "//www.jbfg.com"
         }
     },{
-        "corp" : "전북은행(주)",
-        "thumb" : "jbbank.co.kr.png",
         "title" : "전북은행 인터넷뱅킹",
+        "corp" : "전북은행(주)",
         "description" : "금융으로 더 따뜻한 세상을 만드는 전북은행 지금 전북은행 뉴스마트뱅킹 서비스로 나에게 딱 맞는 금융서비스를 만나보세요",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "tag" : ["금융서비스", "적응형"],
+        "thumb" : "jbbank.co.kr.png",
         "more" : {
             "link" : "//www.jbbank.co.kr"
         }
     },{
-        "corp" : "전북은행(주)",
-        "thumb" : "direct.jbbank.co.kr.png",
         "title" : "JB다이렉트 예금/적금",
+        "corp" : "전북은행(주)",
         "description" : "비대면 입출금통장. 영업점 방문없이 가입이 가능한 고금리 입출금이 자유로운 예금으로 인터넷뱅킹, 스마트폰뱅킹, 폰뱅킹 및 자동화기기이용수수료 우대",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["금융서비스", "적응형"]
+        "tag" : ["금융서비스", "적응형"],
+        "thumb" : "direct.jbbank.co.kr.png"
     },{
-        "corp" : "전북은행(주)",
-        "thumb" : "directcredit.jbbank.co.kr.png",
         "title" : "JB다이렉트 직장인 신용대출",
+        "corp" : "전북은행(주)",
         "description" : "직장인을 대상으로 무서류·무방문 인터넷으로 대출신청에서 대출실행까지 처리하는 신속하고 간편한 인터넷전용 대출상품",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["금융서비스", "적응형"]
+        "tag" : ["금융서비스", "적응형"],
+        "thumb" : "directcredit.jbbank.co.kr.png"
     },{
-        "corp" : "전북은행(주)",
-        "thumb" : "cp.jbbank.co.kr.png",
         "title" : "JB카드 CP업무지원 시스템",
+        "corp" : "전북은행(주)",
         "description" : "내용",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "",
         "workDays" : "",
-        "tag" : ["금융서비스", "적응형", "CMS"]
+        "tag" : ["금융서비스", "적응형", "CMS"],
+        "thumb" : "cp.jbbank.co.kr.png"
     },{
-        "corp" : "전북은행(주)",
-        "thumb" : "jbbank_jbcard.jpg",
         "title" : "JB카드 프로모션 디자인",
-        "description" : "내용",
-        "workRole" : ["웹디자인"],
-        "workDate" : "",
-        "workDays" : "",
-        "tag" : ["프로모션 디자인"]
-    },{
         "corp" : "전북은행(주)",
-        "thumb" : "jbbank_social.jpg",
-        "title" : "전북은행 사회공헌 사업",
         "description" : "내용",
         "workRole" : ["웹디자인"],
         "workDate" : "",
         "workDays" : "",
-        "tag" : ["프로모션 디자인"]
+        "tag" : ["프로모션 디자인"],
+        "thumb" : "jbbank_jbcard.jpg"
+    },{
+        "title" : "전북은행 사회공헌 사업",
+        "corp" : "전북은행(주)",
+        "description" : "내용",
+        "workRole" : ["웹디자인"],
+        "workDate" : "",
+        "workDays" : "",
+        "tag" : ["프로모션 디자인"],
+        "thumb" : "jbbank_social.jpg"
     }
 ]
