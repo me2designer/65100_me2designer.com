@@ -378,7 +378,10 @@ $(function(){/*
 
                                             if (each.more.image.count <= 1) $layer.find('.swiper-button-next, .swiper-button-prev, .swiper-pagination').remove();
                                         }
-                                        if (!$swiper.find('.swiper-slide').attr('data-background')) runSwiper(); //swiper-lazy 적용이 안된 경우 재실행
+                                        if (!$swiper.find('.swiper-slide').attr('data-background')) {
+                                            console.log('data-background'); 
+                                            runSwiper(); //swiper-lazy 적용이 안된 경우 재실행
+                                        }
                                     },
                                 });
                             });
