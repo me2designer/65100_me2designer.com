@@ -341,14 +341,17 @@ $(function(){/*
                             var $btnImg = $listMore.find('.btn_image').css('display', 'inline-flex');
 
                             $btnImg.on('click', function() {
+                                console.log('click');
                                 LAYER({
                                     name : 'projectImage',
                                     afterLoad : function(){
+                                        console.log('layerAfterLoad');
                                         var $layer = $('#projectImage_wrap');
                                         var $swiper = $layer.find('.swiper-container');
                                         var slide_copied = $swiper.find('.swiper-slide').detach();
                                         var $slide_clone;
                                         for (var i = 1; i <= each.more.image.count; i++) {
+                                            console.log('for', i, each.more.image.count);
                                             $slide_clone = slide_copied.clone();
                                             $slide_clone.attr('data-background', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg'+cache);
 
@@ -358,11 +361,15 @@ $(function(){/*
                                             // });
                                             $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
 
-                                            if (each.more.image.count == i) swiper();
+                                            if (each.more.image.count == i) {
+                                                console.log('for END', i, each.more.image.count);
+                                                swiper();
+                                            }
                                         }
 
                                         // swiper
                                         function swiper() {
+                                            console.log('swiper()')
                                             var swiper = new Swiper($swiper, {
                                                 lazy: true,
                                                 lazy: {
@@ -379,6 +386,7 @@ $(function(){/*
                                                 },
                                                 on : {
                                                     init: function () {
+                                                        console.log('swiper() init', this);
                                                         // $swiper.find('.swiper-lazy').on('load', function() {
                                                         //     var $this = $(this);
                                                         //     var imgW = $this[0].naturalWidth;
