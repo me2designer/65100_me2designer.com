@@ -154,7 +154,7 @@ $(function(){/*
     /* 사용자 편의성 - DOM 생성 */
     var $wrap = $('#device');
     var swiperType = ['pc', 'tablet', 'mobile']
-    var listThumb = ['peoplelife', 'mkbiz','bohumclinic_otc','bohumclinic_fa']
+    var listThumb = ['peoplelife.co.kr', 'bohumclinic.com_otc', 'bohumclinic.com_fa', 'campus.coachjob.net', 'motijob.co.kr']
     var $swiper = $wrap.find('.swiper-container');
     var swiper_copied = $swiper.detach();
 
@@ -361,7 +361,7 @@ $(function(){/*
 
                                         // swiper
                                         function swiper() {
-                                            new Swiper($swiper, {
+                                            var swiper = new Swiper($swiper, {
                                                 lazy: true,
                                                 lazy: {
                                                     loadPrevNext: false,
@@ -459,8 +459,7 @@ $(function(){/*
             });
 
             // 처음 불러오기
-            var keyword = ['경향신문'];
-            // var keyword = ['피플라이프', '취업뽀개기', '경향신문', '한국경제매거진', '전북은행'];
+            var keyword = !isReal ? ['경향'] : ['피플라이프', '취업뽀개기', '경향신문', '한국경제매거진', '전북은행'];
 
             keyword.forEach(function(each, idx, arr){
                 var $this = $wrap.find('.list_tag :contains("'+each+'")').closest('.btn_tag');
