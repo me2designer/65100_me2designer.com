@@ -27,7 +27,11 @@
         "workRate" : "기여도 80% (API 개발부분 제외)",
         "tag" : ["기업홈페이지", "사업소개", "적응형"],
         "more" : {
-            "link" : "//www.peoplelife.co.kr"
+            "link" : "//www.peoplelife.co.kr",
+            "image" : {
+                "folder" : "peoplelife.co.kr",
+                "count" : 14
+            }
         }
     },{
         "corp" : "피플라이프(주)",
