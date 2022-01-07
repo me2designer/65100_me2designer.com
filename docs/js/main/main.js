@@ -359,7 +359,7 @@ $(function(){/*
                                                 $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
                                                 
                                             }                             
-                                            setTimeout(() => { //swiper 오류 개선
+                                            setTimeout(() => { //swiper 비동기 오류 개선
                                                 callback(); 
                                             }, 100);                                                
                                         }
@@ -445,7 +445,7 @@ $(function(){/*
             });
 
             // 처음 불러오기
-            var keyword = !isReal ? ['피플라이프'] : ['피플라이프', '취업뽀개기', '경향신문', '한국경제매거진', '전북은행'];
+            var keyword = !isReal ? ['경향'] : ['피플라이프', '취업뽀개기', '경향신문', '한국경제매거진', '전북은행'];
 
             keyword.forEach(function(each, idx, arr){
                 var $this = $wrap.find('.list_tag :contains("'+each+'")').closest('.btn_tag');
