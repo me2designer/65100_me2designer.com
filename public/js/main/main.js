@@ -35,7 +35,12 @@ $(function(){/*
         slidesPerView: 1,
         loop: true,
         loopedSlides: slide_length,
-        effect: 'fade',
+        effect: 'fade',        
+        lazy: true,
+        lazy: {
+            loadPrevNext: false,
+            loadOnTransitionStart: true
+        },
         navigation: {
             nextEl: $wrap.find('.swiper-button-next'),
             prevEl: $wrap.find('.swiper-button-prev')
@@ -152,101 +157,6 @@ $(function(){/*
 
 
 
-    /* 사용자 편의성 - DOM 생성 */
-    var $wrap = $('#device');
-    var swiperType = ['pc', 'tablet', 'mobile']
-    var listThumb = ['peoplelife.co.kr', 'bohumclinic.com_otc', 'bohumclinic.com_fa', 'campus.coachjob.net', 'motijob.co.kr', 'vnet.go.kr']
-    var $swiper = $wrap.find('.swiper-container');
-    var swiper_copied = $swiper.detach();
-
-    swiperType.forEach(function(type){
-        var $swiper_clone = swiper_copied.clone();
-        $swiper_clone.addClass('swiper-'+type+'');
-
-        var slide_copied = $swiper_clone.find('.swiper-slide').detach();
-        listThumb.forEach(function(fileName){
-            var $slide_clone = slide_copied.clone()
-            $slide_clone.find('.slide-inner').css('background-image', 'url(/img/main/device_thumb/'+type+'/'+fileName+'.jpg)');
-            $slide_clone.prependTo($swiper_clone.find('.swiper-wrapper'))
-        });
-        $swiper_clone.prependTo($wrap.find('.inner'));
-    });
-
-
-
-})();/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/(function(){
-
-
-
-    /* 사용자 편의성 - swiper */
-    var $wrap = $('#device');
-    var interleaveOffset = 0.5;
-    var $swiperTablet = $wrap.find('.swiper-tablet');
-    var $swiperPc = $wrap.find('.swiper-pc');
-    var $swiperMobile = $wrap.find('.swiper-mobile');
-    var swiperOptions = {
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction : false,
-        },
-        loop: true,
-        speed: 1000,
-        grabCursor: true,
-        watchSlidesProgress: true,
-        mousewheelControl: true,
-        keyboardControl: true,
-        on: {
-            progress: function() {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    var slideProgress = swiper.slides[i].progress;
-                    var innerOffset = swiper.width * interleaveOffset;
-                    var innerTranslate = slideProgress * innerOffset;
-                    swiper.slides[i].querySelector(".slide-inner").style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
-                }
-            },
-            touchStart: function() {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    swiper.slides[i].style.transition = "";
-                }
-            },
-            setTransition: function(speed) {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    swiper.slides[i].style.transition = speed + "ms";
-                    swiper.slides[i].querySelector(".slide-inner").style.transition =
-                    speed + "ms";
-                }
-            }
-        }
-    };
-
-    // swiper 실행
-    var swiperTablet = new Swiper($swiperTablet, swiperOptions);
-    var swiperPc = new Swiper($swiperPc, swiperOptions);
-    var swiperMobile = new Swiper($swiperMobile, swiperOptions);
-
-    // swiper stop
-    swiperTablet.autoplay.stop();
-    swiperPc.autoplay.stop();
-    swiperMobile.autoplay.stop();
-
-    // swiper sync
-    swiperPc.controller.control = [swiperMobile]
-    swiperMobile.controller.control = [swiperTablet]
-
-    // swiper play
-    swiperPc.autoplay.start();
-
-})();/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/(function(){
-
-
-
     /* 프로젝트 - 태그(tag) 불러오기 */
     getProjectList({
         callback: function(listAll) {
@@ -349,7 +259,6 @@ $(function(){/*
                                         var $swiper = $layer.find('.swiper-container');
                                         var slide_copied = $swiper.find('.swiper-slide').detach();
 
-
                                         // slide_clone
                                         function runSwiper(callback) {
                                             for (let i = 1; i <= each.more.image.count; i++) {
@@ -357,15 +266,15 @@ $(function(){/*
 
                                                 $slide_clone.attr('data-background', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg'+cache);
                                                 $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
-                                                
-                                            }                             
+
+                                            }
                                             setTimeout(() => { //swiper 비동기 오류 개선
-                                                callback(); 
-                                            }, 100);                                                
+                                                callback();
+                                            }, 100);
                                         }
 
                                         // swiper()
-                                        runSwiper(function() {                                            
+                                        runSwiper(function() {
                                             let swiper = new Swiper($swiper, {
                                                 lazy: true,
                                                 lazy: {
@@ -380,7 +289,7 @@ $(function(){/*
                                                     el: $layer.find('.swiper-pagination'),
                                                     clickable: true
                                                 },
-                                            });                                            
+                                            });
                                             if (each.more.image.count <= 1) $layer.find('.swiper-button-next, .swiper-button-prev, .swiper-pagination').remove();
                                         });
                                     },
@@ -460,6 +369,125 @@ $(function(){/*
 
         }
     });
+    
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 사용자 편의성 - DOM 생성 */
+    var $wrap = $('#device');
+    var swiperType = ['pc', 'tablet', 'mobile']
+    var listThumb = [
+        'peoplelife.co.kr',
+        'bohumclinic.com_otc',
+        'bohumclinic.com_fa',
+        'campus.coachjob.net',
+        'motijob.co.kr',
+        'vnet.go.kr',
+        'sports.khan.co.kr_olympic'
+    ]
+    var $swiper = $wrap.find('.swiper-container');
+    var swiper_copied = $swiper.detach();
+
+    swiperType.forEach(function(type){
+        var $swiper_clone = swiper_copied.clone();
+        $swiper_clone.addClass('swiper-'+type+'');
+
+        var slide_copied = $swiper_clone.find('.swiper-slide').detach();
+        listThumb.forEach(function(fileName){
+            var $slide_clone = slide_copied.clone()
+            $slide_clone.find('.slide-inner').attr('data-background', '/img/main/device_thumb/'+type+'/'+fileName+'.jpg');
+            $slide_clone.prependTo($swiper_clone.find('.swiper-wrapper'));            
+        });
+        $swiper_clone.prependTo($wrap.find('.inner'));
+    });
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 사용자 편의성 - swiper */
+    var $wrap = $('#device');
+    var interleaveOffset = 0.5;
+    var $swiperTablet = $wrap.find('.swiper-tablet');
+    var $swiperPc = $wrap.find('.swiper-pc');
+    var $swiperMobile = $wrap.find('.swiper-mobile');
+    var swiperOptions = {
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction : false,
+        },
+        loop: true,
+        speed: 1000,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        mousewheelControl: true,
+        keyboardControl: true,
+        allowTouchMove: true,  // drag 방지
+        breakpointsInverse: true,  // drag 방지
+        breakpoints: {
+            1023: {
+                allowTouchMove: false // drag 방지
+            }
+        },
+        lazy: true,
+        lazy: {
+            loadPrevNext: false,
+            loadOnTransitionStart: true
+        },
+        on: {
+            progress: function() {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slideProgress = swiper.slides[i].progress;
+                    var innerOffset = swiper.width * interleaveOffset;
+                    var innerTranslate = slideProgress * innerOffset;
+                    swiper.slides[i].querySelector(".slide-inner").style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
+                }
+            },
+            touchStart: function() {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = "";
+                }
+            },
+            setTransition: function(speed) {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = speed + "ms";
+                    swiper.slides[i].querySelector(".slide-inner").style.transition =
+                    speed + "ms";
+                }
+            }
+        }
+    };
+
+    // swiper 실행
+    var swiperPc = new Swiper($swiperPc, swiperOptions);
+    var swiperMobile = new Swiper($swiperMobile, swiperOptions);
+    var swiperTablet = new Swiper($swiperTablet, swiperOptions);
+
+    // swiper stop
+    swiperPc.autoplay.stop();
+    swiperMobile.autoplay.stop();
+    swiperTablet.autoplay.stop();
+
+    // swiper sync
+    // swiperPc.controller.control = [swiperMobile]
+    // swiperMobile.controller.control = [swiperTablet]
+
+    // swiper play
+    swiperPc.autoplay.start();
+    swiperMobile.autoplay.start();
+    swiperTablet.autoplay.start();
 
 
 
