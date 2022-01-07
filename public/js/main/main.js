@@ -358,15 +358,14 @@ $(function(){/*
                                                 $slide_clone.attr('data-background', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg'+cache);
                                                 $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
                                                 
-                                                if (each.more.image.count == $swiper.find('.swiper-slide').length) {
-                                                    callback();
-                                                }
+                                                setTimeout(() => { //swiper 오류 개선
+                                                    callback(); 
+                                                }, 300);                                                
                                             }                             
                                         }
 
                                         // swiper()
-                                        runSwiper(function() {
-                                            console.log('a');
+                                        runSwiper(function() {                                            
                                             let swiper = new Swiper($swiper, {
                                                 lazy: true,
                                                 lazy: {
