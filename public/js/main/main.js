@@ -1,18 +1,6 @@
 var ProjectPage = 0;
 
 
-function test(callback) {
-    
-    console.log('test');
-
-    callback();
-}
-
-
-test(function(){
-    console.log('a');
-})
-
 
 $(function(){/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -353,27 +341,33 @@ $(function(){/*
                         if (each.more.image) {
                             var $btnImg = $listMore.find('.btn_image').css('display', 'inline-flex');
 
-                            $btnImg.on('click', function() {                                
+                            $btnImg.on('click', function() {
                                 LAYER({
                                     name : 'projectImage',
-                                    afterLoad : function(){                                        
+                                    afterLoad : function(){
                                         var $layer = $('#projectImage_wrap');
                                         var $swiper = $layer.find('.swiper-container');
                                         var slide_copied = $swiper.find('.swiper-slide').detach();
 
-                                        function runSwiper(callback) {                                            
-                                            for (var i = 1; i <= each.more.image.count; i++) {                                            
-                                                var $slide_clone = slide_copied.clone();
+
+                                        // slide_clone
+                                        function runSwiper(callback) {
+                                            for (let i = 1; i <= each.more.image.count; i++) {
+                                                let $slide_clone = slide_copied.clone();
 
                                                 $slide_clone.attr('data-background', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg'+cache);
                                                 $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
-                                            }
-
-                                            callback();
+                                                
+                                                if (each.more.image.count == $swiper.find('.swiper-slide').length) {
+                                                    callback();
+                                                }
+                                            }                             
                                         }
 
+                                        // swiper()
                                         runSwiper(function() {
-                                            var swiper = new Swiper($swiper, {
+                                            console.log('a');
+                                            let swiper = new Swiper($swiper, {
                                                 lazy: true,
                                                 lazy: {
                                                     loadPrevNext: false,
@@ -386,47 +380,10 @@ $(function(){/*
                                                 pagination: {
                                                     el: $layer.find('.swiper-pagination'),
                                                     clickable: true
-                                                }
-                                            });
-
+                                                },
+                                            });                                            
                                             if (each.more.image.count <= 1) $layer.find('.swiper-button-next, .swiper-button-prev, .swiper-pagination').remove();
                                         });
-
-                                        // var $slide_clone;
-                                        // for (var i = 1; i <= each.more.image.count; i++) {                                            
-                                        //     $slide_clone = slide_copied.clone();
-                                        //     $slide_clone.attr('data-background', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg'+cache);
-                                        //     $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
-
-                                        //     if (each.more.image.count == i) {                                                
-                                        //         runSwiper();
-                                        //     }
-                                        // }
-
-                                        // // swiper                                        
-                                        // function runSwiper() {                                            
-                                        //     var swiper = new Swiper($swiper, {
-                                        //         lazy: true,
-                                        //         lazy: {
-                                        //             loadPrevNext: false,
-                                        //             loadOnTransitionStart: true
-                                        //         },
-                                        //         navigation: {
-                                        //             nextEl: $layer.find('.swiper-button-next'),
-                                        //             prevEl: $layer.find('.swiper-button-prev')
-                                        //         },
-                                        //         pagination: {
-                                        //             el: $layer.find('.swiper-pagination'),
-                                        //             clickable: true
-                                        //         },
-                                        //     });
-
-                                        //     if (each.more.image.count <= 1) $layer.find('.swiper-button-next, .swiper-button-prev, .swiper-pagination').remove();
-                                        // }
-                                        // if (!$swiper.find('.swiper-slide').attr('data-background')) {
-                                        //     console.log('data-background'); 
-                                        //     runSwiper(); //swiper-lazy 적용이 안된 경우 재실행
-                                        // }
                                     },
                                 });
                             });
@@ -495,8 +452,8 @@ $(function(){/*
                 var $this = $wrap.find('.list_tag :contains("'+each+'")').closest('.btn_tag');
 
                 $this.addClass('on');
-                
-                if (idx === arr.length - 1) {                    
+
+                if (idx === arr.length - 1) {
                     $btnMore.trigger('click');
                     $wrap.find('.list_tag').addClass('is-reset');
                 }

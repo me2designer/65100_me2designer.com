@@ -67,20 +67,20 @@
                 "count" : 2
             }
         }
-    },{
-        "title" : "보험비교클리닉",
+    },{        
+        "title" : "건강보험클리닉",
         "corp" : "피플라이프(주)",
-        "description" : "암보험부터 건강보험까지 보험클리닉의 대표 상품을 비교하고 보장분석 한 번에 쉽고 정확하게!",
+        "description" : "꼭! 필요한 필수보장만 제공하는 수실비&2대질병진단비 보험료 안내",
         "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
-        "workDate" : "2020.05.08 ~ 2020.05.15(W.Day 2.5)",
+        "workDate" : "2021.05.10 ~ 2021.05.15(W.Day 4)",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
-        "thumb" : "bigyo-clinic.com.jpg",
+        "thumb" : "health-clinic.co.kr.jpg",
         "more" : {
-            "link" : "//www.bigyo-clinic.com",
+            "link" : "//health-clinic.co.kr",
             "image" : {
-                "folder" : "bigyo-clinic.com",
+                "folder" : "health-clinic.co.kr",
                 "count" : 2
             }
         }
@@ -91,13 +91,30 @@
         "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
         "workDate" : "2020.05.22 ~ 2020.06.11(W.Day 7)",
-        "workRate" : "기여도 100% (API 개발부분 제외)",
+        "workRate" : "기여도 90% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
         "thumb" : "zero-clinic.co.kr.jpg",
         "more" : {
             "link" : "//zero-clinic.co.kr",
             "image" : {
                 "folder" : "zero-clinic.co.kr",
+                "count" : 2
+            }
+        }
+    },{
+        "title" : "보험비교클리닉",
+        "corp" : "피플라이프(주)",
+        "description" : "암보험부터 건강보험까지 보험클리닉의 대표 상품을 비교하고 보장분석 한 번에 쉽고 정확하게!",
+        "workDesc" : "PC, Mobile 신규 구축",
+        "workRole" : ["퍼블리싱"],
+        "workDate" : "2020.05.08 ~ 2020.05.15(W.Day 2.5)",
+        "workRate" : "기여도 60% (API 개발부분 제외)",
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "bigyo-clinic.com.jpg",
+        "more" : {
+            "link" : "//www.bigyo-clinic.com",
+            "image" : {
+                "folder" : "bigyo-clinic.com",
                 "count" : 2
             }
         }
@@ -158,12 +175,16 @@
         "description" : "대한민국 30여 개 보험사의 18,000여 보험 상품을 비교하여 단계별 치매진단비 보장 및 보험료 확인",
         "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
-        "workDate" : "??",
+        "workDate" : "2019.07.04 ~ 2019.07.10(W.Day 5)",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
         "thumb" : "senior-clinic.com.jpg",
         "more" : {
-            "link" : "//senior-clinic.com"
+            "link" : "//senior-clinic.com",
+            "image" : {
+                "folder" : "senior-clinic.com",
+                "count" : 2
+            }
         }
     },{
         "title" : "유병자보험클리닉",
@@ -171,12 +192,16 @@
         "description" : "고령자도, 유병자도 2가지 질문 통과시 가입OK",
         "workDesc" : "PC, Mobile 신규 구축",
         "workRole" : ["퍼블리싱"],
-        "workDate" : "??",
+        "workDate" : "2019.04.16 ~ 2019.04.25(W.Day 5)",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업", "적응형"],
         "thumb" : "simple-clinic.com.jpg",
         "more" : {
-            "link" : "//simple-clinic.com"
+            "link" : "//simple-clinic.com",
+            "image" : {
+                "folder" : "simple-clinic.com",
+                "count" : 2
+            }
         }
     },{
         "title" : "어른이보험클리닉",
@@ -190,19 +215,6 @@
         "thumb" : "kidult-clinic.com.jpg",
         "more" : {
             "link" : "//kidult-clinic.com"
-        }
-    },{
-        "title" : "건강보험클리닉",
-        "corp" : "피플라이프(주)",
-        "description" : "꼭! 필요한 필수보장만 제공하는 수실비&2대질병진단비 보험료 안내",
-        "workDesc" : "PC, Mobile 신규 구축",
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "??",
-        "workRate" : "기여도 100% (API 개발부분 제외)",
-        "tag" : ["원페이지", "TM영업", "적응형"],
-        "thumb" : "health-clinic.co.kr.jpg",
-        "more" : {
-            "link" : "//health-clinic.co.kr"
         }
     },{
         "title" : "취업뽀개기",
@@ -257,13 +269,13 @@
     },{
         "title" : "국방전직교육원 전직컨설팅",
         "corp" : "(주)취업뽀개기",
-        "description" : "국방부 산하 공공기관으로서 전역예정장병을 대상으로 진로설계, 진로교육, 전직기본교육, 전직컨설팅, 맞춤형 전문교육, 기본교육심화과정 취업컨설팅 제공",        
+        "description" : "국방부 산하 공공기관으로서 전역예정장병을 대상으로 진로설계, 진로교육, 전직기본교육, 전직컨설팅, 맞춤형 전문교육, 기본교육심화과정 취업컨설팅 제공",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "2019.01.28 ~ 2019.02.22",
         "workRate" : "기여도 100%",
         "tag" : ["취업컨설팅", "채용서비스", "반응형"],
+        "thumb" : "motijob.co.kr.jpg",
         "more" : {
-            "thumb" : "motijob.co.kr.jpg",
             "image" : {
                 "folder" : "motijob.co.kr",
                 "count" : 2
