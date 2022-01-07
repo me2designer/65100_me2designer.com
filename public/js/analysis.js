@@ -1,9 +1,43 @@
+(function(){/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+    /* Block IP Access */
+    function blockIp(callback) {
+        function resp() {
+            var arrUserIP = ['118.32.95.171'];  // 차단할 아이피 입력
+            var json = JSON.parse(this.responseText);
+
+            for (var i = 0; i < arrUserIP.length; i++) {                
+                switch (arrUserIP[i] == json.ip) {
+                    case true :
+                        return;
+                    break;
+                    case false :
+                        if (i == arrUserIP.length -1) callback();
+                    break;
+                }
+
+            }
+        }
+
+        var request = new XMLHttpRequest();
+
+        request.addEventListener("load", resp);
+        request.open("GET", 'https://api.ipify.org?format=json');
+        request.send();
+    }
+
+
+
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
 
 
 
+    /* Load Script */
     function loadScript() {
         var arg = arguments[0]
         var url = arg.url;
@@ -21,42 +55,47 @@
 */
 
 
-
-    if(isReal) {
-        loadScript({
-            url : '//www.googletagmanager.com/gtag/js?id=G-W07XFYE5BD',
-            afterLoad : function() {
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-W07XFYE5BD');
-            }
-        });
-    }
-
-
-
-/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/
-
-
-
-    if(isReal) {
-        loadScript({
-            url : '//wcs.naver.net/wcslog.js',
-            afterLoad : function() {
-                if(!wcs_add) var wcs_add = {};
-                    wcs_add["wa"] = "6bdcfe9ed81e10";
-                if(window.wcs) {
-                    wcs_do();
+    /* Google  analytics */ 
+    blockIp(function(){        
+        if(isReal) {
+            loadScript({
+                url : '//www.googletagmanager.com/gtag/js?id=G-W07XFYE5BD',
+                afterLoad : function() {
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-W07XFYE5BD');
                 }
-            }
-        });
-    }
+            });
+        }
+    });
 
 
 
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
+
+
+
+    /* NAVER  analytics */ 
+    blockIp(function(){     
+        if(isReal) {
+            loadScript({
+                url : '//wcs.naver.net/wcslog.js',
+                afterLoad : function() {
+                    if(!wcs_add) var wcs_add = {};
+                        wcs_add["wa"] = "6bdcfe9ed81e10";
+                    if(window.wcs) {
+                        wcs_do();
+                    }
+                }
+            });
+        }
+    });
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/}());
