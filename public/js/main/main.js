@@ -54,7 +54,7 @@ $(function(){/*
                 var $active = $swiper.find('.swiper-slide[data-swiper-slide-index="'+this.realIndex+'"]');
                 var $next = $swiper.find('.swiper-slide').not('.swiper-slide-duplicate-prev, .swiper-slide-prev');
 
-                //bacground-image animate
+                //bacground-image animateㅎ
                 TweenMax.set($next.find('.bg'), {scale:1});
                 TweenMax.to($active.find('.bg'), 6, {ease:Linear.easeNone, scale:1.05});
 
@@ -264,7 +264,7 @@ $(function(){/*
                                             for (let i = 1; i <= each.more.image.count; i++) {
                                                 let $slide_clone = slide_copied.clone();
 
-                                                $slide_clone.attr('data-background', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg'+cache);
+                                                $slide_clone.attr('data-background', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg');
                                                 $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
 
                                             }
@@ -318,11 +318,8 @@ $(function(){/*
                 $list.find('[data-images-path]').matchPath();
 
                 // button hide()
-                if (idx >= list_divi.length - 1) {
-                    $btnMore.hide();
-                } else {
-                    $btnMore.show();
-                }
+                if (idx >= list_divi.length - 1) $btnMore.hide();
+                else $btnMore.show();
             }
 
             // .btn_more click event
@@ -430,14 +427,7 @@ $(function(){/*
         grabCursor: true,
         watchSlidesProgress: true,
         mousewheelControl: true,
-        keyboardControl: true,
-        allowTouchMove: true,  // drag 방지
-        breakpointsInverse: true,  // drag 방지
-        breakpoints: {
-            1023: {
-                allowTouchMove: false // drag 방지
-            }
-        },
+        keyboardControl: true,        
         lazy: true,
         lazy: {
             loadPrevNext: false,
@@ -488,7 +478,8 @@ $(function(){/*
     swiperPc.autoplay.start();
     swiperMobile.autoplay.start();
     swiperTablet.autoplay.start();
-
+    
+    if(!isReal) $wrap.find('.pointer-none').removeClass('pointer-none');
 
 
 })();/*

@@ -143,7 +143,7 @@
     <section id="device">
         <div class="inner">
             <div class="tag">MULTI-DEVICE</div>
-            <div class="swiper-container">
+            <div class="swiper-container pointer-none">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide-inner swiper-lazy" data-background=""></div>
@@ -151,9 +151,9 @@
                     </div>
                 </div>
             </div>
-            <img class="bg_tablet" :src="imgPath+'project_device_tablet.png'" alt="태블렛">
-            <img class="bg_pc" :src="imgPath+'project_device_pc.png'" alt="노트북">
-            <img class="bg_mobile" :src="imgPath+'project_device_mobile.png'" alt="스마트폰">
+            <img class="bg_tablet pointer-none" :src="imgPath+'project_device_tablet.png'" alt="태블렛">
+            <img class="bg_pc pointer-none" :src="imgPath+'project_device_pc.png'" alt="노트북">
+            <img class="bg_mobile pointer-none" :src="imgPath+'project_device_mobile.png'" alt="스마트폰">
             <div class="txt_area">
                 <h3 class="tit_section">사용자의 편의성을 위해<br><strong>다양한 디바이스 조건에 맞춰 제작!</strong></h3>
                 <p class="desc_section">브랜드의 가치를 알리고, 마케팅 효율을 극대화 하기 위하여<br>수많은 프로젝트에서 Flexible Web 형태의 구축과 유지보수 경험을 가지고 있습니다.</p>

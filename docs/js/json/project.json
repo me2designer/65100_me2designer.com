@@ -40,7 +40,7 @@
         "workDesc" : "SHOP를 제외한 GATE, Visit 부분 PC, Mobile 신규 구축과 컨셉 디자인 시안 제작",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "2020.11.10 ~ 2020.12.15(W.Day 12)",
-        "workRate" : "기여도 100% (API 개발부분 제외)",
+        "workRate" : "기여도 100% (디자인 부분 컨셉 시안 제작만, API 개발부분 제외)",
         "tag" : ["기업홈페이지", "사업소개", "적응형"],
         "thumb" : "bohumclinic.com.jpg",
         "more" : {
@@ -318,13 +318,13 @@
     },{
         "title" : "2018 평창동계올림픽 뉴스포털",
         "corp" : "(주)경향신문사",
-        "description" : "2018년 대한민국의 뜨거운 겨울을 경향신문·스포츠경향과 함께하세요. 감동과 환희의 순간, 선수 인터뷰, 경기 결과 및 정보, 뒷 얘기 까지 세계 최대의 스포츠 이벤트 평창 동계올림픽의 모든 것을 담았습니다",
-        "workDesc" : "스포츠경향 플랫폼에 디자인 및 퍼블리싱 커스터마이징 진행",
+        "description" : "2018년 대한민국의 뜨거운 겨울의 감동과 환희의 순간, 선수 인터뷰, 경기 결과 및 정보, 뒷 얘기 까지 세계 최대의 스포츠 이벤트 평창 동계올림픽의 모든 것을 담았습니다",
+        "workDesc" : "스포츠경향 플랫폼에서 디자인 및 퍼블리싱 커스터마이징 진행",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "2018.12.19 ~ 2019.01.18(W.Day 20)",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["뉴스플랫폼", "적응형"],
-        "thumb" : "sports.khan.co.kr_olympic_2018.jpg",
+        "thumb" : "sports.khan.co.kr_olympic.jpg",
         "more" : {
             "link" : "//sports.khan.co.kr/olympic/2018",
             "image" : {
@@ -333,14 +333,38 @@
             }
         }
     },{
+        "title" : "스포츠경향 뉴스플랫폼",
+        "corp" : "(주)경향신문사",
+        "description" : "실시간 주요 뉴스 PICK! 독자를 위한 뉴스 큐레이션으로 실시간 이슈를 한 발 더 빨리 접할 수 있으며, 주요 뉴스와 실시간 속보 제공",
+        "workDesc" : "스포츠경향 플랫폼 PC,MO 리뉴얼",
+        "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "2017.04.17 ~ 2019.05.22(W.Day 23)",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
+        "tag" : ["뉴스플랫폼", "적응형"],
+        "thumb" : "sports.khan.co.kr.jpg",
+        "more" : {
+            "link" : "//sports.khan.co.kr",
+            "image" : {
+                "folder" : "sports.khan.co.kr",
+                "count" : 20
+            }
+        }
+    },{
         "title" : "경향신문 뉴스플랫폼",
         "corp" : "(주)경향신문사",
         "description" : "국내 최고 언론사 경향신문 온라인 지면 서비스를 통해 오피니언, 정치, 사회, 경제, 국제, 스포츠, 문화 뉴스를 빠르고 정확하게 제공",
+        "workDesc" : "유지/보수, 고도화등 운영업무 지원",
         "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "2016.09 ~ 2018.03",
+        "workRate" : "기여도 100% (운영부분)",
         "tag" : ["뉴스플랫폼", "적응형"],
         "thumb" : "khan.co.kr.jpg",
         "more" : {
-            "link" : "//khan.co.kr"
+            "link" : "//khan.co.kr",
+            "image" : {
+                "folder" : "khan.co.kr",
+                "count" : 20
+            }
         }
     },{
         "title" : "경향신문 회사소개",
@@ -370,7 +394,7 @@
         "tag" : ["뉴스플랫폼", "봇(BOT)", "반응형"],
         "thumb" : "jebo.khan.co.kr.jpg",
         "more" : {
-            "link" : "//jebo.khan.co.kr"
+            "link" : "//www.behance.net/gallery/62593407/_"
         }
     },{
         "title" : "경향신문 토요판",
