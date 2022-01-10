@@ -18,7 +18,6 @@
                         if (i == arrUserIP.length -1) callback();
                     break;
                 }
-
             }
         }
 
@@ -46,6 +45,7 @@
         script.src = url;
         script.onload = arg.afterLoad ? arg.afterLoad() : '';
         document.getElementsByTagName('head')[0].appendChild(script);
+        console.log('analysis.js, loadScript');
     }
 
 
@@ -53,6 +53,7 @@
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
+
 
 
     /* Google  analytics */ 
@@ -74,28 +75,7 @@
 
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/
-
-
-
-    /* NAVER  analytics */ 
-    blockIp(function(){     
-        if(isReal) {
-            loadScript({
-                url : '//wcs.naver.net/wcslog.js',
-                afterLoad : function() {
-                    if(!wcs_add) var wcs_add = {};
-                        wcs_add["wa"] = "6bdcfe9ed81e10";
-                    if(window.wcs) {
-                        wcs_do();
-                    }
-                }
-            });
-        }
-    });
-
-
-
-/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */}());
+
+
+

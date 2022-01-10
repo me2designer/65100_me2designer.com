@@ -23,12 +23,12 @@
     <link rel="icon" href="/img/favicon/favicon-64.png" sizes="64x64">
     <link rel="icon" href="/img/favicon/favicon-128.png" sizes="128x128">
 
-    <!-- FILES -->
+    <!-- FILES -->    
 	<script src="//public.me2designer.com/js/server.js"></script>
 	<script src="/js/files.js"></script>
-    <script src="/js/analysis.js" async></script>
+    <script src="/js/analysis.js" async></script>    
 </head>
-<body>
+<body>    
     <noscript>
         <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
@@ -70,8 +70,18 @@
             }
         </style>
     </aside>
-
+    <!-- #wrap -->
     <div id="wrap" data-target-device="pc" style="visibility:hidden;opacity:0"></div>
-    <!-- built files will be auto injected -->
+    <!-- //#wrap -->
+
+    <!-- NAVER Analysis -->    
+    <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+    <script type="text/javascript">        
+        if(!wcs_add) var wcs_add = {};
+        wcs_add["wa"] = "6bdcfe9ed81e10";
+        if(window.wcs) {
+            wcs_do();
+        }
+    </script>
 </body>
 </html>

@@ -374,7 +374,11 @@
         "tag" : ["기업홈페이지", "사업소개"],
         "thumb" : "khan.co.kr_aboutkh.jpg",
         "more" : {
-            "link" : "//khan.co.kr/aboutkh"
+            "link" : "//khan.co.kr/aboutkh",
+            "image" : {
+                "folder" : "khan.co.kr_aboutkh",
+                "count" : 20
+            }
         }
     },{
         "title" : "경향신문 인재채용",
