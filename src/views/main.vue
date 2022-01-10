@@ -13,8 +13,7 @@
                     <div class="inner">
                         <p class="tit">웹 표준과 웹 접근성 그리고 크로스 브라우징,<br>다양한 디바이스에 최적화된 UI 마크업 개발하고있습니다.</p>
                     </div>
-                    <div class="bg swiper-lazy" :data-background="''+imgPath+'visual_bg1.jpg'"></div>
-                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    <div class="bg swiper-lazy" :style="'background-image:url('+imgPath+'visual_bg1.jpg)'"></div>                    
                 </div>
                 <div class="swiper-slide">
                     <div class="inner">

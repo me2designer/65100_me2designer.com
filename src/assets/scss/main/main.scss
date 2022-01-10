@@ -9,7 +9,7 @@ $imgPath : "/img/main/";
 
     /* 메인비주얼 */
     #visual {
-        position:relative;width:100%;height:900px;        
+        position:relative;width:100%;height:900px;
         .tit_section {
             position:absolute;top:228px;font-size:63px;font-weight:900;line-height:1.27em;letter-spacing:-2.4px;color:#fff;
             strong {
@@ -235,7 +235,7 @@ $imgPath : "/img/main/";
                 fill:#fff;overflow:hidden;display:none;justify-content:center;align-items:center;position:relative;width:48px;height:48px;margin:0 7px;border:2px solid #fff;border-radius:100%;font-size:24px;
                 &::after {
                     content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;opacity:0;border-radius:100%;border:0;transition:0.3s $G-easeHover;
-                }           
+                }
                 &.btn_video {
                     font-size:18px;
                 }
@@ -295,7 +295,7 @@ $imgPath : "/img/main/";
         }
     }
 
-    #device .swiper-container {        
+    #device .swiper-container {
         $value:
             'pc'         49px     388px    21   750px   468px    0,
             'tablet'     236px    131px    11   427px   319px    6px,
