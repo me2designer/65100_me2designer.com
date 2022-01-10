@@ -391,7 +391,7 @@
         "workDesc" : "자료수집, 기획, 디자인, 퍼블리싱까지 전 작업 수행",
         "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
         "workDate" : "2017.01.24 ~ 2017.02.15(W.Day 15)",
-        "workRate" : "기여도 100%",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["기업홈페이지", "사업소개", "채용서비스", "반응형"],
         "thumb" : "recruit.khan.co.kr.jpg",
         "more" : {
@@ -409,7 +409,7 @@
         "workRole" : ["웹디자인", "퍼블리싱"],
         "tag" : ["뉴스플랫폼", "봇(BOT)", "반응형"],
         "workDate" : "2017.03.27 ~ 2017.04.24(W.Day 9)",
-        "workRate" : "기여도 100%",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "thumb" : "jebo.khan.co.kr.jpg",
         "more" : {
             "link" : "//www.behance.net/gallery/62593407/_"
@@ -421,6 +421,7 @@
         "workDesc" : "반응형웹으로 디자인, 퍼블리싱까지 전 작업 수행",
         "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "2017.08.08 ~ 2017.08.14(W.Day 4)",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["뉴스플랫폼", "반응형"],
         "thumb" : "khan.co.kr_saturday.jpg",
         "more" : {

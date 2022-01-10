@@ -24,7 +24,7 @@
         var request = new XMLHttpRequest();
 
         request.addEventListener("load", resp);
-        request.open("GET", 'https://api.ipify.org?format=json');
+        request.open("GET", 'https://api.ipify.org?format=json', true);
         request.send();
     }
 
