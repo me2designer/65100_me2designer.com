@@ -6,7 +6,7 @@
     /* Block IP Access */
     function blockIp(callback) {
         function resp() {
-            var arrUserIP = ['1.1.1.1'];  // 차단할 아이피 입력 118.32.95.171
+            var arrUserIP = ['118.32.95.171'];  // 차단할 아이피 입력 118.32.95.171
             var json = JSON.parse(this.responseText);
 
             for (var i = 0; i < arrUserIP.length; i++) {                
@@ -44,8 +44,7 @@
         var script = document.createElement('script');
         script.src = url;
         script.onload = arg.afterLoad ? arg.afterLoad() : '';
-        document.getElementsByTagName('head')[0].appendChild(script);
-        console.log('analysis.js, loadScript');
+        document.getElementsByTagName('head')[0].appendChild(script);        
     }
 
 
