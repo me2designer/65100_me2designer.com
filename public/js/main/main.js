@@ -281,6 +281,9 @@ $(function(){/*
                                                     loadPrevNext: false,
                                                     loadOnTransitionStart: true
                                                 },
+                                                keyboard: {
+                                                    enabled: true,
+                                                },
                                                 navigation: {
                                                     nextEl: $layer.find('.swiper-button-next'),
                                                     prevEl: $layer.find('.swiper-button-prev')

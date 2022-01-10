@@ -221,15 +221,15 @@
         "corp" : "(주)취업뽀개기",
         "description" : "대한민국 최대의 취업정보 온라인 커뮤니티. 공공기관 부터 일반 사기업 취업정보 제공",
         "workDesc" : "자료수집, 기획, 디자인, 퍼블리싱까지 전 작업 수행. 마크업 단계에서 반응형으로 고도화 진행함",
-        "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
+        "workRole" : ["웹기획", "웹디자인", "퍼블리싱", "광고디자인"],
         "workDate" : "2018.12.11 ~ 2019.01.03",
         "workRate" : "기여도 100% (API 개발부분 제외)",
-        "tag" : ["기업홈페이지", "사업소개", "취업컨설팅", "원페이지", "반응형"],
+        "tag" : ["기업홈페이지", "사업소개", "취업컨설팅", "원페이지", "반응형", "서포터즈"],
         "thumb" : "chippo.co.kr.jpg",
         "more" : {
             "image" : {
                 "folder" : "chippo.co.kr",
-                "count" : 1
+                "count" : 5
             }
         }
     },{
@@ -435,20 +435,34 @@
         "title" : "매거진한경",
         "corp" : "한국경제매거진(주)",
         "description" : "대한민국 잡지 미디어의 새 장을 열어가고 있는 매거진한경, 주간 한경BUSINESS, 월간 MONEY, 격주간 한경JOB&JOY 발행",
-        "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDesc" : "네이버 스토어팜 운영, eDM 제작, 기타 프로모션 디자인등",
+        "workRole" : ["웹디자인", "광고디자인"],
+        "workDate" : "2014.04 ~ 2016.09",
+        "workRate" : "기여도 100% (운영부분)",
         "tag" : ["뉴스플랫폼", "적응형"],
         "thumb" : "magazine.hankyung.com.jpg",
         "more" : {
-            "link" : "//magazine.hankyung.com"
+            "link" : "//magazine.hankyung.com",
+            "image" : {
+                "folder" : "magazine.hankyung.com",
+                "count" : 5
+            }
         }
     },{
         "title" : "캠퍼스잡앤조이",
         "corp" : "한국경제매거진(주)",
         "description" : "한국경제신문 발행 대학생 격주간지. 취업, 창업, 대학생활, 인턴십, 공모전 관련 정보 제공",
-        "workRole" : ["웹디자인", "퍼블리싱", "영상제작"],
-        "tag" : ["뉴스플랫폼", "적응형", "E-commerce"],
-        "thumb" : "jobnjoy.com.png",
+        "workDesc" : "유지/보수, 고도화등 운영업무 지원 및 리뉴얼 컨셉시안 제작등",
+        "workRole" : ["웹디자인", "퍼블리싱", "광고디자인", "영상제작"],        
+        "workDate" : "2014.04 ~ 2016.09",
+        "workRate" : "기여도 100% (운영부분)",
+        "tag" : ["뉴스플랫폼", "적응형", "서포터즈", "공모전"],
+        "thumb" : "jobnjoy.com.jpg",
         "more" : {
+            "image" : {
+                "folder" : "jobnjoy.com",
+                "count" : 12
+            },
             "video" : {
                 "src" : "//www.youtube.com/embed/3gfBukTyLE0",
                 "type" : "youtube"
@@ -457,13 +471,53 @@
     },{
         "title" : "MONEY 특판사이트",
         "corp" : "한국경제매거진(주)",
-        "description" : "한국경제신문 발행 대학생 격주간지. 취업, 창업, 대학생활, 인턴십, 공모전 관련 정보 제공",
-        "workRole" : ["웹디자인", "퍼블리싱"],
+        "description" : "재테크의 모든 영역에 걸쳐 깊이 있는 투자정보를 제공하고 고품격 라이프스타일을 소개하는 프리미엄 매거진",
+        "workDesc" : "자료수집, 기획, 디자인, 퍼블리싱까지 전 작업 수행",
+        "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
+        "workDate" : "2014.07.24 ~ 2017.09.19(W.Day 30)",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["E-commerce"],
-        "thumb" : "jobnjoy.com.png",
+        "thumb" : "money.hankyung.com.jpg",
         "more" : {
+            "image" : {
+                "folder" : "money.hankyung.com",
+                "count" : 21
+            }
+        }
+    },{
+        "title" : "G-SHOCK 디자인 공모전",
+        "corp" : "한국경제매거진(주)",
+        "description" : "G-SHOCK의 스피릿을 자유롭게 디자인하라! 재미있고 개성 넘치는 아이디어로 G-SHOCK을 표현하는 공모전입니다",
+        "workDesc" : "PC, Mobile 신규 구축",
+        "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
+        "workDate" : "2014.04.22 ~ 2014.05.04(W.Day 6)",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
+        "tag" : ["적응형", "공모전", "CMS"],
+        "thumb" : "gshockcontest.com.jpg",
+        "more" : {
+            "image" : {
+                "folder" : "gshockcontest.com",
+                "count" : 13
+            }
+        }
+    },{
+        "title" : "미디어 콘텐츠 제작 지원",
+        "corp" : "한국경제매거진(주)",
+        "description" : "대기업 홍보기획 부터 대학생 스펙업 서포터즈 운영까지 한국경제신문과 함께하는 온라인 소싱 플랫폼",
+        "workDesc" : "잡앤조이, 한경매거진, 월간머니, 영삼성 서포터즈등 SNS 채널 부분 디자인 가이드 제작 및 운영 지원",
+        "workRole" : ["웹디자인", "광고디자인"],
+        "workDate" : "2014.04 ~ 2016.09",
+        "workRate" : "기여도 30% ~ 50%",
+        "tag" : ["SNS 마케팅", "서포터즈", "공모전", "광고디자인", "영상제작"],
+        "thumb" : "jobnjoy.com_sns.jpg",
+        "more" : {
+            "link" : "//www.facebook.com/jobjoy",
+            "image" : {
+                "folder" : "jobnjoy.com_sns",
+                "count" : 7
+            },
             "video" : {
-                "src" : "//www.youtube.com/embed/3gfBukTyLE0",
+                "src" : "//www.youtube.com/embed/pTMr9xKxwMo",
                 "type" : "youtube"
             }
         }
@@ -517,7 +571,7 @@
         "workRole" : ["웹디자인"],
         "workDate" : "",
         "workDays" : "",
-        "tag" : ["프로모션 디자인"],
+        "tag" : ["광고디자인"],
         "thumb" : "jbbank_jbcard.jpg"
     },{
         "title" : "전북은행 사회공헌 사업",
@@ -526,7 +580,7 @@
         "workRole" : ["웹디자인"],
         "workDate" : "",
         "workDays" : "",
-        "tag" : ["프로모션 디자인"],
+        "tag" : ["광고디자인"],
         "thumb" : "jbbank_social.jpg"
     }
 ]
