@@ -56,18 +56,16 @@
 
 
     /* Google  analytics */ 
-    blockIp(function(){        
-        if(isReal) {
-            loadScript({
-                url : '//www.googletagmanager.com/gtag/js?id=G-W07XFYE5BD',
-                afterLoad : function() {
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-W07XFYE5BD');
-                }
-            });
-        }
+    blockIp(function(){                
+        loadScript({
+            url : '//www.googletagmanager.com/gtag/js?id=G-W07XFYE5BD',
+            afterLoad : function() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-W07XFYE5BD');
+            }
+        });        
     });
 
 

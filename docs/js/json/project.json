@@ -67,6 +67,23 @@
                 "count" : 2
             }
         }
+    },{
+        "title" : "어른이보험클리닉",
+        "corp" : "피플라이프(주)",
+        "description" : "영유아부터 30세 성인까지 같은 보장으로 실속있게 가입하는 어른이보험클리닉",
+        "workDesc" : "PC, Mobile 신규 구축",
+        "workRole" : ["퍼블리싱"],
+        "workDate" : "2020.08.09 ~ 2020.08.13(W.Day 3)",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
+        "tag" : ["원페이지", "TM영업", "적응형"],
+        "thumb" : "kidult-clinic.com.jpg",
+        "more" : {
+            "link" : "//kidult-clinic.com",
+            "image" : {
+                "folder" : "kidult-clinic.com",
+                "count" : 2
+            }
+        }
     },{        
         "title" : "건강보험클리닉",
         "corp" : "피플라이프(주)",
@@ -202,20 +219,7 @@
                 "folder" : "simple-clinic.com",
                 "count" : 2
             }
-        }
-    },{
-        "title" : "어른이보험클리닉",
-        "corp" : "피플라이프(주)",
-        "description" : "영유아부터 30세 성인까지 같은 보장으로 실속있게 가입하는 어른이보험클리닉",
-        "workDesc" : "PC, Mobile 신규 구축",
-        "workRole" : ["퍼블리싱"],
-        "workDate" : "??",
-        "workRate" : "기여도 100% (API 개발부분 제외)",
-        "tag" : ["원페이지", "TM영업", "적응형"],
-        "thumb" : "kidult-clinic.com.jpg",
-        "more" : {
-            "link" : "//kidult-clinic.com"
-        }
+        }    
     },{
         "title" : "취업뽀개기",
         "corp" : "(주)취업뽀개기",
@@ -224,7 +228,7 @@
         "workRole" : ["웹기획", "웹디자인", "퍼블리싱", "광고디자인"],
         "workDate" : "2018.12.11 ~ 2019.01.03",
         "workRate" : "기여도 100% (API 개발부분 제외)",
-        "tag" : ["기업홈페이지", "사업소개", "취업컨설팅", "원페이지", "반응형", "서포터즈"],
+        "tag" : ["기업홈페이지", "사업소개", "취업컨설팅", "원페이지", "반응형", "서포터즈", "프로모션 디자인"],
         "thumb" : "chippo.co.kr.jpg",
         "more" : {
             "image" : {
@@ -439,7 +443,7 @@
         "workRole" : ["웹디자인", "광고디자인"],
         "workDate" : "2014.04 ~ 2016.09",
         "workRate" : "기여도 100% (운영부분)",
-        "tag" : ["뉴스플랫폼", "적응형"],
+        "tag" : ["뉴스플랫폼", "프로모션 디자인", "적응형"],
         "thumb" : "magazine.hankyung.com.jpg",
         "more" : {
             "link" : "//magazine.hankyung.com",
@@ -453,7 +457,7 @@
         "corp" : "한국경제매거진(주)",
         "description" : "한국경제신문 발행 대학생 격주간지. 취업, 창업, 대학생활, 인턴십, 공모전 관련 정보 제공",
         "workDesc" : "유지/보수, 고도화등 운영업무 지원 및 리뉴얼 컨셉시안 제작등",
-        "workRole" : ["웹디자인", "퍼블리싱", "광고디자인", "영상제작"],        
+        "workRole" : ["웹디자인", "퍼블리싱", "광고디자인", "영상제작", "프로모션 디자인"],        
         "workDate" : "2014.04 ~ 2016.09",
         "workRate" : "기여도 100% (운영부분)",
         "tag" : ["뉴스플랫폼", "적응형", "서포터즈", "공모전"],
@@ -505,10 +509,10 @@
         "corp" : "한국경제매거진(주)",
         "description" : "대기업 홍보기획 부터 대학생 스펙업 서포터즈 운영까지 한국경제신문과 함께하는 온라인 소싱 플랫폼",
         "workDesc" : "잡앤조이, 한경매거진, 월간머니, 영삼성 서포터즈등 SNS 채널 부분 디자인 가이드 제작 및 운영 지원",
-        "workRole" : ["웹디자인", "광고디자인"],
+        "workRole" : ["웹디자인", "광고디자인", "영상제작", "카드뉴스"],
         "workDate" : "2014.04 ~ 2016.09",
         "workRate" : "기여도 30% ~ 50%",
-        "tag" : ["SNS 마케팅", "서포터즈", "공모전", "광고디자인", "영상제작"],
+        "tag" : ["SNS 마케팅", "서포터즈", "공모전"],
         "thumb" : "jobnjoy.com_sns.jpg",
         "more" : {
             "link" : "//www.facebook.com/jobjoy",
@@ -524,63 +528,116 @@
     },{
         "title" : "JB금융지주",
         "corp" : "전북은행(주)",
-        "description" : "",
+        "description" : "JB금융지주의 계열사 소개, 기업지배구조, 투자정보, 지속가능경영, 뉴스룸 등 정보 제공",
+        "workDesc" : "유지/보수, 고도화등 운영업무 지원",
         "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "2013.07 ~ 2014.07",
+        "workRate" : "기여도 100% (운영부분)",
         "tag" : ["기업홈페이지", "사업소개"],
-        "thumb" : "jbfg.com.png",
+        "thumb" : "jbfg.com.jpg",
         "more" : {
-            "link" : "//www.jbfg.com"
+            "link" : "//www.jbfg.com",
+            "image" : {
+                "folder" : "jbfg.com",
+                "count" : 8
+            }
         }
     },{
         "title" : "전북은행 인터넷뱅킹",
         "corp" : "전북은행(주)",
         "description" : "금융으로 더 따뜻한 세상을 만드는 전북은행 지금 전북은행 뉴스마트뱅킹 서비스로 나에게 딱 맞는 금융서비스를 만나보세요",
-        "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["금융서비스", "적응형"],
-        "thumb" : "jbbank.co.kr.png",
+        "workDesc" : "차세대 전산시스템 구축 사업 후반 참여, 오픈뱅킹 콘텐츠 영역에 대한 운영 디자인 직무 수행",
+        "workRole" : ["웹디자인"],
+        "workDate" : "2013.07 ~ 2014.07",
+        "workRate" : "기여도 100% (운영부분)",
+        "tag" : [],
+        "thumb" : "jbbank.co.kr.jpg",
         "more" : {
-            "link" : "//www.jbbank.co.kr"
+            "link" : "//www.jbbank.co.kr",
+            "image" : {
+                "folder" : "jbbank.co.kr",
+                "count" : 1
+            }
         }
     },{
         "title" : "JB다이렉트 예금/적금",
         "corp" : "전북은행(주)",
         "description" : "비대면 입출금통장. 영업점 방문없이 가입이 가능한 고금리 입출금이 자유로운 예금으로 인터넷뱅킹, 스마트폰뱅킹, 폰뱅킹 및 자동화기기이용수수료 우대",
-        "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["금융서비스", "적응형"],
-        "thumb" : "direct.jbbank.co.kr.png"
+        "workDesc" : "랜딩페이지 리뉴얼 및 유지/보수, 브랜딩 마케팅 업무 지원",
+        "workRole" : ["웹디자인", "퍼블리싱", "광고디자인"],
+        "workDate" : "2013.11.26 ~ 2012.12.17(W.Day 15)",
+        "workRate" : "기여도 100% (API 없음 하드코딩 적용)",
+        "tag" : ["원페이지", "프로모션 디자인", "인쇄물", "TM영업"],
+        "thumb" : "direct.jbbank.co.kr.jpg",
+        "more" : {            
+            "image" : {
+                "folder" : "direct.jbbank.co.kr",
+                "count" : 6
+            }
+        }
     },{
         "title" : "JB다이렉트 직장인 신용대출",
         "corp" : "전북은행(주)",
         "description" : "직장인을 대상으로 무서류·무방문 인터넷으로 대출신청에서 대출실행까지 처리하는 신속하고 간편한 인터넷전용 대출상품",
+        "workDesc" : "신규 상품 출시에 따른 대출시물레이션(한도조회) 개발",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "tag" : ["금융서비스", "적응형"],
-        "thumb" : "directcredit.jbbank.co.kr.png"
+        "workDate" : "2014.03.11 ~ 2014.04.28(W.Day 22)",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
+        "tag" : ["원페이지", "TM영업"],
+        "thumb" : "directcredit.jbbank.co.kr.jpg",
+        "more" : {            
+            "image" : {
+                "folder" : "directcredit.jbbank.co.kr",
+                "count" : 4
+            }
+        }
     },{
         "title" : "JB카드 CP업무지원 시스템",
         "corp" : "전북은행(주)",
-        "description" : "내용",
+        "description" : "카드발급현황, 실적조회, 수수료 조회등 CP 상담사 및 영업점 직원 온라인 업무지원 시스템",
+        "workDesc" : "신규 구축",
         "workRole" : ["웹디자인", "퍼블리싱"],
-        "workDate" : "",
-        "workDays" : "",
-        "tag" : ["금융서비스", "적응형", "CMS"],
-        "thumb" : "cp.jbbank.co.kr.png"
+        "workDate" : "2013.10.31 ~ 2013.11.08(W.Day 5)",
+        "workRate" : "기여도 100% (API 개발부분 제외)",
+        "tag" : ["CMS"],
+        "thumb" : "cp.jbbank.co.kr.jpg",
+        "more" : {            
+            "image" : {
+                "folder" : "cp.jbbank.co.kr",
+                "count" : 6
+            }
+        }
     },{
         "title" : "JB카드 프로모션 디자인",
         "corp" : "전북은행(주)",
-        "description" : "내용",
-        "workRole" : ["웹디자인"],
-        "workDate" : "",
-        "workDays" : "",
-        "tag" : ["광고디자인"],
-        "thumb" : "jbbank_jbcard.jpg"
+        "description" : "차별화된 상품과 서비스를 개발하여, 편리하고 다양한 채널을 통해 JB카드 회원들만을 위한 특별한 서비스 제공",        
+        "workRole" : ["웹디자인", "광고디자인"],
+        "workDate" : "2013.07 ~ 2014.07",
+        "workRate" : "기여도 100%",
+        "tag" : ["프로모션 디자인"],
+        "thumb" : "jbbank.co.kr_jbcard.jpg",
+        "more" : {
+            "link" : "//www.jbbank.co.kr/CARD_MAIN.act?_MENU_PRJ_TYPE_=CARD",
+            "image" : {
+                "folder" : "jbbank.co.kr_jbcard",
+                "count" : 6
+            }
+        }
     },{
         "title" : "전북은행 사회공헌 사업",
         "corp" : "전북은행(주)",
-        "description" : "내용",
-        "workRole" : ["웹디자인"],
-        "workDate" : "",
-        "workDays" : "",
-        "tag" : ["광고디자인"],
-        "thumb" : "jbbank_social.jpg"
+        "description" : "참다운 자원봉사 정신으로 삶의 의미와 질을 높여 나감은 물론 더불어사는 지역사회의 일원으로서 자원봉사에 투철한 사명감을 가지고 스스로 참여하는데 그 목적이 있습니다.",
+        "workRole" : ["웹디자인", "광고디자인"],
+        "workDate" : "2013.07 ~ 2014.07",
+        "workRate" : "기여도 100%",
+        "tag" : ["프로모션 디자인"],
+        "thumb" : "jbbank.com_social.jpg",
+        "more" : {
+            "link" : "//www.jbbank.co.kr/district",
+            "image" : {
+                "folder" : "jbbank.co.kr_social",
+                "count" : 5
+            }
+        }
     }
 ]
