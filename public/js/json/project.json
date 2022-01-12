@@ -84,7 +84,7 @@
                 "count" : 2
             }
         }
-    },{        
+    },{
         "title" : "건강보험클리닉",
         "corp" : "피플라이프(주)",
         "description" : "꼭! 필요한 필수보장만 제공하는 수실비&2대질병진단비 보험료 안내",
@@ -219,13 +219,13 @@
                 "folder" : "simple-clinic.com",
                 "count" : 2
             }
-        }    
+        }
     },{
         "title" : "취업뽀개기",
         "corp" : "(주)취업뽀개기",
         "description" : "대한민국 최대의 취업정보 온라인 커뮤니티. 공공기관 부터 일반 사기업 취업정보 제공",
         "workDesc" : "자료수집, 기획, 디자인, 퍼블리싱까지 전 작업 수행. 마크업 단계에서 반응형으로 고도화 진행함",
-        "workRole" : ["웹기획", "웹디자인", "퍼블리싱", "광고디자인"],
+        "workRole" : ["웹기획", "웹디자인", "퍼블리싱"],
         "workDate" : "2018.12.11 ~ 2019.01.03",
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["기업홈페이지", "사업소개", "취업컨설팅", "원페이지", "반응형", "서포터즈", "프로모션 디자인"],
@@ -440,7 +440,7 @@
         "corp" : "한국경제매거진(주)",
         "description" : "대한민국 잡지 미디어의 새 장을 열어가고 있는 매거진한경, 주간 한경BUSINESS, 월간 MONEY, 격주간 한경JOB&JOY 발행",
         "workDesc" : "네이버 스토어팜 운영, eDM 제작, 기타 프로모션 디자인등",
-        "workRole" : ["웹디자인", "광고디자인"],
+        "workRole" : ["웹디자인"],
         "workDate" : "2014.04 ~ 2016.09",
         "workRate" : "기여도 100% (운영부분)",
         "tag" : ["뉴스플랫폼", "프로모션 디자인", "적응형"],
@@ -457,10 +457,10 @@
         "corp" : "한국경제매거진(주)",
         "description" : "한국경제신문 발행 대학생 격주간지. 취업, 창업, 대학생활, 인턴십, 공모전 관련 정보 제공",
         "workDesc" : "유지/보수, 고도화등 운영업무 지원 및 리뉴얼 컨셉시안 제작등",
-        "workRole" : ["웹디자인", "퍼블리싱", "광고디자인", "영상제작", "프로모션 디자인"],        
+        "workRole" : ["웹디자인", "퍼블리싱", "영상제작"],
         "workDate" : "2014.04 ~ 2016.09",
         "workRate" : "기여도 100% (운영부분)",
-        "tag" : ["뉴스플랫폼", "적응형", "서포터즈", "공모전"],
+        "tag" : ["뉴스플랫폼", "적응형", "서포터즈", "공모전", "프로모션 디자인"],
         "thumb" : "jobnjoy.com.jpg",
         "more" : {
             "image" : {
@@ -509,7 +509,7 @@
         "corp" : "한국경제매거진(주)",
         "description" : "대기업 홍보기획 부터 대학생 스펙업 서포터즈 운영까지 한국경제신문과 함께하는 온라인 소싱 플랫폼",
         "workDesc" : "잡앤조이, 한경매거진, 월간머니, 영삼성 서포터즈등 SNS 채널 부분 디자인 가이드 제작 및 운영 지원",
-        "workRole" : ["웹디자인", "광고디자인", "영상제작", "카드뉴스"],
+        "workRole" : ["웹디자인", "영상제작", "카드뉴스"],
         "workDate" : "2014.04 ~ 2016.09",
         "workRate" : "기여도 30% ~ 50%",
         "tag" : ["SNS 마케팅", "서포터즈", "공모전"],
@@ -564,12 +564,12 @@
         "corp" : "전북은행(주)",
         "description" : "비대면 입출금통장. 영업점 방문없이 가입이 가능한 고금리 입출금이 자유로운 예금으로 인터넷뱅킹, 스마트폰뱅킹, 폰뱅킹 및 자동화기기이용수수료 우대",
         "workDesc" : "랜딩페이지 리뉴얼 및 유지/보수, 브랜딩 마케팅 업무 지원",
-        "workRole" : ["웹디자인", "퍼블리싱", "광고디자인"],
+        "workRole" : ["웹디자인", "퍼블리싱"],
         "workDate" : "2013.11.26 ~ 2012.12.17(W.Day 15)",
         "workRate" : "기여도 100% (API 없음 하드코딩 적용)",
         "tag" : ["원페이지", "프로모션 디자인", "인쇄물", "TM영업"],
         "thumb" : "direct.jbbank.co.kr.jpg",
-        "more" : {            
+        "more" : {
             "image" : {
                 "folder" : "direct.jbbank.co.kr",
                 "count" : 6
@@ -585,7 +585,7 @@
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["원페이지", "TM영업"],
         "thumb" : "directcredit.jbbank.co.kr.jpg",
-        "more" : {            
+        "more" : {
             "image" : {
                 "folder" : "directcredit.jbbank.co.kr",
                 "count" : 4
@@ -601,7 +601,7 @@
         "workRate" : "기여도 100% (API 개발부분 제외)",
         "tag" : ["CMS"],
         "thumb" : "cp.jbbank.co.kr.jpg",
-        "more" : {            
+        "more" : {
             "image" : {
                 "folder" : "cp.jbbank.co.kr",
                 "count" : 6
@@ -610,8 +610,8 @@
     },{
         "title" : "JB카드 프로모션 디자인",
         "corp" : "전북은행(주)",
-        "description" : "차별화된 상품과 서비스를 개발하여, 편리하고 다양한 채널을 통해 JB카드 회원들만을 위한 특별한 서비스 제공",        
-        "workRole" : ["웹디자인", "광고디자인"],
+        "description" : "차별화된 상품과 서비스를 개발하여, 편리하고 다양한 채널을 통해 JB카드 회원들만을 위한 특별한 서비스 제공",
+        "workRole" : ["웹디자인"],
         "workDate" : "2013.07 ~ 2014.07",
         "workRate" : "기여도 100%",
         "tag" : ["프로모션 디자인"],
@@ -627,7 +627,7 @@
         "title" : "전북은행 사회공헌 사업",
         "corp" : "전북은행(주)",
         "description" : "참다운 자원봉사 정신으로 삶의 의미와 질을 높여 나감은 물론 더불어사는 지역사회의 일원으로서 자원봉사에 투철한 사명감을 가지고 스스로 참여하는데 그 목적이 있습니다.",
-        "workRole" : ["웹디자인", "광고디자인"],
+        "workRole" : ["웹디자인"],
         "workDate" : "2013.07 ~ 2014.07",
         "workRate" : "기여도 100%",
         "tag" : ["프로모션 디자인"],
@@ -637,6 +637,177 @@
             "image" : {
                 "folder" : "jbbank.co.kr_social",
                 "count" : 5
+            }
+        }
+    },{
+        "title" : "실버타운 정원속궁전",
+        "corp" : "(주)아이오시스",
+        "description" : "제2의 인생을 준비하는 분들에게 삶의 향기가 느껴지는 고품격 실버타운 정원속궁전으로 초대합니다.",
+        "workDesc" : "클라이언트 현장 미팅 후 의견사항 반영한 기획, 디자인 작업 진행",
+        "workRole" : ["웹기획", "웹디자인"],
+        "workDate" : "2012.04.04 ~ 2012.4.25(W.Day 8)",
+        "workRate" : "기여도 100%",
+        "tag" : ["기업홈페이지", "사업소개"],
+        "thumb" : "jwpalace.co.kr.jpg",
+        "more" : {
+            "link" : "//xn--of0b439apzdj9alc.com",
+            "image" : {
+                "folder" : "jwpalace.co.kr",
+                "count" : 10
+            }
+        }
+    },{
+        "title" : "리딩스타어학원",
+        "corp" : "(주)아이오시스",
+        "description" : "수준별 학습과 자기주도학습의 효율을 성공적으로 극대화하는 교육프로그렘 제공",
+        "workDesc" : "제이엔에스아카데미(주) 자사 사이트 리뉴얼 제안용 컨셉 시안 제작",
+        "workRole" : ["웹기획", "웹디자인"],
+        "workDate" : "2014.04.18 ~ 2014.04.23(W.Day 3)",
+        "workRate" : "기여도 100%",
+        "tag" : ["기업홈페이지", "사업소개"],
+        "thumb" : "readingstar.co.kr.jpg",
+        "more" : {
+            "link" : "//www.readingstar.co.kr",
+            "image" : {
+                "folder" : "readingstar.co.kr",
+                "count" : 3
+            }
+        }
+    },{
+        "title" : "얼개닷컴 홍보영상",
+        "corp" : "(주)아이오시스",
+        "description" : "문제은행 및 진단 처방∙시스템을 활용한 학원별, 개인별 맞춤 교재 제작 및 맞춤 학습 서비스 제공",
+        "workDesc" : "",
+        "workRole" : ["영상제작"],
+        "workDate" : "2012.07.03 ~ 2017.08.06(W.Day 22)",
+        "workRate" : "기여도 100%",
+        "tag" : [],
+        "thumb" : "earlgae.com.jpg",
+        "more" : {
+            "link" : "//www.earlgae.com",            
+            "video" : {
+                "src" : "//www.youtube.com/embed/dlCLmSPR0E4",
+                "type" : "youtube"
+            }
+        }
+    },{
+        "title" : "QUIZ Scanner",
+        "corp" : "(주)아이오시스",
+        "description" : "교재의 문항을 스마트폰으로 촬영하고 클라우드 서비스로 보관하는 서비스",
+        "workDesc" : "",
+        "workRole" : ["앱디자인"],
+        "workDate" : "2012.08.10 ~ 2017.09.28(W.Day 10)",
+        "workRate" : "기여도 100%",
+        "tag" : [],
+        "thumb" : "quizscanner.jpg",
+        "more" : {
+            "image" : {
+                "folder" : "quizscanner",
+                "count" : 2
+            }
+        }
+    },{
+        "title" : "새미학습닷컴",
+        "corp" : "(주)아이오시스",
+        "description" : "경상남도교육연구정보원 사이버가정학습 새미학습닷컴 스마트러닝사업",
+        "workDesc" : "",
+        "workRole" : ["앱디자인"],
+        "workDate" : "2012.07.03 ~ 2017.08.06",
+        "workRate" : "기여도 100%",
+        "tag" : [],
+        "thumb" : "cls.jpg",
+        "more" : {
+            "image" : {
+                "folder" : "cls",
+                "count" : 2
+            }
+        }
+    },{
+        "title" : "에듀스충남닷컴",
+        "corp" : "(주)아이오시스",
+        "description" : "충남교육연구정보원 사이버가정학습 새미학습닷컴 스마트러닝사업",
+        "workDesc" : "",
+        "workRole" : ["앱디자인"],
+        "workDate" : "2012.07.03 ~ 2017.08.06",
+        "workRate" : "기여도 100%",
+        "tag" : [],
+        "thumb" : "edus.or.kr.jpg",
+        "more" : {
+            "image" : {
+                "folder" : "edus.or.kr",
+                "count" : 2
+            }
+        }
+    },{
+        "title" : "초학력향상지원사이트 홍보영상",
+        "corp" : "(주)아이오시스",
+        "description" : "학습에 어려움이 있는 학생들 지원을 위한 기초·교과학습 진단 및 보정자료, 정서·심리 진단도구 및 프로그램, 교사교육 프로그램, 학생 활용 프로그램 등 현장에서 학생 지원에 도움이 될 다양한 자료를 보급하고 있습니다.",
+        "workDesc" : "",
+        "workRole" : ["영상제작"],
+        "workDate" : "2013.01.13 ~ 2013.02.22(W.Day 30)",
+        "workRate" : "기여도 90% (일정 문제로 일부 외주로 작업함)",
+        "tag" : [],
+        "thumb" : "basics.re.kr.jpg",
+        "more" : {
+            "link" : "//basics.re.kr",            
+            "video" : {
+                "src" : "//www.youtube.com/embed/Dmkpx9bWeT8",
+                "type" : "youtube"
+            }
+        }
+    },{
+        "title" : "NRC 폐쇄몰",
+        "corp" : "(주)앤알커뮤니케이션",
+        "description" : "생활 속 삶의 가치 향상, 글로벌 종합유통기업 앤알커뮤니케이션",
+        "workDesc" : "폐쇄몰 상품상세페이지 디자인, 프로모션, 패키지, 제품사진 촬영등",
+        "workRole" : ["웹디자인"],
+        "workDate" : "2011.06.01 ~ 2012.03.17",
+        "workRate" : "기여도 100%",
+        "tag" : ["E-commerce", "프로모션 디자인"],
+        "thumb" : "nbizmall.com.jpg",
+        "more" : {
+            "link" : "//www.imall7.com",
+            "image" : {
+                "folder" : "nbizmall.com",
+                "count" : 12
+            }
+        }
+    },{
+        "title" : "퍼마라이프 9스타",
+        "corp" : "(주)앤알커뮤니케이션",
+        "description" : "세계 최고의 기술력을 자랑하는 미국 리갈웨어에서 제조하는 명품 쿡웨어 Perma-life 9Star",
+        "workDesc" : "신제품 출시에 따른 홍보용 마이크로사이트 제작",
+        "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "2012.02.23 ~ 2017.03.13(W.Day 20)",
+        "workRate" : "기여도 100% (API 없음 하드코딩 적용)",
+        "tag" : ["기업홈페이지", "사업소개"],
+        "thumb" : "permalifekorea.co.kr.jpg",
+        "more" : {
+            "link" : "//www.permalifekorea.co.kr",
+            "image" : {
+                "folder" : "permalifekorea.co.kr",
+                "count" : 5
+            }
+        }    
+    },{
+        "title" : "웹, 그래픽 디자인등",
+        "corp" : "(주)한국리모텍",
+        "description" : "독자적인 제품 기획, 광고, 프로모션, 이벤트등을 통해 IT제품의 단순 유통에서 벗어나 제품의 가치를 제대로 표현하는 마케팅 기반의 전문 유통 기업",
+        "workDesc" : "오픈마켓 상품상세페이지, 프로모션, 포스터, 패키지, 홍보영상 제작등",
+        "workRole" : ["웹디자인", "퍼블리싱"],
+        "workDate" : "2010.02.01 ~ 2011.04.11",
+        "workRate" : "",
+        "tag" : ["프로모션 디자인", "인쇄물", "영상제작"],
+        "thumb" : "limotech.jpg",
+        "more" : {
+            "link" : "//www.balmuda.co.kr/shop/service/company.php?&",
+            "image" : {
+                "folder" : "limotech",
+                "count" : 8
+            },
+            "video" : {
+                "src" : "//www.youtube.com/embed/j9onQiNg2Yw",
+                "type" : "youtube"
             }
         }
     }
