@@ -56,7 +56,7 @@ $(function(){/*
 
                 //bacground-image animateㅎ
                 TweenMax.set($next.find('.bg'), {scale:1});
-                TweenMax.to($active.find('.bg'), 6, {ease:Linear.easeNone, scale:1.05});
+                TweenMax.to($active.find('.bg'), 6, {ease:Linear.easeNone, scale:1.15});
 
                 //progress bar
                 $progress.removeClass(function(){
@@ -149,7 +149,7 @@ $(function(){/*
 
     $wrap.find('.age').text(age);
 
-
+  
 
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -354,7 +354,7 @@ $(function(){/*
             });
 
             // 처음 불러오기
-            var keyword = !isReal ? ['아이오'] : ['피플라이프', '취업뽀개기', '경향신문', '한국경제매거진', '전북은행'];
+            var keyword = ['피플라이프', '취업뽀개기', '경향신문', '한국경제매거진', '전북은행'];
 
             keyword.forEach(function(each, idx, arr){
                 var $this = $wrap.find('.list_tag :contains("'+each+'")').closest('.btn_tag');
