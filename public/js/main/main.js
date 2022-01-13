@@ -589,7 +589,7 @@ $(function(){/*
     infoList.forEach(function(info){
         var $slide_clone = slide_copied.clone();
         $slide_clone.find('.logo').attr({
-            'src': '/img/common/ci/'+info.logo+'',
+            'src': '/img/main/career_ci/'+info.logo+cache+'',
             'alt': info.name
         });
         $slide_clone.find('.name').text(info.name);

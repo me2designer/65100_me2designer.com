@@ -143,53 +143,57 @@ $(function(){/*
     /* animate cursor */
     var $wrap = $('.animateCursor');
 
-    //append
-    $wrap.append('<i class="circle"></i><i class="arrow"></i>');
+    $wrap.each(function() {
+        var $this = $(this);
 
-    //interaction
-    var cursor = $wrap.find('.circle'),
-		follower = $wrap.find('.arrow'),
-        posX = 0,
-        posY = 0,
-        mouseX = 0,
-        mouseY = 0;
-        
+        //append
+        $this.append('<i class="circle"></i><i class="arrow"></i>');
 
-    var tm_cursor = TweenMax.to({}, 0.016, {
-        repeat:-1,
-        onRepeat:function(){
-            posX += (mouseX - posX) / 4;
-            posY += (mouseY - posY) / 4;            
+        //interaction
+        var cursor = $this.find('.circle'),
+            follower = $this.find('.arrow'),
+            posX = 0,
+            posY = 0,
+            mouseX = 0,
+            mouseY = 0;
+            
 
-            TweenMax.set(follower, {
-                css: {
-                    left: posX,
-                    top: posY
-                }
-            });
-            TweenMax.set(cursor, {
-                css: {
-                    left: mouseX,
-                    top: mouseY
-                }
-            });
-        }
-    }).pause();
+        var tm_cursor = TweenMax.to({}, 0.016, {
+            repeat:-1,
+            onRepeat:function(){
+                posX += (mouseX - posX) / 4;
+                posY += (mouseY - posY) / 4;            
 
-    $wrap.parent().on("mousemove",function(e){                
-        mouseX = e.pageX  - $wrap.offset().left;
-        mouseY = e.pageY - $wrap.offset().top;        
-        tm_cursor.play();
-        $wrap.addClass('is-active');
-        
-        if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'none'; //cursor hidden
-    }).on('mouseleave',function(e) {
-        tm_cursor.pause();
-        $wrap.removeClass('is-active');
-        
-        if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'default'; //cursor visible
-    });
+                TweenMax.set(follower, {
+                    css: {
+                        left: posX,
+                        top: posY
+                    }
+                });
+                TweenMax.set(cursor, {
+                    css: {
+                        left: mouseX,
+                        top: mouseY
+                    }
+                });
+            }
+        }).pause();
 
+        $this.parent().on("mousemove",function(e){                
+            mouseX = e.pageX  - $this.offset().left;
+            mouseY = e.pageY - $this.offset().top;        
+            tm_cursor.play();
+            $this.addClass('is-active');
+            
+            if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'none'; //cursor hidden
+        }).on('mouseleave',function(e) {
+            tm_cursor.pause();
+            $this.removeClass('is-active');
+            
+            if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'default'; //cursor visible
+        });
+    })
+    
 
 
 })();/*
