@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="right">
-            <p class="tit">가장 쓸모 있는<br>경험을 제공하기 위해<br>UI를 개발 합니다</p>
+            <p class="tit">누구나 쉽고 익숙한<br>경험을 제공하기 위해<br>UI를 개발 합니다</p>
             <p class="desc">ME2DESIGNER.COM All rights reserved </p>
         </div>    
     </div>
@@ -36,9 +36,3 @@ export default {
     }
 }
 </script>
-
-
-
-<style lang="scss">
-    @import '@/assets/scss/common/layout.scss';
-</style>

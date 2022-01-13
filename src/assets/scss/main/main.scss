@@ -232,7 +232,7 @@ $imgPath : "/img/main/";
         .list_more {
             display:flex;align-items:center;position:absolute;bottom:57px;left:50%;transform:translateX(-50%);
             > * {
-                fill:#fff;overflow:hidden;display:none;justify-content:center;align-items:center;position:relative;width:48px;height:48px;margin:0 7px;border:2px solid #fff;border-radius:100%;font-size:24px;
+                fill:#fff;overflow:hidden;display:none;justify-content:center;align-items:center;position:relative;width:48px;height:48px;margin:0 7px;border:2px solid #fff;border-radius:100%;font-size:24px;transition:transform 0.3s $G-easeHover;
                 &::after {
                     content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;opacity:0;border-radius:100%;border:0;transition:0.3s $G-easeHover;
                 }
@@ -241,7 +241,7 @@ $imgPath : "/img/main/";
                 }
             }
             > *:hover {
-                border-width:0;
+                border-width:0;transform:scale(1.1);
                 &::after {
                     opacity:1;background:$G-gradPrimary;
                 }
@@ -281,7 +281,7 @@ $imgPath : "/img/main/";
 
     /* 사용자 편의성 */
     #device {
-        overflow:hidden;position:relative;height:1296px;background: #292B31 url(https://displayad.naver.com/static/images/9ac6aa3c8c899465dff373ee9586ee53.jpg) 50% 0 no-repeat;background-size:cover;background-attachment:fixed;
+        overflow:hidden;position:relative;height:1296px;background: #292B31 url(#{$imgPath}device_bg.jpg) 50% 0 no-repeat;background-size:cover;background-attachment:fixed;
     }
 
     #device .tag {
@@ -355,11 +355,11 @@ $imgPath : "/img/main/";
         ;
         @each $Y, $X, $bgc in $value {
             .rotate_#{$Y} {
-                position:absolute;width:120%;height:300px;background-color:#{$bgc};transform-origin:#{$X} #{$Y};transform:rotate( 5.2deg);z-index:0;
+                position:absolute;width:120%;height:500px;background-color:#{$bgc};transform-origin:#{$X} #{$Y};transform:rotate( 5.2deg);z-index:0;
                 @if ($Y == top){
-                    left:0;top:-288px;
+                    left:0;top:-450px;
                 } @else {
-                    right:0;bottom:-288px;
+                    right:0;bottom:-450px;
                 }
             }
         }
