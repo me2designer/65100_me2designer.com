@@ -7,15 +7,15 @@ $(function(){/*
     /* wrapper is ready */
     var $wrap = $('#wrap');
 
-    if ($wrap.css('opacity') == '0' || $wrap.css('visibility') == 'hidden') {
-        $wrap.css({
-            'opacity': 1,
-            'visibility': 'visible'
-        });
-    }
-
     // Loding
-    $('#lodingWrap').remove();
+    $.when($('#lodingWrap').remove()).then(function(){
+        if ($wrap.css('opacity') == '0' || $wrap.css('visibility') == 'hidden') {
+            $wrap.css({
+                'opacity': 1,
+                'visibility': 'visible'
+            });
+        }
+    });
 
 
 
