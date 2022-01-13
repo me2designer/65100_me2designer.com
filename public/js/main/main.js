@@ -35,12 +35,7 @@ $(function(){/*
         slidesPerView: 1,
         loop: true,
         loopedSlides: slide_length,
-        effect: 'fade',        
-        lazy: true,
-        lazy: {
-            loadPrevNext: false,
-            loadOnTransitionStart: true
-        },
+        effect: 'fade',
         navigation: {
             nextEl: $wrap.find('.swiper-button-next'),
             prevEl: $wrap.find('.swiper-button-prev')
@@ -54,7 +49,7 @@ $(function(){/*
                 var $active = $swiper.find('.swiper-slide[data-swiper-slide-index="'+this.realIndex+'"]');
                 var $next = $swiper.find('.swiper-slide').not('.swiper-slide-duplicate-prev, .swiper-slide-prev');
 
-                //bacground-image animateㅎ
+                //bacground-image animate
                 TweenMax.set($next.find('.bg'), {scale:1});
                 TweenMax.to($active.find('.bg'), 6, {ease:Linear.easeNone, scale:1.15});
 
@@ -149,7 +144,7 @@ $(function(){/*
 
     $wrap.find('.age').text(age);
 
-  
+
 
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -369,7 +364,7 @@ $(function(){/*
 
         }
     });
-    
+
 
 
 })();/*
@@ -401,7 +396,7 @@ $(function(){/*
         listThumb.forEach(function(fileName){
             var $slide_clone = slide_copied.clone()
             $slide_clone.find('.slide-inner').attr('data-background', '/img/main/device_thumb/'+type+'/'+fileName+'.jpg');
-            $slide_clone.prependTo($swiper_clone.find('.swiper-wrapper'));            
+            $slide_clone.prependTo($swiper_clone.find('.swiper-wrapper'));
         });
         $swiper_clone.prependTo($wrap.find('.inner'));
     });
@@ -430,7 +425,7 @@ $(function(){/*
         grabCursor: true,
         watchSlidesProgress: true,
         mousewheelControl: true,
-        keyboardControl: true,        
+        keyboardControl: true,
         lazy: true,
         lazy: {
             loadPrevNext: false,
@@ -481,7 +476,7 @@ $(function(){/*
     swiperPc.autoplay.start();
     swiperMobile.autoplay.start();
     swiperTablet.autoplay.start();
-    
+
     if(!isReal) $wrap.find('.pointer-none').removeClass('pointer-none');
 
 

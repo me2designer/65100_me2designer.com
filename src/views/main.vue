@@ -13,35 +13,31 @@
                     <div class="inner">
                         <p class="tit">웹 표준과 웹 접근성 그리고 크로스 브라우징,<br>다양한 디바이스에 최적화된 UI 마크업 개발하고있습니다.</p>
                     </div>
-                    <div class="bg swiper-lazy" :style="'background-image:url('+imgPath+'visual_bg_onerror.png)'" :data-background="''+imgPath+'visual_bg1.jpg'"></div>                    
+                    <div class="bg" :style="'background-image:url('+imgPath+'visual_bg1.jpg), url('+imgPath+'visual_bg_onerror.png)'"></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="inner">
                         <p class="tit">더 좋은 코드를 만들기 위해 고민하고 습관을 정리하여<br>가장 효율적인 방법으로 생산성 향상에 노력합니다.</p>
                     </div>
-                    <div class="bg swiper-lazy" :style="'background-image:url('+imgPath+'visual_bg_onerror.png)'" :data-background="''+imgPath+'visual_bg2.jpg'"></div>
-                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    <div class="bg" :style="'background-image:url('+imgPath+'visual_bg2.jpg), url('+imgPath+'visual_bg_onerror.png)'"></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="inner">
                         <p class="tit">광고디자인, UX/UI 디자인, 마크업 개발까지 다양한 기술과 경험으로<br>의사소통과 협업에 큰 강점을 갖고 있습니다.</p>
                     </div>
-                    <div class="bg swiper-lazy" :style="'background-image:url('+imgPath+'visual_bg_onerror.png)'" :data-background="''+imgPath+'visual_bg3.jpg'"></div>
-                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    <div class="bg" :style="'background-image:url('+imgPath+'visual_bg3.jpg), url('+imgPath+'visual_bg_onerror.png)'"></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="inner">
                         <p class="tit">SEO 최적화, 시맨틱 마크업 사용<br>검색엔진에 친화적인 설계를 지향합니다.</p>
                     </div>
-                    <div class="bg swiper-lazy" :style="'background-image:url('+imgPath+'visual_bg_onerror.png)'" :data-background="''+imgPath+'visual_bg4.jpg'"></div>
-                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    <div class="bg" :style="'background-image:url('+imgPath+'visual_bg4.jpg), url('+imgPath+'visual_bg_onerror.png)'"></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="inner">
                         <p class="tit">마크업과 스타일링 위한 코딩에서 벗어나<br>꾸준한 역량 개발로 FE 개발자로 성장하고 있습니다.</p>
                     </div>
-                    <div class="bg swiper-lazy" :style="'background-image:url('+imgPath+'visual_bg_onerror.png)'" :data-background="''+imgPath+'visual_bg5.jpg'"></div>
-                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    <div class="bg" :style="'background-image:url('+imgPath+'visual_bg5.jpg), url('+imgPath+'visual_bg_onerror.png)'"></div>
                 </div>
             </div>
             <!-- Add Navigation -->
@@ -230,7 +226,7 @@
         <!-- <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
         <div class="swiper-button-next swiper-button-white" slot="button-next"></div> -->
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>        
+        <div class="swiper-pagination"></div>
     </section>
     <!-- //근무이력 -->
 
