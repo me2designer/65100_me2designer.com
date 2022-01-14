@@ -90,17 +90,17 @@ $imgPath : "/img/main/";
 
     /* 약력 */
     #profile {
-        overflow:hidden;position:relative;height:550px;background-image:linear-gradient(to right, #00c652, #00c5ae);
+        position:relative;height:550px;        
+    }
+
+    #profile .swiper-container {
+        width:100%;height:100%;background-image:linear-gradient(to right, #00c652, #00c5ae);
         &::before {
             content:"";position:absolute;bottom:0;left:0;width:0;height:0;border-top:900px solid transparent;border-left:600px solid rgba(#fff,0.05);
         }
         &::after {
             content:"";position:absolute;bottom:0;right:0;width:0;height:0;border-top:900px solid transparent;border-right:600px solid rgba(#fff,0.05);
         }
-    }
-
-    #profile .swiper-container {
-        width:100%;height:100%;
     }
 
     #profile .swiper-slide {

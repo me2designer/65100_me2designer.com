@@ -128,7 +128,7 @@ $(function(){/*
                     $this.stop().animateNumber({
                         addComma : false,
                         addZero : 2,
-                        totalPlayTime : 1200,
+                        totalPlayTime : 800,
                         endNumber : endNumber,
                         endValue : _countNum,
                     });

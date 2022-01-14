@@ -11,7 +11,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="inner">
-                        <p class="tit">웹 표준과 웹 접근성 그리고 크로스 브라우징,<br>다양한 디바이스에 최적화된 UI 마크업 개발하고있습니다.</p>
+                        <p class="tit">웹 표준과 웹 접근성 그리고 크로스 브라우징,<br>다양한 디바이스에 최적화된 UI 마크업 개발하고 있습니다.</p>
                     </div>
                     <div class="bg" :style="'background-image:url('+imgPath+'visual_bg1.jpg), url('+imgPath+'visual_bg_onerror.png)'"></div>
                 </div>
@@ -59,32 +59,32 @@
                 <div class="swiper-slide">
                     <p class="tit">올해로 만 <span class="age"></span>세가 되었습니다.</p>
                     <p class="num"><span class="count">1983</span>.<span class="count">02</span>.<span class="count">01</span></p>
-                    <p class="desc">1남 2녀 막내로 충정북도 충주에서 태어났으며,<br> 크리스천인 부모님 영향으로 이타심의 중요성 배우며 성장했습니다.</p>
+                    <p class="desc">1남 2녀 막내로 충정 북도 충주에서 태어났으며,<br> 크리스천인 부모님 영향으로 이타심의 중요성 배우며 성장했습니다.</p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">수상경력 및 자격증</p>
-                    <p class="num"><span class="count">2002</span>.<span class="count">07</span>.<span class="count">15</span></p>
-                    <p class="desc">창업동아리 설립하여 창업아이템경진대회 수상..</p>
+                    <p class="tit">열아홉, 고등학교 재학중 진로를 결정</p>
+                    <p class="num"><span class="count">2001</span>.<span class="count">02</span>.<span class="count">13</span></p>
+                    <p class="desc">토목설계전공으로 CAD, 3D MAX 모델링 과정에서 그래픽디자인에 대한 재능을 발견했으며,<br>관련 자격증을 취득과 다수 홈페이지 제작 경진대회 도전하여 수상도 하였습니다.</p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">대외활동<p>
-                    <p class="num"><span class="count">2010</span>.<span class="count">01</span>.<span class="count">01</span></p>
-                    <p class="desc">삼육대학교 제48대 총학생회장으로..</p>
+                    <p class="tit">스물셋, 아르바이트 아닌 첫 사회생활 도전!<p>
+                    <p class="num"><span class="count">2004</span>.<span class="count">05</span>.<span class="count">01</span></p>
+                    <p class="desc">군 입대 전 휴학과 함께 다양한 사회경험에 도전했으며, 그중 약 10개월 기간을<br>엔프리즘(주)에서 "Hello Myworrdy" 교육 교제의 Flash Animation 제작에 참여하였습니다.</p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">스물아홉, 커뮤니케이션디자인학과 졸업</p>
+                    <p class="tit">스물일곱, 육군 만기 전역</p>
+                    <p class="num"><span class="count">2007</span>.<span class="count">06</span>.<span class="count">30</span></p>
+                    <p class="desc">군사행정특기병(3111)으로 부사관/병 인사 및 병력현황 관리와<br>육본 부관감실 "장교/부사관 상훈정보조회시스템" 개발(기획/디자인) 참여 및 포상</p>
+                </div>
+                <div class="swiper-slide">
+                    <p class="tit">스물아홉, 대학교 졸업과 첫 직장생활 시작</p>
                     <p class="num"><span class="count">2010</span>.<span class="count">02</span>.<span class="count">08</span></p>
-                    <p class="desc">늦게 시작한 미술 공부로 학사 수료가 늦었지만,<br>청소년 시기부터 디자인 분야를 공부하고 업으로 삼는 것이 관심이고 비전이었습니다.</p>
+                    <p class="desc">재학 중 대외활동으로 창업동아리 설립과 총학생회, 졸업준비위원회 활동했으며,<br>종합유통기업에서 광고디자이너로 첫 직장생활을 시작했습니다.</p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">광고디자인에서 UI 마크업개발까지..</p>
-                    <p class="num"><span class="count">2021</span>.<span class="count">12</span>.<span class="count">03</span></p>
-                    <p class="desc">총 11년 7개월</p>
-                </div>
-                <div class="swiper-slide">
-                    <p class="tit">앞으로 계획</p>
-                    <p class="num">VISION <span class="count">2030</span></p>
-                    <p class="desc">마이스터 자격으로 모교인 한양공업고등학교에서 후배들 취업 및 진학에..</p>
+                    <p class="tit">현재, 웹퍼블리셔에서 FE개발자로 성장하고있습니다.</p>
+                    <p class="num">VISION <span class="count">2022</span></p>
+                    <p class="desc">총 경력 11년 7개월 중 2년 광고디자인 경력을 제외한<br>UX/UI 및 웹퍼블리싱 영역에서 경력개발을 지속적으로 하고 있습니다.</p>
                 </div>
             </div>
         </div>
@@ -93,6 +93,7 @@
         <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
+        <div class="animateCursor"></div>
     </section>
     <!-- //약력 -->
 
