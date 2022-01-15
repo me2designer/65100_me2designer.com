@@ -465,7 +465,7 @@
         "more" : {
             "image" : {
                 "folder" : "jobnjoy.com",
-                "count" : 12
+                "count" : 11
             },
             "video" : {
                 "src" : "//www.youtube.com/embed/3gfBukTyLE0",
@@ -501,7 +501,11 @@
         "more" : {
             "image" : {
                 "folder" : "gshockcontest.com",
-                "count" : 13
+                "count" : 14
+            },
+            "video" : {
+                "src" : "//www.youtube.com/embed/qHk1DTeFYQk",
+                "type" : "youtube"
             }
         }
     },{
@@ -518,7 +522,7 @@
             "link" : "//www.facebook.com/jobjoy",
             "image" : {
                 "folder" : "jobnjoy.com_sns",
-                "count" : 7
+                "count" : 11
             },
             "video" : {
                 "src" : "//www.youtube.com/embed/pTMr9xKxwMo",
@@ -547,7 +551,7 @@
         "corp" : "전북은행(주)",
         "description" : "금융으로 더 따뜻한 세상을 만드는 전북은행 지금 전북은행 뉴스마트뱅킹 서비스로 나에게 딱 맞는 금융서비스를 만나보세요",
         "workDesc" : "차세대 전산시스템 전환 사업 후반 참여, 오픈뱅킹 콘텐츠 영역에 대한 운영 디자인 직무 수행",
-        "workRole" : ["웹디자인"],
+        "workRole" : ["웹디자인", "영상제작"],
         "workDate" : "2013.07 ~ 2014.07",
         "workRate" : "기여도 100% (운영부분)",
         "tag" : [],
@@ -557,6 +561,10 @@
             "image" : {
                 "folder" : "jbbank.co.kr",
                 "count" : 1
+            },
+            "video" : {
+                "src" : "//www.youtube.com/embed/XPLEZvWG0LY",
+                "type" : "youtube"
             }
         }
     },{
@@ -572,7 +580,7 @@
         "more" : {
             "image" : {
                 "folder" : "direct.jbbank.co.kr",
-                "count" : 6
+                "count" : 7
             }
         }
     },{
@@ -763,7 +771,7 @@
         "workRole" : ["웹디자인"],
         "workDate" : "2011.06.01 ~ 2012.03.17",
         "workRate" : "기여도 100%",
-        "tag" : ["E-commerce", "프로모션 디자인"],
+        "tag" : ["E-commerce", "프로모션 디자인", "제품촬영"],
         "thumb" : "nbizmall.com.jpg",
         "more" : {
             "link" : "//www.imall7.com",
@@ -797,16 +805,16 @@
         "workRole" : ["웹디자인"],
         "workDate" : "2010.02.01 ~ 2011.04.11",
         "workRate" : "",
-        "tag" : ["프로모션 디자인", "인쇄물", "영상제작"],
+        "tag" : ["프로모션 디자인", "인쇄물", "영상제작", "제품촬영"],
         "thumb" : "limotech.jpg",
         "more" : {
             "link" : "//www.balmuda.co.kr/shop/service/company.php?&",
             "image" : {
                 "folder" : "limotech",
-                "count" : 8
+                "count" : 13
             },
             "video" : {
-                "src" : "//www.youtube.com/embed/j9onQiNg2Yw",
+                "src" : "//www.youtube.com/embed/lHzCPRUcYMo",
                 "type" : "youtube"
             }
         }
