@@ -52,7 +52,7 @@
     </section>
     <!-- //메인비주얼 -->
 
-    <!-- 약력 -->
+    <!-- 성장과정 -->
     <section id="profile">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -69,7 +69,7 @@
                 <div class="swiper-slide">
                     <p class="tit">스물셋, 아르바이트 아닌 첫 사회생활 도전!<p>
                     <p class="num"><span class="count">2004</span>.<span class="count">05</span>.<span class="count">01</span></p>
-                    <p class="desc">군 입대 전 휴학과 함께 다양한 사회경험에 도전했으며, 그중 약 10개월 기간을<br>엔프리즘(주)에서 "Hello Myworrdy" 교육 교제의 Flash Animation 제작에 참여하였습니다.</p>
+                    <p class="desc">군 입대 전 휴학과 함께 다양한 사회경험에 도전했으며, 그중 약 10개월 기간을<br>엔프리즘(주)에서 인턴으로 "Hello Myworrdy" 교육 교제의 Flash Animation 제작에 참여하였습니다.</p>
                 </div>
                 <div class="swiper-slide">
                     <p class="tit">스물일곱, 육군 만기 전역</p>
@@ -95,7 +95,7 @@
         <div class="swiper-pagination"></div>
         <div class="animateCursor"></div>
     </section>
-    <!-- //약력 -->
+    <!-- //성장과정 -->
 
     <!-- 프로젝트 -->
     <section id="project">
@@ -219,6 +219,12 @@
                     <dl class="list_job">
                         <dt class="tit"></dt>
                     </dl>
+                    <div class="btn_area">
+                        <button class="btn_search on" title="찾아보기" type="button"><img src="" data-images-path="/images/ico/search-regular.svg" alt=""></button>
+                        <div class="tooltip">
+                            <p class="tit"><strong class="corp"></strong>프로젝트 찾아보기</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="animateCursor"></div>

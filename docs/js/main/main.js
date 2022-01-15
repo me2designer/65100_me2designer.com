@@ -86,7 +86,7 @@ $(function(){/*
 
 
 
-    /* 약력 */
+    /* 성장과정 */
     var $wrap = $('#profile');
 
     // swiper
@@ -592,19 +592,18 @@ $(function(){/*
             'src': '/img/main/career_ci/'+info.logo+cache+'',
             'alt': info.name
         });
-        $slide_clone.find('.name').text(info.name);
-        $slide_clone.find('.postion').text(info.postion);
-        $slide_clone.find('.list_job .tit').text(info.title);
-
-        var period = $slide_clone.find('.period').text(info.period);
-        period.html(function(i, text) {
+        $slide_clone.find('.detail .name, .btn_area .corp').text(info.name);
+        $slide_clone.find('.btn_search').attr('data-search', info.name);
+        $slide_clone.find('.detail .period').text(info.period).html(function(i, text) {
             return text.replace('재직중', '<strong class="color-primary">재직중</strong>');
         });
-
+        $slide_clone.find('.detail .postion').text(info.postion);
+        $slide_clone.find('.list_job .tit').text(info.title);
 
         for (var i = 0; i < info.job.length && i < 5; i++) {
             $slide_clone.find('.list_job').append('<dd class="desc">'+info.job[i]+'</dd>');
         }
+
         $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
     });
 
@@ -658,6 +657,41 @@ $(function(){/*
         }
     });
 
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+    /* 근무이력 - 선택한 회사 프로젝트 보기 */
+    var $wrap = $('#career');
+    var $btnSrh = $wrap.find('.btn_search');
+
+    $btnSrh.on('click', function(){
+        var $this = $(this);        
+
+        moveTo({
+            top: 150,
+            target: $('#project .list_tag'),
+        });
+
+        setTimeout(function() {
+            var keyword = $this.attr('data-search');            
+            var $project = $('#project')
+            var $listTag = $project.find('.list_tag');
+            var $btnMore = $project.find('.btn_more');
+
+            // list 초기화
+            ProjectPage = 0;
+            $project.find('.item_project').remove();
+
+            // tag 초기화 및 선택
+            $listTag.find('.btn_tag.on').removeClass('on');
+            $listTag.find(':contains("'+keyword+'")').closest('.btn_tag').addClass('on')            
+
+            $btnMore.trigger('click');
+        }, 400);
+    });
 
 
 })();/*
