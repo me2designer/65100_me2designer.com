@@ -69,7 +69,7 @@ $(function(){/*
         $wrap.find('.videoLayer').on('click', function() {
             LAYER({
                 name : 'alert',
-                text : '현재 개발 중 입니다.'
+                text : '현재 제작 중 입니다.'
             })
         });
     } else {
