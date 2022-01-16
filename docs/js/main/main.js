@@ -115,22 +115,28 @@ $(function(){/*
 
                 var $this = $swiper.find('.swiper-slide[data-swiper-slide-index="'+this.realIndex+'"]');
                 var $num = $this.find('.count').get();
+                var $mark = $this.find('.desc mark').removeClass('is-textMark');
 
+                var Y = true
                 $num.forEach(function(each){
-                    var $this = $(each);
-                    var _countNum = $this.text();
+                    var $each = $(each);
+                    var _countNum = $each.text();
 
                     var endNumber = '';
                     for (var i = 0; i < _countNum.length; i++){
                         endNumber = endNumber + '9'
                     }
-
-                    $this.stop().animateNumber({
+                    
+                    $each.stop().animateNumber({
                         addComma : false,
                         addZero : 2,
-                        totalPlayTime : 800,
+                        totalPlayTime : 800,                        
                         endNumber : endNumber,
                         endValue : _countNum,
+                        callback : function(){
+                            if (Y) $mark.addClass('is-textMark');
+                            Y = false;
+                        }
                     });
                 });
             },
@@ -138,11 +144,11 @@ $(function(){/*
     });
 
     // 나이계산기
-    var today = new Date();
-    var birthDate = new Date(1983, 2, 1);
-    var age = today.getFullYear() - birthDate.getFullYear() + 1;
+    // var today = new Date();
+    // var birthDate = new Date(1983, 2, 1);
+    // var age = today.getFullYear() - birthDate.getFullYear() + 1;
 
-    $wrap.find('.age').text(age);
+    // $wrap.find('.age').text(age);
 
 
 

@@ -105,13 +105,16 @@ $imgPath : "/img/main/";
 
     #profile .swiper-slide {
         .tit {
-            padding:105px 0 20px;font-size:20px;color:#fff;text-align:center;line-height:1em;
+            padding:105px 0 20px;font-size:28px;color:#fff;text-align:center;line-height:1em;
         }
         .num {
             font-family:"CenturyGothic";font-size:141px;font-weight:bold;color:#fff;text-align:center;line-height:1em;
         }
         .desc {
-            padding-top:35px;font-size:25px;color:#fff;text-align:center;line-height:1.56em;
+            padding-top:35px;font-size:22px;color:#fff;text-align:center;line-height:1.56em;
+            mark.is-textMark {
+                @include textMark(#008054,0s,1.4);
+            }
         }
     }
 

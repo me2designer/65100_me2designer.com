@@ -55,36 +55,31 @@
     <!-- 성장과정 -->
     <section id="profile">
         <div class="swiper-container">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper">                
                 <div class="swiper-slide">
-                    <p class="tit">올해로 만 <span class="age"></span>세가 되었습니다.</p>
-                    <p class="num"><span class="count">1983</span>.<span class="count">02</span>.<span class="count">01</span></p>
-                    <p class="desc">1남 2녀 막내로 충정 북도 충주에서 태어났으며,<br> 크리스천인 부모님 영향으로 이타심의 중요성 배우며 성장했습니다.</p>
-                </div>
-                <div class="swiper-slide">
-                    <p class="tit">열아홉, 고등학교 재학중 진로를 결정</p>
+                    <p class="tit">열아홉, 고등학교 재학중 진로 결정</p>
                     <p class="num"><span class="count">2001</span>.<span class="count">02</span>.<span class="count">13</span></p>
-                    <p class="desc">토목설계전공으로 CAD, 3D MAX 모델링 과정에서 그래픽디자인에 대한 재능을 발견했으며,<br>관련 자격증을 취득과 다수 홈페이지 제작 경진대회 도전하여 수상도 하였습니다.</p>
+                    <p class="desc"><mark>그래픽디자인에 대한 흥미를 시작으로 관련 자격증을 취득하고</mark><br><mark>홈페이지 제작 경진대회에서 4회이상 수상을 함으로써 재능이 더해져 진로를 결정</mark></p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">스물셋, 아르바이트 아닌 첫 사회생활 도전!<p>
+                    <p class="tit">스물셋, 첫 사회생활 도전기!<p>
                     <p class="num"><span class="count">2004</span>.<span class="count">05</span>.<span class="count">01</span></p>
-                    <p class="desc">군 입대 전 휴학과 함께 다양한 사회경험에 도전했으며, 그중 약 10개월 기간을<br>엔프리즘(주)에서 인턴으로 "Hello Myworrdy" 교육 교제의 Flash Animation 제작에 참여하였습니다.</p>
+                    <p class="desc"><mark>휴학 중 약 10개월 동안 엔프리즘(주)에서 인턴으로</mark><br><mark>"Hello Myworrdy" 교제 중 Flash Animation 제작과 제품 출시에 기여</mark></p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">스물일곱, 육군 만기 전역</p>
+                    <p class="tit">스물일곱, 군 복무 중에도 역량 발휘</p>
                     <p class="num"><span class="count">2007</span>.<span class="count">06</span>.<span class="count">30</span></p>
-                    <p class="desc">군사행정특기병(3111)으로 부사관/병 인사 및 병력현황 관리와<br>육본 부관감실 "장교/부사관 상훈정보조회시스템" 개발(기획/디자인) 참여 및 포상</p>
+                    <p class="desc"><mark>입대 후 OA능력을 인정받아 군사행정특기병(3111)으로 훈련받았으며,</mark><br><mark>육군본부 부관감실 "장교/부사관 상훈정보조회시스템" 개발(기획/디자인)로 포상 수여</mark></p>
                 </div>
                 <div class="swiper-slide">
                     <p class="tit">스물아홉, 대학교 졸업과 첫 직장생활 시작</p>
                     <p class="num"><span class="count">2010</span>.<span class="count">02</span>.<span class="count">08</span></p>
-                    <p class="desc">재학 중 대외활동으로 창업동아리 설립과 총학생회, 졸업준비위원회 활동했으며,<br>종합유통기업에서 광고디자이너로 첫 직장생활을 시작했습니다.</p>
+                    <p class="desc"><mark>커뮤니케이션 디자인 전공으로 Flash Animation 사용한 졸업작품을 바탕으로</mark><br><mark>종합유통기업 (주)한국리모텍에서 광고디자이너로 첫 직장생활을 시작</mark></p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">현재, 웹퍼블리셔에서 FE개발자로 성장하고있습니다.</p>
+                    <p class="tit">FE개발자로 나아가고 있는 Generalist</p>
                     <p class="num">VISION <span class="count">2022</span></p>
-                    <p class="desc">총 경력 11년 7개월 중 2년 광고디자인 경력을 제외한<br>UX/UI 및 웹퍼블리싱 영역에서 경력개발을 지속적으로 하고 있습니다.</p>
+                    <p class="desc"><mark>11년 7개월 동안 광고디자인, UX/UI 디자인, 웹퍼블리싱 경력에서</mark><br><mark>더 나아가 데이터 중심 애플리케이션 개발을 위한 프론트웹개발자로 성장</mark></p>
                 </div>
             </div>
         </div>
