@@ -11,6 +11,7 @@
                 <button class="btn_gnb" data-target="#professional" type="button">경력개발</button>
                 <button class="btn_gnb" data-target="#career" type="button">근무이력</button>
                 <button class="btn_gnb" data-target="#blog" type="button">코딩블로그</button>
+                <i class="bar"></i>
             </nav>
         </div>
     </div>

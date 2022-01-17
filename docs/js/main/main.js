@@ -126,11 +126,11 @@ $(function(){/*
                     for (var i = 0; i < _countNum.length; i++){
                         endNumber = endNumber + '9'
                     }
-                    
+
                     $each.stop().animateNumber({
                         addComma : false,
                         addZero : 2,
-                        totalPlayTime : 800,                        
+                        totalPlayTime : 800,
                         endNumber : endNumber,
                         endValue : _countNum,
                         callback : function(){
@@ -548,7 +548,14 @@ $(function(){/*
         // 탭높이 animate
         var slideH = $wrap.find('.tab-slide').eq(idx).outerHeight();
         $tabWrapper.height(slideH)
-    }).eq(0).trigger('click');
+
+        // moveTo()
+        var headerH = $('#header').height();
+        moveTo({
+            top: headerH,
+            target: $wrap,
+        });
+    }).eq(2).trigger('click');
 
 
 
@@ -577,6 +584,64 @@ $(function(){/*
         .to($lineList, 0.5, {ease:Power0.easeNone, strokeDashoffset:0}, "span")
         .to($loop.find('path, line'), 10, {ease:Power0.easeNone, strokeDashoffset:-400, repeat:-1}, "loop");
     tl.restart();
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 경력개발 - 인턴·대외활동 및 직무교육 */
+    var $wrap = $('#professional .tab-slide-activity');
+
+    // 본문
+    var $swiperTop = $wrap.find('.swiper-top');
+    var swiperTop = new Swiper($swiperTop, {
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction : false,
+        },
+        speed: 600,
+        loop: true,
+        slidesPerView: 3,
+        loopedSlides: 3,
+        centeredSlides: true,
+        direction: 'vertical',
+        pagination: {
+            el: $wrap.find('.swiper-pagination'),
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: $wrap.find('.swiper-button-next'),
+            prevEl: $wrap.find('.swiper-button-prev'),
+        },
+        on : {
+            slideChangeTransitionStart : function(){
+                var $slide = $swiperTop.find('.swiper-slide');
+                $slide.removeClass('is-active');
+            },
+            slideChangeTransitionEnd : function(){
+                var $this = $swiperTop.find('[data-swiper-slide-index="'+this.realIndex+'"]');
+                $this.addClass('is-active');
+            },
+        },
+    });
+
+    // 썸네일
+    var swiperThumbs = new Swiper($wrap.find('.swiper-thumb'), {
+        centeredSlides: true,
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
+        loop: true,
+        slidesPerView: 1,
+        loopedSlides: 3,
+        direction: 'vertical',
+    });
+    swiperTop.controller.control = swiperThumbs;
+    swiperThumbs.controller.control = swiperTop;
+    swiperTop.autoplay.stop();
 
 
 
@@ -674,7 +739,7 @@ $(function(){/*
     var $btnSrh = $wrap.find('.btn_search');
 
     $btnSrh.on('click', function(){
-        var $this = $(this);        
+        var $this = $(this);
 
         moveTo({
             top: 150,
@@ -682,7 +747,7 @@ $(function(){/*
         });
 
         setTimeout(function() {
-            var keyword = $this.attr('data-search');            
+            var keyword = $this.attr('data-search');
             var $project = $('#project')
             var $listTag = $project.find('.list_tag');
             var $btnMore = $project.find('.btn_more');
@@ -693,7 +758,7 @@ $(function(){/*
 
             // tag 초기화 및 선택
             $listTag.find('.btn_tag.on').removeClass('on');
-            $listTag.find(':contains("'+keyword+'")').closest('.btn_tag').addClass('on')            
+            $listTag.find(':contains("'+keyword+'")').closest('.btn_tag').addClass('on')
 
             $btnMore.trigger('click');
         }, 400);

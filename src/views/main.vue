@@ -55,29 +55,29 @@
     <!-- 성장과정 -->
     <section id="profile">
         <div class="swiper-container">
-            <div class="swiper-wrapper">                
+            <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <p class="tit">열아홉, 고등학교 재학중 진로 결정</p>
                     <p class="num"><span class="count">2001</span>.<span class="count">02</span>.<span class="count">13</span></p>
-                    <p class="desc"><mark>그래픽디자인에 대한 흥미를 시작으로 관련 자격증을 취득하고</mark><br><mark>홈페이지 제작 경진대회에서 4회이상 수상을 함으로써 재능이 더해져 진로를 결정</mark></p>
+                    <p class="desc"><mark>그래픽디자인에 대한 흥미를 시작으로 관련 자격증을 취득하고</mark><br><mark>홈페이지 제작 경진대회에서 3회이상 수상을 함으로써 재능이 더해져 진로를 결정</mark></p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">스물셋, 첫 사회생활 도전기!<p>
+                    <p class="tit">스물둘, 첫 사회생활 도전기!<p>
                     <p class="num"><span class="count">2004</span>.<span class="count">05</span>.<span class="count">01</span></p>
                     <p class="desc"><mark>휴학 중 약 10개월 동안 엔프리즘(주)에서 인턴으로</mark><br><mark>"Hello Myworrdy" 교제 중 Flash Animation 제작과 제품 출시에 기여</mark></p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">스물일곱, 군 복무 중에도 역량 발휘</p>
+                    <p class="tit">스물다섯, 군 복무 중에도 역량 발휘</p>
                     <p class="num"><span class="count">2007</span>.<span class="count">06</span>.<span class="count">30</span></p>
-                    <p class="desc"><mark>입대 후 OA능력을 인정받아 군사행정특기병(3111)으로 훈련받았으며,</mark><br><mark>육군본부 부관감실 "장교/부사관 상훈정보조회시스템" 개발(기획/디자인)로 포상 수여</mark></p>
+                    <p class="desc"><mark>입대 후 OA능력을 인정받아 군사행정특기병(3111)으로 훈련받았으며,</mark><br><mark>육군본부 부관감실 "장교/부사관 상훈정보조회시스템" 개발(기획/디자인)로 표창 수여</mark></p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">스물아홉, 대학교 졸업과 첫 직장생활 시작</p>
+                    <p class="tit">스물여덟, 대학교 졸업과 첫 직장생활 시작</p>
                     <p class="num"><span class="count">2010</span>.<span class="count">02</span>.<span class="count">08</span></p>
                     <p class="desc"><mark>커뮤니케이션 디자인 전공으로 Flash Animation 사용한 졸업작품을 바탕으로</mark><br><mark>종합유통기업 (주)한국리모텍에서 광고디자이너로 첫 직장생활을 시작</mark></p>
                 </div>
                 <div class="swiper-slide">
-                    <p class="tit">FE개발자로 나아가고 있는 Generalist</p>
+                    <p class="tit">현재, FE개발자로 나아가고 있는 Generalist</p>
                     <p class="num">VISION <span class="count">2022</span></p>
                     <p class="desc"><mark>11년 7개월 동안 광고디자인, UX/UI 디자인, 웹퍼블리싱 경력에서</mark><br><mark>더 나아가 데이터 중심 애플리케이션 개발을 위한 프론트웹개발자로 성장</mark></p>
                 </div>
@@ -158,11 +158,11 @@
 
     <!-- 경력개발 -->
     <section id="professional">
-        <h3 class="tit_section">비즈니스 니즈를 충족시키기 위하여<br> 꾸준한 자기계발로 <strong class="color-primary">기술역량</strong>을 확장했습니다.</h3>
-        <p class="desc_section">현재를 안주하기 보다 절박함과 위기의식을 느끼고 미래에 대한 지속성 갖기위해<br>시장의 변화와 맞춰 필요한 역량을 개발하고 발전시켰습니다.</p>
         <div class="tab-container">
             <div class="tab-wrapper">
                 <div class="tab-slide tab-slide-tool isAppear">
+                    <h3 class="tit_slide">비즈니스 니즈를 충족시키기 위하여<br> 꾸준한 자기계발로 <strong class="color-primary">기술역량</strong>을 확장했습니다.</h3>
+                    <p class="desc_slide">현재를 안주하기 보다 절박함과 위기의식을 느끼고 미래에 대한 지속성 갖기위해<br>시장의 변화와 맞춰 필요한 역량을 개발하고 발전시켰습니다.</p>
                     <div class="list_tool">
                         <i class="item_tool indesign"><img class="logo" :src="imgPath+'professional_tool_logo/indesign.svg'"></i>
                         <i class="item_tool illust"><img class="logo" :src="imgPath+'professional_tool_logo/illust.svg'"></i>
@@ -182,16 +182,63 @@
                     </div>
                 </div>
                 <div class="tab-slide">
-                    수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>수상내용<br>
+                    <h3 class="tit_slide"><strong class="color-primary">수상경력 및 자격증</strong>은 새로운 도전과 경험을<br>성취하고자 노력한 결과입니다.</h3>
+                    <p class="desc_slide">수 많은 대회에서 실패와 성공 그리고 팀원들과 협업 경험을 바탕으로<br>대학시절 창업동아리, 학생자치기구에서 핵심적인 역할을 할 수 있었습니다.</p>
                 </div>
-                <div class="tab-slide">
-                    대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>대외활동내용<br>
+                <div class="tab-slide tab-slide-activity">
+                    <h3 class="tit_slide">미래의 발판을 건설하기 위해<br><strong class="color-primary">인턴·대외활동 및 직무교육</strong>에 참여했습니다.</h3>
+                    <p class="desc_slide">이른시기 독립적인 생활로 용돈과 학업에 대부분을 스스로 해결하는 과정에서<br>사회생활과 자기계발의 중요성을 새삼 깨달았습니다</p>
+                    <div class="inner">
+                        <div class="swiper-container swiper-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="text-area">
+                                        <p class="headline">2000.11.17 ~ 2001.03.01</p>
+                                        <p class="tit">한양공업고등학교 근로장학생</p>
+                                        <p class="desc">학급별 멀티미디어 수업, 특별활동 시간 지도교사 보조 및<br>교내 전산장비 자산관리, 네트워크망 유지/보수등</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-area">
+                                        <p class="headline">2000.11.17 ~ 2001.03.01</p>
+                                        <p class="tit">한양공업고등학교 근로장학생</p>
+                                        <p class="desc">학급별 멀티미디어 수업, 특별활동 시간 지도교사 보조 및<br>교내 전산장비 자산관리, 네트워크망 유지/보수등</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-area">
+                                        <p class="headline">2000.11.17 ~ 2001.03.01</p>
+                                        <p class="tit">한양공업고등학교 근로장학생</p>
+                                        <p class="desc">학급별 멀티미디어 수업, 특별활동 시간 지도교사 보조 및<br>교내 전산장비 자산관리, 네트워크망 유지/보수등</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Navigation -->
+                            <div class="swiper-button-prev swiper-button"><img src="" data-images-path="/image/svg/arr_top01.svg" alt="위로"></div>
+                            <div class="swiper-button-next swiper-button"><img src="" data-images-path="/image/svg/arr_bottom01.svg" alt="아래로"></div>
+                        </div>
+
+                        <div class="swiper-container swiper-thumb">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb1.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
+                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb2.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
+                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb3.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
+                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb4.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
+                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb5.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
+                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb6.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
+                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb7.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <nav class="tab-nav">
                 <button class="tab-btn" type=button><img class="ico" src="" data-images-path="/images/ico/lightbulb-exclamation-solid.svg" alt="">기술역량</button>
                 <button class="tab-btn" type=button><img class="ico" src="" data-images-path="/images/ico/medal-solid.svg" alt="">수상경력 및 자격증</button>
-                <button class="tab-btn" type=button><img class="ico" src="" data-images-path="/images/ico/calendar-alt-regular.svg" alt="">인턴·대외활동</button>
+                <button class="tab-btn" type=button><img class="ico" src="" data-images-path="/images/ico/calendar-alt-regular.svg" alt="">인턴·대외활동 및 직무교육</button>
             </nav>
         </div>
     </section>

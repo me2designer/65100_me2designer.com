@@ -36,28 +36,6 @@ $(function(){/*
 
 
 
-    /* TEXT 말줄임 */
-
-    //1줄
-    $('.lineClamp').lineClamp(1);
-
-    //2줄
-    $('.lineClamp2').lineClamp(2);
-
-    //3줄
-    $('.lineClamp3').lineClamp(3);
-
-    //4줄
-    $('.lineClamp4').lineClamp(4);
-
-
-
-})();/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/(function(){
-
-
-
     /* HEADER - is-active */
     var $header = $('#header');
     var status;
@@ -86,7 +64,8 @@ $(function(){/*
 
     //현재위치표시
     var $section = $('#container > section');
-    var $btn = $header.find('.btn_gnb');
+    var $btn = $header.find('.gnb .btn_gnb');
+    var $bar = $header.find('.gnb .bar');
 
     //data-target 추출
     var arrId = []
@@ -105,17 +84,27 @@ $(function(){/*
             top: 20,
             scrollDownAction : function(){
                 // 스크롤 DOWN 액션
-                $btn.removeClass('on');
-                $btn.siblings('[data-target="'+id+'"]').addClass('on');
+                var $target = $btn.siblings('[data-target="'+id+'"]');
+                var positionX = Number($target.css('margin-left').replace(/[^0-9]/g, "")) + $target.position().left;
+                var width = $target.width();
 
+                $bar.css({
+                    'width' : width,
+                    'transform' : 'translateX('+positionX+'px)'
+                });
             },
             scrollUpAction : function(){
                 // 스크롤 UP 액션
                 var $prev = $btn.siblings('[data-target="'+id+'"]').prev();
                 var prevId = $prev.attr('data-target');
+                var $target = $btn.siblings('[data-target="'+prevId+'"]');
+                var positionX = Number($target.css('margin-left').replace(/[^0-9]/g, "")) + $target.position().left;
+                var width = $target.width();
 
-                $btn.removeClass('on');
-                $btn.siblings('[data-target="'+prevId+'"]').addClass('on');
+                $bar.css({
+                    'width' : width,
+                    'transform' : 'translateX('+positionX+'px)'
+                });
             }
         });
     });
@@ -156,13 +145,13 @@ $(function(){/*
             posY = 0,
             mouseX = 0,
             mouseY = 0;
-            
+
 
         var tm_cursor = TweenMax.to({}, 0.016, {
             repeat:-1,
             onRepeat:function(){
                 posX += (mouseX - posX) / 4;
-                posY += (mouseY - posY) / 4;            
+                posY += (mouseY - posY) / 4;
 
                 TweenMax.set(follower, {
                     css: {
@@ -179,21 +168,21 @@ $(function(){/*
             }
         }).pause();
 
-        $this.parent().on("mousemove",function(e){                
+        $this.parent().on("mousemove",function(e){
             mouseX = e.pageX  - $this.offset().left;
-            mouseY = e.pageY - $this.offset().top;        
+            mouseY = e.pageY - $this.offset().top;
             tm_cursor.play();
             $this.addClass('is-active');
-            
+
             if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'none'; //cursor hidden
         }).on('mouseleave',function(e) {
             tm_cursor.pause();
             $this.removeClass('is-active');
-            
+
             if (!$('#wrap').filter('[data-device-detail="ie11"]').length) document.body.style.cursor = 'default'; //cursor visible
         });
     })
-    
+
 
 
 })();/*

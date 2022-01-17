@@ -18,10 +18,10 @@ $wrapW: 1440px;
 #header .logo {margin-right:38px}
 #header .link_home {font-size:21px;font-weight:bold;color:#fff;letter-spacing:-0.01em;transition:color 0.3s $G-easeHover}
 #header .link_home strong {display:inline-block;margin-right:11px;font-family:"OpenSans";font-size:22px;font-weight:800}
+#header .gnb {position:relative;}
 #header .gnb .btn_gnb {position:relative;margin:0 38px;font-size:17px;color:#fff;line-height:1em;letter-spacing:-0.01em;transition:color 0.3s $G-easeHover}
-#header .gnb .btn_gnb::after {content:"";position:absolute;bottom:-10px;left:-4%;width:0;height:2px;background-color:$G-colorPrimary;transition:width 0.3s $G-easeHover}
-#header .gnb .btn_gnb:hover::after,
-#header:hover .gnb .btn_gnb.on::after {width:108%}
+#header .gnb .bar {position:absolute;bottom:-10px;left:0;height:2px;background-color:$G-colorPrimary;transition:all 0.3s $G-easeHover}
+#header:not(.is-active):not(:hover) .gnb .bar {width:0 !important}
 #header:hover,
 #header.is-active {background-color:#fff;box-shadow:0 1px 10px rgba(0,0,0,0.05)}
 #header:hover .link_home,
@@ -30,7 +30,6 @@ $wrapW: 1440px;
 #header.is-active .link_home strong {color:$G-colorPrimary}
 #header:hover .gnb .btn_gnb,
 #header.is-active .gnb .btn_gnb {color:#333}
-#header.is-active .gnb .btn_gnb.on::after {width:108%}
 
 /* FOOTER */ 
 $footerH: 445px;
