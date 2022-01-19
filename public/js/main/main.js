@@ -532,30 +532,23 @@ $(function(){/*
 
     /* 경력개발 - 탭메뉴 */
     var $wrap = $('#professional');
-    var $tabWrapper = $wrap.find('.tab-wrapper');
 
-    $wrap.find('.tab-btn').on('click', function(){
-        if ($(this).hasClass('tab-btn-active')) return; //중복클릭 방지
-
-        var idx = $(this).index();
-
-        // 탭버튼 활성화
-        $wrap.find('.tab-btn').removeClass('tab-btn-active').eq(idx).addClass('tab-btn-active');
-
-        // 탭슬라이드 활성화
-        $wrap.find('.tab-slide').hide().css('opacity', 0).removeClass('tab-slide-active').eq(idx).show().addClass('tab-slide-active').fadeTo(100, 1);
-
-        // 탭높이 animate
-        var slideH = $wrap.find('.tab-slide').eq(idx).outerHeight();
-        $tabWrapper.height(slideH)
-
-        // moveTo()
-        var headerH = $('#header').height();
-        moveTo({
-            top: headerH,
-            target: $wrap,
-        });
-    }).eq(2).trigger('click');
+    tab($wrap.find('.tab-container'),{        
+        navigation : {
+            el : $wrap.find('.tab-nav'),
+            autoHeight : true
+        },
+        afterLoad : function(){
+            $wrap.find('.tab-btn').on('click', function(){
+                // moveTo()
+                var headerH = $('#header').height();
+                moveTo({
+                    top: headerH,
+                    target: $wrap,
+                });
+            })     
+        }
+    });
 
 
 
@@ -595,9 +588,43 @@ $(function(){/*
 
     /* 경력개발 - 인턴·대외활동 및 직무교육 */
     var $wrap = $('#professional .tab-slide-activity');
+    var $swiperTop = $wrap.find('.swiper-top');
+    var slideTop_copied = $swiperTop.find('.swiper-slide').detach();
+    var $swiperThumb = $wrap.find('.swiper-thumb');
+    var slideThumb_copied = $swiperThumb.find('.swiper-slide').detach();
+
+
+    // clone()
+    var infoList = getActivityList()
+
+    infoList.forEach(function(each) {
+        var $slideTop_clone = slideTop_copied.clone();
+        var $slideThumb_clone = slideThumb_copied.clone();
+
+        $slideTop_clone.find('.corp').text(each.corp);
+        $slideTop_clone.find('.tit').text(each.title).html(function(i, text) {
+            return text.replace('長', '<span>長</span>');
+        });
+        $slideTop_clone.find('.date').text(each.date);
+        $slideTop_clone.find('.desc').text(each.description);
+        $slideThumb_clone.attr('data-background', '/img/main/professional_activity/'+each.thumb+'');
+
+        $slideTop_clone.appendTo($swiperTop.find('.swiper-wrapper'))
+        $slideThumb_clone.appendTo($swiperThumb.find('.swiper-wrapper'))
+    })
+
+
+
+
+
+    // for (var i = 1; i <= $slideTop.length; i++) {
+    //     var $slideThumb_clone = slideThumb_copied.clone();
+
+    //     $slideThumb_clone.attr('data-background', '/img/main/professional_activity/thumb'+i+'.jpg');
+    //     $slideThumb_clone.appendTo($swiperThumb.find('.swiper-wrapper'));
+    // }
 
     // 본문
-    var $swiperTop = $wrap.find('.swiper-top');
     var swiperTop = new Swiper($swiperTop, {
         autoplay: {
             delay: 4000,
@@ -627,10 +654,10 @@ $(function(){/*
                 $this.addClass('is-active');
             },
         },
-    });
+    });    
 
     // 썸네일
-    var swiperThumbs = new Swiper($wrap.find('.swiper-thumb'), {
+    var swiperThumb = new Swiper($swiperThumb, {
         centeredSlides: true,
         touchRatio: 0.2,
         slideToClickedSlide: true,
@@ -638,10 +665,30 @@ $(function(){/*
         slidesPerView: 1,
         loopedSlides: 3,
         direction: 'vertical',
+        lazy: true,
+        lazy: {
+            loadPrevNext: false,
+            loadOnTransitionStart: true
+        },
     });
-    swiperTop.controller.control = swiperThumbs;
-    swiperThumbs.controller.control = swiperTop;
+    swiperTop.controller.control = swiperThumb;
+    swiperThumb.controller.control = swiperTop;
     swiperTop.autoplay.stop();
+
+    // siwper reset
+    var observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            if (mutation.attributeName === "class") {
+                if ($wrap.hasClass('tab-slide-active')) {
+                    swiperTop.slideTo($wrap.find('.swiper-top [data-swiper-slide-index=0]').index(), 0, true);
+                    // swiperTop.autoplay.start();
+                } else {
+                    swiperTop.autoplay.stop();
+                }
+            }
+        });
+    });
+    observer.observe($wrap[0], {attributes: true});
 
 
 
@@ -657,22 +704,22 @@ $(function(){/*
     var $swiper = $wrap.find('.swiper-container');
     var slide_copied = $swiper.find('.swiper-slide').detach();
 
-    infoList.forEach(function(info){
+    infoList.forEach(function(each) {
         var $slide_clone = slide_copied.clone();
         $slide_clone.find('.logo').attr({
-            'src': '/img/main/career_ci/'+info.logo+cache+'',
-            'alt': info.name
+            'src': '/img/main/career_ci/'+each.logo+cache+'',
+            'alt': each.name
         });
-        $slide_clone.find('.detail .name, .btn_area .corp').text(info.name);
-        $slide_clone.find('.btn_search').attr('data-search', info.name);
-        $slide_clone.find('.detail .period').text(info.period).html(function(i, text) {
+        $slide_clone.find('.detail .name, .btn_area .corp').text(each.name);
+        $slide_clone.find('.btn_search').attr('data-search', each.name);
+        $slide_clone.find('.detail .period').text(each.period).html(function(i, text) {
             return text.replace('재직중', '<strong class="color-primary">재직중</strong>');
         });
-        $slide_clone.find('.detail .postion').text(info.postion);
-        $slide_clone.find('.list_job .tit').text(info.title);
+        $slide_clone.find('.detail .postion').text(each.postion);
+        $slide_clone.find('.list_job .tit').text(each.title);
 
-        for (var i = 0; i < info.job.length && i < 5; i++) {
-            $slide_clone.find('.list_job').append('<dd class="desc">'+info.job[i]+'</dd>');
+        for (var i = 0; i < each.job.length && i < 5; i++) {
+            $slide_clone.find('.list_job').append('<dd class="desc">'+each.job[i]+'</dd>');
         }
 
         $slide_clone.appendTo($swiper.find('.swiper-wrapper'));

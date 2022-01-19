@@ -7,7 +7,7 @@
     /* 코딩블로그 - 티스토리 - 글목록 */
     function getTistory(type, count, pageNum) {
         var opction = {
-            type: function(data){                
+            type: function(data){
                 // var val;
                 switch (data){
                     case 'post':
@@ -21,7 +21,7 @@
             },
             count: count == undefined ? '' : '&count='+count,
             pageNum: pageNum == undefined ? '' : '&page='+pageNum,
-        }    
+        }
         var list;
         var pars = {
             'accessToken' : '014f0adecdf2a12798c783abbc7a0498_3ea393c3f6e235ff61d1f6e3557bbdb9',
@@ -84,6 +84,27 @@
 
 
     /* 근무이력 */
+    function getActivityList() {
+        var list = [];
+        $.ajax({
+            url : '/js/json/activity.json',
+            async : false,
+            success : function(data){
+                list = data;
+            }
+        });
+        return list;
+    }
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+
+
+    /* 근무이력 */
     function getCareerList() {
         var list = [];
         $.ajax({
@@ -106,11 +127,6 @@
     //     });
     // }
 
-
-
-/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/
 
 
 /*

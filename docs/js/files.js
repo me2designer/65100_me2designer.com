@@ -3,6 +3,7 @@ FILES([
     SERVER.fonts+'/fonts/NanumSquare/NanumSquare.css',
     SERVER.fonts+'/fonts/CenturyGothic/CenturyGothic.css',
     SERVER.fonts+'/fonts/PerpetuaTitlingMT/PerpetuaTitlingMT.css',
+    SERVER.fonts+'/fonts/SHMyungjo/SHMyungjo.css',
     SERVER.public+'/css/reset.css',
     SERVER.public+'/css/common_pc.css',
     SERVER.public+'/lib/swiper/swiper@4.5.1.css',

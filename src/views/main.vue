@@ -193,23 +193,10 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="text-area">
-                                        <p class="headline">2000.11.17 ~ 2001.03.01</p>
-                                        <p class="tit">한양공업고등학교 근로장학생</p>
-                                        <p class="desc">학급별 멀티미디어 수업, 특별활동 시간 지도교사 보조 및<br>교내 전산장비 자산관리, 네트워크망 유지/보수등</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="text-area">
-                                        <p class="headline">2000.11.17 ~ 2001.03.01</p>
-                                        <p class="tit">한양공업고등학교 근로장학생</p>
-                                        <p class="desc">학급별 멀티미디어 수업, 특별활동 시간 지도교사 보조 및<br>교내 전산장비 자산관리, 네트워크망 유지/보수등</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="text-area">
-                                        <p class="headline">2000.11.17 ~ 2001.03.01</p>
-                                        <p class="tit">한양공업고등학교 근로장학생</p>
-                                        <p class="desc">학급별 멀티미디어 수업, 특별활동 시간 지도교사 보조 및<br>교내 전산장비 자산관리, 네트워크망 유지/보수등</p>
+                                        <p class="corp"></p>
+                                        <p class="tit"></p>
+                                        <p class="date"></p>
+                                        <p class="desc"></p>
                                     </div>
                                 </div>
                             </div>
@@ -217,19 +204,13 @@
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
                             <!-- Add Navigation -->
-                            <div class="swiper-button-prev swiper-button"><img src="" data-images-path="/image/svg/arr_top01.svg" alt="위로"></div>
-                            <div class="swiper-button-next swiper-button"><img src="" data-images-path="/image/svg/arr_bottom01.svg" alt="아래로"></div>
+                            <div class="swiper-button-prev swiper-button"><img src="" data-images-path="/images/ico/chevron-up_regular.svg" alt="위로"></div>
+                            <div class="swiper-button-next swiper-button"><img src="" data-images-path="/images/ico/chevron-down_regular.svg" alt="아래로"></div>
                         </div>
 
                         <div class="swiper-container swiper-thumb">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb1.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
-                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb2.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
-                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb3.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
-                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb4.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
-                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb5.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
-                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb6.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
-                                <div class="swiper-slide"><img :src="imgPath+'/professional_activity/thumb7.jpg'" onerror="this.src='/img/main/professional_activity/onerror.png'" alt="사진"></div>
+                                <div class="swiper-slide swiper-lazy"><div class="swiper-lazy-preloader"></div></div>                                                                                              
                             </div>
                         </div>
                     </div>
@@ -300,8 +281,8 @@
             </table>
             <div class="table-pagination" data-group-index="0">
                 <span class="table-pagination-bullet"></span>
-                <!-- <span class="table-pagination-prev disable"><img src="" data-images-path="/images/ico/prev01.svg"></span> -->
-                <!-- <span class="table-pagination-next"><img src="" data-images-path="/images/ico/next01.svg"></span> -->
+                <!-- <span class="table-pagination-prev disable"><img src="" data-images-path="/images/ico/chevron-left_regular.svg"></span> -->
+                <!-- <span class="table-pagination-next"><img src="" data-images-path="/images/ico/chevron-right_regular.svg"></span> -->
             </div>
         </div>
     </section>
