@@ -181,9 +181,22 @@
                         <img class="line" :src="imgPath+'professional_tool_line.svg'" alt="">
                     </div>
                 </div>
-                <div class="tab-slide">
+                <div class="tab-slide tab-slide-license">
                     <h3 class="tit_slide"><strong class="color-primary">수상경력 및 자격증</strong>은 새로운 도전과 경험을<br>성취하고자 노력한 결과입니다.</h3>
                     <p class="desc_slide">수 많은 대회에서 실패와 성공 그리고 팀원들과 협업 경험을 바탕으로<br>대학시절 창업동아리, 학생자치기구에서 핵심적인 역할을 할 수 있었습니다.</p>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <p class="date"></p>
+                                    <p class="tit"></p>
+                                    <p class="desc"></p>
+                                    <p class="desc"></p>
+                                </div>
+                                <i class="border"></i>
+                            </div>                            
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-slide tab-slide-activity">
                     <h3 class="tit_slide">미래의 발판을 건설하기 위해<br><strong class="color-primary">인턴·대외활동 및 직무교육</strong>에 참여했습니다.</h3>
@@ -200,14 +213,12 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
                             <!-- Add Navigation -->
                             <div class="swiper-button-prev swiper-button"><img src="" data-images-path="/images/ico/chevron-up_regular.svg" alt="위로"></div>
                             <div class="swiper-button-next swiper-button"><img src="" data-images-path="/images/ico/chevron-down_regular.svg" alt="아래로"></div>
                         </div>
-
                         <div class="swiper-container swiper-thumb">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide swiper-lazy"><div class="swiper-lazy-preloader"></div></div>                                                                                              

@@ -533,7 +533,7 @@ $(function(){/*
     /* 경력개발 - 탭메뉴 */
     var $wrap = $('#professional');
 
-    tab($wrap.find('.tab-container'),{        
+    tab($wrap.find('.tab-container'),{
         navigation : {
             el : $wrap.find('.tab-nav'),
             autoHeight : true
@@ -546,7 +546,7 @@ $(function(){/*
                     top: headerH,
                     target: $wrap,
                 });
-            })     
+            })/* .eq(1).trigger('click'); */
         }
     });
 
@@ -558,8 +558,8 @@ $(function(){/*
 
 
 
-    /* 경력개발 - 탭메뉴 */
-    var $wrap = $('#professional')
+    /* 경력개발 - 기술역량 */
+    var $wrap = $('#professional .tab-slide-tool')
 
     //line animate
     var $make = $wrap.find('#theMask')
@@ -586,13 +586,106 @@ $(function(){/*
 
 
 
+    /* 경력개발 - 수상경력 및 자격증 */
+    let $wrap = $('#professional .tab-slide-license');
+    let $swiper = $wrap.find('.swiper-container');
+    let $slide = $swiper.find('.swiper-slide');
+    let slide_copied = $swiper.find('.swiper-slide').detach();
+
+    // clone()
+    getList('/js/json/license.json', function(infoList) {
+        infoList.forEach(function(each) {
+            let slide_clone = slide_copied.clone();
+
+            slide_clone.find('.date').text(each.date);
+            slide_clone.find('.tit').text(each.title);
+            slide_clone.find('.desc:eq(0)').text(each.description1);
+            slide_clone.find('.desc:eq(1)').text(each.description2);
+            slide_clone.appendTo($swiper.find('.swiper-wrapper'))
+        });
+
+        swiperOpt();
+    })
+
+    // swiperOpt()
+    const swiperOpt = function() {
+        // swiper
+        let swiper = new Swiper($swiper, {
+            autoplay: {
+                delay: 1,
+                disableOnInteraction : false,
+            },
+            speed: 3000,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            freeMode: true,
+            // grabCursor: true,
+            mousewheelControl: true,
+            keyboardControl: true,
+            on : {
+                slideChangeTransitionStart : function(){
+                    let $this = $(swiper.el).find('.swiper-slide-active');
+                    let $next = $(swiper.el).find('.swiper-slide-next');
+
+                    $this.prevAll().addClass('swiper-slide-active-complete');
+                    $this.prevAll().find('.border').addClass('border-active');
+                    $this.addClass('swiper-slide-active-complete');
+                    $next.addClass('swiper-slide-active-complete');
+                    $this.find('.border').addClass('border-active');
+                },
+                slideChangeTransitionEnd : function(){                                        
+                    if (++swiper.realIndex == swiper.slides.length){
+                        let tl = new TimelineMax();
+
+                        swiper.autoplay.stop();
+                        tl.delay(1)
+                        .to(swiper.$wrapperEl, 0.6, {opacity:0, onComplete:function(){
+                            swiper.slideTo($(swiper.slides).eq(0).index(), 0, true);
+                            $(swiper.slides).removeClass('swiper-slide-active-complete');
+                            $(swiper.slides).find('.border').removeClass('border-active');
+                        }})
+                        .to(swiper.$wrapperEl, 0.6, {opacity:1})
+                        .call(function(){
+                            swiper.autoplay.start();
+                        });
+                    }
+                },
+            },
+        });
+        swiper.autoplay.stop();        
+
+        // siwper reset
+        let observer = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+                if (mutation.attributeName === "class") {
+                    if ($wrap.hasClass('tab-slide-active')) {                        
+                        swiper.autoplay.start();
+                    } else {
+                        swiper.autoplay.stop();
+                        swiper.slideTo($(swiper.slides).eq(0).index(), 0, true);
+                        $(swiper.slides).removeClass('swiper-slide-active-complete');
+                        $(swiper.slides).find('.border').removeClass('border-active');
+                    }
+                }
+            });
+        });
+        observer.observe($wrap[0], {attributes: true});
+    }
+
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
     /* 경력개발 - 인턴·대외활동 및 직무교육 */
     var $wrap = $('#professional .tab-slide-activity');
     var $swiperTop = $wrap.find('.swiper-top');
     var slideTop_copied = $swiperTop.find('.swiper-slide').detach();
     var $swiperThumb = $wrap.find('.swiper-thumb');
     var slideThumb_copied = $swiperThumb.find('.swiper-slide').detach();
-
 
     // clone()
     var infoList = getActivityList()
@@ -613,21 +706,10 @@ $(function(){/*
         $slideThumb_clone.appendTo($swiperThumb.find('.swiper-wrapper'))
     })
 
-
-
-
-
-    // for (var i = 1; i <= $slideTop.length; i++) {
-    //     var $slideThumb_clone = slideThumb_copied.clone();
-
-    //     $slideThumb_clone.attr('data-background', '/img/main/professional_activity/thumb'+i+'.jpg');
-    //     $slideThumb_clone.appendTo($swiperThumb.find('.swiper-wrapper'));
-    // }
-
     // 본문
     var swiperTop = new Swiper($swiperTop, {
         autoplay: {
-            delay: 4000,
+            delay: 3000,
             disableOnInteraction : false,
         },
         speed: 600,
@@ -654,7 +736,7 @@ $(function(){/*
                 $this.addClass('is-active');
             },
         },
-    });    
+    });
 
     // 썸네일
     var swiperThumb = new Swiper($swiperThumb, {
@@ -681,7 +763,7 @@ $(function(){/*
             if (mutation.attributeName === "class") {
                 if ($wrap.hasClass('tab-slide-active')) {
                     swiperTop.slideTo($wrap.find('.swiper-top [data-swiper-slide-index=0]').index(), 0, true);
-                    // swiperTop.autoplay.start();
+                    swiperTop.autoplay.start();
                 } else {
                     swiperTop.autoplay.stop();
                 }
@@ -780,6 +862,9 @@ $(function(){/*
 })();/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
+
+
+
 
     /* 근무이력 - 선택한 회사 프로젝트 보기 */
     var $wrap = $('#career');

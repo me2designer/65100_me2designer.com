@@ -132,3 +132,25 @@
 /*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
+
+
+
+    const getList = function() {
+        let arg = mergeDeep({url : arguments[0]}, {callback : arguments[1]})        
+                
+        $.ajax({
+            url: arg.url,            
+            method:'GET',
+            contentType : "application/json; charset=utf-8",
+            dataType: "JSON",
+            success:function(data){                
+                if(arg.callback) arg.callback(data);
+            }
+        });        
+    }
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
