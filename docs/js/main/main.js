@@ -1,14 +1,15 @@
 var ProjectPage = 0;
+console.log('b');
 
 
 $(function(){/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
 
-    
+    console.log('c');
 
     /* 사이트 준비중 안내 */
-    if(isReal) LAYER('developing');
+    // if(isReal) LAYER('developing');
 
 
 
