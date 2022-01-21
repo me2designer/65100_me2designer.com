@@ -84,27 +84,6 @@
 
 
     /* 근무이력 */
-    function getActivityList() {
-        var list = [];
-        $.ajax({
-            url : '/js/json/activity.json',
-            async : false,
-            success : function(data){
-                list = data;
-            }
-        });
-        return list;
-    }
-
-
-
-/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/
-
-
-
-    /* 근무이력 */
     function getCareerList() {
         var list = [];
         $.ajax({

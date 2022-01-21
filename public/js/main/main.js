@@ -27,10 +27,10 @@ $(function(){/*
     var slide_length = $swiper.find('.swiper-slide').length;
     var $progress = $wrap.find('.progress_bar');
     var swiper = new Swiper($swiper, {
-        // autoplay: {
-        //     delay: 4000,
-        //     disableOnInteraction : false,
-        // },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction : false,
+        },
         speed: 1500,
         slidesPerView: 1,
         loop: true,
