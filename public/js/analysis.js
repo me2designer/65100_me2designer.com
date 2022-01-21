@@ -2,7 +2,6 @@
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
 
-
     /* Block IP Access */
     function blockIp(callback) {
         function resp() {
@@ -25,7 +24,7 @@
 
         request.addEventListener("load", resp);
         request.open("GET", 'https://api.ipify.org?format=json', true);
-        request.send();
+        request.send();        
     }
 
 
@@ -59,7 +58,7 @@
     blockIp(function(){                
         loadScript({
             url : '//www.googletagmanager.com/gtag/js?id=G-W07XFYE5BD',
-            afterLoad : function() {
+            afterLoad : function() {                
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
