@@ -27,15 +27,20 @@ $(function(){/*
     var slide_length = $swiper.find('.swiper-slide').length;
     var $progress = $wrap.find('.progress_bar');
     var swiper = new Swiper($swiper, {
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction : false,
-        },
+        // autoplay: {
+        //     delay: 4000,
+        //     disableOnInteraction : false,
+        // },
         speed: 1500,
         slidesPerView: 1,
         loop: true,
         loopedSlides: slide_length,
         effect: 'fade',
+        lazy: true,
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true
+        },
         navigation: {
             nextEl: $wrap.find('.swiper-button-next'),
             prevEl: $wrap.find('.swiper-button-prev')
@@ -434,7 +439,7 @@ $(function(){/*
         keyboardControl: true,
         lazy: true,
         lazy: {
-            loadPrevNext: false,
+            loadPrevNext: true,
             loadOnTransitionStart: true
         },
         on: {
@@ -681,97 +686,102 @@ $(function(){/*
 
 
     /* 경력개발 - 인턴·대외활동 및 직무교육 */
-    var $wrap = $('#professional .tab-slide-activity');
-    var $swiperTop = $wrap.find('.swiper-top');
-    var slideTop_copied = $swiperTop.find('.swiper-slide').detach();
-    var $swiperThumb = $wrap.find('.swiper-thumb');
-    var slideThumb_copied = $swiperThumb.find('.swiper-slide').detach();
+    let $wrap = $('#professional .tab-slide-activity');
+    let $swiperTop = $wrap.find('.swiper-top');
+    let slideTop_copied = $swiperTop.find('.swiper-slide').detach();
+    let $swiperThumb = $wrap.find('.swiper-thumb');
+    let slideThumb_copied = $swiperThumb.find('.swiper-slide').detach();        
 
     // clone()
-    var infoList = getActivityList()
-
-    infoList.forEach(function(each) {
-        var $slideTop_clone = slideTop_copied.clone();
-        var $slideThumb_clone = slideThumb_copied.clone();
-
-        $slideTop_clone.find('.corp').text(each.corp);
-        $slideTop_clone.find('.tit').text(each.title).html(function(i, text) {
-            return text.replace('長', '<span>長</span>');
+    getList('/js/json/activity.json', function(infoList) {
+        infoList.forEach(function(each) {
+            let $slideTop_clone = slideTop_copied.clone();
+            let $slideThumb_clone = slideThumb_copied.clone();
+    
+            $slideTop_clone.find('.corp').text(each.corp);
+            $slideTop_clone.find('.tit').text(each.title).html(function(i, text) {
+                return text.replace('長', '<span>長</span>');
+            });
+            $slideTop_clone.find('.date').text(each.date);
+            $slideTop_clone.find('.desc').text(each.description);
+            $slideThumb_clone.attr('data-background', '/img/main/professional_activity/'+each.thumb+'');
+    
+            $slideTop_clone.appendTo($swiperTop.find('.swiper-wrapper'))
+            $slideThumb_clone.appendTo($swiperThumb.find('.swiper-wrapper'))
         });
-        $slideTop_clone.find('.date').text(each.date);
-        $slideTop_clone.find('.desc').text(each.description);
-        $slideThumb_clone.attr('data-background', '/img/main/professional_activity/'+each.thumb+'');
 
-        $slideTop_clone.appendTo($swiperTop.find('.swiper-wrapper'))
-        $slideThumb_clone.appendTo($swiperThumb.find('.swiper-wrapper'))
-    })
-
-    // 본문
-    var swiperTop = new Swiper($swiperTop, {
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction : false,
-        },
-        speed: 600,
-        loop: true,
-        slidesPerView: 3,
-        loopedSlides: 3,
-        centeredSlides: true,
-        direction: 'vertical',
-        pagination: {
-            el: $wrap.find('.swiper-pagination'),
-            type: 'fraction',
-        },
-        navigation: {
-            nextEl: $wrap.find('.swiper-button-next'),
-            prevEl: $wrap.find('.swiper-button-prev'),
-        },
-        on : {
-            slideChangeTransitionStart : function(){
-                var $slide = $swiperTop.find('.swiper-slide');
-                $slide.removeClass('is-active');
-            },
-            slideChangeTransitionEnd : function(){
-                var $this = $swiperTop.find('[data-swiper-slide-index="'+this.realIndex+'"]');
-                $this.addClass('is-active');
-            },
-        },
+        swiperOpt();
     });
 
-    // 썸네일
-    var swiperThumb = new Swiper($swiperThumb, {
-        centeredSlides: true,
-        touchRatio: 0.2,
-        slideToClickedSlide: true,
-        loop: true,
-        slidesPerView: 1,
-        loopedSlides: 3,
-        direction: 'vertical',
-        lazy: true,
-        lazy: {
-            loadPrevNext: false,
-            loadOnTransitionStart: true
-        },
-    });
-    swiperTop.controller.control = swiperThumb;
-    swiperThumb.controller.control = swiperTop;
-    swiperTop.autoplay.stop();
+    // swiperOpt()
+    const swiperOpt = function() {
+        // 본문
+        let swiperTop = new Swiper($swiperTop, {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction : false,
+            },
+            speed: 600,
+            loop: true,
+            slidesPerView: 3,
+            loopedSlides: 3,
+            centeredSlides: true,
+            direction: 'vertical',            
+            pagination: {
+                el: $wrap.find('.swiper-pagination'),
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: $wrap.find('.swiper-button-next'),
+                prevEl: $wrap.find('.swiper-button-prev'),
+            },
+            on : {
+                slideChangeTransitionStart : function(){
+                    let $slide = $swiperTop.find('.swiper-slide');
+                    $slide.removeClass('is-active');
+                },
+                slideChangeTransitionEnd : function(){
+                    let $this = $swiperTop.find('[data-swiper-slide-index="'+this.realIndex+'"]');
+                    $this.addClass('is-active');
+                },
+            },
+        });
 
-    // siwper reset
-    var observer = new MutationObserver(mutations => {
-        mutations.forEach(mutation => {
-            if (mutation.attributeName === "class") {
-                if ($wrap.hasClass('tab-slide-active')) {
-                    swiperTop.slideTo($wrap.find('.swiper-top [data-swiper-slide-index=0]').index(), 0, true);
-                    swiperTop.autoplay.start();
-                } else {
-                    swiperTop.autoplay.stop();
+        // 썸네일
+        let swiperThumb = new Swiper($swiperThumb, {
+            centeredSlides: true,
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+            loop: true,
+            slidesPerView: 1,
+            loopedSlides: 3,
+            direction: 'vertical',
+            lazy: true,
+            lazy: {
+                loadPrevNext: true,
+                loadOnTransitionStart: true
+            },
+        });
+        swiperTop.controller.control = swiperThumb;
+        swiperThumb.controller.control = swiperTop;
+        swiperTop.autoplay.stop();
+
+        // siwper reset
+        let observer = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+                if (mutation.attributeName === "class") {
+                    if ($wrap.hasClass('tab-slide-active')) {
+                        swiperTop.slideTo($wrap.find('.swiper-top [data-swiper-slide-index=0]').index(), 0, true);
+                        swiperTop.autoplay.start();
+                    } else {
+                        swiperTop.autoplay.stop();
+                    }
                 }
-            }
+            });
         });
-    });
-    observer.observe($wrap[0], {attributes: true});
-
+        observer.observe($wrap[0], {attributes: true});
+    }
+    
 
 
 })();/*
