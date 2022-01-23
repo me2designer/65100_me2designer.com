@@ -1,12 +1,11 @@
 var ProjectPage = 0;
-console.log('b');
 
 
 $(function(){/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
 
-    console.log('c');
+
 
     /* 사이트 준비중 안내 */
     // if(isReal) LAYER('developing');
@@ -163,30 +162,31 @@ $(function(){/*
 
 
 
-    /* 프로젝트 - 태그(tag) 불러오기 */
-    getProjectList({
-        callback: function(listAll) {
-            var $wrap = $('#project');
+    /* 프로젝트 */
+    let $wrap = $('#project');
 
-             // tag 배열 합치기
-            var concat_tag = [];
-            filterList(listAll, function(info){
+    getList('/js/json/project.json', function(infoList) {
+        // 태그(tag) 불러오기
+        (function() {
+            // tag 배열 합치기
+            let concat_tag = [];
+            filterList(infoList, function(info){
                 concat_tag = concat_tag.concat(info.corp, info.tag, info.workRole);
             });
 
             // tag 중복된 배열 제거
-            var filter_tag = concat_tag.filter(function(info, idx){
+            let filter_tag = concat_tag.filter(function(info, idx){
                 return concat_tag.indexOf(info) === idx;
             }).sort(function(a, b){
                 return ( a < b ) ? -1 : ( a == b ) ? 0 : 1; //가나다 순 정렬
             });
 
             // append
-            var $list = $wrap.find('.list_tag');
-            var $btn_copied = $list.find('.btn_tag').detach();
+            let $list = $wrap.find('.list_tag');
+            let $btn_copied = $list.find('.btn_tag').detach();
 
             filter_tag.forEach(function(info) {
-                var $btn_clone = $btn_copied.clone();
+                let $btn_clone = $btn_copied.clone();
                 $btn_clone.html('<span>'+info+'</span>');
                 $btn_clone.appendTo($list);
             });
@@ -202,32 +202,21 @@ $(function(){/*
                 $wrap.find('.item_project').remove();
                 if ($list.find('.btn_tag.on').length) $wrap.find('.btn_more').trigger('click');
             });
-        }
-    });
+        })();
 
-
-
-})();/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/(function(){
-
-
-
-    /* 프로젝트 - 목록 불러오기 */
-    getProjectList({
-        callback: function(listAll) {
-            var $wrap = $('#project');
-            var $list = $wrap.find('.list_project');
-            var item_copied = $list.find('.item_project').detach();
-            var $btnMore = $wrap.find('.btn_more');
+        //목록 불러오기
+        (function() {
+            let $list = $wrap.find('.list_project');
+            let item_copied = $list.find('.item_project').detach();
+            let $btnMore = $wrap.find('.btn_more');
 
             function appendList(list, idx) {
-                var list_divi = list.arrDivision(9);
+                let list_divi = list.arrDivision(9);
 
                 // append
                 list_divi[idx].forEach(function(each) {
-                    var $item_clone = item_copied.clone();
-                    var eachIdx = listAll.findIndex(el => el == each);
+                    let $item_clone = item_copied.clone();
+                    let eachIdx = infoList.findIndex(el => el == each);
 
 
                     // .inner_default
@@ -238,7 +227,7 @@ $(function(){/*
                     $item_clone.find('.inner_default .tit').text(each.title);
                     $item_clone.find('.inner_default .desc').append('<span>'+each.description+'</span>');
 
-                    for (var i = 0; i < each.tag.length && i < 5; i++) {
+                    for (let i = 0; i < each.tag.length && i < 5; i++) {
                         $item_clone.find('.inner_default .tag').append('<span>'+each.tag[i]+'</span>');
                     }
 
@@ -250,20 +239,20 @@ $(function(){/*
                     $item_clone.find('.inner_overlay .rate').text(each.workRate);
 
                     // .inner_overlay - .list_more
-                    var $listMore = $item_clone.find('.inner_overlay .list_more');
+                    let $listMore = $item_clone.find('.inner_overlay .list_more');
 
                     if (each.more) {
                         if (each.more.link) $listMore.find('.link_more').css('display', 'inline-flex').attr('href',each.more.link);
                         if (each.more.image) {
-                            var $btnImg = $listMore.find('.btn_image').css('display', 'inline-flex');
+                            let $btnImg = $listMore.find('.btn_image').css('display', 'inline-flex');
 
                             $btnImg.on('click', function() {
                                 LAYER({
                                     name : 'projectImage',
                                     afterLoad : function(){
-                                        var $layer = $('#projectImage_wrap');
-                                        var $swiper = $layer.find('.swiper-container');
-                                        var slide_copied = $swiper.find('.swiper-slide').detach();
+                                        let $layer = $('#projectImage_wrap');
+                                        let $swiper = $layer.find('.swiper-container');
+                                        let slide_copied = $swiper.find('.swiper-slide').detach();
 
                                         // slide_clone
                                         function runSwiper(callback) {
@@ -306,7 +295,7 @@ $(function(){/*
                             });
                         }
                         if (each.more.video) {
-                            var $btnVideo = $listMore.find('.btn_video').css('display', 'inline-flex');
+                            let $btnVideo = $listMore.find('.btn_video').css('display', 'inline-flex');
 
                             $btnVideo.attr({
                                 'data-title' : each.title,
@@ -334,21 +323,21 @@ $(function(){/*
             // .btn_more click event
             $btnMore.on('click', function() {
                 // 1. 선택된 태그의 keyword 저장
-                var tag = [];
-                var get_tag = $wrap.find('.list_tag .btn_tag.on').get();
+                let tag = [];
+                let get_tag = $wrap.find('.list_tag .btn_tag.on').get();
 
                 get_tag.forEach(function(info){
-                    var text = $(info).find('span').text();
+                    let text = $(info).find('span').text();
                     text = text.replace(/\(/g,'&#40;').replace(/\)/g,'&#41;');
                     tag.push(text);
                 });
 
                 // 2. 선택된 태그가 포함된 item
-                var activeList = []
-                var patt = new RegExp(tag.join('|'));
+                let activeList = []
+                let patt = new RegExp(tag.join('|'));
 
-                listAll.forEach(function(each, idx){
-                    var combineText = each.corp+','+each.workRole.join(',')+','+each.tag.join(',');
+                infoList.forEach(function(each, idx){
+                    let combineText = each.corp+','+each.workRole.join(',')+','+each.tag.join(',');
                     combineText = combineText.replace(/\(/g,'&#40;').replace(/\)/g,'&#41;');
 
                     if (patt.test(combineText)) activeList.push(each);
@@ -360,10 +349,10 @@ $(function(){/*
             });
 
             // 처음 불러오기
-            var keyword = ['피플라이프', '취업뽀개기', '경향신문', '한국경제매거진', '전북은행'];
+            let keyword = ['피플라이프', '취업뽀개기', '경향신문', '한국경제매거진', '전북은행'];
 
             keyword.forEach(function(each, idx, arr){
-                var $this = $wrap.find('.list_tag :contains("'+each+'")').closest('.btn_tag');
+                let $this = $wrap.find('.list_tag :contains("'+each+'")').closest('.btn_tag');
 
                 $this.addClass('on');
 
@@ -372,8 +361,7 @@ $(function(){/*
                     $wrap.find('.list_tag').addClass('is-reset');
                 }
             });
-
-        }
+        })();
     });
 
 
@@ -609,11 +597,11 @@ $(function(){/*
             slide_clone.appendTo($swiper.find('.swiper-wrapper'))
         });
 
-        swiperOpt();
+        afterLoad();
     })
 
-    // swiperOpt()
-    const swiperOpt = function() {
+    // afterLoad()
+    const afterLoad = function() {
         // swiper
         let swiper = new Swiper($swiper, {
             autoplay: {
@@ -638,7 +626,7 @@ $(function(){/*
                     $next.addClass('swiper-slide-active-complete');
                     $this.find('.border').addClass('border-active');
                 },
-                slideChangeTransitionEnd : function(){                                        
+                slideChangeTransitionEnd : function(){
                     if (++swiper.realIndex == swiper.slides.length){
                         let tl = new TimelineMax();
 
@@ -657,13 +645,13 @@ $(function(){/*
                 },
             },
         });
-        swiper.autoplay.stop();        
+        swiper.autoplay.stop();
 
         // siwper reset
         let observer = new MutationObserver(mutations => {
             mutations.forEach(mutation => {
                 if (mutation.attributeName === "class") {
-                    if ($wrap.hasClass('tab-slide-active')) {                        
+                    if ($wrap.hasClass('tab-slide-active')) {
                         swiper.autoplay.start();
                     } else {
                         swiper.autoplay.stop();
@@ -690,14 +678,14 @@ $(function(){/*
     let $swiperTop = $wrap.find('.swiper-top');
     let slideTop_copied = $swiperTop.find('.swiper-slide').detach();
     let $swiperThumb = $wrap.find('.swiper-thumb');
-    let slideThumb_copied = $swiperThumb.find('.swiper-slide').detach();        
+    let slideThumb_copied = $swiperThumb.find('.swiper-slide').detach();
 
     // clone()
     getList('/js/json/activity.json', function(infoList) {
         infoList.forEach(function(each) {
             let $slideTop_clone = slideTop_copied.clone();
             let $slideThumb_clone = slideThumb_copied.clone();
-    
+
             $slideTop_clone.find('.corp').text(each.corp);
             $slideTop_clone.find('.tit').text(each.title).html(function(i, text) {
                 return text.replace('長', '<span>長</span>');
@@ -705,16 +693,16 @@ $(function(){/*
             $slideTop_clone.find('.date').text(each.date);
             $slideTop_clone.find('.desc').text(each.description);
             $slideThumb_clone.attr('data-background', '/img/main/professional_activity/'+each.thumb+'');
-    
+
             $slideTop_clone.appendTo($swiperTop.find('.swiper-wrapper'))
             $slideThumb_clone.appendTo($swiperThumb.find('.swiper-wrapper'))
         });
 
-        swiperOpt();
+        afterLoad();
     });
 
-    // swiperOpt()
-    const swiperOpt = function() {
+    // afterLoad()
+    const afterLoad = function() {
         // 본문
         let swiperTop = new Swiper($swiperTop, {
             autoplay: {
@@ -726,7 +714,7 @@ $(function(){/*
             slidesPerView: 3,
             loopedSlides: 3,
             centeredSlides: true,
-            direction: 'vertical',            
+            direction: 'vertical',
             pagination: {
                 el: $wrap.find('.swiper-pagination'),
                 type: 'fraction',
@@ -781,7 +769,7 @@ $(function(){/*
         });
         observer.observe($wrap[0], {attributes: true});
     }
-    
+
 
 
 })();/*
@@ -791,193 +779,217 @@ $(function(){/*
 
 
     /* 근무이력 - DOM 생성 */
-    var $wrap = $('#career');
-    var infoList = getCareerList();
-    var $swiper = $wrap.find('.swiper-container');
-    var slide_copied = $swiper.find('.swiper-slide').detach();
+    let $wrap = $('#career');
+    let $swiper = $wrap.find('.swiper-container');
+    let slide_copied = $swiper.find('.swiper-slide').detach();
 
-    infoList.forEach(function(each) {
-        var $slide_clone = slide_copied.clone();
-        $slide_clone.find('.logo').attr({
-            'src': '/img/main/career_ci/'+each.logo+cache+'',
-            'alt': each.name
-        });
-        $slide_clone.find('.detail .name, .btn_area .corp').text(each.name);
-        $slide_clone.find('.btn_search').attr('data-search', each.name);
-        $slide_clone.find('.detail .period').text(each.period).html(function(i, text) {
-            return text.replace('재직중', '<strong class="color-primary">재직중</strong>');
-        });
-        $slide_clone.find('.detail .postion').text(each.postion);
-        $slide_clone.find('.list_job .tit').text(each.title);
+    getList('/js/json/career.json', function(infoList) {
+        infoList.forEach(function(each) {
+            let $slide_clone = slide_copied.clone();
+            $slide_clone.find('.logo').attr({
+                'src': '/img/main/career_ci/'+each.logo+cache+'',
+                'alt': each.name
+            });
+            $slide_clone.find('.detail .name, .btn_area .corp').text(each.name);
+            $slide_clone.find('.btn_search').attr('data-search', each.name);
+            $slide_clone.find('.detail .period').text(each.period).html(function(i, text) {
+                return text.replace('재직중', '<strong class="color-primary">재직중</strong>');
+            });
+            $slide_clone.find('.detail .postion').text(each.postion);
+            $slide_clone.find('.list_job .tit').text(each.title);
 
-        for (var i = 0; i < each.job.length && i < 5; i++) {
-            $slide_clone.find('.list_job').append('<dd class="desc">'+each.job[i]+'</dd>');
-        }
+            for (let i = 0; i < each.job.length && i < 5; i++) {
+                $slide_clone.find('.list_job').append('<dd class="desc">'+each.job[i]+'</dd>');
+            }
 
-        $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
-    });
-
-
-
-})();/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/(function(){
-
-
-
-    /* 근무이력 - swiper */
-    var $wrap = $('#career');
-
-    // swiper
-    var $swiper = $wrap.find('.swiper-container');
-    var swiper = new Swiper($swiper, {
-        autoplay: {
-            delay: 1,
-            disableOnInteraction : false,
-        },
-        speed: 20000,
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-        loopedSlides: $swiper.find('.swiper-slide').length,
-        // navigation: {
-        //     nextEl: $wrap.find('.swiper-button-next'),
-        //     prevEl: $wrap.find('.swiper-button-prev')
-        // },
-        pagination: {
-            el: $wrap.find('.swiper-pagination'),
-            clickable: true
-        },
-    });
-
-    // swiper 위치 초기화
-    swiper.autoplay.stop();
-    scrollAction({
-        target: $wrap,
-        top: 100,
-        scrollDownAction : function(){
-            // 스크롤 DOWN 액션
-            swiper.autoplay.start();
-        },
-        scrollUpAction : function(){
-            // 스크롤 UP 액션
-            swiper.slideTo($swiper.find('.swiper-slide[data-swiper-slide-index="0"]').index(), 0, false);
-            swiper.autoplay.stop();
-        }
-    });
-
-
-
-})();/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/(function(){
-
-
-
-
-    /* 근무이력 - 선택한 회사 프로젝트 보기 */
-    var $wrap = $('#career');
-    var $btnSrh = $wrap.find('.btn_search');
-
-    $btnSrh.on('click', function(){
-        var $this = $(this);
-
-        moveTo({
-            top: 150,
-            target: $('#project .list_tag'),
+            $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
         });
 
-        setTimeout(function() {
-            var keyword = $this.attr('data-search');
-            var $project = $('#project')
-            var $listTag = $project.find('.list_tag');
-            var $btnMore = $project.find('.btn_more');
-
-            // list 초기화
-            ProjectPage = 0;
-            $project.find('.item_project').remove();
-
-            // tag 초기화 및 선택
-            $listTag.find('.btn_tag.on').removeClass('on');
-            $listTag.find(':contains("'+keyword+'")').closest('.btn_tag').addClass('on')
-
-            $btnMore.trigger('click');
-        }, 400);
+        afterLoad();
     });
 
-
-})();/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/(function(){
-
-
-
-    /* 코딩블로그 */
-    var $wrap = $('#blog');
-
-    // categroy 변환기
-    var categoryList = getTistory('category');
-    var filterCate = function(id) {
-        var category = categoryList.categories.filter(function(item) {
-            if (item.id == id) return item;
+    // afterLoad()
+    const afterLoad = function() {
+        // swiper
+        var swiper = new Swiper($swiper, {
+            autoplay: {
+                delay: 1,
+                disableOnInteraction : false,
+            },
+            speed: 20000,
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            loopedSlides: $swiper.find('.swiper-slide').length,
+            // navigation: {
+            //     nextEl: $wrap.find('.swiper-button-next'),
+            //     prevEl: $wrap.find('.swiper-button-prev')
+            // },
+            pagination: {
+                el: $wrap.find('.swiper-pagination'),
+                clickable: true
+            },
         });
-        return category[0].name;
+
+        // swiper 위치 초기화
+        // swiper.autoplay.stop();
+        // scrollAction({
+        //     target: $wrap,
+        //     top: 100,
+        //     scrollDownAction : function(){
+        //         // 스크롤 DOWN 액션
+        //         swiper.autoplay.start();
+        //     },
+        //     scrollUpAction : function(){
+        //         // 스크롤 UP 액션
+        //         swiper.slideTo($swiper.find('.swiper-slide[data-swiper-slide-index="0"]').index(), 0, false);
+        //         swiper.autoplay.stop();
+        //     }
+        // });
+
+        /* 선택한 회사 프로젝트 보기 */
+        var $btnSrh = $wrap.find('.btn_search');
+
+        $btnSrh.on('click', function(){
+            var $this = $(this);
+
+            moveTo({
+                top: 150,
+                target: $('#project .list_tag'),
+            });
+
+            setTimeout(function() {
+                var keyword = $this.attr('data-search');
+                var $project = $('#project')
+                var $listTag = $project.find('.list_tag');
+                var $btnMore = $project.find('.btn_more');
+
+                // list 초기화
+                ProjectPage = 0;
+                $project.find('.item_project').remove();
+
+                // tag 초기화 및 선택
+                $listTag.find('.btn_tag.on').removeClass('on');
+                $listTag.find(':contains("'+keyword+'")').closest('.btn_tag').addClass('on')
+
+                $btnMore.trigger('click');
+            }, 400);
+        });
     }
 
-    // post 생성
-    var $tbody = $wrap.find('.table tbody');
-    var tr_copied = $tbody.find('tr').detach();
 
-    function appendPost(page) {
-        $tbody.find('tr').remove()
 
-        var postList = getTistory('post', 4, page);
 
-        postList.posts.forEach(function(info){
-            var $tr_clone = tr_copied.clone();
-            $tr_clone.find('.cate').text(filterCate(info.categoryId));
-            $tr_clone.find('.tit').text(info.title)
-            $tr_clone.find('.date').text(info.date.substr(0, 10))
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+
+    /* 티스토리 API */
+    const getTistory = function() {
+        let arg = arguments[0];
+        let default_option = {
+            pars : {
+                'accessToken' : '014f0adecdf2a12798c783abbc7a0498_3ea393c3f6e235ff61d1f6e3557bbdb9',
+                'outputType' : 'json', //xml 또는 json
+                'blogName' : 'https://me2designer.tistory.com'
+            },
+            type : {
+                post : 'https://www.tistory.com/apis/post/list?',
+                category : 'https://www.tistory.com/apis/category/list?'
+            },
+            callback : function(){}
+        }
+        arg = mergeDeep(default_option, arg);
+        arg.count = arg.count == undefined ? '' : '&count='+arg.count;
+        arg.page = arg.page == undefined ? '' : '&page='+arg.page;
+
+        let arrType = Object.entries(arg.type)
+        let datas = {}
+        let Y;
+
+        arrType.forEach(function(each) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', each[1]+'access_token='+arg.pars.accessToken+'&output='+arg.pars.outputType+'&blogName='+arg.pars.blogName+'&visibility=0'+arg.count+arg.page);
+            xhr.send();
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    datas[each[0]] = each[0] == 'post' ? JSON.parse(xhr.response).tistory.item : JSON.parse(xhr.response).tistory.item.categories;
+
+                    if (Y) arg.callback(datas);
+
+                    Y = true;
+                } else {
+                    console.log('failed');
+                }
+            };
+        });
+    }
+
+    /* 코딩블로그 */
+    const $wrap = $('#blog');
+    let $tbody = $wrap.find('.table tbody');
+    let tr_copied = $tbody.find('tr').detach();
+    var $paging = $wrap.find('.table-pagination');
+    var bullet_copied = $paging.find('.table-pagination-bullet').detach();  
+
+    getTistory({
+        count : 4,
+        page : 1,
+        callback : function(infoList){         
+            list(infoList);            
+        }
+    })
+
+    // table clone()
+    const list = function(infoList) {
+        let cate_filter = id => (infoList.category.filter(object => object.id == id)[0].name);
+
+        infoList.post.posts.forEach(function(each){
+            let $tr_clone = tr_copied.clone();
+            $tr_clone.find('.cate').text(cate_filter(each.categoryId));
+            $tr_clone.find('.tit').text(each.title)
+            $tr_clone.find('.date').text(each.date.substr(0, 10))
             $tr_clone.appendTo($tbody);
 
-            if (info.visibility !== '0') {
+            if (each.visibility !== '0') {
                 $tr_clone.on('click', function(){
-                    window.open('about:blank').location.href=info.postUrl;
+                    window.open('about:blank').location.href=each.postUrl;
                 });
             } else {
                 $tr_clone.attr('data-disable','true');
             }
         });
 
-        $paging.find('.table-pagination-bullet').removeClass('on');
-        $paging.find('.table-pagination-bullet[data-page-number="'+page+'"]').addClass('on');
+        // clone() - 페이징
+        let total = infoList.post.totalCount / infoList.post.count;
+
+        for (let i = 0; i < total; i++) {
+            let $bullet_clone = bullet_copied.clone();
+            let page = i+1;
+
+            $bullet_clone.attr('data-page-number',page).text(page);
+            if (page == infoList.post.page) $bullet_clone.addClass('on');
+            $bullet_clone.appendTo($paging)
+        }
+
+        $paging.find('.table-pagination-bullet:not(.on)').on('click', function(){
+            let page = $(this).attr('data-page-number');            
+
+            getTistory({
+                count : 4,
+                page : page,
+                callback : function(newInfoList){
+                    $tbody.find('tr').remove();
+                    $paging.find('.table-pagination-bullet').remove();
+                    
+                    list(newInfoList);
+                }
+            });
+        })
     }
-
-    //page 생성
-    var pagingList = getTistory('post');
-    var pagingLength = Math.ceil(pagingList.totalCount / 4);
-    var $paging = $wrap.find('.table-pagination');
-    var bullet_copied = $paging.find('.table-pagination-bullet').detach();
-
-    for (var i = 0; i < pagingLength; i++ ) {
-        var $bullet_clone = bullet_copied.clone();
-        var pageNum = i+1;
-        $bullet_clone.attr('data-page-number',pageNum).text(pageNum);
-        $bullet_clone.appendTo($paging)
-    }
-
-    $paging.find('.table-pagination-bullet').on('click', function(){
-        var len = $paging.find('.table-pagination-bullet').length;
-        var num = Number($(this).text());
-        var pageGrpIdx = Number($paging.attr('data-group-index'));
-        var selectedPageNum = (len*pageGrpIdx)+num;
-
-        appendPost(selectedPageNum)
-    });
-
-    // 게시물 초기목록 load
-    appendPost(1);
 
 
 

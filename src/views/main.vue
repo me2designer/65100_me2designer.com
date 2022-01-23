@@ -295,7 +295,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="table-pagination" data-group-index="0">
+            <div class="table-pagination">
                 <span class="table-pagination-bullet"></span>
                 <!-- <span class="table-pagination-prev disable"><img src="" data-images-path="/images/ico/chevron-left_regular.svg"></span> -->
                 <!-- <span class="table-pagination-next"><img src="" data-images-path="/images/ico/chevron-right_regular.svg"></span> -->

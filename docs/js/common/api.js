@@ -5,7 +5,7 @@
 
 
     /* 코딩블로그 - 티스토리 - 글목록 */
-    function getTistory(type, count, pageNum) {
+    function getTistory2(type, count, pageNum) {
         var opction = {
             type: function(data){
                 // var val;
@@ -45,91 +45,42 @@
 */
 
 
-
-    /* 프로젝트 */
-    function getProjectList() {
-        var arg = arguments[0];
-        var callback = arg.callback;
-        $.ajax({
-            url: '/js/json/project.json',
-            method:'GET',
-            contentType : "application/json; charset=utf-8",
-            dataType: "JSON",
-            success:function(data){
-                if(callback) callback(data);
-            }
-        });
+const getTistory1 = function() {
+    let arg = arguments[0];
+    let default_option = {
+        pars : {
+            'accessToken' : '014f0adecdf2a12798c783abbc7a0498_3ea393c3f6e235ff61d1f6e3557bbdb9',
+            'outputType' : 'json', //xml 또는 json
+            'blogName' : 'https://me2designer.tistory.com'
+        },
+        type : {
+            post : 'https://www.tistory.com/apis/post/list?',
+            category : 'https://www.tistory.com/apis/category/list?'
+        },
+        callback : function(){}
     }
+    arg = mergeDeep(default_option, arg);
+    arg.count = arg.count == undefined ? '' : '&count='+arg.count;
+    arg.page = arg.page == undefined ? '' : '&page='+arg.page;
 
-    // function getProjectList(callback){
-    //     $.ajax({
-    //         url:'/js/json/career.json',
-    //         async : false,
-    //         success:function(data){
-    //             if(callback) callback(data);
-    //         }
-    //     });
-    // }
+    let arrType = Object.entries(arg.type)
+    let datas = {}
+    let Y;
 
-    // getProjectList(function(infoList){
-    //     console.log(infoList);
-    // })
+    arrType.forEach(function(each) {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', each[1]+'access_token='+arg.pars.accessToken+'&output='+arg.pars.outputType+'&blogName='+arg.pars.blogName+'&visibility=0'+arg.count+arg.page);
+        xhr.send();
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                datas[each[0]] = each[0] == 'post' ? JSON.parse(xhr.response).tistory.item : JSON.parse(xhr.response).tistory.item.categories;
 
+                if (Y) arg.callback(datas);
 
-
-/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/
-
-
-
-    /* 근무이력 */
-    function getCareerList() {
-        var list = [];
-        $.ajax({
-            url : '/js/json/career.json',
-            async : false,
-            success : function(data){
-                list = data;
+                Y = true;
+            } else {
+                console.log('failed');
             }
-        });
-        return list;
-    }
-
-    // function getCareer(callback){
-    //     $.ajax({
-    //         url:'/js/json/career.json',
-    //         async : false,
-    //         success:function(data){
-    //             if(callback) callback(data);
-    //         }
-    //     });
-    // }
-
-
-
-/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/
-
-
-
-    const getList = function() {
-        let arg = mergeDeep({url : arguments[0]}, {callback : arguments[1]})        
-                
-        $.ajax({
-            url: arg.url,            
-            method:'GET',
-            contentType : "application/json; charset=utf-8",
-            dataType: "JSON",
-            success:function(data){                
-                if(arg.callback) arg.callback(data);
-            }
-        });        
-    }
-
-
-
-/*
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/
+        };
+    });
+}

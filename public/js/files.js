@@ -11,8 +11,8 @@ FILES([
     SERVER.public+'/js/public.js',
     SERVER.public+'/lib/swiper/swiper@4.5.1.js',
     SERVER.public+'/lib/tweenmax/tweenmax.js',
-    '/js/common/modules.js',
-    '/js/common/api.js',
+    '/js/analysis.js',
+    '/js/common/modules.js',    
     '/js/common/common.js',
     '/js/main/main.js',
 ]);
