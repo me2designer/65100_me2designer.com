@@ -11,7 +11,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="inner">
-                        <p class="tit">웹 표준과 웹 접근성 그리고 크로스 브라우징,<br>다양한 디바이스에 최적화된 UI 마크업 개발하고 있습니다.</p>
+                        <p class="tit">웹 표준과 웹 접근성 그리고 크로스 브라우징까지<br>다양한 디바이스에 최적화된 UI 마크업 개발하고 있습니다.</p>
                     </div>
                     <div class="bg swiper-lazy" :data-background="imgPath+'visual_bg1.jpg'" :style="'background-image:url('+imgPath+'visual_bg_onerror.png)'"></div>
                     <div class="swiper-lazy-preloader"></div>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="inner">
-                        <p class="tit">마크업과 스타일링 위한 코딩에서 벗어나<br>꾸준한 역량 개발로 FE 개발자로 성장하고 있습니다.</p>
+                        <p class="tit">마크업과 스타일링 위한 코딩에서 벗어나<br>꾸준한 역량 개발을 통해 FE 개발자로 성장하고 있습니다.</p>
                     </div>
                     <div class="bg swiper-lazy" :data-background="imgPath+'visual_bg5.jpg'" :style="'background-image:url('+imgPath+'visual_bg_onerror.png)'"></div>
                     <div class="swiper-lazy-preloader"></div>

@@ -9,19 +9,21 @@ $imgPath : "/img/main/";
 
     /* 메인비주얼 */
     #visual {
-        position:relative;width:100%;height:900px;
+        position:relative;width:100%;height:85vh;min-height:700px;
         .tit_section {
-            position:absolute;top:228px;font-size:63px;font-weight:900;line-height:1.27em;letter-spacing:-2.4px;color:#fff;
+            position:absolute;top:50%;font-size:63px;font-weight:900;line-height:1.27em;letter-spacing:-2.4px;color:#fff;transform:translateY(-130%);
             strong {
-                font-weight:900;background-image:linear-gradient(to right,#28e375 0%, #22e6cc 101%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
-                @include ieHack {
-                    color:#28e375;background-image:none;
-                }
+                font-weight:900;background-image:linear-gradient(to right,#28e375 0%, #22e6cc 101%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;                
             }
         }
         .videoLayer {
             @include gradSlideBtn;
-            position:absolute;top:610px;/* width:176px;height:46px;border-radius:2em;color:#fff;background-image:$G-gradPrimary; */
+            position:absolute;top:50%;transform:translateY(240%);
+        }
+        @include xl {
+            .inner {
+                width:1200px;
+            }
         }
     }
 
@@ -31,14 +33,14 @@ $imgPath : "/img/main/";
 
     #visual .swiper-slide {
         .tit {
-            position:absolute;top:500px;font-size:25px;line-height:1.56em;color:#fff;opacity:0;transform:translateX(60px);
+            position:absolute;top:50%;font-size:25px;line-height:1.56em;color:#fff;opacity:0;transform:translate(60px, 60%);
         }
         .bg {
             position:absolute;top:0;bottom:0;left:0;right:0;background:center center no-repeat;background-size:cover;transform:rotate(.001deg);
         }
         &.swiper-slide-active {
             .tit {
-                opacity:1;transform:translateX(0);transition:all 0.6s 0.2s ease-in-out;
+                opacity:1;transform:translate(0, 60%);transition:all 0.6s 0.2s ease-in-out;
             }
         }
     }
