@@ -38,9 +38,12 @@ $imgPath : "/img/main/";
         .bg {
             position:absolute;top:0;bottom:0;left:0;right:0;background:center center no-repeat;background-size:cover;transform:rotate(.001deg);
         }
-        &.swiper-slide-active {
+        &.swiper-slide-active, &.swiper-slide-duplicate-active, &.swiper-slide-prev, &.swiper-slide-duplicate-prev {
             .tit {
                 opacity:1;transform:translate(0, 60%);transition:all 0.6s 0.2s ease-in-out;
+            }
+            .bg {
+                transform:rotate(.001deg) scale(1.15);transition:transform 6s linear;
             }
         }
     }
@@ -65,7 +68,7 @@ $imgPath : "/img/main/";
         position:absolute;top:0;left:0;width:0;height:100%;background-color:$G-colorPrimary;
         &.is-active {
             $name: inline-#{unique-id()};
-            animation:#{$name} 5s forwards linear;
+            animation:#{$name} 3.8s forwards linear;
             @keyframes #{$name} {
                 100%        {width:100%}
             }
