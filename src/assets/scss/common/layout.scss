@@ -83,7 +83,7 @@ $footerH: 445px;
 /* 공통 */ 
 
 /* 맨 위로 이동하기 */ 
-#aisdeBtnTop {z-index:1;min-width:$wrapW;margin-left:0 !important}
+#aisdeBtnTop {z-index:10;min-width:$wrapW;margin-left:0 !important}
 #aisdeBtnTop .btn_top {display:flex;flex-direction:column;justify-content:center;align-items:center;position:absolute;bottom:-45px;right:75px;z-index:1;width:90px;height:90px;color:#fff;fill:#fff;background:$G-gradPrimary;transition:all 0.4s ease-in-out}
 #aisdeBtnTop .btn_top:hover {animation:aisdeBtnTopHover 0.4s forwards ease-in-out}
 #aisdeBtnTop.fixed .btn_top {bottom:75px}

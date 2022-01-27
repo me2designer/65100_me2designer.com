@@ -64,7 +64,7 @@
                 <div class="swiper-slide">
                     <p class="tit">열아홉, 고등학교 재학중 진로 결정</p>
                     <p class="num"><span class="count">2001</span>.<span class="count">02</span>.<span class="count">13</span></p>
-                    <p class="desc"><mark>그래픽디자인에 대한 흥미를 시작으로 관련 자격증을 취득하고</mark><br><mark>홈페이지 제작 경진대회에서 3회이상 수상을 함으로써 재능이 더해져 진로를 결정</mark></p>
+                    <p class="desc"><mark>그래픽디자인 취미활동 중 재능을 발견하고 관련 자격증 취득과</mark><br><mark>홈페이지 제작 경진대회에서 3회이상 수상을 함으로써 디자인계열로 진로를 결정</mark></p>
                 </div>
                 <div class="swiper-slide">
                     <p class="tit">스물둘, 첫 사회생활 도전기!<p>

@@ -4,7 +4,7 @@ var ProjectPage = 0;
 $(function(){/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
-
+    
 
 
     /* 사이트 준비중 안내 */
@@ -170,7 +170,7 @@ $(function(){/*
     /* 프로젝트 */
     let $wrap = $('#project');
 
-    getList('/js/json/project.json', function(infoList) {
+    getList(SERVER.public+'/json/project.json', function(infoList) {
         // 태그(tag) 불러오기
         (function() {
             // tag 배열 합치기
@@ -191,16 +191,17 @@ $(function(){/*
             let $btn_copied = $list.find('.btn_tag').detach();
 
             filter_tag.forEach(function(info) {
-                let $btn_clone = $btn_copied.clone();
+                let $btn_clone = $btn_copied.clone();                                                
                 $btn_clone.html('<span>'+info+'</span>');
+                if (info == '퍼블리싱') $btn_clone.addClass('fw-bold')
                 $btn_clone.appendTo($list);
             });
 
             // click event
             $list.find('.btn_tag').on('click', function(){
-                if ($list.hasClass('is-reset')) $list.removeClass('is-reset').find('.btn_tag').removeClass('on');
+                if ($(this).hasClass('on')) return; //중복클릭 방지
 
-                $(this).toggleClass('on');
+                $(this).addClass('on').siblings().removeClass('on');
 
                 // list 초기화
                 ProjectPage = 0;
@@ -257,7 +258,7 @@ $(function(){/*
                                     afterLoad : function(){
                                         let $layer = $('#projectImage_wrap');
                                         let $swiper = $layer.find('.swiper-container');
-                                        let slide_copied = $swiper.find('.swiper-slide').detach();
+                                        let slide_copied = $swiper.find('.swiper-slide').detach();                                        
 
                                         // slide_clone
                                         function runSwiper(callback) {
@@ -591,7 +592,7 @@ $(function(){/*
     let slide_copied = $swiper.find('.swiper-slide').detach();
 
     // clone()
-    getList('/js/json/license.json', function(infoList) {
+    getList(SERVER.public+'/json/license.json', function(infoList) {
         infoList.forEach(function(each) {
             let slide_clone = slide_copied.clone();
 
@@ -686,7 +687,7 @@ $(function(){/*
     let slideThumb_copied = $swiperThumb.find('.swiper-slide').detach();
 
     // clone()
-    getList('/js/json/activity.json', function(infoList) {
+    getList(SERVER.public+'/json/activity.json', function(infoList) {
         infoList.forEach(function(each) {
             let $slideTop_clone = slideTop_copied.clone();
             let $slideThumb_clone = slideThumb_copied.clone();
@@ -788,7 +789,7 @@ $(function(){/*
     let $swiper = $wrap.find('.swiper-container');
     let slide_copied = $swiper.find('.swiper-slide').detach();
 
-    getList('/js/json/career.json', function(infoList) {
+    getList(SERVER.public+'/json/career.json', function(infoList) {
         infoList.forEach(function(each) {
             let $slide_clone = slide_copied.clone();
             $slide_clone.find('.logo').attr({

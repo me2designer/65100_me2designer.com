@@ -13,7 +13,7 @@ $imgPath : "/img/main/";
         .tit_section {
             position:absolute;top:50%;font-size:63px;font-weight:900;line-height:1.27em;letter-spacing:-2.4px;color:#fff;transform:translateY(-130%);
             strong {
-                font-weight:900;background-image:linear-gradient(to right,#28e375 0%, #22e6cc 101%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;                
+                font-weight:900;background-image:linear-gradient(to right,#28e375 0%, #22e6cc 101%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
             }
         }
         .videoLayer {
@@ -171,11 +171,14 @@ $imgPath : "/img/main/";
             &::after {
                 content:"";position:absolute;top:0;bottom:0;left:0;right:100%;z-index:-1;background:$G-gradPrimary;transition:all 0.4s ease-in-out;
             }
-            &.on {
+            &.on, &.on.fw-bold {
                 border-color:transparent;color:#fff;transition:all 0.4s ease-in-out;
                 &::after {
                     right:0;
                 }
+            }
+            &.fw-bold {
+                color:$G-colorPrimary;
             }
         }
     }
@@ -549,7 +552,7 @@ $imgPath : "/img/main/";
         }
         &:nth-last-child(1) {
             opacity:0 !important;
-        }        
+        }
         &.swiper-slide-active-complete {
             opacity:1;transition:opacity 0.6s ease-in-out;
             &::before {
