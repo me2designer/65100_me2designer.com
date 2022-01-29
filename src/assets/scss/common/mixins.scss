@@ -15,12 +15,12 @@
 
 
 /****************************************************************************
-    IE 브라우저 hack
+    브라우저 hack
 ****************************************************************************/
 /*
     [style 작성 예]
-        .선택자 {
-            @include ieHack {
+        .선택자명 {
+            @include 지시자명 {
                 display:none;
             }
         }
@@ -28,6 +28,12 @@
 
 @mixin ieHack() {
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
+    }
+}
+
+@mixin safariHack() {
+    @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
         @content;
     }
 }
