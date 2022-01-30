@@ -204,6 +204,9 @@ $imgPath : "/img/main/";
 
     #project .item_project .inner_default {
         width:100%;height:100%;
+        .box_thumb {
+            height:240px;background-size:cover;
+        }
         .tit {
             padding:36px 0 23px 32px;font-size:24px;font-weight:bold;line-height:1em;
         }
@@ -292,7 +295,7 @@ $imgPath : "/img/main/";
 
     /* 사용자 편의성 */
     #device {
-        overflow:hidden;position:relative;height:1296px;background: #292B31 url(#{$imgPath}device_bg.jpg) 50% 0 no-repeat;background-size:cover;background-attachment:fixed;
+        overflow:hidden;position:relative;height:1296px;background: #292B31 50% 0 no-repeat;background-size:cover;background-attachment:fixed;
     }
 
     #device .tag {
@@ -475,7 +478,7 @@ $imgPath : "/img/main/";
     }
 
     #professional .tab-slide-license {
-        padding-bottom:45px;background:url(#{$imgPath}professional_license_bg.jpg) no-repeat center bottom 45px;background-size:100% auto;
+        padding-bottom:45px;background:no-repeat center bottom 45px;background-size:100% auto;
         .swiper-container {
             width:100%;height:670px;padding:225px 0 290px;
             .swiper-wrapper {

@@ -4,7 +4,7 @@ var ProjectPage = 0;
 $(function(){/*
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */(function(){
-    
+
 
 
     /* 사이트 준비중 안내 */
@@ -48,7 +48,7 @@ $(function(){/*
             el: $wrap.find('.swiper-pagination'),
             clickable: true
         },
-        on : {            
+        on : {
             slideChangeTransitionStart: function() {
                 $progress.removeClass('is-active');
                 //bacground-image animate
@@ -70,8 +70,8 @@ $(function(){/*
                 $progress.addClass('is-active');
             }
         },
-    });    
-    
+    });
+
 
     // videoLayer
     if (isReal) {
@@ -191,7 +191,7 @@ $(function(){/*
             let $btn_copied = $list.find('.btn_tag').detach();
 
             filter_tag.forEach(function(info) {
-                let $btn_clone = $btn_copied.clone();                                                
+                let $btn_clone = $btn_copied.clone();
                 $btn_clone.html('<span>'+info+'</span>');
                 if (info == '퍼블리싱') $btn_clone.addClass('fw-bold')
                 $btn_clone.appendTo($list);
@@ -224,11 +224,9 @@ $(function(){/*
                     let $item_clone = item_copied.clone();
                     let eachIdx = infoList.findIndex(el => el == each);
 
-
                     // .inner_default
-                    $item_clone.find('.inner_default .box_thumb img').attr({
-                        'src': '/img/main/project_thumb/'+each.thumb+'',
-                        'alt': each.title
+                    $item_clone.find('.inner_default .box_thumb').css({
+                        'background-image' : 'url('+SERVER.images+'/portfolio/project_thumb/'+each.thumb+'), url('+SERVER.images+'/portfolio/project_thumb/onerror.png)'
                     });
                     $item_clone.find('.inner_default .tit').text(each.title);
                     $item_clone.find('.inner_default .desc').append('<span>'+each.description+'</span>');
@@ -258,14 +256,14 @@ $(function(){/*
                                     afterLoad : function(){
                                         let $layer = $('#projectImage_wrap');
                                         let $swiper = $layer.find('.swiper-container');
-                                        let slide_copied = $swiper.find('.swiper-slide').detach();                                        
+                                        let slide_copied = $swiper.find('.swiper-slide').detach();
 
                                         // slide_clone
                                         function runSwiper(callback) {
                                             for (let i = 1; i <= each.more.image.count; i++) {
                                                 let $slide_clone = slide_copied.clone();
 
-                                                $slide_clone.attr('data-background', '/img/main/project_image/'+each.more.image.folder+'/'+i+'.jpg');
+                                                $slide_clone.attr('data-background', ''+SERVER.images+'/portfolio/project_image/'+each.more.image.folder+'/'+i+'.jpg');
                                                 $slide_clone.appendTo($swiper.find('.swiper-wrapper'));
 
                                             }
@@ -400,7 +398,7 @@ $(function(){/*
         var slide_copied = $swiper_clone.find('.swiper-slide').detach();
         listThumb.forEach(function(fileName){
             var $slide_clone = slide_copied.clone()
-            $slide_clone.find('.slide-inner').attr('data-background', '/img/main/device_thumb/'+type+'/'+fileName+'.jpg');
+            $slide_clone.find('.slide-inner').attr('data-background', ''+SERVER.images+'/portfolio/device_thumb/'+type+'/'+fileName+'.jpg');
             $slide_clone.prependTo($swiper_clone.find('.swiper-wrapper'));
         });
         $swiper_clone.prependTo($wrap.find('.inner'));
@@ -698,7 +696,7 @@ $(function(){/*
             });
             $slideTop_clone.find('.date').text(each.date);
             $slideTop_clone.find('.desc').text(each.description);
-            $slideThumb_clone.attr('data-background', '/img/main/professional_activity/'+each.thumb+'');
+            $slideThumb_clone.attr('data-background', SERVER.images+'/portfolio/professional_activity/'+each.thumb);
 
             $slideTop_clone.appendTo($swiperTop.find('.swiper-wrapper'))
             $slideThumb_clone.appendTo($swiperThumb.find('.swiper-wrapper'))
@@ -793,7 +791,7 @@ $(function(){/*
         infoList.forEach(function(each) {
             let $slide_clone = slide_copied.clone();
             $slide_clone.find('.logo').attr({
-                'src': '/img/main/career_ci/'+each.logo+cache+'',
+                'src': SERVER.images+'/portfolio/career_ci/'+each.logo+cache+'',
                 'alt': each.name
             });
             $slide_clone.find('.detail .name, .btn_area .corp').text(each.name);
@@ -939,13 +937,13 @@ $(function(){/*
     let $tbody = $wrap.find('.table tbody');
     let tr_copied = $tbody.find('tr').detach();
     var $paging = $wrap.find('.table-pagination');
-    var bullet_copied = $paging.find('.table-pagination-bullet').detach();  
+    var bullet_copied = $paging.find('.table-pagination-bullet').detach();
 
     getTistory({
         count : 4,
         page : 1,
-        callback : function(infoList){         
-            list(infoList);            
+        callback : function(infoList){
+            list(infoList);
         }
     })
 
@@ -982,7 +980,7 @@ $(function(){/*
         }
 
         $paging.find('.table-pagination-bullet:not(.on)').on('click', function(){
-            let page = $(this).attr('data-page-number');            
+            let page = $(this).attr('data-page-number');
 
             getTistory({
                 count : 4,
@@ -990,7 +988,7 @@ $(function(){/*
                 callback : function(newInfoList){
                     $tbody.find('tr').remove();
                     $paging.find('.table-pagination-bullet').remove();
-                    
+
                     list(newInfoList);
                 }
             });
