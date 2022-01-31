@@ -696,7 +696,7 @@ $(function(){/*
             });
             $slideTop_clone.find('.date').text(each.date);
             $slideTop_clone.find('.desc').text(each.description);
-            $slideThumb_clone.attr('data-background', SERVER.images+'/portfolio/professional_activity/'+each.thumb);
+            $slideThumb_clone.attr('data-background', SERVER.images+'/portfolio/professional_activity/'+each.thumb+'_pc.jpg');
 
             $slideTop_clone.appendTo($swiperTop.find('.swiper-wrapper'))
             $slideThumb_clone.appendTo($swiperThumb.find('.swiper-wrapper'))
