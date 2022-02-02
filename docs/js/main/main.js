@@ -714,11 +714,11 @@ $(function(){/*
                 disableOnInteraction : false,
             },
             speed: 600,
-            loop: true,
             slidesPerView: 3,
-            loopedSlides: 3,
             centeredSlides: true,
             direction: 'vertical',
+            loop: true,
+            loopedSlides: 3,
             pagination: {
                 el: $wrap.find('.swiper-pagination'),
                 type: 'fraction',
@@ -741,13 +741,14 @@ $(function(){/*
 
         // 썸네일
         let swiperThumb = new Swiper($swiperThumb, {
-            centeredSlides: true,
-            touchRatio: 0.2,
-            slideToClickedSlide: true,
-            loop: true,
             slidesPerView: 1,
-            loopedSlides: 3,
+            centeredSlides: true,
             direction: 'vertical',
+            loop: true,
+            loopedSlides: 3,
+            // touchRatio: 0.2,
+            // slideToClickedSlide: true,
+            allowTouchMove: false,
             lazy: true,
             lazy: {
                 loadPrevNext: true,
