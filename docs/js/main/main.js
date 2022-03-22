@@ -893,109 +893,193 @@ $(function(){/*
 
 
     /* 티스토리 API */
-    const getTistory = function() {
-        let arg = arguments[0];
-        let default_option = {
-            pars : {
-                'accessToken' : '014f0adecdf2a12798c783abbc7a0498_3ea393c3f6e235ff61d1f6e3557bbdb9',
-                'outputType' : 'json', //xml 또는 json
-                'blogName' : 'https://me2designer.tistory.com'
-            },
-            type : {
-                post : 'https://www.tistory.com/apis/post/list?',
-                category : 'https://www.tistory.com/apis/category/list?'
-            },
-            callback : function(){}
+    // const getTistory = function() {
+    //     let arg = arguments[0];
+    //     let default_option = {
+    //         pars : {
+    //             'accessToken' : '014f0adecdf2a12798c783abbc7a0498_3ea393c3f6e235ff61d1f6e3557bbdb9',
+    //             'outputType' : 'json', //xml 또는 json
+    //             'blogName' : 'https://me2designer.tistory.com'
+    //         },
+    //         type : {
+    //             post : 'https://www.tistory.com/apis/post/list?',
+    //             category : 'https://www.tistory.com/apis/category/list?'
+    //         },
+    //         callback : function(){}
+    //     }
+    //     arg = mergeDeep(default_option, arg);
+    //     arg.count = arg.count == undefined ? '' : '&count='+arg.count;
+    //     arg.page = arg.page == undefined ? '' : '&page='+arg.page;
+
+    //     let arrType = Object.entries(arg.type)
+    //     let datas = {}
+    //     let Y;
+
+    //     arrType.forEach(function(each) {
+    //         let xhr = new XMLHttpRequest();
+    //         xhr.open('GET', each[1]+'access_token='+arg.pars.accessToken+'&output='+arg.pars.outputType+'&blogName='+arg.pars.blogName+'&visibility=0'+arg.count+arg.page);
+    //         xhr.send();
+    //         xhr.onload = function () {
+    //             if (xhr.status >= 200 && xhr.status < 300) {
+    //                 datas[each[0]] = each[0] == 'post' ? JSON.parse(xhr.response).tistory.item : JSON.parse(xhr.response).tistory.item.categories;
+
+    //                 if (Y) arg.callback(datas);
+
+    //                 Y = true;
+    //             } else {
+    //                 console.log('failed');
+    //             }
+    //         };
+    //     });
+    // }
+
+    // /* 코딩블로그 */
+    // const $wrap = $('#blog');
+    // let $tbody = $wrap.find('.table tbody');
+    // let tr_copied = $tbody.find('tr').detach();
+    // var $paging = $wrap.find('.table-pagination');
+    // var bullet_copied = $paging.find('.table-pagination-bullet').detach();
+
+    // getTistory({
+    //     count : 4,
+    //     page : 1,
+    //     callback : function(infoList){
+    //         list(infoList);
+    //     }
+    // })
+
+    // // table clone()
+    // const list = function(infoList) {
+    //     let cate_filter = id => (infoList.category.filter(object => object.id == id)[0].name);
+
+    //     infoList.post.posts.forEach(function(each){
+    //         let $tr_clone = tr_copied.clone();
+    //         $tr_clone.find('.cate').text(cate_filter(each.categoryId));
+    //         $tr_clone.find('.tit').text(each.title)
+    //         $tr_clone.find('.date').text(each.date.substr(0, 10))
+    //         $tr_clone.appendTo($tbody);
+
+    //         if (each.visibility !== '0') {
+    //             $tr_clone.on('click', function(){
+    //                 window.open('about:blank').location.href=each.postUrl;
+    //             });
+    //         } else {
+    //             $tr_clone.attr('data-disable','true');
+    //         }
+    //     });
+
+    //     // clone() - 페이징
+    //     let total = infoList.post.totalCount / infoList.post.count;
+
+    //     for (let i = 0; i < total; i++) {
+    //         let $bullet_clone = bullet_copied.clone();
+    //         let page = i+1;
+
+    //         $bullet_clone.attr('data-page-number',page).text(page);
+    //         if (page == infoList.post.page) $bullet_clone.addClass('on');
+    //         $bullet_clone.appendTo($paging)
+    //     }
+
+    //     $paging.find('.table-pagination-bullet:not(.on)').on('click', function(){
+    //         let page = $(this).attr('data-page-number');
+
+    //         getTistory({
+    //             count : 4,
+    //             page : page,
+    //             callback : function(newInfoList){
+    //                 $tbody.find('tr').remove();
+    //                 $paging.find('.table-pagination-bullet').remove();
+
+    //                 list(newInfoList);
+    //             }
+    //         });
+    //     })
+    // }
+
+
+})();/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/(function(){
+
+
+  let myKey = '1PbOKz2JGK93EX7BN1f-2T41DT5JiQ9nrSCHtHzD1U6g';
+
+  google.charts.load('current', { packages: ['corechart'] })
+    .then(() => {
+      let query = new google.visualization.Query(`http://spreadsheets.google.com/tq?key=${myKey}&pub=1`);
+
+      query.send((response) => {
+        if (response.isError()) {
+          console.error('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+          return;
         }
-        arg = mergeDeep(default_option, arg);
-        arg.count = arg.count == undefined ? '' : '&count='+arg.count;
-        arg.page = arg.page == undefined ? '' : '&page='+arg.page;
 
-        let arrType = Object.entries(arg.type)
-        let datas = {}
-        let Y;
+        let dataTable = response.getDataTable().toJSON();
+        let jsonData = JSON.parse(dataTable);
+        let cols = jsonData.cols.map((col) => col.label);
+        let rows = jsonData.rows.map(row => {
+          let newRow;
 
-        arrType.forEach(function(each) {
-            let xhr = new XMLHttpRequest();
-            xhr.open('GET', each[1]+'access_token='+arg.pars.accessToken+'&output='+arg.pars.outputType+'&blogName='+arg.pars.blogName+'&visibility=0'+arg.count+arg.page);
-            xhr.send();
-            xhr.onload = function () {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    datas[each[0]] = each[0] == 'post' ? JSON.parse(xhr.response).tistory.item : JSON.parse(xhr.response).tistory.item.categories;
+          row.c.forEach((obj, index) => {
+            obj[cols[index]] = ('f' in obj) ? obj['f'] : obj['v'];
+            ['f', 'v'].forEach(each => delete obj[each]);
+            newRow = {...newRow, ...obj};
+          });
 
-                    if (Y) arg.callback(datas);
-
-                    Y = true;
-                } else {
-                    console.log('failed');
-                }
-            };
-        });
-    }
-
-    /* 코딩블로그 */
-    const $wrap = $('#blog');
-    let $tbody = $wrap.find('.table tbody');
-    let tr_copied = $tbody.find('tr').detach();
-    var $paging = $wrap.find('.table-pagination');
-    var bullet_copied = $paging.find('.table-pagination-bullet').detach();
-
-    getTistory({
-        count : 4,
-        page : 1,
-        callback : function(infoList){
-            list(infoList);
-        }
-    })
-
-    // table clone()
-    const list = function(infoList) {
-        let cate_filter = id => (infoList.category.filter(object => object.id == id)[0].name);
-
-        infoList.post.posts.forEach(function(each){
-            let $tr_clone = tr_copied.clone();
-            $tr_clone.find('.cate').text(cate_filter(each.categoryId));
-            $tr_clone.find('.tit').text(each.title)
-            $tr_clone.find('.date').text(each.date.substr(0, 10))
-            $tr_clone.appendTo($tbody);
-
-            if (each.visibility !== '0') {
-                $tr_clone.on('click', function(){
-                    window.open('about:blank').location.href=each.postUrl;
-                });
-            } else {
-                $tr_clone.attr('data-disable','true');
-            }
-        });
-
-        // clone() - 페이징
-        let total = infoList.post.totalCount / infoList.post.count;
-
-        for (let i = 0; i < total; i++) {
-            let $bullet_clone = bullet_copied.clone();
-            let page = i+1;
-
-            $bullet_clone.attr('data-page-number',page).text(page);
-            if (page == infoList.post.page) $bullet_clone.addClass('on');
-            $bullet_clone.appendTo($paging)
-        }
-
-        $paging.find('.table-pagination-bullet:not(.on)').on('click', function(){
-            let page = $(this).attr('data-page-number');
-
-            getTistory({
-                count : 4,
-                page : page,
-                callback : function(newInfoList){
-                    $tbody.find('tr').remove();
-                    $paging.find('.table-pagination-bullet').remove();
-
-                    list(newInfoList);
-                }
-            });
+          return newRow;
         })
-    }
 
+        createTable(rows)
+    });
+  });
+
+
+   /* 코딩블로그 */
+   const $wrap = $('#blog');
+   let $tbody = $wrap.find('.table tbody');
+   let $tr_copied = $tbody.find('tr').detach();
+   let $paging = $wrap.find('.table-pagination');
+   let bullet_copied = $paging.find('.table-pagination-bullet').detach();
+
+  const createTable = rows => {
+    rows.sort(() => Math.random() - 0.5); // array 랜덤 섞기
+    let newRows = rows.arrDivision(4)
+    let pageNum = 0;
+    const loadList = pageNum => {
+      // clone() - 글목록
+      newRows[pageNum].forEach((row, index) => {
+        let $tr_clone = $tr_copied.clone();
+
+        $tr_clone.find('.cate').text(row.tag);
+        $tr_clone.find('.tit').text(row.title);
+        $tr_clone.find('.date').text(row.date);
+        $tr_clone.on('click', function(){
+          window.open('about:blank').location.href=row.url;
+        });
+        $tr_clone.appendTo($tbody);        
+      });
+
+      // clone() - 페이징
+      newRows.forEach((_, index) => {
+        let $bullet_clone = bullet_copied.clone();        
+
+        $bullet_clone.text(index + 1);
+        if (pageNum === index) $bullet_clone.addClass('on');
+
+        $bullet_clone.on('click', () => {
+          if (pageNum === index) return;
+          else {
+            $tbody.find('tr').remove();
+            $paging.find('.table-pagination-bullet').remove();
+            pageNum = index;
+            loadList(pageNum);
+          }
+        });
+        $bullet_clone.appendTo($paging);
+      });
+    }
+    loadList(pageNum);
+  };
 
 
 })();/*

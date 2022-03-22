@@ -10,7 +10,8 @@ FILES([
     SERVER.public+'/js/modules.js',
     SERVER.public+'/js/public.js',
     SERVER.public+'/lib/swiper/swiper@4.5.1.js',
-    SERVER.public+'/lib/tweenmax/tweenmax.js',    
+    SERVER.public+'/lib/tweenmax/tweenmax.js',
+    '//www.gstatic.com/charts/loader.js',
     '/js/common/common.js',
     '/js/main/main.js',
 ]);
