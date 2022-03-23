@@ -1016,11 +1016,13 @@ $(function(){/*
 
         let dataTable = response.getDataTable().toJSON();
         let jsonData = JSON.parse(dataTable);
+        console.log(jsonData);
         let cols = jsonData.cols.map((col) => col.label);
         let rows = jsonData.rows.map(row => {
           let newRow;
 
-          row.c.forEach((obj, index) => {
+          row.c.forEach((obj, index) => {              
+            if (obj == null || obj == undefined) return; //sheet 빈값이 경우 
             obj[cols[index]] = ('f' in obj) ? obj['f'] : obj['v'];
             ['f', 'v'].forEach(each => delete obj[each]);
             newRow = {...newRow, ...obj};
@@ -1045,9 +1047,10 @@ $(function(){/*
     rows.sort(() => Math.random() - 0.5); // array 랜덤 섞기
     let newRows = rows.arrDivision(4)
     let pageNum = 0;
+
     const loadList = pageNum => {
       // clone() - 글목록
-      newRows[pageNum].forEach((row, index) => {
+      newRows[pageNum].forEach(row => {
         let $tr_clone = $tr_copied.clone();
 
         $tr_clone.find('.cate').text(row.tag);
@@ -1056,12 +1059,12 @@ $(function(){/*
         $tr_clone.on('click', function(){
           window.open('about:blank').location.href=row.url;
         });
-        $tr_clone.appendTo($tbody);        
+        $tr_clone.appendTo($tbody);
       });
 
       // clone() - 페이징
       newRows.forEach((_, index) => {
-        let $bullet_clone = bullet_copied.clone();        
+        let $bullet_clone = bullet_copied.clone();
 
         $bullet_clone.text(index + 1);
         if (pageNum === index) $bullet_clone.addClass('on');
