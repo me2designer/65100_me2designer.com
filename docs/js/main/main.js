@@ -1016,13 +1016,12 @@ $(function(){/*
 
         let dataTable = response.getDataTable().toJSON();
         let jsonData = JSON.parse(dataTable);
-        console.log(jsonData);
         let cols = jsonData.cols.map((col) => col.label);
         let rows = jsonData.rows.map(row => {
           let newRow;
 
-          row.c.forEach((obj, index) => {              
-            if (obj == null || obj == undefined) return; //sheet 빈값이 경우 
+          row.c.forEach((obj, index) => {
+            if (obj == null || obj == undefined) return; //sheet 빈값이 경우
             obj[cols[index]] = ('f' in obj) ? obj['f'] : obj['v'];
             ['f', 'v'].forEach(each => delete obj[each]);
             newRow = {...newRow, ...obj};
