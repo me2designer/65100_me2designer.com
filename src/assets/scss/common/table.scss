@@ -106,7 +106,7 @@
     .table-pagination-prev {
         display:inline-flex;justify-content:center;align-items:center;width:32px;height:32px;margin-right:10px;border:1px solid #a1a1a1;border-radius:100%;font-size:12px;fill:#a1a1a1;transition:all 0.3s #{$G-easeHover};cursor:pointer;
         &.disable {
-            opacity:0.5;
+            opacity:0.3;cursor:default;
         }
         &:hover:not(.disable) {
             border:0;fill:#fff;background:#{$G-gradPrimary};            
@@ -115,7 +115,7 @@
     .table-pagination-next {
         display:inline-flex;justify-content:center;align-items:center;width:32px;height:32px;margin-left:10px;border:1px solid #a1a1a1;border-radius:100%;font-size:12px;fill:#a1a1a1;transition:all 0.3s #{$G-easeHover};cursor:pointer;
         &.disable {
-            opacity:0.5;
+            opacity:0.3;cursor:default;
         }
         &:hover:not(.disable) {
             border:0;fill:#fff;background:#{$G-gradPrimary};            

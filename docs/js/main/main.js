@@ -1021,7 +1021,7 @@ $(function(){/*
           let newRow;
 
           row.c.forEach((obj, index) => {
-            if (obj == null || obj == undefined) return; //sheet 빈값이 경우
+            if (obj == null || obj == undefined) return; //빈값이 경우 정지
             obj[cols[index]] = ('f' in obj) ? obj['f'] : obj['v'];
             ['f', 'v'].forEach(each => delete obj[each]);
             newRow = {...newRow, ...obj};
@@ -1030,58 +1030,107 @@ $(function(){/*
           return newRow;
         })
 
-        createTable(rows)
+        runTableDate(rows) // table 생성시작
     });
   });
 
-
-   /* 코딩블로그 */
    const $wrap = $('#blog');
    let $tbody = $wrap.find('.table tbody');
    let $tr_copied = $tbody.find('tr').detach();
    let $paging = $wrap.find('.table-pagination');
-   let bullet_copied = $paging.find('.table-pagination-bullet').detach();
+   let $bullet_copied = $paging.find('.table-pagination-bullet').detach();
 
-  const createTable = rows => {
-    rows.sort(() => Math.random() - 0.5); // array 랜덤 섞기
-    let newRows = rows.arrDivision(4)
-    let pageNum = 0;
+  const runTableDate = totalList => {
+    let default_options = {
+      totalData: totalList.length, //총 데이터 수
+      dataPerPage: 4, //한 페이지에 나타낼 글 수
+      pageCount: 4, //페이징에 나타낼 페이지 수
+      currentPage: 1, //현재 페이지
+    }
 
-    const loadList = pageNum => {
+    // 글목록 호출
+    totalList.sort(() => Math.random() - 0.5); // array 랜덤 섞기
+    let splitList = totalList.arrDivision(default_options.dataPerPage);
+
+    const loadList = index => {
+      $tbody.find('tr').remove();
+
       // clone() - 글목록
-      newRows[pageNum].forEach(row => {
+      splitList[--index].forEach(each => {
         let $tr_clone = $tr_copied.clone();
 
-        $tr_clone.find('.cate').text(row.tag);
-        $tr_clone.find('.tit').text(row.title);
-        $tr_clone.find('.date').text(row.date);
-        $tr_clone.on('click', function(){
-          window.open('about:blank').location.href=row.url;
-        });
+        $tr_clone.find('.cate').text(each.tag);
+        $tr_clone.find('.tit').text(each.title);
+        $tr_clone.find('.date').text(each.date);
+        $tr_clone.on('click', e => window.open('about:blank').location.href=each.url)
         $tr_clone.appendTo($tbody);
       });
+    }
+    loadList(default_options.currentPage);
+
+    // 페이징 호출
+    const loadPaging = opt => {
+      $paging.find('.table-pagination-bullet').remove();
+
+      opt.totalPage = Math.ceil(opt.totalData / opt.dataPerPage); // 총 페이지 수
+      opt.currentGroup = Math.ceil(opt.currentPage / opt.pageCount); // 현재 페이지 그룹
+
+      let lastNum = (opt.totalPage < opt.pageCount * opt.currentGroup) ? opt.totalPage : opt.pageCount * opt.currentGroup;
+      let firstNum = opt.currentGroup * opt.pageCount - (opt.pageCount - 1);
 
       // clone() - 페이징
-      newRows.forEach((_, index) => {
-        let $bullet_clone = bullet_copied.clone();
+      for (let i = firstNum; i <= lastNum; i++) {
+        let $bullet_clone = $bullet_copied.clone();
+        $bullet_clone.text(i);
 
-        $bullet_clone.text(index + 1);
-        if (pageNum === index) $bullet_clone.addClass('on');
+        if (opt.currentPage === i) $bullet_clone.addClass('on');
 
-        $bullet_clone.on('click', () => {
-          if (pageNum === index) return;
-          else {
-            $tbody.find('tr').remove();
-            $paging.find('.table-pagination-bullet').remove();
-            pageNum = index;
-            loadList(pageNum);
-          }
+        // Click
+        $bullet_clone.on('click', e => {
+          let pageNum = Number($(e.target).text());
+          opt.currentPage = pageNum;
+
+          // reset
+          loadList(opt.currentPage);
+          loadPaging(opt);
         });
-        $bullet_clone.appendTo($paging);
-      });
+
+        $bullet_clone.insertBefore('.table-pagination-next');
+      }
+
+      // $btnPrev
+      let $btnPrev = $paging.find('.table-pagination-prev');
+      let prevNum = firstNum - 1;
+
+      if (opt.currentGroup === 1) $btnPrev.addClass('disable').off('click').on('click', e => e.preventDefault());
+      else {
+        $btnPrev.removeClass('disable').off('click').on('click', e => {
+          opt.currentPage = prevNum;
+
+          // reset
+          loadList(opt.currentPage);
+          loadPaging(opt);
+        });
+      }
+
+      // $btnNext
+      let $btnNext = $paging.find('.table-pagination-next');
+      let nextNum = lastNum + 1;
+
+      if (lastNum >= opt.totalPage) $btnNext.addClass('disable').off('click').on('click', e => e.preventDefault());
+      else {
+        $btnNext.removeClass('disable').off('click').on('click', e => {
+          opt.currentPage = nextNum;
+
+          // reset
+          loadList(opt.currentPage);
+          loadPaging(opt);
+        });
+      }
     }
-    loadList(pageNum);
-  };
+    loadPaging(default_options);
+  }
+
 
 
 })();/*
